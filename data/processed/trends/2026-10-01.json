@@ -1,0 +1,3038 @@
+{
+ "as_of": "2026-10-01",
+ "generated_at": "2026-10-01T17:06:53+00:00",
+ "history": {
+  "n_snapshots": 1,
+  "first": "2026-10-01",
+  "last": "2026-10-01",
+  "span_days": 0,
+  "missing_dates": []
+ },
+ "config": {
+  "min_snapshots": 2,
+  "flow_min_days": 14,
+  "flow_min_new_per_half": 30,
+  "min_postings": 10,
+  "fdr_q": 0.05,
+  "top_k": 10,
+  "min_city_postings": 50
+ },
+ "scopes": [
+  {
+   "scope": "all in-region postings",
+   "role": null,
+   "city": null,
+   "snapshot": {
+    "day": "2026-10-01",
+    "scope": "all in-region postings",
+    "postings": 1315,
+    "view": "point-in-time snapshot (one day); not a trend",
+    "ci_note": "Wilson 95% interval over this panel's postings, not the whole market",
+    "skills": [
+     {
+      "skill": "python",
+      "category": "languages",
+      "postings": 368,
+      "share": 0.2798,
+      "ci95": [
+       0.2563,
+       0.3047
+      ]
+     },
+     {
+      "skill": "aws",
+      "category": "cloud_ops",
+      "postings": 294,
+      "share": 0.2236,
+      "ci95": [
+       0.2019,
+       0.2469
+      ]
+     },
+     {
+      "skill": "sql",
+      "category": "languages",
+      "postings": 225,
+      "share": 0.1711,
+      "ci95": [
+       0.1517,
+       0.1924
+      ]
+     },
+     {
+      "skill": "java",
+      "category": "languages",
+      "postings": 219,
+      "share": 0.1665,
+      "ci95": [
+       0.1474,
+       0.1876
+      ]
+     },
+     {
+      "skill": "kubernetes",
+      "category": "cloud_ops",
+      "postings": 203,
+      "share": 0.1544,
+      "ci95": [
+       0.1359,
+       0.1749
+      ]
+     },
+     {
+      "skill": "gcp",
+      "category": "cloud_ops",
+      "postings": 200,
+      "share": 0.1521,
+      "ci95": [
+       0.1337,
+       0.1725
+      ]
+     },
+     {
+      "skill": "azure",
+      "category": "cloud_ops",
+      "postings": 196,
+      "share": 0.149,
+      "ci95": [
+       0.1308,
+       0.1693
+      ]
+     },
+     {
+      "skill": "go",
+      "category": "languages",
+      "postings": 188,
+      "share": 0.143,
+      "ci95": [
+       0.1251,
+       0.1629
+      ]
+     },
+     {
+      "skill": "llm",
+      "category": "ml_dl_nlp",
+      "postings": 155,
+      "share": 0.1179,
+      "ci95": [
+       0.1015,
+       0.1364
+      ]
+     },
+     {
+      "skill": "terraform",
+      "category": "cloud_ops",
+      "postings": 95,
+      "share": 0.0722,
+      "ci95": [
+       0.0595,
+       0.0875
+      ]
+     },
+     {
+      "skill": "javascript",
+      "category": "languages",
+      "postings": 91,
+      "share": 0.0692,
+      "ci95": [
+       0.0567,
+       0.0842
+      ]
+     },
+     {
+      "skill": "docker",
+      "category": "cloud_ops",
+      "postings": 89,
+      "share": 0.0677,
+      "ci95": [
+       0.0553,
+       0.0826
+      ]
+     },
+     {
+      "skill": "spark",
+      "category": "data_eng",
+      "postings": 65,
+      "share": 0.0494,
+      "ci95": [
+       0.039,
+       0.0625
+      ]
+     },
+     {
+      "skill": "typescript",
+      "category": "languages",
+      "postings": 63,
+      "share": 0.0479,
+      "ci95": [
+       0.0376,
+       0.0608
+      ]
+     },
+     {
+      "skill": "scala",
+      "category": "languages",
+      "postings": 58,
+      "share": 0.0441,
+      "ci95": [
+       0.0343,
+       0.0566
+      ]
+     },
+     {
+      "skill": "kafka",
+      "category": "data_eng",
+      "postings": 56,
+      "share": 0.0426,
+      "ci95": [
+       0.0329,
+       0.0549
+      ]
+     },
+     {
+      "skill": "tableau",
+      "category": "viz_bi",
+      "postings": 51,
+      "share": 0.0388,
+      "ci95": [
+       0.0296,
+       0.0506
+      ]
+     },
+     {
+      "skill": "looker",
+      "category": "viz_bi",
+      "postings": 28,
+      "share": 0.0213,
+      "ci95": [
+       0.0148,
+       0.0306
+      ]
+     },
+     {
+      "skill": "power bi",
+      "category": "viz_bi",
+      "postings": 27,
+      "share": 0.0205,
+      "ci95": [
+       0.0141,
+       0.0297
+      ]
+     },
+     {
+      "skill": "snowflake",
+      "category": "data_eng",
+      "postings": 27,
+      "share": 0.0205,
+      "ci95": [
+       0.0141,
+       0.0297
+      ]
+     },
+     {
+      "skill": "r",
+      "category": "languages",
+      "postings": 25,
+      "share": 0.019,
+      "ci95": [
+       0.0129,
+       0.0279
+      ]
+     },
+     {
+      "skill": "langchain",
+      "category": "ml_dl_nlp",
+      "postings": 23,
+      "share": 0.0175,
+      "ci95": [
+       0.0117,
+       0.0261
+      ]
+     },
+     {
+      "skill": "hadoop",
+      "category": "data_eng",
+      "postings": 22,
+      "share": 0.0167,
+      "ci95": [
+       0.0111,
+       0.0252
+      ]
+     },
+     {
+      "skill": "nlp",
+      "category": "ml_dl_nlp",
+      "postings": 20,
+      "share": 0.0152,
+      "ci95": [
+       0.0099,
+       0.0234
+      ]
+     },
+     {
+      "skill": "dbt",
+      "category": "data_eng",
+      "postings": 18,
+      "share": 0.0137,
+      "ci95": [
+       0.0087,
+       0.0215
+      ]
+     },
+     {
+      "skill": "airflow",
+      "category": "data_eng",
+      "postings": 17,
+      "share": 0.0129,
+      "ci95": [
+       0.0081,
+       0.0206
+      ]
+     },
+     {
+      "skill": "pytorch",
+      "category": "ml_dl_nlp",
+      "postings": 16,
+      "share": 0.0122,
+      "ci95": [
+       0.0075,
+       0.0197
+      ]
+     },
+     {
+      "skill": "databricks",
+      "category": "data_eng",
+      "postings": 13,
+      "share": 0.0099,
+      "ci95": [
+       0.0058,
+       0.0168
+      ]
+     },
+     {
+      "skill": "mlflow",
+      "category": "cloud_ops",
+      "postings": 11,
+      "share": 0.0084,
+      "ci95": [
+       0.0047,
+       0.0149
+      ]
+     },
+     {
+      "skill": "scikit-learn",
+      "category": "ml_dl_nlp",
+      "postings": 10,
+      "share": 0.0076,
+      "ci95": [
+       0.0041,
+       0.0139
+      ]
+     },
+     {
+      "skill": "tensorflow",
+      "category": "ml_dl_nlp",
+      "postings": 8,
+      "share": 0.0061,
+      "ci95": [
+       0.0031,
+       0.012
+      ]
+     },
+     {
+      "skill": "hugging face",
+      "category": "ml_dl_nlp",
+      "postings": 5,
+      "share": 0.0038,
+      "ci95": [
+       0.0016,
+       0.0089
+      ]
+     },
+     {
+      "skill": "computer vision",
+      "category": "ml_dl_nlp",
+      "postings": 3,
+      "share": 0.0023,
+      "ci95": [
+       0.0008,
+       0.0067
+      ]
+     },
+     {
+      "skill": "streamlit",
+      "category": "viz_bi",
+      "postings": 2,
+      "share": 0.0015,
+      "ci95": [
+       0.0004,
+       0.0055
+      ]
+     },
+     {
+      "skill": "transformers",
+      "category": "ml_dl_nlp",
+      "postings": 2,
+      "share": 0.0015,
+      "ci95": [
+       0.0004,
+       0.0055
+      ]
+     }
+    ]
+   },
+   "trend": {
+    "scope": "all in-region postings",
+    "history": {
+     "n_snapshots": 1,
+     "first": "2026-10-01",
+     "last": "2026-10-01",
+     "span_days": 0,
+     "missing_dates": []
+    },
+    "status": "insufficient_history",
+    "reason": "1 snapshot day(s); a trend needs >= 2. Showing nothing rather than a guess."
+   }
+  },
+  {
+   "scope": "role=data scientist",
+   "role": "data scientist",
+   "city": null,
+   "snapshot": {
+    "day": "2026-10-01",
+    "scope": "role=data scientist",
+    "postings": 16,
+    "view": "point-in-time snapshot (one day); not a trend",
+    "ci_note": "Wilson 95% interval over this panel's postings, not the whole market",
+    "skills": [
+     {
+      "skill": "python",
+      "category": "languages",
+      "postings": 15,
+      "share": 0.9375,
+      "ci95": [
+       0.7167,
+       0.9889
+      ]
+     },
+     {
+      "skill": "spark",
+      "category": "data_eng",
+      "postings": 10,
+      "share": 0.625,
+      "ci95": [
+       0.3864,
+       0.8152
+      ]
+     },
+     {
+      "skill": "r",
+      "category": "languages",
+      "postings": 8,
+      "share": 0.5,
+      "ci95": [
+       0.28,
+       0.72
+      ]
+     },
+     {
+      "skill": "sql",
+      "category": "languages",
+      "postings": 7,
+      "share": 0.4375,
+      "ci95": [
+       0.231,
+       0.6682
+      ]
+     },
+     {
+      "skill": "aws",
+      "category": "cloud_ops",
+      "postings": 7,
+      "share": 0.4375,
+      "ci95": [
+       0.231,
+       0.6682
+      ]
+     },
+     {
+      "skill": "azure",
+      "category": "cloud_ops",
+      "postings": 6,
+      "share": 0.375,
+      "ci95": [
+       0.1848,
+       0.6136
+      ]
+     },
+     {
+      "skill": "gcp",
+      "category": "cloud_ops",
+      "postings": 6,
+      "share": 0.375,
+      "ci95": [
+       0.1848,
+       0.6136
+      ]
+     },
+     {
+      "skill": "llm",
+      "category": "ml_dl_nlp",
+      "postings": 6,
+      "share": 0.375,
+      "ci95": [
+       0.1848,
+       0.6136
+      ]
+     },
+     {
+      "skill": "pytorch",
+      "category": "ml_dl_nlp",
+      "postings": 5,
+      "share": 0.3125,
+      "ci95": [
+       0.1416,
+       0.556
+      ]
+     },
+     {
+      "skill": "scikit-learn",
+      "category": "ml_dl_nlp",
+      "postings": 4,
+      "share": 0.25,
+      "ci95": [
+       0.1018,
+       0.495
+      ]
+     },
+     {
+      "skill": "nlp",
+      "category": "ml_dl_nlp",
+      "postings": 4,
+      "share": 0.25,
+      "ci95": [
+       0.1018,
+       0.495
+      ]
+     },
+     {
+      "skill": "tensorflow",
+      "category": "ml_dl_nlp",
+      "postings": 4,
+      "share": 0.25,
+      "ci95": [
+       0.1018,
+       0.495
+      ]
+     },
+     {
+      "skill": "hadoop",
+      "category": "data_eng",
+      "postings": 3,
+      "share": 0.1875,
+      "ci95": [
+       0.0659,
+       0.4301
+      ]
+     },
+     {
+      "skill": "transformers",
+      "category": "ml_dl_nlp",
+      "postings": 1,
+      "share": 0.0625,
+      "ci95": [
+       0.0111,
+       0.2833
+      ]
+     },
+     {
+      "skill": "java",
+      "category": "languages",
+      "postings": 1,
+      "share": 0.0625,
+      "ci95": [
+       0.0111,
+       0.2833
+      ]
+     },
+     {
+      "skill": "hugging face",
+      "category": "ml_dl_nlp",
+      "postings": 1,
+      "share": 0.0625,
+      "ci95": [
+       0.0111,
+       0.2833
+      ]
+     }
+    ]
+   },
+   "trend": {
+    "scope": "role=data scientist",
+    "history": {
+     "n_snapshots": 1,
+     "first": "2026-10-01",
+     "last": "2026-10-01",
+     "span_days": 0,
+     "missing_dates": []
+    },
+    "status": "insufficient_history",
+    "reason": "1 snapshot day(s); a trend needs >= 2. Showing nothing rather than a guess."
+   }
+  },
+  {
+   "scope": "role=machine learning engineer",
+   "role": "machine learning engineer",
+   "city": null,
+   "snapshot": {
+    "day": "2026-10-01",
+    "scope": "role=machine learning engineer",
+    "postings": 26,
+    "view": "point-in-time snapshot (one day); not a trend",
+    "ci_note": "Wilson 95% interval over this panel's postings, not the whole market",
+    "skills": [
+     {
+      "skill": "python",
+      "category": "languages",
+      "postings": 17,
+      "share": 0.6538,
+      "ci95": [
+       0.4622,
+       0.8059
+      ]
+     },
+     {
+      "skill": "llm",
+      "category": "ml_dl_nlp",
+      "postings": 16,
+      "share": 0.6154,
+      "ci95": [
+       0.4253,
+       0.7757
+      ]
+     },
+     {
+      "skill": "aws",
+      "category": "cloud_ops",
+      "postings": 6,
+      "share": 0.2308,
+      "ci95": [
+       0.1103,
+       0.4205
+      ]
+     },
+     {
+      "skill": "pytorch",
+      "category": "ml_dl_nlp",
+      "postings": 6,
+      "share": 0.2308,
+      "ci95": [
+       0.1103,
+       0.4205
+      ]
+     },
+     {
+      "skill": "javascript",
+      "category": "languages",
+      "postings": 5,
+      "share": 0.1923,
+      "ci95": [
+       0.0851,
+       0.3788
+      ]
+     },
+     {
+      "skill": "spark",
+      "category": "data_eng",
+      "postings": 5,
+      "share": 0.1923,
+      "ci95": [
+       0.0851,
+       0.3788
+      ]
+     },
+     {
+      "skill": "sql",
+      "category": "languages",
+      "postings": 5,
+      "share": 0.1923,
+      "ci95": [
+       0.0851,
+       0.3788
+      ]
+     },
+     {
+      "skill": "typescript",
+      "category": "languages",
+      "postings": 4,
+      "share": 0.1538,
+      "ci95": [
+       0.0615,
+       0.3353
+      ]
+     },
+     {
+      "skill": "kubernetes",
+      "category": "cloud_ops",
+      "postings": 4,
+      "share": 0.1538,
+      "ci95": [
+       0.0615,
+       0.3353
+      ]
+     },
+     {
+      "skill": "langchain",
+      "category": "ml_dl_nlp",
+      "postings": 4,
+      "share": 0.1538,
+      "ci95": [
+       0.0615,
+       0.3353
+      ]
+     },
+     {
+      "skill": "nlp",
+      "category": "ml_dl_nlp",
+      "postings": 3,
+      "share": 0.1154,
+      "ci95": [
+       0.04,
+       0.2898
+      ]
+     },
+     {
+      "skill": "java",
+      "category": "languages",
+      "postings": 3,
+      "share": 0.1154,
+      "ci95": [
+       0.04,
+       0.2898
+      ]
+     },
+     {
+      "skill": "computer vision",
+      "category": "ml_dl_nlp",
+      "postings": 2,
+      "share": 0.0769,
+      "ci95": [
+       0.0214,
+       0.2414
+      ]
+     },
+     {
+      "skill": "go",
+      "category": "languages",
+      "postings": 2,
+      "share": 0.0769,
+      "ci95": [
+       0.0214,
+       0.2414
+      ]
+     },
+     {
+      "skill": "terraform",
+      "category": "cloud_ops",
+      "postings": 2,
+      "share": 0.0769,
+      "ci95": [
+       0.0214,
+       0.2414
+      ]
+     },
+     {
+      "skill": "azure",
+      "category": "cloud_ops",
+      "postings": 2,
+      "share": 0.0769,
+      "ci95": [
+       0.0214,
+       0.2414
+      ]
+     },
+     {
+      "skill": "gcp",
+      "category": "cloud_ops",
+      "postings": 2,
+      "share": 0.0769,
+      "ci95": [
+       0.0214,
+       0.2414
+      ]
+     },
+     {
+      "skill": "scikit-learn",
+      "category": "ml_dl_nlp",
+      "postings": 2,
+      "share": 0.0769,
+      "ci95": [
+       0.0214,
+       0.2414
+      ]
+     },
+     {
+      "skill": "hugging face",
+      "category": "ml_dl_nlp",
+      "postings": 2,
+      "share": 0.0769,
+      "ci95": [
+       0.0214,
+       0.2414
+      ]
+     },
+     {
+      "skill": "mlflow",
+      "category": "cloud_ops",
+      "postings": 1,
+      "share": 0.0385,
+      "ci95": [
+       0.0068,
+       0.1889
+      ]
+     },
+     {
+      "skill": "transformers",
+      "category": "ml_dl_nlp",
+      "postings": 1,
+      "share": 0.0385,
+      "ci95": [
+       0.0068,
+       0.1889
+      ]
+     },
+     {
+      "skill": "docker",
+      "category": "cloud_ops",
+      "postings": 1,
+      "share": 0.0385,
+      "ci95": [
+       0.0068,
+       0.1889
+      ]
+     },
+     {
+      "skill": "snowflake",
+      "category": "data_eng",
+      "postings": 1,
+      "share": 0.0385,
+      "ci95": [
+       0.0068,
+       0.1889
+      ]
+     },
+     {
+      "skill": "airflow",
+      "category": "data_eng",
+      "postings": 1,
+      "share": 0.0385,
+      "ci95": [
+       0.0068,
+       0.1889
+      ]
+     }
+    ]
+   },
+   "trend": {
+    "scope": "role=machine learning engineer",
+    "history": {
+     "n_snapshots": 1,
+     "first": "2026-10-01",
+     "last": "2026-10-01",
+     "span_days": 0,
+     "missing_dates": []
+    },
+    "status": "insufficient_history",
+    "reason": "1 snapshot day(s); a trend needs >= 2. Showing nothing rather than a guess."
+   }
+  },
+  {
+   "scope": "role=data analyst",
+   "role": "data analyst",
+   "city": null,
+   "snapshot": {
+    "day": "2026-10-01",
+    "scope": "role=data analyst",
+    "postings": 27,
+    "view": "point-in-time snapshot (one day); not a trend",
+    "ci_note": "Wilson 95% interval over this panel's postings, not the whole market",
+    "skills": [
+     {
+      "skill": "sql",
+      "category": "languages",
+      "postings": 22,
+      "share": 0.8148,
+      "ci95": [
+       0.633,
+       0.9182
+      ]
+     },
+     {
+      "skill": "python",
+      "category": "languages",
+      "postings": 19,
+      "share": 0.7037,
+      "ci95": [
+       0.5152,
+       0.8415
+      ]
+     },
+     {
+      "skill": "tableau",
+      "category": "viz_bi",
+      "postings": 14,
+      "share": 0.5185,
+      "ci95": [
+       0.3399,
+       0.6926
+      ]
+     },
+     {
+      "skill": "snowflake",
+      "category": "data_eng",
+      "postings": 13,
+      "share": 0.4815,
+      "ci95": [
+       0.3074,
+       0.6601
+      ]
+     },
+     {
+      "skill": "r",
+      "category": "languages",
+      "postings": 6,
+      "share": 0.2222,
+      "ci95": [
+       0.1061,
+       0.4076
+      ]
+     },
+     {
+      "skill": "looker",
+      "category": "viz_bi",
+      "postings": 5,
+      "share": 0.1852,
+      "ci95": [
+       0.0818,
+       0.367
+      ]
+     },
+     {
+      "skill": "power bi",
+      "category": "viz_bi",
+      "postings": 5,
+      "share": 0.1852,
+      "ci95": [
+       0.0818,
+       0.367
+      ]
+     },
+     {
+      "skill": "dbt",
+      "category": "data_eng",
+      "postings": 5,
+      "share": 0.1852,
+      "ci95": [
+       0.0818,
+       0.367
+      ]
+     },
+     {
+      "skill": "nlp",
+      "category": "ml_dl_nlp",
+      "postings": 3,
+      "share": 0.1111,
+      "ci95": [
+       0.0385,
+       0.2806
+      ]
+     },
+     {
+      "skill": "llm",
+      "category": "ml_dl_nlp",
+      "postings": 3,
+      "share": 0.1111,
+      "ci95": [
+       0.0385,
+       0.2806
+      ]
+     },
+     {
+      "skill": "spark",
+      "category": "data_eng",
+      "postings": 2,
+      "share": 0.0741,
+      "ci95": [
+       0.0206,
+       0.2337
+      ]
+     },
+     {
+      "skill": "langchain",
+      "category": "ml_dl_nlp",
+      "postings": 1,
+      "share": 0.037,
+      "ci95": [
+       0.0066,
+       0.1828
+      ]
+     },
+     {
+      "skill": "scikit-learn",
+      "category": "ml_dl_nlp",
+      "postings": 1,
+      "share": 0.037,
+      "ci95": [
+       0.0066,
+       0.1828
+      ]
+     },
+     {
+      "skill": "kafka",
+      "category": "data_eng",
+      "postings": 1,
+      "share": 0.037,
+      "ci95": [
+       0.0066,
+       0.1828
+      ]
+     },
+     {
+      "skill": "streamlit",
+      "category": "viz_bi",
+      "postings": 1,
+      "share": 0.037,
+      "ci95": [
+       0.0066,
+       0.1828
+      ]
+     },
+     {
+      "skill": "databricks",
+      "category": "data_eng",
+      "postings": 1,
+      "share": 0.037,
+      "ci95": [
+       0.0066,
+       0.1828
+      ]
+     }
+    ]
+   },
+   "trend": {
+    "scope": "role=data analyst",
+    "history": {
+     "n_snapshots": 1,
+     "first": "2026-10-01",
+     "last": "2026-10-01",
+     "span_days": 0,
+     "missing_dates": []
+    },
+    "status": "insufficient_history",
+    "reason": "1 snapshot day(s); a trend needs >= 2. Showing nothing rather than a guess."
+   }
+  },
+  {
+   "scope": "role=data engineer",
+   "role": "data engineer",
+   "city": null,
+   "snapshot": {
+    "day": "2026-10-01",
+    "scope": "role=data engineer",
+    "postings": 12,
+    "view": "point-in-time snapshot (one day); not a trend",
+    "ci_note": "Wilson 95% interval over this panel's postings, not the whole market",
+    "skills": [
+     {
+      "skill": "kafka",
+      "category": "data_eng",
+      "postings": 7,
+      "share": 0.5833,
+      "ci95": [
+       0.3195,
+       0.8067
+      ]
+     },
+     {
+      "skill": "airflow",
+      "category": "data_eng",
+      "postings": 7,
+      "share": 0.5833,
+      "ci95": [
+       0.3195,
+       0.8067
+      ]
+     },
+     {
+      "skill": "sql",
+      "category": "languages",
+      "postings": 6,
+      "share": 0.5,
+      "ci95": [
+       0.2538,
+       0.7462
+      ]
+     },
+     {
+      "skill": "python",
+      "category": "languages",
+      "postings": 6,
+      "share": 0.5,
+      "ci95": [
+       0.2538,
+       0.7462
+      ]
+     },
+     {
+      "skill": "spark",
+      "category": "data_eng",
+      "postings": 5,
+      "share": 0.4167,
+      "ci95": [
+       0.1933,
+       0.6805
+      ]
+     },
+     {
+      "skill": "kubernetes",
+      "category": "cloud_ops",
+      "postings": 5,
+      "share": 0.4167,
+      "ci95": [
+       0.1933,
+       0.6805
+      ]
+     },
+     {
+      "skill": "gcp",
+      "category": "cloud_ops",
+      "postings": 4,
+      "share": 0.3333,
+      "ci95": [
+       0.1381,
+       0.6094
+      ]
+     },
+     {
+      "skill": "scala",
+      "category": "languages",
+      "postings": 4,
+      "share": 0.3333,
+      "ci95": [
+       0.1381,
+       0.6094
+      ]
+     },
+     {
+      "skill": "dbt",
+      "category": "data_eng",
+      "postings": 4,
+      "share": 0.3333,
+      "ci95": [
+       0.1381,
+       0.6094
+      ]
+     },
+     {
+      "skill": "aws",
+      "category": "cloud_ops",
+      "postings": 4,
+      "share": 0.3333,
+      "ci95": [
+       0.1381,
+       0.6094
+      ]
+     },
+     {
+      "skill": "databricks",
+      "category": "data_eng",
+      "postings": 3,
+      "share": 0.25,
+      "ci95": [
+       0.0889,
+       0.5323
+      ]
+     },
+     {
+      "skill": "java",
+      "category": "languages",
+      "postings": 3,
+      "share": 0.25,
+      "ci95": [
+       0.0889,
+       0.5323
+      ]
+     },
+     {
+      "skill": "llm",
+      "category": "ml_dl_nlp",
+      "postings": 3,
+      "share": 0.25,
+      "ci95": [
+       0.0889,
+       0.5323
+      ]
+     },
+     {
+      "skill": "terraform",
+      "category": "cloud_ops",
+      "postings": 3,
+      "share": 0.25,
+      "ci95": [
+       0.0889,
+       0.5323
+      ]
+     },
+     {
+      "skill": "docker",
+      "category": "cloud_ops",
+      "postings": 3,
+      "share": 0.25,
+      "ci95": [
+       0.0889,
+       0.5323
+      ]
+     },
+     {
+      "skill": "snowflake",
+      "category": "data_eng",
+      "postings": 2,
+      "share": 0.1667,
+      "ci95": [
+       0.047,
+       0.448
+      ]
+     },
+     {
+      "skill": "go",
+      "category": "languages",
+      "postings": 2,
+      "share": 0.1667,
+      "ci95": [
+       0.047,
+       0.448
+      ]
+     },
+     {
+      "skill": "azure",
+      "category": "cloud_ops",
+      "postings": 1,
+      "share": 0.0833,
+      "ci95": [
+       0.0149,
+       0.3539
+      ]
+     }
+    ]
+   },
+   "trend": {
+    "scope": "role=data engineer",
+    "history": {
+     "n_snapshots": 1,
+     "first": "2026-10-01",
+     "last": "2026-10-01",
+     "span_days": 0,
+     "missing_dates": []
+    },
+    "status": "insufficient_history",
+    "reason": "1 snapshot day(s); a trend needs >= 2. Showing nothing rather than a guess."
+   }
+  },
+  {
+   "scope": "role=backend engineer",
+   "role": "backend engineer",
+   "city": null,
+   "snapshot": {
+    "day": "2026-10-01",
+    "scope": "role=backend engineer",
+    "postings": 42,
+    "view": "point-in-time snapshot (one day); not a trend",
+    "ci_note": "Wilson 95% interval over this panel's postings, not the whole market",
+    "skills": [
+     {
+      "skill": "java",
+      "category": "languages",
+      "postings": 22,
+      "share": 0.5238,
+      "ci95": [
+       0.3772,
+       0.6664
+      ]
+     },
+     {
+      "skill": "aws",
+      "category": "cloud_ops",
+      "postings": 16,
+      "share": 0.381,
+      "ci95": [
+       0.25,
+       0.5319
+      ]
+     },
+     {
+      "skill": "go",
+      "category": "languages",
+      "postings": 16,
+      "share": 0.381,
+      "ci95": [
+       0.25,
+       0.5319
+      ]
+     },
+     {
+      "skill": "python",
+      "category": "languages",
+      "postings": 13,
+      "share": 0.3095,
+      "ci95": [
+       0.1907,
+       0.4603
+      ]
+     },
+     {
+      "skill": "kubernetes",
+      "category": "cloud_ops",
+      "postings": 11,
+      "share": 0.2619,
+      "ci95": [
+       0.153,
+       0.4107
+      ]
+     },
+     {
+      "skill": "gcp",
+      "category": "cloud_ops",
+      "postings": 9,
+      "share": 0.2143,
+      "ci95": [
+       0.1171,
+       0.3594
+      ]
+     },
+     {
+      "skill": "scala",
+      "category": "languages",
+      "postings": 8,
+      "share": 0.1905,
+      "ci95": [
+       0.0998,
+       0.333
+      ]
+     },
+     {
+      "skill": "kafka",
+      "category": "data_eng",
+      "postings": 6,
+      "share": 0.1429,
+      "ci95": [
+       0.0672,
+       0.2784
+      ]
+     },
+     {
+      "skill": "docker",
+      "category": "cloud_ops",
+      "postings": 5,
+      "share": 0.119,
+      "ci95": [
+       0.0519,
+       0.25
+      ]
+     },
+     {
+      "skill": "azure",
+      "category": "cloud_ops",
+      "postings": 4,
+      "share": 0.0952,
+      "ci95": [
+       0.0377,
+       0.2207
+      ]
+     },
+     {
+      "skill": "llm",
+      "category": "ml_dl_nlp",
+      "postings": 3,
+      "share": 0.0714,
+      "ci95": [
+       0.0246,
+       0.1901
+      ]
+     },
+     {
+      "skill": "spark",
+      "category": "data_eng",
+      "postings": 3,
+      "share": 0.0714,
+      "ci95": [
+       0.0246,
+       0.1901
+      ]
+     },
+     {
+      "skill": "javascript",
+      "category": "languages",
+      "postings": 2,
+      "share": 0.0476,
+      "ci95": [
+       0.0132,
+       0.1579
+      ]
+     },
+     {
+      "skill": "sql",
+      "category": "languages",
+      "postings": 2,
+      "share": 0.0476,
+      "ci95": [
+       0.0132,
+       0.1579
+      ]
+     },
+     {
+      "skill": "hadoop",
+      "category": "data_eng",
+      "postings": 2,
+      "share": 0.0476,
+      "ci95": [
+       0.0132,
+       0.1579
+      ]
+     },
+     {
+      "skill": "typescript",
+      "category": "languages",
+      "postings": 1,
+      "share": 0.0238,
+      "ci95": [
+       0.0042,
+       0.1232
+      ]
+     },
+     {
+      "skill": "langchain",
+      "category": "ml_dl_nlp",
+      "postings": 1,
+      "share": 0.0238,
+      "ci95": [
+       0.0042,
+       0.1232
+      ]
+     },
+     {
+      "skill": "nlp",
+      "category": "ml_dl_nlp",
+      "postings": 1,
+      "share": 0.0238,
+      "ci95": [
+       0.0042,
+       0.1232
+      ]
+     },
+     {
+      "skill": "pytorch",
+      "category": "ml_dl_nlp",
+      "postings": 1,
+      "share": 0.0238,
+      "ci95": [
+       0.0042,
+       0.1232
+      ]
+     }
+    ]
+   },
+   "trend": {
+    "scope": "role=backend engineer",
+    "history": {
+     "n_snapshots": 1,
+     "first": "2026-10-01",
+     "last": "2026-10-01",
+     "span_days": 0,
+     "missing_dates": []
+    },
+    "status": "insufficient_history",
+    "reason": "1 snapshot day(s); a trend needs >= 2. Showing nothing rather than a guess."
+   }
+  },
+  {
+   "scope": "role=software engineer",
+   "role": "software engineer",
+   "city": null,
+   "snapshot": {
+    "day": "2026-10-01",
+    "scope": "role=software engineer",
+    "postings": 245,
+    "view": "point-in-time snapshot (one day); not a trend",
+    "ci_note": "Wilson 95% interval over this panel's postings, not the whole market",
+    "skills": [
+     {
+      "skill": "java",
+      "category": "languages",
+      "postings": 128,
+      "share": 0.5224,
+      "ci95": [
+       0.46,
+       0.5842
+      ]
+     },
+     {
+      "skill": "python",
+      "category": "languages",
+      "postings": 110,
+      "share": 0.449,
+      "ci95": [
+       0.388,
+       0.5116
+      ]
+     },
+     {
+      "skill": "aws",
+      "category": "cloud_ops",
+      "postings": 98,
+      "share": 0.4,
+      "ci95": [
+       0.3407,
+       0.4624
+      ]
+     },
+     {
+      "skill": "go",
+      "category": "languages",
+      "postings": 91,
+      "share": 0.3714,
+      "ci95": [
+       0.3133,
+       0.4335
+      ]
+     },
+     {
+      "skill": "kubernetes",
+      "category": "cloud_ops",
+      "postings": 85,
+      "share": 0.3469,
+      "ci95": [
+       0.2901,
+       0.4085
+      ]
+     },
+     {
+      "skill": "azure",
+      "category": "cloud_ops",
+      "postings": 57,
+      "share": 0.2327,
+      "ci95": [
+       0.1841,
+       0.2894
+      ]
+     },
+     {
+      "skill": "gcp",
+      "category": "cloud_ops",
+      "postings": 54,
+      "share": 0.2204,
+      "ci95": [
+       0.173,
+       0.2764
+      ]
+     },
+     {
+      "skill": "sql",
+      "category": "languages",
+      "postings": 48,
+      "share": 0.1959,
+      "ci95": [
+       0.1511,
+       0.2502
+      ]
+     },
+     {
+      "skill": "docker",
+      "category": "cloud_ops",
+      "postings": 47,
+      "share": 0.1918,
+      "ci95": [
+       0.1474,
+       0.2457
+      ]
+     },
+     {
+      "skill": "llm",
+      "category": "ml_dl_nlp",
+      "postings": 46,
+      "share": 0.1878,
+      "ci95": [
+       0.1438,
+       0.2413
+      ]
+     },
+     {
+      "skill": "scala",
+      "category": "languages",
+      "postings": 40,
+      "share": 0.1633,
+      "ci95": [
+       0.1222,
+       0.2147
+      ]
+     },
+     {
+      "skill": "terraform",
+      "category": "cloud_ops",
+      "postings": 38,
+      "share": 0.1551,
+      "ci95": [
+       0.1151,
+       0.2057
+      ]
+     },
+     {
+      "skill": "typescript",
+      "category": "languages",
+      "postings": 35,
+      "share": 0.1429,
+      "ci95": [
+       0.1045,
+       0.1922
+      ]
+     },
+     {
+      "skill": "javascript",
+      "category": "languages",
+      "postings": 33,
+      "share": 0.1347,
+      "ci95": [
+       0.0975,
+       0.1831
+      ]
+     },
+     {
+      "skill": "kafka",
+      "category": "data_eng",
+      "postings": 27,
+      "share": 0.1102,
+      "ci95": [
+       0.0769,
+       0.1556
+      ]
+     },
+     {
+      "skill": "spark",
+      "category": "data_eng",
+      "postings": 15,
+      "share": 0.0612,
+      "ci95": [
+       0.0375,
+       0.0985
+      ]
+     },
+     {
+      "skill": "airflow",
+      "category": "data_eng",
+      "postings": 8,
+      "share": 0.0327,
+      "ci95": [
+       0.0166,
+       0.0631
+      ]
+     },
+     {
+      "skill": "langchain",
+      "category": "ml_dl_nlp",
+      "postings": 7,
+      "share": 0.0286,
+      "ci95": [
+       0.0139,
+       0.0578
+      ]
+     },
+     {
+      "skill": "dbt",
+      "category": "data_eng",
+      "postings": 7,
+      "share": 0.0286,
+      "ci95": [
+       0.0139,
+       0.0578
+      ]
+     },
+     {
+      "skill": "nlp",
+      "category": "ml_dl_nlp",
+      "postings": 5,
+      "share": 0.0204,
+      "ci95": [
+       0.0087,
+       0.0469
+      ]
+     },
+     {
+      "skill": "databricks",
+      "category": "data_eng",
+      "postings": 4,
+      "share": 0.0163,
+      "ci95": [
+       0.0064,
+       0.0412
+      ]
+     },
+     {
+      "skill": "snowflake",
+      "category": "data_eng",
+      "postings": 3,
+      "share": 0.0122,
+      "ci95": [
+       0.0042,
+       0.0354
+      ]
+     },
+     {
+      "skill": "hadoop",
+      "category": "data_eng",
+      "postings": 3,
+      "share": 0.0122,
+      "ci95": [
+       0.0042,
+       0.0354
+      ]
+     },
+     {
+      "skill": "pytorch",
+      "category": "ml_dl_nlp",
+      "postings": 2,
+      "share": 0.0082,
+      "ci95": [
+       0.0022,
+       0.0293
+      ]
+     },
+     {
+      "skill": "transformers",
+      "category": "ml_dl_nlp",
+      "postings": 1,
+      "share": 0.0041,
+      "ci95": [
+       0.0007,
+       0.0228
+      ]
+     },
+     {
+      "skill": "tensorflow",
+      "category": "ml_dl_nlp",
+      "postings": 1,
+      "share": 0.0041,
+      "ci95": [
+       0.0007,
+       0.0228
+      ]
+     },
+     {
+      "skill": "power bi",
+      "category": "viz_bi",
+      "postings": 1,
+      "share": 0.0041,
+      "ci95": [
+       0.0007,
+       0.0228
+      ]
+     },
+     {
+      "skill": "looker",
+      "category": "viz_bi",
+      "postings": 1,
+      "share": 0.0041,
+      "ci95": [
+       0.0007,
+       0.0228
+      ]
+     },
+     {
+      "skill": "tableau",
+      "category": "viz_bi",
+      "postings": 1,
+      "share": 0.0041,
+      "ci95": [
+       0.0007,
+       0.0228
+      ]
+     }
+    ]
+   },
+   "trend": {
+    "scope": "role=software engineer",
+    "history": {
+     "n_snapshots": 1,
+     "first": "2026-10-01",
+     "last": "2026-10-01",
+     "span_days": 0,
+     "missing_dates": []
+    },
+    "status": "insufficient_history",
+    "reason": "1 snapshot day(s); a trend needs >= 2. Showing nothing rather than a guess."
+   }
+  },
+  {
+   "scope": "city=Bengaluru",
+   "role": null,
+   "city": "Bengaluru",
+   "snapshot": {
+    "day": "2026-10-01",
+    "scope": "city=Bengaluru",
+    "postings": 843,
+    "view": "point-in-time snapshot (one day); not a trend",
+    "ci_note": "Wilson 95% interval over this panel's postings, not the whole market",
+    "skills": [
+     {
+      "skill": "python",
+      "category": "languages",
+      "postings": 250,
+      "share": 0.2966,
+      "ci95": [
+       0.2667,
+       0.3283
+      ]
+     },
+     {
+      "skill": "aws",
+      "category": "cloud_ops",
+      "postings": 202,
+      "share": 0.2396,
+      "ci95": [
+       0.212,
+       0.2696
+      ]
+     },
+     {
+      "skill": "java",
+      "category": "languages",
+      "postings": 160,
+      "share": 0.1898,
+      "ci95": [
+       0.1648,
+       0.2177
+      ]
+     },
+     {
+      "skill": "sql",
+      "category": "languages",
+      "postings": 144,
+      "share": 0.1708,
+      "ci95": [
+       0.1469,
+       0.1977
+      ]
+     },
+     {
+      "skill": "gcp",
+      "category": "cloud_ops",
+      "postings": 139,
+      "share": 0.1649,
+      "ci95": [
+       0.1414,
+       0.1914
+      ]
+     },
+     {
+      "skill": "azure",
+      "category": "cloud_ops",
+      "postings": 134,
+      "share": 0.159,
+      "ci95": [
+       0.1358,
+       0.1852
+      ]
+     },
+     {
+      "skill": "kubernetes",
+      "category": "cloud_ops",
+      "postings": 131,
+      "share": 0.1554,
+      "ci95": [
+       0.1325,
+       0.1814
+      ]
+     },
+     {
+      "skill": "go",
+      "category": "languages",
+      "postings": 123,
+      "share": 0.1459,
+      "ci95": [
+       0.1237,
+       0.1713
+      ]
+     },
+     {
+      "skill": "llm",
+      "category": "ml_dl_nlp",
+      "postings": 102,
+      "share": 0.121,
+      "ci95": [
+       0.1007,
+       0.1447
+      ]
+     },
+     {
+      "skill": "terraform",
+      "category": "cloud_ops",
+      "postings": 69,
+      "share": 0.0819,
+      "ci95": [
+       0.0652,
+       0.1023
+      ]
+     },
+     {
+      "skill": "javascript",
+      "category": "languages",
+      "postings": 63,
+      "share": 0.0747,
+      "ci95": [
+       0.0588,
+       0.0945
+      ]
+     },
+     {
+      "skill": "docker",
+      "category": "cloud_ops",
+      "postings": 59,
+      "share": 0.07,
+      "ci95": [
+       0.0546,
+       0.0892
+      ]
+     },
+     {
+      "skill": "spark",
+      "category": "data_eng",
+      "postings": 51,
+      "share": 0.0605,
+      "ci95": [
+       0.0463,
+       0.0787
+      ]
+     },
+     {
+      "skill": "typescript",
+      "category": "languages",
+      "postings": 45,
+      "share": 0.0534,
+      "ci95": [
+       0.0401,
+       0.0707
+      ]
+     },
+     {
+      "skill": "scala",
+      "category": "languages",
+      "postings": 42,
+      "share": 0.0498,
+      "ci95": [
+       0.0371,
+       0.0667
+      ]
+     },
+     {
+      "skill": "tableau",
+      "category": "viz_bi",
+      "postings": 35,
+      "share": 0.0415,
+      "ci95": [
+       0.03,
+       0.0572
+      ]
+     },
+     {
+      "skill": "kafka",
+      "category": "data_eng",
+      "postings": 34,
+      "share": 0.0403,
+      "ci95": [
+       0.029,
+       0.0558
+      ]
+     },
+     {
+      "skill": "snowflake",
+      "category": "data_eng",
+      "postings": 20,
+      "share": 0.0237,
+      "ci95": [
+       0.0154,
+       0.0364
+      ]
+     },
+     {
+      "skill": "power bi",
+      "category": "viz_bi",
+      "postings": 19,
+      "share": 0.0225,
+      "ci95": [
+       0.0145,
+       0.0349
+      ]
+     },
+     {
+      "skill": "langchain",
+      "category": "ml_dl_nlp",
+      "postings": 18,
+      "share": 0.0214,
+      "ci95": [
+       0.0135,
+       0.0335
+      ]
+     },
+     {
+      "skill": "r",
+      "category": "languages",
+      "postings": 17,
+      "share": 0.0202,
+      "ci95": [
+       0.0126,
+       0.0321
+      ]
+     },
+     {
+      "skill": "looker",
+      "category": "viz_bi",
+      "postings": 17,
+      "share": 0.0202,
+      "ci95": [
+       0.0126,
+       0.0321
+      ]
+     },
+     {
+      "skill": "nlp",
+      "category": "ml_dl_nlp",
+      "postings": 17,
+      "share": 0.0202,
+      "ci95": [
+       0.0126,
+       0.0321
+      ]
+     },
+     {
+      "skill": "pytorch",
+      "category": "ml_dl_nlp",
+      "postings": 16,
+      "share": 0.019,
+      "ci95": [
+       0.0117,
+       0.0306
+      ]
+     },
+     {
+      "skill": "dbt",
+      "category": "data_eng",
+      "postings": 14,
+      "share": 0.0166,
+      "ci95": [
+       0.0099,
+       0.0277
+      ]
+     },
+     {
+      "skill": "databricks",
+      "category": "data_eng",
+      "postings": 13,
+      "share": 0.0154,
+      "ci95": [
+       0.009,
+       0.0262
+      ]
+     },
+     {
+      "skill": "hadoop",
+      "category": "data_eng",
+      "postings": 13,
+      "share": 0.0154,
+      "ci95": [
+       0.009,
+       0.0262
+      ]
+     },
+     {
+      "skill": "airflow",
+      "category": "data_eng",
+      "postings": 11,
+      "share": 0.013,
+      "ci95": [
+       0.0073,
+       0.0232
+      ]
+     },
+     {
+      "skill": "scikit-learn",
+      "category": "ml_dl_nlp",
+      "postings": 10,
+      "share": 0.0119,
+      "ci95": [
+       0.0065,
+       0.0217
+      ]
+     },
+     {
+      "skill": "mlflow",
+      "category": "cloud_ops",
+      "postings": 8,
+      "share": 0.0095,
+      "ci95": [
+       0.0048,
+       0.0186
+      ]
+     },
+     {
+      "skill": "tensorflow",
+      "category": "ml_dl_nlp",
+      "postings": 8,
+      "share": 0.0095,
+      "ci95": [
+       0.0048,
+       0.0186
+      ]
+     },
+     {
+      "skill": "hugging face",
+      "category": "ml_dl_nlp",
+      "postings": 5,
+      "share": 0.0059,
+      "ci95": [
+       0.0025,
+       0.0138
+      ]
+     },
+     {
+      "skill": "transformers",
+      "category": "ml_dl_nlp",
+      "postings": 2,
+      "share": 0.0024,
+      "ci95": [
+       0.0007,
+       0.0086
+      ]
+     },
+     {
+      "skill": "computer vision",
+      "category": "ml_dl_nlp",
+      "postings": 1,
+      "share": 0.0012,
+      "ci95": [
+       0.0002,
+       0.0067
+      ]
+     },
+     {
+      "skill": "streamlit",
+      "category": "viz_bi",
+      "postings": 1,
+      "share": 0.0012,
+      "ci95": [
+       0.0002,
+       0.0067
+      ]
+     }
+    ]
+   },
+   "trend": {
+    "scope": "city=Bengaluru",
+    "history": {
+     "n_snapshots": 1,
+     "first": "2026-10-01",
+     "last": "2026-10-01",
+     "span_days": 0,
+     "missing_dates": []
+    },
+    "status": "insufficient_history",
+    "reason": "1 snapshot day(s); a trend needs >= 2. Showing nothing rather than a guess."
+   }
+  },
+  {
+   "scope": "city=Delhi NCR",
+   "role": null,
+   "city": "Delhi NCR",
+   "snapshot": {
+    "day": "2026-10-01",
+    "scope": "city=Delhi NCR",
+    "postings": 213,
+    "view": "point-in-time snapshot (one day); not a trend",
+    "ci_note": "Wilson 95% interval over this panel's postings, not the whole market",
+    "skills": [
+     {
+      "skill": "python",
+      "category": "languages",
+      "postings": 50,
+      "share": 0.2347,
+      "ci95": [
+       0.1828,
+       0.2961
+      ]
+     },
+     {
+      "skill": "sql",
+      "category": "languages",
+      "postings": 35,
+      "share": 0.1643,
+      "ci95": [
+       0.1206,
+       0.2199
+      ]
+     },
+     {
+      "skill": "aws",
+      "category": "cloud_ops",
+      "postings": 28,
+      "share": 0.1315,
+      "ci95": [
+       0.0925,
+       0.1834
+      ]
+     },
+     {
+      "skill": "go",
+      "category": "languages",
+      "postings": 26,
+      "share": 0.1221,
+      "ci95": [
+       0.0847,
+       0.1728
+      ]
+     },
+     {
+      "skill": "java",
+      "category": "languages",
+      "postings": 26,
+      "share": 0.1221,
+      "ci95": [
+       0.0847,
+       0.1728
+      ]
+     },
+     {
+      "skill": "kubernetes",
+      "category": "cloud_ops",
+      "postings": 23,
+      "share": 0.108,
+      "ci95": [
+       0.073,
+       0.1568
+      ]
+     },
+     {
+      "skill": "gcp",
+      "category": "cloud_ops",
+      "postings": 19,
+      "share": 0.0892,
+      "ci95": [
+       0.0578,
+       0.1351
+      ]
+     },
+     {
+      "skill": "azure",
+      "category": "cloud_ops",
+      "postings": 17,
+      "share": 0.0798,
+      "ci95": [
+       0.0504,
+       0.1241
+      ]
+     },
+     {
+      "skill": "javascript",
+      "category": "languages",
+      "postings": 16,
+      "share": 0.0751,
+      "ci95": [
+       0.0468,
+       0.1185
+      ]
+     },
+     {
+      "skill": "llm",
+      "category": "ml_dl_nlp",
+      "postings": 12,
+      "share": 0.0563,
+      "ci95": [
+       0.0325,
+       0.0959
+      ]
+     },
+     {
+      "skill": "tableau",
+      "category": "viz_bi",
+      "postings": 12,
+      "share": 0.0563,
+      "ci95": [
+       0.0325,
+       0.0959
+      ]
+     },
+     {
+      "skill": "kafka",
+      "category": "data_eng",
+      "postings": 11,
+      "share": 0.0516,
+      "ci95": [
+       0.0291,
+       0.0901
+      ]
+     },
+     {
+      "skill": "typescript",
+      "category": "languages",
+      "postings": 9,
+      "share": 0.0423,
+      "ci95": [
+       0.0224,
+       0.0783
+      ]
+     },
+     {
+      "skill": "scala",
+      "category": "languages",
+      "postings": 9,
+      "share": 0.0423,
+      "ci95": [
+       0.0224,
+       0.0783
+      ]
+     },
+     {
+      "skill": "spark",
+      "category": "data_eng",
+      "postings": 8,
+      "share": 0.0376,
+      "ci95": [
+       0.0192,
+       0.0724
+      ]
+     },
+     {
+      "skill": "docker",
+      "category": "cloud_ops",
+      "postings": 8,
+      "share": 0.0376,
+      "ci95": [
+       0.0192,
+       0.0724
+      ]
+     },
+     {
+      "skill": "r",
+      "category": "languages",
+      "postings": 7,
+      "share": 0.0329,
+      "ci95": [
+       0.016,
+       0.0663
+      ]
+     },
+     {
+      "skill": "looker",
+      "category": "viz_bi",
+      "postings": 7,
+      "share": 0.0329,
+      "ci95": [
+       0.016,
+       0.0663
+      ]
+     },
+     {
+      "skill": "power bi",
+      "category": "viz_bi",
+      "postings": 7,
+      "share": 0.0329,
+      "ci95": [
+       0.016,
+       0.0663
+      ]
+     },
+     {
+      "skill": "terraform",
+      "category": "cloud_ops",
+      "postings": 5,
+      "share": 0.0235,
+      "ci95": [
+       0.0101,
+       0.0538
+      ]
+     },
+     {
+      "skill": "langchain",
+      "category": "ml_dl_nlp",
+      "postings": 4,
+      "share": 0.0188,
+      "ci95": [
+       0.0073,
+       0.0473
+      ]
+     },
+     {
+      "skill": "hadoop",
+      "category": "data_eng",
+      "postings": 3,
+      "share": 0.0141,
+      "ci95": [
+       0.0048,
+       0.0406
+      ]
+     },
+     {
+      "skill": "dbt",
+      "category": "data_eng",
+      "postings": 2,
+      "share": 0.0094,
+      "ci95": [
+       0.0026,
+       0.0336
+      ]
+     },
+     {
+      "skill": "snowflake",
+      "category": "data_eng",
+      "postings": 2,
+      "share": 0.0094,
+      "ci95": [
+       0.0026,
+       0.0336
+      ]
+     },
+     {
+      "skill": "airflow",
+      "category": "data_eng",
+      "postings": 1,
+      "share": 0.0047,
+      "ci95": [
+       0.0008,
+       0.0261
+      ]
+     },
+     {
+      "skill": "mlflow",
+      "category": "cloud_ops",
+      "postings": 1,
+      "share": 0.0047,
+      "ci95": [
+       0.0008,
+       0.0261
+      ]
+     },
+     {
+      "skill": "nlp",
+      "category": "ml_dl_nlp",
+      "postings": 1,
+      "share": 0.0047,
+      "ci95": [
+       0.0008,
+       0.0261
+      ]
+     },
+     {
+      "skill": "pytorch",
+      "category": "ml_dl_nlp",
+      "postings": 1,
+      "share": 0.0047,
+      "ci95": [
+       0.0008,
+       0.0261
+      ]
+     },
+     {
+      "skill": "scikit-learn",
+      "category": "ml_dl_nlp",
+      "postings": 1,
+      "share": 0.0047,
+      "ci95": [
+       0.0008,
+       0.0261
+      ]
+     },
+     {
+      "skill": "hugging face",
+      "category": "ml_dl_nlp",
+      "postings": 1,
+      "share": 0.0047,
+      "ci95": [
+       0.0008,
+       0.0261
+      ]
+     }
+    ]
+   },
+   "trend": {
+    "scope": "city=Delhi NCR",
+    "history": {
+     "n_snapshots": 1,
+     "first": "2026-10-01",
+     "last": "2026-10-01",
+     "span_days": 0,
+     "missing_dates": []
+    },
+    "status": "insufficient_history",
+    "reason": "1 snapshot day(s); a trend needs >= 2. Showing nothing rather than a guess."
+   }
+  },
+  {
+   "scope": "city=Hyderabad",
+   "role": null,
+   "city": "Hyderabad",
+   "snapshot": {
+    "day": "2026-10-01",
+    "scope": "city=Hyderabad",
+    "postings": 97,
+    "view": "point-in-time snapshot (one day); not a trend",
+    "ci_note": "Wilson 95% interval over this panel's postings, not the whole market",
+    "skills": [
+     {
+      "skill": "python",
+      "category": "languages",
+      "postings": 28,
+      "share": 0.2887,
+      "ci95": [
+       0.2079,
+       0.3855
+      ]
+     },
+     {
+      "skill": "sql",
+      "category": "languages",
+      "postings": 28,
+      "share": 0.2887,
+      "ci95": [
+       0.2079,
+       0.3855
+      ]
+     },
+     {
+      "skill": "aws",
+      "category": "cloud_ops",
+      "postings": 27,
+      "share": 0.2784,
+      "ci95": [
+       0.1989,
+       0.3747
+      ]
+     },
+     {
+      "skill": "kubernetes",
+      "category": "cloud_ops",
+      "postings": 26,
+      "share": 0.268,
+      "ci95": [
+       0.19,
+       0.3638
+      ]
+     },
+     {
+      "skill": "azure",
+      "category": "cloud_ops",
+      "postings": 23,
+      "share": 0.2371,
+      "ci95": [
+       0.1635,
+       0.3307
+      ]
+     },
+     {
+      "skill": "llm",
+      "category": "ml_dl_nlp",
+      "postings": 16,
+      "share": 0.1649,
+      "ci95": [
+       0.1042,
+       0.2513
+      ]
+     },
+     {
+      "skill": "gcp",
+      "category": "cloud_ops",
+      "postings": 16,
+      "share": 0.1649,
+      "ci95": [
+       0.1042,
+       0.2513
+      ]
+     },
+     {
+      "skill": "java",
+      "category": "languages",
+      "postings": 15,
+      "share": 0.1546,
+      "ci95": [
+       0.096,
+       0.2396
+      ]
+     },
+     {
+      "skill": "docker",
+      "category": "cloud_ops",
+      "postings": 14,
+      "share": 0.1443,
+      "ci95": [
+       0.088,
+       0.2278
+      ]
+     },
+     {
+      "skill": "terraform",
+      "category": "cloud_ops",
+      "postings": 13,
+      "share": 0.134,
+      "ci95": [
+       0.08,
+       0.2159
+      ]
+     },
+     {
+      "skill": "go",
+      "category": "languages",
+      "postings": 11,
+      "share": 0.1134,
+      "ci95": [
+       0.0645,
+       0.1917
+      ]
+     },
+     {
+      "skill": "kafka",
+      "category": "data_eng",
+      "postings": 6,
+      "share": 0.0619,
+      "ci95": [
+       0.0287,
+       0.1284
+      ]
+     },
+     {
+      "skill": "javascript",
+      "category": "languages",
+      "postings": 5,
+      "share": 0.0515,
+      "ci95": [
+       0.0222,
+       0.115
+      ]
+     },
+     {
+      "skill": "airflow",
+      "category": "data_eng",
+      "postings": 3,
+      "share": 0.0309,
+      "ci95": [
+       0.0106,
+       0.087
+      ]
+     },
+     {
+      "skill": "hadoop",
+      "category": "data_eng",
+      "postings": 3,
+      "share": 0.0309,
+      "ci95": [
+       0.0106,
+       0.087
+      ]
+     },
+     {
+      "skill": "typescript",
+      "category": "languages",
+      "postings": 2,
+      "share": 0.0206,
+      "ci95": [
+       0.0057,
+       0.0721
+      ]
+     },
+     {
+      "skill": "looker",
+      "category": "viz_bi",
+      "postings": 2,
+      "share": 0.0206,
+      "ci95": [
+       0.0057,
+       0.0721
+      ]
+     },
+     {
+      "skill": "langchain",
+      "category": "ml_dl_nlp",
+      "postings": 2,
+      "share": 0.0206,
+      "ci95": [
+       0.0057,
+       0.0721
+      ]
+     },
+     {
+      "skill": "spark",
+      "category": "data_eng",
+      "postings": 1,
+      "share": 0.0103,
+      "ci95": [
+       0.0018,
+       0.0561
+      ]
+     },
+     {
+      "skill": "scala",
+      "category": "languages",
+      "postings": 1,
+      "share": 0.0103,
+      "ci95": [
+       0.0018,
+       0.0561
+      ]
+     },
+     {
+      "skill": "scikit-learn",
+      "category": "ml_dl_nlp",
+      "postings": 1,
+      "share": 0.0103,
+      "ci95": [
+       0.0018,
+       0.0561
+      ]
+     },
+     {
+      "skill": "power bi",
+      "category": "viz_bi",
+      "postings": 1,
+      "share": 0.0103,
+      "ci95": [
+       0.0018,
+       0.0561
+      ]
+     },
+     {
+      "skill": "tableau",
+      "category": "viz_bi",
+      "postings": 1,
+      "share": 0.0103,
+      "ci95": [
+       0.0018,
+       0.0561
+      ]
+     },
+     {
+      "skill": "snowflake",
+      "category": "data_eng",
+      "postings": 1,
+      "share": 0.0103,
+      "ci95": [
+       0.0018,
+       0.0561
+      ]
+     }
+    ]
+   },
+   "trend": {
+    "scope": "city=Hyderabad",
+    "history": {
+     "n_snapshots": 1,
+     "first": "2026-10-01",
+     "last": "2026-10-01",
+     "span_days": 0,
+     "missing_dates": []
+    },
+    "status": "insufficient_history",
+    "reason": "1 snapshot day(s); a trend needs >= 2. Showing nothing rather than a guess."
+   }
+  },
+  {
+   "scope": "city=Mumbai",
+   "role": null,
+   "city": "Mumbai",
+   "snapshot": {
+    "day": "2026-10-01",
+    "scope": "city=Mumbai",
+    "postings": 87,
+    "view": "point-in-time snapshot (one day); not a trend",
+    "ci_note": "Wilson 95% interval over this panel's postings, not the whole market",
+    "skills": [
+     {
+      "skill": "python",
+      "category": "languages",
+      "postings": 14,
+      "share": 0.1609,
+      "ci95": [
+       0.0983,
+       0.2522
+      ]
+     },
+     {
+      "skill": "sql",
+      "category": "languages",
+      "postings": 12,
+      "share": 0.1379,
+      "ci95": [
+       0.0807,
+       0.2258
+      ]
+     },
+     {
+      "skill": "llm",
+      "category": "ml_dl_nlp",
+      "postings": 11,
+      "share": 0.1264,
+      "ci95": [
+       0.0721,
+       0.2124
+      ]
+     },
+     {
+      "skill": "aws",
+      "category": "cloud_ops",
+      "postings": 10,
+      "share": 0.1149,
+      "ci95": [
+       0.0636,
+       0.1988
+      ]
+     },
+     {
+      "skill": "gcp",
+      "category": "cloud_ops",
+      "postings": 7,
+      "share": 0.0805,
+      "ci95": [
+       0.0395,
+       0.1569
+      ]
+     },
+     {
+      "skill": "azure",
+      "category": "cloud_ops",
+      "postings": 7,
+      "share": 0.0805,
+      "ci95": [
+       0.0395,
+       0.1569
+      ]
+     },
+     {
+      "skill": "java",
+      "category": "languages",
+      "postings": 6,
+      "share": 0.069,
+      "ci95": [
+       0.032,
+       0.1424
+      ]
+     },
+     {
+      "skill": "spark",
+      "category": "data_eng",
+      "postings": 5,
+      "share": 0.0575,
+      "ci95": [
+       0.0248,
+       0.1276
+      ]
+     },
+     {
+      "skill": "go",
+      "category": "languages",
+      "postings": 4,
+      "share": 0.046,
+      "ci95": [
+       0.018,
+       0.1123
+      ]
+     },
+     {
+      "skill": "kafka",
+      "category": "data_eng",
+      "postings": 4,
+      "share": 0.046,
+      "ci95": [
+       0.018,
+       0.1123
+      ]
+     },
+     {
+      "skill": "kubernetes",
+      "category": "cloud_ops",
+      "postings": 4,
+      "share": 0.046,
+      "ci95": [
+       0.018,
+       0.1123
+      ]
+     },
+     {
+      "skill": "scala",
+      "category": "languages",
+      "postings": 3,
+      "share": 0.0345,
+      "ci95": [
+       0.0118,
+       0.0965
+      ]
+     },
+     {
+      "skill": "tableau",
+      "category": "viz_bi",
+      "postings": 2,
+      "share": 0.023,
+      "ci95": [
+       0.0063,
+       0.08
+      ]
+     },
+     {
+      "skill": "javascript",
+      "category": "languages",
+      "postings": 2,
+      "share": 0.023,
+      "ci95": [
+       0.0063,
+       0.08
+      ]
+     },
+     {
+      "skill": "r",
+      "category": "languages",
+      "postings": 2,
+      "share": 0.023,
+      "ci95": [
+       0.0063,
+       0.08
+      ]
+     },
+     {
+      "skill": "hadoop",
+      "category": "data_eng",
+      "postings": 2,
+      "share": 0.023,
+      "ci95": [
+       0.0063,
+       0.08
+      ]
+     },
+     {
+      "skill": "mlflow",
+      "category": "cloud_ops",
+      "postings": 2,
+      "share": 0.023,
+      "ci95": [
+       0.0063,
+       0.08
+      ]
+     },
+     {
+      "skill": "terraform",
+      "category": "cloud_ops",
+      "postings": 2,
+      "share": 0.023,
+      "ci95": [
+       0.0063,
+       0.08
+      ]
+     },
+     {
+      "skill": "nlp",
+      "category": "ml_dl_nlp",
+      "postings": 2,
+      "share": 0.023,
+      "ci95": [
+       0.0063,
+       0.08
+      ]
+     },
+     {
+      "skill": "computer vision",
+      "category": "ml_dl_nlp",
+      "postings": 2,
+      "share": 0.023,
+      "ci95": [
+       0.0063,
+       0.08
+      ]
+     },
+     {
+      "skill": "langchain",
+      "category": "ml_dl_nlp",
+      "postings": 2,
+      "share": 0.023,
+      "ci95": [
+       0.0063,
+       0.08
+      ]
+     },
+     {
+      "skill": "hugging face",
+      "category": "ml_dl_nlp",
+      "postings": 2,
+      "share": 0.023,
+      "ci95": [
+       0.0063,
+       0.08
+      ]
+     },
+     {
+      "skill": "airflow",
+      "category": "data_eng",
+      "postings": 1,
+      "share": 0.0115,
+      "ci95": [
+       0.002,
+       0.0623
+      ]
+     },
+     {
+      "skill": "typescript",
+      "category": "languages",
+      "postings": 1,
+      "share": 0.0115,
+      "ci95": [
+       0.002,
+       0.0623
+      ]
+     },
+     {
+      "skill": "looker",
+      "category": "viz_bi",
+      "postings": 1,
+      "share": 0.0115,
+      "ci95": [
+       0.002,
+       0.0623
+      ]
+     },
+     {
+      "skill": "pytorch",
+      "category": "ml_dl_nlp",
+      "postings": 1,
+      "share": 0.0115,
+      "ci95": [
+       0.002,
+       0.0623
+      ]
+     },
+     {
+      "skill": "scikit-learn",
+      "category": "ml_dl_nlp",
+      "postings": 1,
+      "share": 0.0115,
+      "ci95": [
+       0.002,
+       0.0623
+      ]
+     }
+    ]
+   },
+   "trend": {
+    "scope": "city=Mumbai",
+    "history": {
+     "n_snapshots": 1,
+     "first": "2026-10-01",
+     "last": "2026-10-01",
+     "span_days": 0,
+     "missing_dates": []
+    },
+    "status": "insufficient_history",
+    "reason": "1 snapshot day(s); a trend needs >= 2. Showing nothing rather than a guess."
+   }
+  }
+ ]
+}

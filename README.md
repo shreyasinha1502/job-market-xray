@@ -162,6 +162,37 @@ spelling support:
 - **None of the 61 is counted yet.** Adding skills to the vocabulary is a deliberate edit to
   `skills.yaml`, so coverage is never inflated silently.
 
+## Trend engine (M4)
+
+There are two views, and they are never mixed:
+
+- **Snapshot**: skill shares among postings open on one day, with Wilson 95% intervals. The
+  intervals matter at this panel's sizes. Data analyst on 2026-10-01 has n=27, so SQL at 81.5% is
+  really somewhere in 63–92%.
+- **Trend**: needs at least 2 real snapshot days and is never backfilled. Each trend states its
+  history window (snapshot count, first and last date, span, missing calendar days).
+  - *Stock change*: share on the last vs first day, over a **balanced panel**. Only boards fetched
+    OK on every day of the window are compared, so a board that failed on one day is excluded and
+    listed instead of showing up as a demand drop. This view is descriptive with no p-values: the
+    same postings stay open for weeks, so day samples overlap.
+  - *Flow test*: skill share among postings **first seen** in the early vs late half of the
+    window. These sets are disjoint, so it uses Fisher's exact test with Benjamini-Hochberg FDR
+    (q < 0.05). Postings first seen on the very first snapshot are the panel's backlog and are
+    excluded. The test needs a window of at least 14 days and at least 30 new postings per half.
+    Otherwise it reports `insufficient_*` with the actual counts.
+- **Scopes**: all in-region postings, each tracked role (title rules), and each city with at least
+  50 postings.
+
+The **data-quality panel** (`quality/<date>.json`) covers, per snapshot day: boards OK/failed,
+in-region postings, new/changed, skill coverage and description completeness. It also lists every
+known gap: too little history, missing days, failed boards, stale extraction, and boards never
+fetched. It reports posting age too. On 2026-10-01 the median open posting was 56 days old and 36%
+were open more than 90 days. Stock counts are dominated by long-open roles, which is why the flow
+test is the demand signal to trust once history accumulates.
+
+**Current state:** 1 snapshot day (2026-10-01), so every scope reports
+`trend: insufficient_history`. That is the correct output for one day.
+
 ## Storage
 
 ```
@@ -177,6 +208,8 @@ data/processed/skill_mentions/_manifest.json    extractor id (version, vocab sha
 data/processed/skill_reports/<date>.json        skill coverage report for that snapshot
 data/processed/skill_map/clusters_<date>.md      M3 readable cluster dump (+ .json)
 config/skill_map.yaml                            M3 reviewed canonical map (accepted aliases apply)
+data/processed/trends/<date>.json               M4 snapshot + trend per scope (dashboard input)
+data/processed/quality/<date>.json              M4 data-quality panel (dashboard input)
 ```
 
 Derived skill tables are partitioned like `postings` and re-extracted automatically when the postings
@@ -212,6 +245,8 @@ python -m xray extract                                # skill extraction (increm
 python -m xray skills --role "data scientist"         # top skills in a snapshot (--scope role|requirements|anywhere)
 python -m xray mentions --skill go --excluded         # audit: text around each (rejected) match
 python -m xray normalize                              # M3: embed + cluster terms -> skill_map.yaml + dump
+python -m xray trends --role "data analyst"           # M4: snapshot (with CIs) + trend for one scope
+python -m xray report                                 # M4: write trends + quality JSON for all scopes
 python scripts/discover_panel.py                      # re-scan candidate boards (writes evidence)
 python -m pytest && python -m ruff check .
 ```
@@ -225,6 +260,6 @@ listed in the coverage report.
 - [x] M1: panel ingestion from public ATS APIs, provenance-stamped postings, coverage report
 - [x] M2: spaCy skill extraction, section tags, ambiguity rules, honest coverage report
 - [x] M3: embedding + DBSCAN normalization, measured threshold, reviewed canonical skill map
-- [ ] M4: trend engine
+- [x] M4: trend engine (balanced-panel stock change, FDR-controlled flow test, history windows) + data-quality panel
 - [ ] M5: seniority classifier on rule-derived labels
 - [ ] M6: Render deployment + scheduled ingestion

@@ -25,7 +25,10 @@ def make_config(tmp_path: Path, boards) -> Path:
     return cfg
 
 
-def fixture_transport(fixtures_dir: Path) -> httpx.MockTransport:
+def fixture_transport(
+    fixtures_dir: Path, fail: frozenset[str] = frozenset()
+) -> httpx.MockTransport:
+    """Serve real captured bodies; boards in `fail` (or without a fixture) get the real 404 body."""
     hosts = {"boards-api.greenhouse.io": "greenhouse", "api.lever.co": "lever"}
 
     def handler(req: httpx.Request) -> httpx.Response:
@@ -33,7 +36,7 @@ def fixture_transport(fixtures_dir: Path) -> httpx.MockTransport:
         parts = req.url.path.strip("/").split("/")
         board = parts[2] if source == "greenhouse" else parts[-1]  # /v1/boards/{b}/jobs
         body = fixtures_dir / source / f"{board}.json"
-        if not body.exists():
+        if board in fail or not body.exists():
             nf = (fixtures_dir / "greenhouse" / "not_found_404.json").read_bytes()
             return httpx.Response(404, content=nf, headers={"Content-Type": "application/json"})
         meta = json.loads((fixtures_dir / source / f"{board}.meta.json").read_text("utf-8"))

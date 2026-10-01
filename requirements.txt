@@ -9,3 +9,4 @@ en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_
 # M3: embeddings + clustering (offline step; pulls CPU torch). Model revision pinned in project.yaml
 sentence-transformers==6.1.0
 scikit-learn==1.9.1  # DBSCAN
+scipy==1.18.1        # M4: Fisher exact test, Benjamini-Hochberg (already a scikit-learn dependency)

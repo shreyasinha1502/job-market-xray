@@ -1,0 +1,46 @@
+{
+ "generated_at": "2026-10-01T17:06:53+00:00",
+ "history": {
+  "n_snapshots": 1,
+  "first": "2026-10-01",
+  "last": "2026-10-01",
+  "span_days": 0,
+  "missing_dates": []
+ },
+ "panel": {
+  "boards": 55,
+  "added_dates": [
+   "2026-10-01"
+  ]
+ },
+ "extractor": {
+  "version": "m2.3",
+  "vocab_sha256": "56670b5335967d330d733dfceb42fd29505198f4646f4063d90ce01b598a749f",
+  "spacy": "3.8.16",
+  "model": "en_core_web_sm-3.8.0"
+ },
+ "days": [
+  {
+   "day": "2026-10-01",
+   "boards_ok": 55,
+   "boards_failed": [],
+   "in_region_postings": 1315,
+   "stored": {
+    "new": 1315,
+    "changed": 0,
+    "unchanged": 0
+   },
+   "skill_coverage": 0.5726,
+   "description_completeness": 1.0
+  }
+ ],
+ "posting_age_latest": {
+  "postings_with_publish_date": 1315,
+  "median_days_open": 56,
+  "share_open_over_90_days": 0.3567,
+  "note": "long-open postings dominate stock counts; flow (new postings) is the cleaner demand signal once enough days accumulate"
+ },
+ "gaps": [
+  "only 1 snapshot day(s): no trend can be computed yet"
+ ]
+}

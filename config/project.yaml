@@ -14,3 +14,11 @@ classifier:
   test_size: 0.2
   val_size: 0.1
 allow_synthetic: false      # hard gate. must stay false.
+trends:                     # M4. A trend needs real accumulated snapshots; nothing is backfilled.
+  min_snapshots: 2          # fewer real snapshot days -> "insufficient_history"
+  flow_min_days: 14         # flow (new-posting) significance test needs a window this long...
+  flow_min_new_per_half: 30 # ...and at least this many new postings in each half
+  min_postings: 10          # skills with fewer postings are not ranked / tested
+  fdr_q: 0.05               # Benjamini-Hochberg false discovery rate
+  top_k: 10
+  min_city_postings: 50     # cities with fewer in-region postings get no separate scope

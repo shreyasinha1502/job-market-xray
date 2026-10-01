@@ -216,6 +216,59 @@ def cmd_normalize(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_trends(args: argparse.Namespace) -> int:
+    from xray.trends import Scope, load_frame, load_trend_config, snapshot_table, trend
+
+    frame = load_frame(Store())
+    if not frame.days:
+        raise ConfigError("no snapshots stored yet; run `xray ingest` first")
+    roles = RoleMatcher.from_config(load_sources())
+    scope = Scope(role=args.role, city=args.city)
+    snap = snapshot_table(frame, frame.days[-1], scope, roles)
+    tr = trend(frame, scope, roles, load_trend_config(), args.window_days)
+    h = tr["history"]
+    print(f"scope: {scope.label}")
+    print(f"history: {h['n_snapshots']} snapshot day(s), {h['first']} .. {h['last']} "
+          f"(span {h['span_days']} d, missing {len(h['missing_dates'])})")  # fmt: skip
+    print(f"\nPOINT-IN-TIME SNAPSHOT {snap['day']} ({snap['postings']} postings; not a trend)")
+    print(f"{'skill':<16} {'postings':>8} {'share':>7}  95% CI")
+    for r in snap["skills"][: args.top]:
+        lo, hi = r["ci95"]
+        print(f"{r['skill']:<16} {r['postings']:>8} {r['share']:>7.1%}  {lo:.0%}-{hi:.0%}")
+    print(f"\nTREND: {tr['status']}")
+    if tr["status"] != "ok":
+        print(f"  {tr['reason']}")
+        return 0
+    p = tr["panel"]
+    print(f"  balanced panel: {p['boards_compared']} boards; excluded: {p['boards_excluded']}")
+    for name in ("risers", "fallers"):
+        print(f"  {name}:")
+        for r in tr[name]:
+            sig = " (flow-significant)" if r["flow_significant"] else ""
+            print(f"    {r['skill']:<16} {r['first_share']:.1%} -> {r['last_share']:.1%} "
+                  f"({r['delta_pp']:+.2f} pp){sig}")  # fmt: skip
+    f = tr["flow"]
+    print(f"  flow test: {f['status']} (new postings early={f['early']} late={f['late']})"
+          + (f" - {f['reason']}" if f.get("reason") else ""))  # fmt: skip
+    return 0
+
+
+def cmd_report(args: argparse.Namespace) -> int:
+    """Write trends + data-quality JSON for the latest snapshot (dashboard inputs)."""
+    from xray.quality import build_quality
+    from xray.trends import build_trends, write_json
+
+    store = Store()
+    t = build_trends(store, window_days=args.window_days)
+    q = build_quality(store)
+    print(f"wrote {write_json(store, 'trends', t['as_of'], t)}")
+    print(f"wrote {write_json(store, 'quality', t['as_of'], q)}")
+    print(f"history: {t['history']}")
+    for g in q["gaps"]:
+        print(f"GAP: {g}")
+    return 0
+
+
 def cmd_probe(args: argparse.Namespace) -> int:
     """Adzuna (dormant): one live call. Needs ADZUNA_APP_ID / ADZUNA_APP_KEY in .env."""
     app_id, app_key = adzuna_credentials()
@@ -285,6 +338,17 @@ def build_parser() -> argparse.ArgumentParser:
     nm = sub.add_parser("normalize", help="M3: embed + cluster skill terms -> skill_map.yaml")
     nm.add_argument("--date", type=date.fromisoformat, default=None)
     nm.set_defaults(func=cmd_normalize)
+
+    tr = sub.add_parser("trends", help="M4: snapshot + trend (risers/fallers) for one scope")
+    tr.add_argument("--role", default=None)
+    tr.add_argument("--city", default=None)
+    tr.add_argument("--window-days", type=int, default=None, help="default: all history")
+    tr.add_argument("--top", type=int, default=15)
+    tr.set_defaults(func=cmd_trends)
+
+    rp = sub.add_parser("report", help="write trends + data-quality JSON for all scopes")
+    rp.add_argument("--window-days", type=int, default=None)
+    rp.set_defaults(func=cmd_report)
 
     probe = sub.add_parser("probe", help="Adzuna (dormant, needs keys): one live call")
     probe.add_argument("--role", default="data scientist")
