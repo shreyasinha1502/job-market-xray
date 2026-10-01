@@ -1,5 +1,9 @@
 # Job Market X-Ray
 
+**Live dashboard:** https://job-market-xray.onrender.com (free tier: the first request after
+~15 idle minutes takes up to a minute while the instance wakes). Data is refreshed by a daily
+GitHub Actions run.
+
 Live job postings as an economic signal. This repo pulls real postings from public job APIs, extracts and
 semantically normalizes skills, and tracks which skills are rising or falling in demand per role and
 region, using only real accumulated snapshots.
