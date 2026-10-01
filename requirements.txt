@@ -6,3 +6,6 @@ duckdb==1.5.6        # M1: typed table + parquet writer/reader, no pyarrow neede
 spacy==3.8.16        # M2: tokenizer, PhraseMatcher, NER
 # M2: spaCy English pipeline, pinned to the exact release wheel (12.8 MB) for reproducible installs
 en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
+# M3: embeddings + clustering (offline step; pulls CPU torch). Model revision pinned in project.yaml
+sentence-transformers==6.1.0
+scikit-learn==1.9.1  # DBSCAN

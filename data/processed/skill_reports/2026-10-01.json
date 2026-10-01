@@ -1,15 +1,15 @@
 {
   "snapshot_date": "2026-10-01",
-  "generated_at": "2026-10-01T16:04:47.035133+00:00",
+  "generated_at": "2026-10-01T16:58:00.644187+00:00",
   "extractor": {
     "version": "m2.3",
-    "vocab_sha256": "d9cb2478139935e1275cb29483f07868e36496154eb478fb46a5f9822d3362d3",
+    "vocab_sha256": "56670b5335967d330d733dfceb42fd29505198f4646f4063d90ce01b598a749f",
     "spacy": "3.8.16",
     "model": "en_core_web_sm-3.8.0"
   },
   "vocab": {
     "skills": 37,
-    "surface_forms": 57,
+    "surface_forms": 59,
     "never_seen_in_snapshot": [
       "spacy",
       "xgboost"
@@ -238,7 +238,7 @@
       "share": 0.0388,
       "in_requirements_or_title": 47,
       "boards": 23,
-      "top_board": "okta",
+      "top_board": "paytm",
       "top_board_share": 0.137
     },
     {
@@ -258,7 +258,7 @@
       "share": 0.0205,
       "in_requirements_or_title": 25,
       "boards": 14,
-      "top_board": "inmobi",
+      "top_board": "paytm",
       "top_board_share": 0.185
     },
     {
@@ -338,18 +338,18 @@
       "share": 0.0122,
       "in_requirements_or_title": 13,
       "boards": 6,
-      "top_board": "sarvam",
+      "top_board": "glance",
       "top_board_share": 0.25
     },
     {
       "skill": "databricks",
       "category": "data_eng",
-      "postings": 12,
-      "share": 0.0091,
-      "in_requirements_or_title": 8,
+      "postings": 13,
+      "share": 0.0099,
+      "in_requirements_or_title": 9,
       "boards": 6,
-      "top_board": "sigmoid",
-      "top_board_share": 0.25
+      "top_board": "glance",
+      "top_board_share": 0.231
     },
     {
       "skill": "mlflow",
@@ -378,7 +378,7 @@
       "share": 0.0061,
       "in_requirements_or_title": 6,
       "boards": 4,
-      "top_board": "inmobi",
+      "top_board": "glance",
       "top_board_share": 0.375
     },
     {
@@ -408,7 +408,7 @@
       "share": 0.0015,
       "in_requirements_or_title": 1,
       "boards": 2,
-      "top_board": "okta",
+      "top_board": "zscaler",
       "top_board_share": 0.5
     },
     {
@@ -495,8 +495,8 @@
   "sections": {
     "postings_with_recognized_headings": 0.9947,
     "valid_mentions_by_section": {
-      "requirements": 2850,
-      "responsibilities": 1070,
+      "requirements": 2852,
+      "responsibilities": 1071,
       "about": 417,
       "intro": 216,
       "title": 36,

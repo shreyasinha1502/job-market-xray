@@ -107,6 +107,61 @@ These numbers are not inflated. Known gaps, as reported in `skill_reports/<date>
 - **Board concentration** is shown per skill (`top_board_share`). Some skills are dominated by one
   employer, e.g. scala 57% Databricks and mlflow 73% Databricks.
 
+## Semantic normalization (M3)
+
+`xray normalize` builds a reviewable canonical skill map from the latest snapshot:
+
+1. **Harvest candidate terms** from role sections of real postings. Sources: vocabulary matches
+   (anchors), spaCy entities, tech-shaped tokens (CamelCase, `Node.js`, `C++`, acronyms) and short
+   items of comma/slash lists. Two filters drop noise. A term must appear in at least 3 postings
+   at at least 3 employers. Words written in lowercase at least as often as capitalized are
+   dropped ("Design", "Build"). That leaves 784 terms.
+2. **Lexical keys** merge pure spelling variants deterministically: React.js = ReactJS,
+   PoCs = PoC, but SAs ≠ SAS.
+3. **Embeddings** come from `all-MiniLM-L6-v2` at a pinned revision, clustered with **DBSCAN**
+   (cosine, `eps` 0.12, i.e. similarity ≥ 0.88, `min_cluster_size` 2).
+4. **Decisions**, all written out:
+   - A cluster with one vocabulary skill proposes aliases for it.
+   - A cluster with 2+ vocabulary skills is a conflict and never merges.
+   - A cluster with none is a proposed new skill group.
+   - A merge is auto-accepted only with lexical support. Embeddings alone confuse short acronyms:
+     on this data SASE~SAST = 0.84, Excel~Google Sheets = 0.86, CISO~CISA = 0.83. They also miss
+     acronym expansions (AWS~Amazon Web Services = 0.66, GenAI~Generative AI = 0.36).
+
+**Why eps 0.12**, measured on the 2026-10-01 terms. "Unsupported" counts merges that have no
+spelling support:
+
+| eps (sim ≥) | clusters | unsupported merges | conflicts |
+|---|---|---|---|
+| 0.06 (0.94) | 6 | 0 | 0 |
+| 0.12 (0.88) | 21 | 7 | 0 |
+| 0.20 (0.80) | 55 | 43 | 0 |
+| 0.30 (0.70) | 101 | 169 | 0 |
+
+**Outputs:**
+
+- `config/skill_map.yaml` is the reviewed map. Only aliases with `status: accepted` change
+  extraction. Review decisions (`reviewed: true`) survive regeneration. Decisions about terms no
+  longer observed are kept and marked `stale`.
+- `data/processed/skill_map/clusters_<date>.md` is the readable cluster dump. It holds the
+  sensitivity table, every vocabulary skill with its observed spellings, alias proposals, new
+  groups with per-member similarity and lexical support, and the near misses the threshold
+  deliberately did not merge. A `.json` twin sits next to it.
+
+**What the 2026-10-01 run found:**
+
+- The seed vocabulary plus aliases already caught almost every spelling variant of its 35 skills.
+  M3 added two accepted aliases: "Data bricks" → databricks, and "GO" → go. "GO" has 2 real
+  uses, both the language, and it stays under the Go context rules. Coverage did not change.
+- There were 0 conflicts at any eps in the sweep.
+- 178 new groups were proposed. My review classified 61 as `skill`, for example PostgreSQL+Postgres,
+  Excel+MS Excel+Microsoft Excel, React+React.js, OAuth+OAuth2+OAuth 2.0, Node.js, Next.js, Git,
+  GitHub Actions, Spring Boot, Elasticsearch and Claude Code. The other 117 are `not_a_skill`:
+  degrees, job titles, business acronyms, soft-skill phrases, generic or ambiguous terms. Each
+  carries a note.
+- **None of the 61 is counted yet.** Adding skills to the vocabulary is a deliberate edit to
+  `skills.yaml`, so coverage is never inflated silently.
+
 ## Storage
 
 ```
@@ -120,6 +175,8 @@ data/processed/entity_mentions/<date>.parquet   NER entities that are not vocab 
 data/processed/extraction_meta/<date>.parquet   per posting: recognized section headings
 data/processed/skill_mentions/_manifest.json    extractor id (version, vocab sha256, spaCy/model)
 data/processed/skill_reports/<date>.json        skill coverage report for that snapshot
+data/processed/skill_map/clusters_<date>.md      M3 readable cluster dump (+ .json)
+config/skill_map.yaml                            M3 reviewed canonical map (accepted aliases apply)
 ```
 
 Derived skill tables are partitioned like `postings` and re-extracted automatically when the postings
@@ -154,6 +211,7 @@ python -m xray coverage                               # coverage / gaps report (
 python -m xray extract                                # skill extraction (incremental) + skill report
 python -m xray skills --role "data scientist"         # top skills in a snapshot (--scope role|requirements|anywhere)
 python -m xray mentions --skill go --excluded         # audit: text around each (rejected) match
+python -m xray normalize                              # M3: embed + cluster terms -> skill_map.yaml + dump
 python scripts/discover_panel.py                      # re-scan candidate boards (writes evidence)
 python -m pytest && python -m ruff check .
 ```
@@ -166,7 +224,7 @@ listed in the coverage report.
 - [x] M0: scaffold, config + hard gates, structured logging, schemas, polite fetcher + raw cache
 - [x] M1: panel ingestion from public ATS APIs, provenance-stamped postings, coverage report
 - [x] M2: spaCy skill extraction, section tags, ambiguity rules, honest coverage report
-- [ ] M3: embedding-based skill normalization
+- [x] M3: embedding + DBSCAN normalization, measured threshold, reviewed canonical skill map
 - [ ] M4: trend engine
 - [ ] M5: seniority classifier on rule-derived labels
 - [ ] M6: Render deployment + scheduled ingestion

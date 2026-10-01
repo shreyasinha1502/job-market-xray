@@ -190,6 +190,32 @@ def cmd_mentions(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_normalize(args: argparse.Namespace) -> int:
+    from xray.skills.normalize_run import run_normalize
+
+    store = Store()
+    res = run_normalize(store, _resolve_day(store, args.date))
+    meta, doc = res["meta"], res["doc"]
+    print(
+        f"snapshot {meta['snapshot']}: {meta['candidate_terms']} candidate terms, {meta['model']}"
+    )
+    cols = ("eps", "sim>=", "clusters", "terms", "conflicts", "no-lexical")
+    print("\n" + " ".join(f"{c:>10}" for c in cols))
+    for r in res["sensitivity"]:
+        mark = "  <- chosen" if r["eps"] == meta["eps"] else ""
+        vals = (
+            r["eps"], r["min_similarity"], r["clusters"], r["terms_in_clusters"],
+            r["multi_skill_conflicts"], r["merges_without_lexical_support"],
+        )  # fmt: skip
+        print(" ".join(f"{v:>10}" for v in vals) + mark)
+    status = Counter(a["status"] for a in doc["aliases"])
+    print(f"\nalias proposals: {dict(status)}  conflicts: {len(doc['conflicts'])}  "
+          f"new skill groups proposed: {len(doc['new_skill_groups'])}")  # fmt: skip
+    for f in res["files"]:
+        print(f"wrote {f}")
+    return 0
+
+
 def cmd_probe(args: argparse.Namespace) -> int:
     """Adzuna (dormant): one live call. Needs ADZUNA_APP_ID / ADZUNA_APP_KEY in .env."""
     app_id, app_key = adzuna_credentials()
@@ -255,6 +281,10 @@ def build_parser() -> argparse.ArgumentParser:
     mn.add_argument("--date", type=date.fromisoformat, default=None)
     mn.add_argument("--limit", type=int, default=15)
     mn.set_defaults(func=cmd_mentions)
+
+    nm = sub.add_parser("normalize", help="M3: embed + cluster skill terms -> skill_map.yaml")
+    nm.add_argument("--date", type=date.fromisoformat, default=None)
+    nm.set_defaults(func=cmd_normalize)
 
     probe = sub.add_parser("probe", help="Adzuna (dormant, needs keys): one live call")
     probe.add_argument("--role", default="data scientist")

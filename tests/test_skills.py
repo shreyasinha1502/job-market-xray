@@ -55,7 +55,7 @@ def test_vocab_aliases_and_case_rules():
     v = load_vocab()
     assert "k8s" in v.lower_forms["kubernetes"]
     assert "spark" not in v.lower_forms["spark"] and "Spark" in v.cased_forms["spark"]
-    assert set(v.needs_context.forms) == {"Go", "R"}
+    assert set(v.needs_context.forms) == {"Go", "GO", "R"}
 
 
 def test_vocab_rejects_alias_for_unknown_skill(tmp_path):

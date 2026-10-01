@@ -3,9 +3,11 @@
 from __future__ import annotations
 
 import hashlib
+import json
 from dataclasses import dataclass
 from pathlib import Path
 
+import yaml
 from pydantic import BaseModel, ConfigDict, Field
 
 from xray.config import CONFIG_DIR, ConfigError, load_yaml
@@ -31,7 +33,7 @@ class SkillVocab:
     cased_forms: dict[str, list[str]]  # matched on exact spelling only
     needs_context: NeedsContext
     exclude_employer_self_mentions: bool
-    sha256: str  # of the skills.yaml bytes, to detect stale extractions
+    sha256: str  # of the effective matching rules, to detect stale extractions
 
     @property
     def skills(self) -> list[str]:
@@ -41,7 +43,20 @@ class SkillVocab:
         return sum(map(len, self.lower_forms.values())) + sum(map(len, self.cased_forms.values()))
 
 
-def load_vocab(config_dir: Path = CONFIG_DIR) -> SkillVocab:
+def accepted_aliases(config_dir: Path) -> dict[str, list[str]]:
+    """skill -> variants with status `accepted` in skill_map.yaml (M3 review output)."""
+    path = config_dir / "skill_map.yaml"
+    if not path.exists():
+        return {}
+    doc = yaml.safe_load(path.read_text("utf-8")) or {}
+    out: dict[str, list[str]] = {}
+    for a in doc.get("aliases") or []:
+        if a.get("status") == "accepted" and not a.get("stale"):
+            out.setdefault(str(a["skill"]).lower(), []).append(str(a["variant"]))
+    return out
+
+
+def load_vocab(config_dir: Path = CONFIG_DIR, *, apply_skill_map: bool = True) -> SkillVocab:
     raw = load_yaml("skills.yaml", config_dir)
     category: dict[str, str] = {}
     for cat, terms in raw.items():
@@ -62,13 +77,24 @@ def load_vocab(config_dir: Path = CONFIG_DIR) -> SkillVocab:
         if unknown:
             raise ConfigError(f"skills.yaml {section} refers to unknown skills: {unknown}")
 
+    mapped = accepted_aliases(config_dir) if apply_skill_map else {}
+    unknown = sorted(set(mapped) - set(category))
+    if unknown:
+        raise ConfigError(f"skill_map.yaml accepted aliases refer to unknown skills: {unknown}")
+
     lower_forms: dict[str, list[str]] = {}
     for skill in category:
         forms = [] if skill in cased else [skill]
         forms += [a.strip().lower() for a in aliases.get(skill, [])]
+        if skill not in cased:
+            forms += [v.strip().lower() for v in mapped.get(skill, [])]
         if forms:
             lower_forms[skill] = sorted(set(forms))
-    cased_forms = {s: sorted(set(f.strip() for f in forms)) for s, forms in cased.items()}
+    # variants of exact-spelling skills stay exact-spelling (e.g. "GoLang" stays cased)
+    cased_forms = {
+        s: sorted({f.strip() for f in forms} | {v.strip() for v in mapped.get(s, [])})
+        for s, forms in cased.items()
+    }
 
     owner: dict[str, str] = {}
     for skill, forms in [
@@ -83,11 +109,17 @@ def load_vocab(config_dir: Path = CONFIG_DIR) -> SkillVocab:
     all_cased = {f for fs in cased_forms.values() for f in fs}
     if not set(nc.forms) <= all_cased:
         raise ConfigError(f"needs_context forms must be case_sensitive forms: {nc.forms}")
+    self_mentions = bool(raw.get("exclude_employer_self_mentions", False))
+    # Hash what matching actually uses, so regenerated metadata never forces a re-extraction.
+    effective = {
+        "category": category, "lower": lower_forms, "cased": cased_forms,
+        "needs_context": nc.model_dump(), "self_mentions": self_mentions,
+    }  # fmt: skip
     return SkillVocab(
         category=category,
         lower_forms=lower_forms,
         cased_forms=cased_forms,
         needs_context=nc,
-        exclude_employer_self_mentions=bool(raw.get("exclude_employer_self_mentions", False)),
-        sha256=hashlib.sha256((config_dir / "skills.yaml").read_bytes()).hexdigest(),
+        exclude_employer_self_mentions=self_mentions,
+        sha256=hashlib.sha256(json.dumps(effective, sort_keys=True).encode()).hexdigest(),
     )

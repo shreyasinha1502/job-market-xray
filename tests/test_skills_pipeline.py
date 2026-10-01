@@ -7,6 +7,7 @@ from xray.config import ConfigError
 from xray.ingest import run_snapshot
 from xray.skills.pipeline import run_extraction
 from xray.skills.report import build_report, ner_candidates
+from xray.skills.vocab import load_vocab
 from xray.store import Store
 
 
@@ -34,11 +35,24 @@ def test_extraction_is_incremental_and_tracks_vocab_changes(snap):
     _, parts = run_extraction(store=store, config_dir=cfg)
     assert [p.status for p in parts] == ["up_to_date"]
 
+    # a comment changes no matching rule: nothing to redo
     skills = cfg / "skills.yaml"
     skills.write_text(skills.read_text("utf-8") + "\n# edited\n", encoding="utf-8")
+    _, parts = run_extraction(store=store, config_dir=cfg)
+    assert [p.status for p in parts] == ["up_to_date"]
+
+    # an accepted alias in the reviewed skill map does change matching
+    (cfg / "skill_map.yaml").write_text(
+        "aliases:\n  - {variant: Py Torch, skill: pytorch, status: accepted}\n"
+        "  - {variant: Tensor Flow, skill: tensorflow, status: needs_review}\n",
+        encoding="utf-8",
+    )
     second, parts = run_extraction(store=store, config_dir=cfg)
     assert [p.status for p in parts] == ["extracted"]
     assert second["extractor"]["vocab_sha256"] != first["extractor"]["vocab_sha256"]
+    vocab = load_vocab(cfg)
+    assert "py torch" in vocab.lower_forms["pytorch"]
+    assert "tensor flow" not in vocab.lower_forms["tensorflow"]  # only `accepted` applies
 
 
 def test_report_refuses_to_run_before_extraction(snap):

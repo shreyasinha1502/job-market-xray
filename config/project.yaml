@@ -1,7 +1,13 @@
 embeddings_model: "sentence-transformers/all-MiniLM-L6-v2"   # small, fast, good enough
+embeddings_revision: "1110a243fdf4706b3f48f1d95db1a4f5529b4d41"  # pinned HF commit (M3)
 clustering:
   algorithm: "dbscan"       # or "kmeans"; dbscan handles variant-merging well
   min_cluster_size: 2
+  eps: 0.12                 # cosine distance (similarity >= 0.88). Chosen from the measured
+                            # sensitivity table in data/processed/skill_map/clusters_<date>.md
+normalization:              # M3 candidate terms must appear in >= this many postings and employers
+  min_postings: 3
+  min_boards: 3
 classifier:
   base_model: "distilbert-base-uncased"   # light enough for Colab free GPU
   baseline: "tfidf_logreg"                 # always compare fine-tuned vs this

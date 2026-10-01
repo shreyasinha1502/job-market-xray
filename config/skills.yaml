@@ -25,14 +25,14 @@ aliases:
 # match ONLY these exact spellings.
 case_sensitive:
   spark: ["Spark", "PySpark", "Pyspark", "pyspark"]
-  go:    ["Go", "Golang", "golang", "GoLang"]
+  go:    ["Go", "GO", "Golang", "golang", "GoLang"]   # "GO" added at M3 review (2 real uses, both the language)
   r:     ["R", "RStudio"]
 # Still ambiguous after casing. Checked against every real "Go"/"R" match on 2026-10-01: rejected if a
 # symbol or a known non-language word follows ("Go-live", "Go To Market", "Go beyond"); otherwise
 # counted if a cue word sits right before/after it, or another language/tool is within `window`
 # tokens. Rejections are kept, flagged.
 needs_context:
-  forms: ["Go", "R"]
+  forms: ["Go", "GO", "R"]
   window: 6
   reject_if_next: ["to", "beyond", "above", "far", "live", "ahead"]
   cue_words_before: ["in", "with", "using", "strong", "production", "fluency", "proficiency"]
