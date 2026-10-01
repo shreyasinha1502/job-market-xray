@@ -139,6 +139,34 @@ def _sql_str(path: Path) -> str:
     return "'" + path.as_posix().replace("'", "''") + "'"
 
 
+def write_parquet(path: Path, cols: list[tuple[str, str]], rows: list[dict[str, Any]]) -> Path:
+    """Typed parquet via DuckDB, written atomically."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_name(path.name + ".tmp")
+    # Stage as NDJSON and bulk-load: DuckDB's executemany inserts row by row and is far too
+    # slow for tens of thousands of rows.
+    staging = path.with_name(path.name + ".ndjson")
+    with staging.open("w", encoding="utf-8") as f:
+        for r in rows:
+            f.write(json.dumps({c: r[c] for c, _ in cols}, default=str, ensure_ascii=False))
+            f.write("\n")
+    con = duckdb.connect()
+    try:
+        con.execute(f"CREATE TABLE t ({', '.join(f'{c} {t}' for c, t in cols)})")
+        if rows:
+            spec = "{" + ", ".join(f"'{c}': '{t}'" for c, t in cols) + "}"
+            con.execute(
+                f"INSERT INTO t SELECT {', '.join(c for c, _ in cols)} FROM read_json("
+                f"{_sql_str(staging)}, format = 'newline_delimited', columns = {spec})"
+            )
+        con.execute(f"COPY t TO {_sql_str(tmp)} (FORMAT parquet, COMPRESSION zstd)")
+    finally:
+        con.close()
+        staging.unlink(missing_ok=True)
+    os.replace(tmp, path)
+    return path
+
+
 class Store:
     def __init__(self, root: Path = PROCESSED_DIR) -> None:
         self.root = root
@@ -154,32 +182,7 @@ class Store:
         return [date.fromisoformat(p.stem) for p in self.files(table)]
 
     def write_day(self, table: str, day: date, rows: list[dict[str, Any]]) -> Path:
-        cols = SCHEMAS[table]
-        path = self.path(table, day)
-        path.parent.mkdir(parents=True, exist_ok=True)
-        tmp = path.with_name(path.name + ".tmp")
-        # Stage as NDJSON and bulk-load: DuckDB's executemany inserts row by row and is far too
-        # slow for tens of thousands of rows.
-        staging = path.with_name(path.name + ".ndjson")
-        with staging.open("w", encoding="utf-8") as f:
-            for r in rows:
-                f.write(json.dumps({c: r[c] for c, _ in cols}, default=str, ensure_ascii=False))
-                f.write("\n")
-        con = duckdb.connect()
-        try:
-            con.execute(f"CREATE TABLE t ({', '.join(f'{c} {t}' for c, t in cols)})")
-            if rows:
-                spec = "{" + ", ".join(f"'{c}': '{t}'" for c, t in cols) + "}"
-                con.execute(
-                    f"INSERT INTO t SELECT {', '.join(c for c, _ in cols)} FROM read_json("
-                    f"{_sql_str(staging)}, format = 'newline_delimited', columns = {spec})"
-                )
-            con.execute(f"COPY t TO {_sql_str(tmp)} (FORMAT parquet, COMPRESSION zstd)")
-        finally:
-            con.close()
-            staging.unlink(missing_ok=True)
-        os.replace(tmp, path)
-        return path
+        return write_parquet(self.path(table, day), SCHEMAS[table], rows)
 
     def connect(self) -> duckdb.DuckDBPyConnection:
         """In-memory connection with one view per table over all its day files."""

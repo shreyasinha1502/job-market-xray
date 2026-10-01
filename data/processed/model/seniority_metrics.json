@@ -1,0 +1,351 @@
+{
+ "generated_at": "2026-10-01T17:22:01+00:00",
+ "task": "seniority: below_senior vs senior",
+ "config": {
+  "base_model": "distilbert-base-uncased",
+  "base_model_revision": "12040accade4e8a0f71eabdb258fecc2e7e948be",
+  "test_size": 0.2,
+  "val_size": 0.1,
+  "max_length": 256,
+  "epochs": 4,
+  "learning_rate": 5e-05,
+  "batch_size": 8,
+  "patience": 1,
+  "seed": 42
+ },
+ "labels": {
+  "postings_considered": 1315,
+  "fine_class_counts": {
+   "mid": 112,
+   "senior": 604,
+   "intern": 18
+  },
+  "target_counts": {
+   "below_senior": 130,
+   "senior": 601
+  },
+  "by_reason": {
+   "labeled_from_description_years": 119,
+   "labeled_from_title": 612,
+   "excluded:no_signal": 509,
+   "excluded:management_title": 58,
+   "excluded:ambiguous_title": 10,
+   "excluded:ambiguous_description": 4,
+   "excluded:empty_model_input": 3
+  },
+  "min_confident_examples_per_class": 100,
+  "class_groups": {
+   "senior": [
+    "senior"
+   ],
+   "below_senior": [
+    "mid",
+    "junior",
+    "intern"
+   ]
+  },
+  "viable": {
+   "senior": true,
+   "below_senior": true
+  },
+  "trainable": true,
+  "duplicate_groups": 709,
+  "split_counts": {
+   "train": {
+    "senior": 421,
+    "below_senior": 91
+   },
+   "val": {
+    "senior": 60,
+    "below_senior": 13
+   },
+   "test": {
+    "below_senior": 26,
+    "senior": 120
+   }
+  }
+ },
+ "majority_class_reference": {
+  "predicts": "senior",
+  "test": {
+   "n": 146,
+   "accuracy": 0.8219,
+   "macro_f1": 0.4511,
+   "macro_f1_ci95_bootstrap": [
+    0.4319,
+    0.4672
+   ],
+   "weighted_f1": 0.7416,
+   "per_class": {
+    "below_senior": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1-score": 0.0,
+     "support": 26
+    },
+    "senior": {
+     "precision": 0.8219,
+     "recall": 1.0,
+     "f1-score": 0.9023,
+     "support": 120
+    }
+   },
+   "confusion_matrix": {
+    "labels": [
+     "below_senior",
+     "senior"
+    ],
+    "rows_true_cols_pred": [
+     [
+      0,
+      26
+     ],
+     [
+      0,
+      120
+     ]
+    ]
+   }
+  }
+ },
+ "baseline": {
+  "model": "tfidf(1-2gram, min_df=2, sublinear) + logreg(class_weight=balanced)",
+  "selection": {
+   "grid": [
+    {
+     "C": 0.1,
+     "val_macro_f1": 0.7501
+    },
+    {
+     "C": 0.3,
+     "val_macro_f1": 0.766
+    },
+    {
+     "C": 1.0,
+     "val_macro_f1": 0.7955
+    },
+    {
+     "C": 3.0,
+     "val_macro_f1": 0.7103
+    },
+    {
+     "C": 10.0,
+     "val_macro_f1": 0.6524
+    }
+   ],
+   "chosen_C": 1.0,
+   "criterion": "val macro-F1"
+  },
+  "val": {
+   "n": 73,
+   "accuracy": 0.8767,
+   "macro_f1": 0.7955,
+   "macro_f1_ci95_bootstrap": [
+    0.6519,
+    0.9003
+   ],
+   "weighted_f1": 0.8785,
+   "per_class": {
+    "below_senior": {
+     "precision": 0.6429,
+     "recall": 0.6923,
+     "f1-score": 0.6667,
+     "support": 13
+    },
+    "senior": {
+     "precision": 0.9322,
+     "recall": 0.9167,
+     "f1-score": 0.9244,
+     "support": 60
+    }
+   },
+   "confusion_matrix": {
+    "labels": [
+     "below_senior",
+     "senior"
+    ],
+    "rows_true_cols_pred": [
+     [
+      9,
+      4
+     ],
+     [
+      5,
+      55
+     ]
+    ]
+   }
+  },
+  "test": {
+   "n": 146,
+   "accuracy": 0.8425,
+   "macro_f1": 0.6864,
+   "macro_f1_ci95_bootstrap": [
+    0.5821,
+    0.7936
+   ],
+   "weighted_f1": 0.8288,
+   "per_class": {
+    "below_senior": {
+     "precision": 0.5882,
+     "recall": 0.3846,
+     "f1-score": 0.4651,
+     "support": 26
+    },
+    "senior": {
+     "precision": 0.876,
+     "recall": 0.9417,
+     "f1-score": 0.9076,
+     "support": 120
+    }
+   },
+   "confusion_matrix": {
+    "labels": [
+     "below_senior",
+     "senior"
+    ],
+    "rows_true_cols_pred": [
+     [
+      10,
+      16
+     ],
+     [
+      7,
+      113
+     ]
+    ]
+   }
+  }
+ },
+ "transformer": {
+  "model": "distilbert-base-uncased@12040accade4e8a0f71eabdb258fecc2e7e948be fine-tuned",
+  "training": {
+   "max_length": 256,
+   "batch_size": 8,
+   "lr": 5e-05,
+   "epochs_max": 4,
+   "patience": 1,
+   "class_weights": {
+    "below_senior": 2.8132,
+    "senior": 0.6081
+   },
+   "history": [
+    {
+     "epoch": 1,
+     "train_loss": 0.6754,
+     "val_macro_f1": 0.6191,
+     "seconds": 527
+    },
+    {
+     "epoch": 2,
+     "train_loss": 0.6354,
+     "val_macro_f1": 0.6789,
+     "seconds": 515
+    },
+    {
+     "epoch": 3,
+     "train_loss": 0.4685,
+     "val_macro_f1": 0.8053,
+     "seconds": 463
+    },
+    {
+     "epoch": 4,
+     "train_loss": 0.3107,
+     "val_macro_f1": 0.7678,
+     "seconds": 466
+    }
+   ],
+   "best_val_macro_f1": 0.8053,
+   "device": "cpu"
+  },
+  "val": {
+   "n": 73,
+   "accuracy": 0.9041,
+   "macro_f1": 0.8053,
+   "macro_f1_ci95_bootstrap": [
+    0.6488,
+    0.9226
+   ],
+   "weighted_f1": 0.8946,
+   "per_class": {
+    "below_senior": {
+     "precision": 0.875,
+     "recall": 0.5385,
+     "f1-score": 0.6667,
+     "support": 13
+    },
+    "senior": {
+     "precision": 0.9077,
+     "recall": 0.9833,
+     "f1-score": 0.944,
+     "support": 60
+    }
+   },
+   "confusion_matrix": {
+    "labels": [
+     "below_senior",
+     "senior"
+    ],
+    "rows_true_cols_pred": [
+     [
+      7,
+      6
+     ],
+     [
+      1,
+      59
+     ]
+    ]
+   }
+  },
+  "test": {
+   "n": 146,
+   "accuracy": 0.8493,
+   "macro_f1": 0.6941,
+   "macro_f1_ci95_bootstrap": [
+    0.5765,
+    0.7955
+   ],
+   "weighted_f1": 0.8344,
+   "per_class": {
+    "below_senior": {
+     "precision": 0.625,
+     "recall": 0.3846,
+     "f1-score": 0.4762,
+     "support": 26
+    },
+    "senior": {
+     "precision": 0.8769,
+     "recall": 0.95,
+     "f1-score": 0.912,
+     "support": 120
+    }
+   },
+   "confusion_matrix": {
+    "labels": [
+     "below_senior",
+     "senior"
+    ],
+    "rows_true_cols_pred": [
+     [
+      10,
+      16
+     ],
+     [
+      6,
+      114
+     ]
+    ]
+   }
+  }
+ },
+ "comparison": {
+  "test_postings": 146,
+  "both_correct": 116,
+  "only_baseline_correct": 7,
+  "only_transformer_correct": 8,
+  "both_wrong": 15,
+  "mcnemar_exact_p": 1.0,
+  "reading": "no significant difference at 0.05"
+ }
+}

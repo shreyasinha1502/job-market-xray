@@ -193,6 +193,52 @@ test is the demand signal to trust once history accumulates.
 **Current state:** 1 snapshot day (2026-10-01), so every scope reports
 `trend: insufficient_history`. That is the correct output for one day.
 
+## Seniority classifier (M5)
+
+Labels are **derived by rule from each posting's own fields** (`config/labeling.yaml`), never
+invented. Word cues count in the title only; experience ranges ("3+ years") count anywhere. The
+title decides, two or more classes means excluded, and management titles are excluded.
+
+**The data forced a scope-down.** On 2026-10-01 the rules found senior 604, mid 112, intern 18
+and junior 0, against a minimum of 100 per class. A 4-class model was not possible, so the target
+is **senior vs below_senior**, where below_senior = mid + junior + intern. This is configured in
+`labeling.yaml: class_groups`. Training refuses to run if any class drops below the minimum.
+
+**Leakage controls:**
+
+- The title is not in the input.
+- Every labeling-rule pattern is deleted from the text.
+- Only role sections are used, requirements first; company boilerplate is dropped.
+- Splits are stratified and grouped by identical text, so a job posted for several cities never
+  straddles train and test.
+- Imbalance is handled with class weights. There is no oversampling and no generated text.
+
+**Results** on the held-out test set (146 postings, 26 of them below_senior):
+
+| model | accuracy | macro-F1 (bootstrap 95% CI) |
+|---|---|---|
+| always "senior" | 0.822 | 0.451 |
+| TF-IDF + logistic regression | 0.843 | 0.686 (0.58–0.79) |
+| DistilBERT fine-tuned (CPU, 3 of 4 epochs kept) | 0.849 | 0.694 (0.58–0.80) |
+
+Paired exact McNemar on the same test postings gives p = 1.0: 7 postings only the baseline got
+right, 8 only DistilBERT got right. **The fine-tuned transformer does not beat the linear
+baseline on this data.** Both catch only 10 of 26 below_senior postings. More real labelled
+postings, which accumulate daily, are the lever, not a bigger model.
+
+Full model card: [`data/processed/model/MODEL_CARD.md`](data/processed/model/MODEL_CARD.md).
+Labels with provenance and split are in `data/processed/model/seniority_labels.parquet`. Weights
+(257 MB) live in `models/` and are not in git; see M6 for distribution.
+
+Training runs on CPU here: 4 epochs took ~34 minutes on 4 threads. The same command runs
+unchanged on a Colab GPU:
+
+```bash
+python -m xray labels                         # derive labels, check the per-class gate
+python -m xray train                          # baseline + DistilBERT + comparison + model card
+python -m xray predict --file jd.txt          # classify a pasted job description
+```
+
 ## Storage
 
 ```
@@ -210,6 +256,8 @@ data/processed/skill_map/clusters_<date>.md      M3 readable cluster dump (+ .js
 config/skill_map.yaml                            M3 reviewed canonical map (accepted aliases apply)
 data/processed/trends/<date>.json               M4 snapshot + trend per scope (dashboard input)
 data/processed/quality/<date>.json              M4 data-quality panel (dashboard input)
+data/processed/model/                           M5 labels, metrics, test predictions, MODEL_CARD.md
+models/                                         M5 weights (gitignored)
 ```
 
 Derived skill tables are partitioned like `postings` and re-extracted automatically when the postings
@@ -261,5 +309,5 @@ listed in the coverage report.
 - [x] M2: spaCy skill extraction, section tags, ambiguity rules, honest coverage report
 - [x] M3: embedding + DBSCAN normalization, measured threshold, reviewed canonical skill map
 - [x] M4: trend engine (balanced-panel stock change, FDR-controlled flow test, history windows) + data-quality panel
-- [ ] M5: seniority classifier on rule-derived labels
+- [x] M5: seniority classifier on rule-derived labels (scoped down to senior vs below_senior; DistilBERT ≈ TF-IDF baseline, McNemar p = 1.0)
 - [ ] M6: Render deployment + scheduled ingestion

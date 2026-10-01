@@ -10,9 +10,16 @@ normalization:              # M3 candidate terms must appear in >= this many pos
   min_boards: 3
 classifier:
   base_model: "distilbert-base-uncased"   # light enough for Colab free GPU
+  base_model_revision: "12040accade4e8a0f71eabdb258fecc2e7e948be"  # pinned HF commit (M5)
   baseline: "tfidf_logreg"                 # always compare fine-tuned vs this
   test_size: 0.2
   val_size: 0.1
+  max_length: 256           # tokens; 512 costs ~8x per step on this CPU (measured 82 s vs 10 s)
+  epochs: 4                 # max; early stopping on validation macro-F1
+  patience: 1
+  learning_rate: 5.0e-5
+  batch_size: 8
+  seed: 42
 allow_synthetic: false      # hard gate. must stay false.
 trends:                     # M4. A trend needs real accumulated snapshots; nothing is backfilled.
   min_snapshots: 2          # fewer real snapshot days -> "insufficient_history"

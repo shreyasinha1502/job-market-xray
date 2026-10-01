@@ -9,3 +9,21 @@ rules:
 exclude_if_ambiguous: true  # no confident signal -> EXCLUDE the posting, do NOT guess
 allow_synthetic_labels: false   # hard gate. must stay false.
 min_confident_examples_per_class: 100   # below this, scope down — never fabricate to fill
+
+# ---- How the rules are applied (added at M5; interpretation of the rules above, not new labels) --
+# Word cues ("senior", "lead", "associate", "intern"...) are matched in the TITLE only: in a
+# description "work with senior leaders" or "lead the design" says nothing about the role's level.
+# Experience ranges (patterns containing "year") are matched in title and description.
+# The title decides when it gives exactly one class; description ranges are used only when the
+# title gives none. Two or more classes from the deciding field -> ambiguous -> EXCLUDED.
+# Management/executive titles sit outside these four bands -> EXCLUDED, never forced into one.
+exclude_titles_with: ["director", "vice president", "vp", "head", "chief", "president", "officer"]
+
+# Scope-down (M5, counts on the 2026-10-01 snapshot): senior 604, mid 112, intern 18, junior 0.
+# intern and junior are below min_confident_examples_per_class, so the model is trained on
+# senior vs below_senior (= mid + junior + intern). Every label is still rule-derived from real
+# fields; groups only coarsen the target. Training refuses to run if any group falls below the
+# minimum. Remove class_groups once all four classes clear it.
+class_groups:
+  senior: [senior]
+  below_senior: [mid, junior, intern]

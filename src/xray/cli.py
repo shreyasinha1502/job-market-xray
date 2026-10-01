@@ -9,6 +9,7 @@ import statistics
 import sys
 from collections import Counter
 from datetime import date
+from pathlib import Path
 
 from xray.config import (
     LOG_DIR,
@@ -269,6 +270,39 @@ def cmd_report(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_labels(args: argparse.Namespace) -> int:
+    from xray.classify.train import build_dataset
+
+    _, report = build_dataset(Store())
+    print(json.dumps(report, indent=2))
+    return 0 if report["trainable"] else 1
+
+
+def cmd_train(args: argparse.Namespace) -> int:
+    from xray.classify.train import run_training
+
+    res = run_training(skip_transformer=args.skip_transformer)
+    print(f"task: {res['task']}  labels: {res['labels']['target_counts']}")
+    print(f"splits: {res['labels']['split_counts']}")
+    for name in ("majority_class_reference", "baseline", "transformer"):
+        if name in res:
+            m = res[name]["test"]
+            print(f"{name:<26} test macro-F1 {m['macro_f1']:.3f} "
+                  f"(95% CI {m['macro_f1_ci95_bootstrap'][0]:.3f}-"
+                  f"{m['macro_f1_ci95_bootstrap'][1]:.3f})  acc {m['accuracy']:.3f}")  # fmt: skip
+    return 0
+
+
+def cmd_predict(args: argparse.Namespace) -> int:
+    from xray.classify.predict import SeniorityPredictor
+
+    text = Path(args.file).read_text(encoding="utf-8") if args.file else args.text
+    if not text:
+        raise ConfigError("give --text or --file")
+    print(json.dumps(SeniorityPredictor.load(prefer=args.model).predict(text), indent=2))
+    return 0
+
+
 def cmd_probe(args: argparse.Namespace) -> int:
     """Adzuna (dormant): one live call. Needs ADZUNA_APP_ID / ADZUNA_APP_KEY in .env."""
     app_id, app_key = adzuna_credentials()
@@ -349,6 +383,19 @@ def build_parser() -> argparse.ArgumentParser:
     rp = sub.add_parser("report", help="write trends + data-quality JSON for all scopes")
     rp.add_argument("--window-days", type=int, default=None)
     rp.set_defaults(func=cmd_report)
+
+    lb = sub.add_parser("labels", help="M5: derive seniority labels; report counts + gate")
+    lb.set_defaults(func=cmd_labels)
+
+    trn = sub.add_parser("train", help="M5: baseline + DistilBERT on rule-derived labels")
+    trn.add_argument("--skip-transformer", action="store_true")
+    trn.set_defaults(func=cmd_train)
+
+    pr = sub.add_parser("predict", help="M5: classify a job description")
+    pr.add_argument("--text", default=None)
+    pr.add_argument("--file", default=None)
+    pr.add_argument("--model", choices=("distilbert", "tfidf_logreg"), default="distilbert")
+    pr.set_defaults(func=cmd_predict)
 
     probe = sub.add_parser("probe", help="Adzuna (dormant, needs keys): one live call")
     probe.add_argument("--role", default="data scientist")
