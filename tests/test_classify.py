@@ -77,6 +77,7 @@ def test_model_input_puts_requirements_first():
 
 
 def test_training_refuses_below_minimum_examples(tmp_path, fixtures_dir):
+    pytest.importorskip("sklearn")
     store = Store(tmp_path / "processed")
     run_snapshot(
         snapshot_date=CAPTURED,
@@ -100,6 +101,7 @@ def real_store(tmp_path_factory):
 
 
 def test_splits_never_share_a_duplicate_group(real_store):
+    pytest.importorskip("sklearn")
     rows, report = build_dataset(real_store)
     assert report["trainable"]
     assign_splits(rows, load_train_config())
@@ -113,6 +115,7 @@ def test_splits_never_share_a_duplicate_group(real_store):
 
 
 def test_baseline_trains_and_predictor_loads(real_store, tmp_path):
+    pytest.importorskip("sklearn")
     res = run_training(store=real_store, model_dir=tmp_path, skip_transformer=True)
     assert res["baseline"]["test"]["n"] > 0
     assert res["majority_class_reference"]["predicts"] == "senior"
@@ -123,6 +126,7 @@ def test_baseline_trains_and_predictor_loads(real_store, tmp_path):
 
 
 def test_evaluate_matches_hand_computed_macro_f1():
+    pytest.importorskip("sklearn")
     m = evaluate(["a", "a", "b"], ["a", "b", "b"], ["a", "b"], seed=0)
     assert m["macro_f1"] == pytest.approx(2 / 3, abs=1e-4)
     assert m["confusion_matrix"]["rows_true_cols_pred"] == [[1, 1], [0, 1]]

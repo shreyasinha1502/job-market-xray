@@ -30,13 +30,12 @@ from xray.classify.labels import (
     load_label_rules,
     model_input,
 )
-from xray.config import CONFIG_DIR, ROOT, ConfigError, load_yaml
+from xray.config import CONFIG_DIR, MODEL_DIR, ConfigError, load_yaml
 from xray.log import kv
 from xray.store import Store, write_parquet
 
 log = logging.getLogger(__name__)
 
-MODEL_DIR = ROOT / "models"
 REPORT_DIR_NAME = "model"
 LABEL_COLS = [
     ("posting_key", "VARCHAR"),

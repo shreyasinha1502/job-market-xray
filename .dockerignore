@@ -1,0 +1,16 @@
+.git
+.venv
+.claude
+.github
+**/__pycache__
+.pytest_cache
+.ruff_cache
+data/raw
+models
+logs
+tests
+scripts
+*.zip
+.env
+.env.*
+.sim

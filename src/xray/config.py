@@ -17,6 +17,7 @@ DATA_DIR = ROOT / "data"
 RAW_DIR = DATA_DIR / "raw"
 PROCESSED_DIR = DATA_DIR / "processed"
 LOG_DIR = ROOT / "logs"
+MODEL_DIR = Path(os.environ.get("XRAY_MODEL_DIR", ROOT / "models"))
 
 
 class ConfigError(RuntimeError):

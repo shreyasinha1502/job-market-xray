@@ -1,0 +1,16 @@
+# Render Blueprint: one free Docker web service, redeployed on every push to main (including
+# the daily data commit), so the dashboard always shows the latest committed snapshot.
+services:
+  - type: web
+    name: job-market-xray
+    runtime: docker
+    plan: free
+    region: singapore
+    branch: main
+    autoDeploy: true
+    healthCheckPath: /
+    envVars:
+      - key: MODEL_URL          # release asset URL of models/seniority-onnx.zip
+        sync: false
+      - key: MODEL_SHA256       # sha256 of that zip; the app refuses a mismatching download
+        sync: false

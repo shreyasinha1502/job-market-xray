@@ -237,7 +237,70 @@ unchanged on a Colab GPU:
 python -m xray labels                         # derive labels, check the per-class gate
 python -m xray train                          # baseline + DistilBERT + comparison + model card
 python -m xray predict --file jd.txt          # classify a pasted job description
+python -m xray.app                            # run the dashboard locally (http://localhost:7860)
 ```
+
+## Dashboard + deployment (M6)
+
+**App** (`python -m xray.app`, Gradio) has five tabs:
+
+- **Skills now**: per-scope shares with 95% intervals, plus a table view.
+- **Trends**: risers and fallers once at least 2 real days exist, always with the history window.
+- **Classify a job description**: the seniority model on pasted text.
+- **Coverage & gaps**: the data-quality panel.
+- **About**: method notes and the model card.
+
+The app only reads committed files (`data/processed/{trends,quality,skill_reports,model}`). It
+never writes data.
+
+**Serving the model inside Render's free 512 MB.** Measured locally: `import torch` alone is
+~200 MB RSS and fp32 DistilBERT ~660 MB, which does not fit. The fine-tuned model is exported to
+ONNX and int8-quantized: 67 MB on disk, a 42 MB release zip, and ~270 MB RSS for the whole app
+including Gradio. On the real test split the int8 model agrees with fp32 on 143/146 postings
+(macro-F1 0.689 vs 0.694). The runtime image installs only `requirements-app.txt`, with no
+torch, spaCy or duckdb, and loads the model **once** at startup.
+
+**Persistence.** Render's filesystem is ephemeral and the free instance sleeps, so nothing is
+written at runtime. Instead:
+
+1. `.github/workflows/daily.yml` runs at 03:30 UTC (09:00 IST). It ingests the panel, extracts
+   skills, rebuilds trends and quality, and **commits the new day into `data/processed`**. Raw
+   API responses are kept as a 90-day workflow artifact for provenance. If any board fails, the
+   job exits non-zero *after* committing the other boards' data.
+2. Render redeploys on every push to `main`, including that daily commit, and the image bakes
+   in the committed data.
+
+Committing to the repo was chosen over a managed database: it is free, versioned, diffable and
+auditable (every day is a commit), and the daily data is small (about 100 KB per day after day 1).
+
+**Model weights** are not in git. They live as a GitHub Release asset (`seniority-onnx.zip`).
+The app downloads the asset from `MODEL_URL`, verifies it against `MODEL_SHA256` (and refuses a
+mismatch), unzips it and caches it for the life of the instance.
+
+**Secrets.** None are needed: the job boards are public, and `GITHUB_TOKEN` (built in) lets the
+workflow push. If the dormant Adzuna source is ever enabled, `ADZUNA_APP_ID` / `ADZUNA_APP_KEY`
+go into GitHub Actions secrets and Render environment variables, never into git. `.env` stays
+gitignored.
+
+### Deploy on Render
+
+1. Sign in at render.com with GitHub. Choose **New → Blueprint** and pick this repo. Render reads
+   `render.yaml` (one free Docker web service).
+2. Set the two environment variables from the model release: `MODEL_URL` (the
+   `seniority-onnx.zip` asset URL) and `MODEL_SHA256` (in the release notes). Apply.
+3. The first build takes a few minutes. After that, every push to `main` redeploys.
+
+**Cold starts.** The free instance sleeps after ~15 minutes without traffic. The first request
+afterwards takes up to a minute while it wakes and re-downloads the 42 MB model. That delay is
+the free tier, not a bug.
+
+### Requirements files
+
+| file | used by |
+|---|---|
+| `requirements-pipeline.txt` | daily GitHub Actions run and CI (ingest, extract, report) |
+| `requirements-app.txt` | Render image (dashboard + ONNX inference) |
+| `requirements.txt` | local development, M3 normalization and M5 training (adds torch stack) |
 
 ## Storage
 
@@ -310,4 +373,4 @@ listed in the coverage report.
 - [x] M3: embedding + DBSCAN normalization, measured threshold, reviewed canonical skill map
 - [x] M4: trend engine (balanced-panel stock change, FDR-controlled flow test, history windows) + data-quality panel
 - [x] M5: seniority classifier on rule-derived labels (scoped down to senior vs below_senior; DistilBERT ≈ TF-IDF baseline, McNemar p = 1.0)
-- [ ] M6: Render deployment + scheduled ingestion
+- [x] M6: Gradio dashboard, int8 ONNX serving, Dockerfile + render.yaml, daily GitHub Actions snapshot commit

@@ -1,0 +1,25 @@
+# Lint + tests on every push / PR. Tests that need the heavy M3/M5 stack (torch,
+# sentence-transformers, scikit-learn, onnxruntime) skip themselves here; run them locally.
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request: {}
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-pipeline.txt
+      - run: |
+          pip install -r requirements-pipeline.txt pytest==9.1.1 ruff==0.16.9
+          pip install --no-deps -e .
+      - run: ruff check . && ruff format --check .
+      - run: pytest

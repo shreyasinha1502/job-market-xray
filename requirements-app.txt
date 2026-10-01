@@ -1,0 +1,9 @@
+# Render web service: dashboard + int8 ONNX classifier. No torch / spaCy / duckdb at runtime
+# (measured: torch + fp32 DistilBERT ~660 MB RSS; this stack ~270 MB, inside the 512 MB tier).
+gradio==6.29.0       # M6: dashboard UI
+onnxruntime==1.30.0  # M6: CPU inference of the int8 model
+tokenizers==0.23.2   # M6: DistilBERT WordPiece tokenizer without transformers
+numpy==2.5.3
+httpx==0.28.1        # model bundle download
+pydantic==2.13.5
+PyYAML==6.0.3

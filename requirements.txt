@@ -1,12 +1,7 @@
-# Runtime deps, added per milestone. Pinned to versions tested here.
-httpx==0.28.1        # M1: API client (timeouts, transport injection for tests)
-pydantic==2.13.5     # M0: schemas for postings / provenance
-PyYAML==6.0.3        # M0: reads config/*.yaml
-duckdb==1.5.6        # M1: typed table + parquet writer/reader, no pyarrow needed
-spacy==3.8.16        # M2: tokenizer, PhraseMatcher, NER
-# M2: spaCy English pipeline, pinned to the exact release wheel (12.8 MB) for reproducible installs
-en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
-# M3: embeddings + clustering (offline step; pulls CPU torch). Model revision pinned in project.yaml
-sentence-transformers==6.1.0
-scikit-learn==1.9.1  # DBSCAN
-scipy==1.18.1        # M4: Fisher exact test, Benjamini-Hochberg (already a scikit-learn dependency)
+# Everything for local development, normalization (M3) and training (M5).
+-r requirements-pipeline.txt
+-r requirements-app.txt
+sentence-transformers==6.1.0  # M3: embeddings (pulls CPU torch). Revision pinned in project.yaml
+scikit-learn==1.9.1           # M3 DBSCAN, M5 TF-IDF + logistic regression, metrics
+transformers==5.18.0          # M5: DistilBERT fine-tuning
+onnx==1.23.1                  # M6: export of the fine-tuned model for serving

@@ -70,6 +70,8 @@ def test_list_items_keep_ab_and_split_languages():
 
 @pytest.fixture(scope="module")
 def embedder():
+    pytest.importorskip("sentence_transformers")
+    pytest.importorskip("sklearn")
     from xray.skills.candidates import Term
     from xray.skills.normalize import embed
 
@@ -96,6 +98,8 @@ def test_threshold_merges_variants_but_not_lookalike_acronyms(embedder):
 def test_reviewed_decisions_survive_regeneration_and_only_accepted_aliases_apply(
     tmp_path, fixtures_dir
 ):
+    pytest.importorskip("sentence_transformers")
+    pytest.importorskip("sklearn")
     store = Store(tmp_path / "processed")
     cfg = make_config(tmp_path, BOARDS)
     (cfg / "skill_map.yaml").unlink(missing_ok=True)

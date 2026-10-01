@@ -18,3 +18,7 @@ data/raw/*
 # runtime logs, model weights
 logs/
 models/
+
+# local tooling
+.claude/
+.sim/

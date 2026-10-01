@@ -1,0 +1,70 @@
+# Daily real snapshot: fetch the panel, extract skills, rebuild trends + quality, commit the new
+# day into data/processed so history survives (Render's filesystem is ephemeral). Nothing is
+# backfilled: a missed day stays missing and shows up in the quality panel.
+name: daily-snapshot
+
+on:
+  schedule:
+    - cron: "30 3 * * *"   # 03:30 UTC = 09:00 IST
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-snapshot
+  cancel-in-progress: false
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-pipeline.txt
+
+      - name: Install pipeline dependencies
+        run: |
+          pip install -r requirements-pipeline.txt
+          pip install --no-deps -e .
+
+      - name: Ingest today's snapshot
+        id: ingest
+        run: python -m xray --log-level WARNING ingest || echo "failed=1" >> "$GITHUB_OUTPUT"
+
+      - name: Extract skills (incremental)
+        run: python -m xray --log-level WARNING extract
+
+      - name: Rebuild trends + data-quality panel
+        run: python -m xray --log-level WARNING report
+
+      - name: Keep raw API responses (provenance; data/raw is not committed)
+        uses: actions/upload-artifact@v4
+        with:
+          name: raw-${{ github.run_id }}
+          path: data/raw/
+          retention-days: 90
+          if-no-files-found: warn
+
+      - name: Commit the new day
+        run: |
+          git config user.name "xray-daily-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/processed
+          if git diff --cached --quiet; then
+            echo "nothing new to commit"
+          else
+            git commit -m "data: daily snapshot $(date -u +%F)"
+            git push
+          fi
+
+      - name: Fail loudly if any board failed (data from the others is already committed)
+        if: steps.ingest.outputs.failed == '1'
+        run: |
+          echo "::error::one or more panel boards failed; see data/processed/coverage/$(date -u +%F).json"
+          exit 1

@@ -27,3 +27,4 @@ addopts = "-q"
 
 [tool.ruff.lint.per-file-ignores]
 "src/xray/classify/card.py" = ["E501"]  # Markdown template lines
+"src/xray/app/charts.py" = ["E501"]  # SVG/HTML template lines

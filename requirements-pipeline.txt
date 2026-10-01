@@ -1,0 +1,9 @@
+# Daily data pipeline (GitHub Actions): ingest -> extract -> report. No torch.
+httpx==0.28.1        # M1: API client
+pydantic==2.13.5     # M0: schemas
+PyYAML==6.0.3        # M0: config
+duckdb==1.5.6        # M1: parquet store
+spacy==3.8.16        # M2: PhraseMatcher + NER
+en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
+numpy==2.5.3         # M4: trend series
+scipy==1.18.1        # M4: Fisher exact, Benjamini-Hochberg
