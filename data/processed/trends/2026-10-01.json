@@ -1,6 +1,6 @@
 {
  "as_of": "2026-10-01",
- "generated_at": "2026-10-01T17:06:53+00:00",
+ "generated_at": "2026-10-01T21:16:46+00:00",
  "history": {
   "n_snapshots": 1,
   "first": "2026-10-01",
@@ -120,6 +120,56 @@
       ]
      },
      {
+      "skill": "generative ai",
+      "category": "ml_dl_nlp",
+      "postings": 153,
+      "share": 0.1163,
+      "ci95": [
+       0.1001,
+       0.1348
+      ]
+     },
+     {
+      "skill": "ai agents",
+      "category": "ml_dl_nlp",
+      "postings": 136,
+      "share": 0.1034,
+      "ci95": [
+       0.0881,
+       0.1211
+      ]
+     },
+     {
+      "skill": "devops",
+      "category": "cloud_ops",
+      "postings": 111,
+      "share": 0.0844,
+      "ci95": [
+       0.0706,
+       0.1007
+      ]
+     },
+     {
+      "skill": "rest",
+      "category": "web_backend",
+      "postings": 106,
+      "share": 0.0806,
+      "ci95": [
+       0.0671,
+       0.0966
+      ]
+     },
+     {
+      "skill": "excel",
+      "category": "viz_bi",
+      "postings": 97,
+      "share": 0.0738,
+      "ci95": [
+       0.0608,
+       0.0892
+      ]
+     },
+     {
       "skill": "terraform",
       "category": "cloud_ops",
       "postings": 95,
@@ -140,6 +190,16 @@
       ]
      },
      {
+      "skill": "c++",
+      "category": "languages",
+      "postings": 90,
+      "share": 0.0684,
+      "ci95": [
+       0.056,
+       0.0834
+      ]
+     },
+     {
       "skill": "docker",
       "category": "cloud_ops",
       "postings": 89,
@@ -147,6 +207,56 @@
       "ci95": [
        0.0553,
        0.0826
+      ]
+     },
+     {
+      "skill": "postgresql",
+      "category": "data_eng",
+      "postings": 87,
+      "share": 0.0662,
+      "ci95": [
+       0.0539,
+       0.0809
+      ]
+     },
+     {
+      "skill": "iac",
+      "category": "cloud_ops",
+      "postings": 77,
+      "share": 0.0586,
+      "ci95": [
+       0.0471,
+       0.0726
+      ]
+     },
+     {
+      "skill": "oauth",
+      "category": "security_net",
+      "postings": 72,
+      "share": 0.0548,
+      "ci95": [
+       0.0437,
+       0.0684
+      ]
+     },
+     {
+      "skill": "sre",
+      "category": "cloud_ops",
+      "postings": 70,
+      "share": 0.0532,
+      "ci95": [
+       0.0423,
+       0.0667
+      ]
+     },
+     {
+      "skill": "react",
+      "category": "web_backend",
+      "postings": 69,
+      "share": 0.0525,
+      "ci95": [
+       0.0417,
+       0.0659
       ]
      },
      {
@@ -167,6 +277,16 @@
       "ci95": [
        0.0376,
        0.0608
+      ]
+     },
+     {
+      "skill": "git",
+      "category": "cloud_ops",
+      "postings": 59,
+      "share": 0.0449,
+      "ci95": [
+       0.0349,
+       0.0574
       ]
      },
      {
@@ -200,6 +320,146 @@
       ]
      },
      {
+      "skill": "mysql",
+      "category": "data_eng",
+      "postings": 46,
+      "share": 0.035,
+      "ci95": [
+       0.0263,
+       0.0463
+      ]
+     },
+     {
+      "skill": "jira",
+      "category": "viz_bi",
+      "postings": 46,
+      "share": 0.035,
+      "ci95": [
+       0.0263,
+       0.0463
+      ]
+     },
+     {
+      "skill": "copilot",
+      "category": "ml_dl_nlp",
+      "postings": 43,
+      "share": 0.0327,
+      "ci95": [
+       0.0244,
+       0.0438
+      ]
+     },
+     {
+      "skill": "nosql",
+      "category": "data_eng",
+      "postings": 41,
+      "share": 0.0312,
+      "ci95": [
+       0.0231,
+       0.042
+      ]
+     },
+     {
+      "skill": "node.js",
+      "category": "web_backend",
+      "postings": 39,
+      "share": 0.0297,
+      "ci95": [
+       0.0218,
+       0.0403
+      ]
+     },
+     {
+      "skill": "scrum",
+      "category": "practices",
+      "postings": 37,
+      "share": 0.0281,
+      "ci95": [
+       0.0205,
+       0.0385
+      ]
+     },
+     {
+      "skill": "netsuite",
+      "category": "enterprise_apps",
+      "postings": 36,
+      "share": 0.0274,
+      "ci95": [
+       0.0198,
+       0.0377
+      ]
+     },
+     {
+      "skill": "unix",
+      "category": "cloud_ops",
+      "postings": 33,
+      "share": 0.0251,
+      "ci95": [
+       0.0179,
+       0.035
+      ]
+     },
+     {
+      "skill": "rust",
+      "category": "languages",
+      "postings": 33,
+      "share": 0.0251,
+      "ci95": [
+       0.0179,
+       0.035
+      ]
+     },
+     {
+      "skill": "claude code",
+      "category": "ml_dl_nlp",
+      "postings": 32,
+      "share": 0.0243,
+      "ci95": [
+       0.0173,
+       0.0342
+      ]
+     },
+     {
+      "skill": "google sheets",
+      "category": "viz_bi",
+      "postings": 31,
+      "share": 0.0236,
+      "ci95": [
+       0.0167,
+       0.0333
+      ]
+     },
+     {
+      "skill": "gsuite",
+      "category": "viz_bi",
+      "postings": 30,
+      "share": 0.0228,
+      "ci95": [
+       0.016,
+       0.0324
+      ]
+     },
+     {
+      "skill": "github actions",
+      "category": "cloud_ops",
+      "postings": 30,
+      "share": 0.0228,
+      "ci95": [
+       0.016,
+       0.0324
+      ]
+     },
+     {
+      "skill": "ruby",
+      "category": "languages",
+      "postings": 28,
+      "share": 0.0213,
+      "ci95": [
+       0.0148,
+       0.0306
+      ]
+     },
+     {
       "skill": "looker",
       "category": "viz_bi",
       "postings": 28,
@@ -230,6 +490,16 @@
       ]
      },
      {
+      "skill": "macos",
+      "category": "cloud_ops",
+      "postings": 26,
+      "share": 0.0198,
+      "ci95": [
+       0.0135,
+       0.0288
+      ]
+     },
+     {
       "skill": "r",
       "category": "languages",
       "postings": 25,
@@ -237,6 +507,16 @@
       "ci95": [
        0.0129,
        0.0279
+      ]
+     },
+     {
+      "skill": "bash",
+      "category": "languages",
+      "postings": 24,
+      "share": 0.0183,
+      "ci95": [
+       0.0123,
+       0.027
       ]
      },
      {
@@ -250,6 +530,26 @@
       ]
      },
      {
+      "skill": "spring boot",
+      "category": "web_backend",
+      "postings": 23,
+      "share": 0.0175,
+      "ci95": [
+       0.0117,
+       0.0261
+      ]
+     },
+     {
+      "skill": "vmware",
+      "category": "cloud_ops",
+      "postings": 22,
+      "share": 0.0167,
+      "ci95": [
+       0.0111,
+       0.0252
+      ]
+     },
+     {
       "skill": "hadoop",
       "category": "data_eng",
       "postings": 22,
@@ -257,6 +557,46 @@
       "ci95": [
        0.0111,
        0.0252
+      ]
+     },
+     {
+      "skill": "load balancer",
+      "category": "security_net",
+      "postings": 21,
+      "share": 0.016,
+      "ci95": [
+       0.0105,
+       0.0243
+      ]
+     },
+     {
+      "skill": "datadog",
+      "category": "cloud_ops",
+      "postings": 21,
+      "share": 0.016,
+      "ci95": [
+       0.0105,
+       0.0243
+      ]
+     },
+     {
+      "skill": "vpn",
+      "category": "security_net",
+      "postings": 21,
+      "share": 0.016,
+      "ci95": [
+       0.0105,
+       0.0243
+      ]
+     },
+     {
+      "skill": "c#",
+      "category": "languages",
+      "postings": 21,
+      "share": 0.016,
+      "ci95": [
+       0.0105,
+       0.0243
       ]
      },
      {
@@ -270,8 +610,98 @@
       ]
      },
      {
+      "skill": "ms office",
+      "category": "viz_bi",
+      "postings": 20,
+      "share": 0.0152,
+      "ci95": [
+       0.0099,
+       0.0234
+      ]
+     },
+     {
+      "skill": "kotlin",
+      "category": "languages",
+      "postings": 20,
+      "share": 0.0152,
+      "ci95": [
+       0.0099,
+       0.0234
+      ]
+     },
+     {
+      "skill": "iso 27001",
+      "category": "security_net",
+      "postings": 19,
+      "share": 0.0144,
+      "ci95": [
+       0.0093,
+       0.0225
+      ]
+     },
+     {
+      "skill": "active directory",
+      "category": "security_net",
+      "postings": 19,
+      "share": 0.0144,
+      "ci95": [
+       0.0093,
+       0.0225
+      ]
+     },
+     {
+      "skill": "soc 2",
+      "category": "security_net",
+      "postings": 19,
+      "share": 0.0144,
+      "ci95": [
+       0.0093,
+       0.0225
+      ]
+     },
+     {
+      "skill": "elasticsearch",
+      "category": "data_eng",
+      "postings": 18,
+      "share": 0.0137,
+      "ci95": [
+       0.0087,
+       0.0215
+      ]
+     },
+     {
+      "skill": "api gateway",
+      "category": "web_backend",
+      "postings": 18,
+      "share": 0.0137,
+      "ci95": [
+       0.0087,
+       0.0215
+      ]
+     },
+     {
       "skill": "dbt",
       "category": "data_eng",
+      "postings": 18,
+      "share": 0.0137,
+      "ci95": [
+       0.0087,
+       0.0215
+      ]
+     },
+     {
+      "skill": "apex",
+      "category": "enterprise_apps",
+      "postings": 18,
+      "share": 0.0137,
+      "ci95": [
+       0.0087,
+       0.0215
+      ]
+     },
+     {
+      "skill": "gitlab",
+      "category": "cloud_ops",
       "postings": 18,
       "share": 0.0137,
       "ci95": [
@@ -290,6 +720,36 @@
       ]
      },
      {
+      "skill": "cpq",
+      "category": "enterprise_apps",
+      "postings": 17,
+      "share": 0.0129,
+      "ci95": [
+       0.0081,
+       0.0206
+      ]
+     },
+     {
+      "skill": "ipsec",
+      "category": "security_net",
+      "postings": 16,
+      "share": 0.0122,
+      "ci95": [
+       0.0075,
+       0.0197
+      ]
+     },
+     {
+      "skill": "argocd",
+      "category": "cloud_ops",
+      "postings": 16,
+      "share": 0.0122,
+      "ci95": [
+       0.0075,
+       0.0197
+      ]
+     },
+     {
       "skill": "pytorch",
       "category": "ml_dl_nlp",
       "postings": 16,
@@ -300,13 +760,83 @@
       ]
      },
      {
-      "skill": "databricks",
-      "category": "data_eng",
+      "skill": "next.js",
+      "category": "web_backend",
+      "postings": 16,
+      "share": 0.0122,
+      "ci95": [
+       0.0075,
+       0.0197
+      ]
+     },
+     {
+      "skill": "siem",
+      "category": "security_net",
+      "postings": 16,
+      "share": 0.0122,
+      "ci95": [
+       0.0075,
+       0.0197
+      ]
+     },
+     {
+      "skill": "lightning web components",
+      "category": "enterprise_apps",
+      "postings": 15,
+      "share": 0.0114,
+      "ci95": [
+       0.0069,
+       0.0187
+      ]
+     },
+     {
+      "skill": "elk stack",
+      "category": "cloud_ops",
+      "postings": 14,
+      "share": 0.0106,
+      "ci95": [
+       0.0064,
+       0.0178
+      ]
+     },
+     {
+      "skill": "agentforce",
+      "category": "enterprise_apps",
+      "postings": 14,
+      "share": 0.0106,
+      "ci95": [
+       0.0064,
+       0.0178
+      ]
+     },
+     {
+      "skill": "gitops",
+      "category": "cloud_ops",
       "postings": 13,
       "share": 0.0099,
       "ci95": [
        0.0058,
        0.0168
+      ]
+     },
+     {
+      "skill": "opensearch",
+      "category": "data_eng",
+      "postings": 12,
+      "share": 0.0091,
+      "ci95": [
+       0.0052,
+       0.0159
+      ]
+     },
+     {
+      "skill": "databricks",
+      "category": "data_eng",
+      "postings": 12,
+      "share": 0.0091,
+      "ci95": [
+       0.0052,
+       0.0159
       ]
      },
      {
@@ -320,6 +850,26 @@
       ]
      },
      {
+      "skill": "hubspot",
+      "category": "enterprise_apps",
+      "postings": 11,
+      "share": 0.0084,
+      "ci95": [
+       0.0047,
+       0.0149
+      ]
+     },
+     {
+      "skill": "waf",
+      "category": "security_net",
+      "postings": 10,
+      "share": 0.0076,
+      "ci95": [
+       0.0041,
+       0.0139
+      ]
+     },
+     {
       "skill": "scikit-learn",
       "category": "ml_dl_nlp",
       "postings": 10,
@@ -327,6 +877,56 @@
       "ci95": [
        0.0041,
        0.0139
+      ]
+     },
+     {
+      "skill": "crossplane",
+      "category": "cloud_ops",
+      "postings": 9,
+      "share": 0.0068,
+      "ci95": [
+       0.0036,
+       0.013
+      ]
+     },
+     {
+      "skill": "https",
+      "category": "security_net",
+      "postings": 9,
+      "share": 0.0068,
+      "ci95": [
+       0.0036,
+       0.013
+      ]
+     },
+     {
+      "skill": "dynamodb",
+      "category": "data_eng",
+      "postings": 9,
+      "share": 0.0068,
+      "ci95": [
+       0.0036,
+       0.013
+      ]
+     },
+     {
+      "skill": "tdd",
+      "category": "practices",
+      "postings": 8,
+      "share": 0.0061,
+      "ci95": [
+       0.0031,
+       0.012
+      ]
+     },
+     {
+      "skill": "php",
+      "category": "languages",
+      "postings": 8,
+      "share": 0.0061,
+      "ci95": [
+       0.0031,
+       0.012
       ]
      },
      {
@@ -340,6 +940,26 @@
       ]
      },
      {
+      "skill": "openshift",
+      "category": "cloud_ops",
+      "postings": 7,
+      "share": 0.0053,
+      "ci95": [
+       0.0026,
+       0.0109
+      ]
+     },
+     {
+      "skill": "swift",
+      "category": "languages",
+      "postings": 6,
+      "share": 0.0046,
+      "ci95": [
+       0.0021,
+       0.0099
+      ]
+     },
+     {
       "skill": "hugging face",
       "category": "ml_dl_nlp",
       "postings": 5,
@@ -347,6 +967,56 @@
       "ci95": [
        0.0016,
        0.0089
+      ]
+     },
+     {
+      "skill": "orm",
+      "category": "web_backend",
+      "postings": 5,
+      "share": 0.0038,
+      "ci95": [
+       0.0016,
+       0.0089
+      ]
+     },
+     {
+      "skill": "perl",
+      "category": "languages",
+      "postings": 5,
+      "share": 0.0038,
+      "ci95": [
+       0.0016,
+       0.0089
+      ]
+     },
+     {
+      "skill": "wifi",
+      "category": "security_net",
+      "postings": 4,
+      "share": 0.003,
+      "ci95": [
+       0.0012,
+       0.0078
+      ]
+     },
+     {
+      "skill": "mulesoft",
+      "category": "enterprise_apps",
+      "postings": 4,
+      "share": 0.003,
+      "ci95": [
+       0.0012,
+       0.0078
+      ]
+     },
+     {
+      "skill": ".net",
+      "category": "languages",
+      "postings": 4,
+      "share": 0.003,
+      "ci95": [
+       0.0012,
+       0.0078
       ]
      },
      {
@@ -360,8 +1030,8 @@
       ]
      },
      {
-      "skill": "streamlit",
-      "category": "viz_bi",
+      "skill": "transformers",
+      "category": "ml_dl_nlp",
       "postings": 2,
       "share": 0.0015,
       "ci95": [
@@ -370,8 +1040,8 @@
       ]
      },
      {
-      "skill": "transformers",
-      "category": "ml_dl_nlp",
+      "skill": "streamlit",
+      "category": "viz_bi",
       "postings": 2,
       "share": 0.0015,
       "ci95": [
@@ -456,8 +1126,8 @@
       ]
      },
      {
-      "skill": "azure",
-      "category": "cloud_ops",
+      "skill": "llm",
+      "category": "ml_dl_nlp",
       "postings": 6,
       "share": 0.375,
       "ci95": [
@@ -476,8 +1146,8 @@
       ]
      },
      {
-      "skill": "llm",
-      "category": "ml_dl_nlp",
+      "skill": "azure",
+      "category": "cloud_ops",
       "postings": 6,
       "share": 0.375,
       "ci95": [
@@ -493,6 +1163,26 @@
       "ci95": [
        0.1416,
        0.556
+      ]
+     },
+     {
+      "skill": "tensorflow",
+      "category": "ml_dl_nlp",
+      "postings": 4,
+      "share": 0.25,
+      "ci95": [
+       0.1018,
+       0.495
+      ]
+     },
+     {
+      "skill": "generative ai",
+      "category": "ml_dl_nlp",
+      "postings": 4,
+      "share": 0.25,
+      "ci95": [
+       0.1018,
+       0.495
       ]
      },
      {
@@ -516,16 +1206,6 @@
       ]
      },
      {
-      "skill": "tensorflow",
-      "category": "ml_dl_nlp",
-      "postings": 4,
-      "share": 0.25,
-      "ci95": [
-       0.1018,
-       0.495
-      ]
-     },
-     {
       "skill": "hadoop",
       "category": "data_eng",
       "postings": 3,
@@ -536,13 +1216,23 @@
       ]
      },
      {
-      "skill": "transformers",
-      "category": "ml_dl_nlp",
-      "postings": 1,
-      "share": 0.0625,
+      "skill": "nosql",
+      "category": "data_eng",
+      "postings": 3,
+      "share": 0.1875,
       "ci95": [
-       0.0111,
-       0.2833
+       0.0659,
+       0.4301
+      ]
+     },
+     {
+      "skill": "ai agents",
+      "category": "ml_dl_nlp",
+      "postings": 2,
+      "share": 0.125,
+      "ci95": [
+       0.035,
+       0.3602
       ]
      },
      {
@@ -557,6 +1247,16 @@
      },
      {
       "skill": "hugging face",
+      "category": "ml_dl_nlp",
+      "postings": 1,
+      "share": 0.0625,
+      "ci95": [
+       0.0111,
+       0.2833
+      ]
+     },
+     {
+      "skill": "transformers",
       "category": "ml_dl_nlp",
       "postings": 1,
       "share": 0.0625,
@@ -612,13 +1312,13 @@
       ]
      },
      {
-      "skill": "aws",
-      "category": "cloud_ops",
-      "postings": 6,
-      "share": 0.2308,
+      "skill": "generative ai",
+      "category": "ml_dl_nlp",
+      "postings": 7,
+      "share": 0.2692,
       "ci95": [
-       0.1103,
-       0.4205
+       0.137,
+       0.4608
       ]
      },
      {
@@ -632,8 +1332,18 @@
       ]
      },
      {
-      "skill": "javascript",
-      "category": "languages",
+      "skill": "aws",
+      "category": "cloud_ops",
+      "postings": 6,
+      "share": 0.2308,
+      "ci95": [
+       0.1103,
+       0.4205
+      ]
+     },
+     {
+      "skill": "spark",
+      "category": "data_eng",
       "postings": 5,
       "share": 0.1923,
       "ci95": [
@@ -642,8 +1352,18 @@
       ]
      },
      {
-      "skill": "spark",
-      "category": "data_eng",
+      "skill": "ai agents",
+      "category": "ml_dl_nlp",
+      "postings": 5,
+      "share": 0.1923,
+      "ci95": [
+       0.0851,
+       0.3788
+      ]
+     },
+     {
+      "skill": "javascript",
+      "category": "languages",
       "postings": 5,
       "share": 0.1923,
       "ci95": [
@@ -659,16 +1379,6 @@
       "ci95": [
        0.0851,
        0.3788
-      ]
-     },
-     {
-      "skill": "typescript",
-      "category": "languages",
-      "postings": 4,
-      "share": 0.1538,
-      "ci95": [
-       0.0615,
-       0.3353
       ]
      },
      {
@@ -692,13 +1402,13 @@
       ]
      },
      {
-      "skill": "nlp",
-      "category": "ml_dl_nlp",
-      "postings": 3,
-      "share": 0.1154,
+      "skill": "typescript",
+      "category": "languages",
+      "postings": 4,
+      "share": 0.1538,
       "ci95": [
-       0.04,
-       0.2898
+       0.0615,
+       0.3353
       ]
      },
      {
@@ -712,38 +1422,28 @@
       ]
      },
      {
-      "skill": "computer vision",
+      "skill": "nlp",
       "category": "ml_dl_nlp",
-      "postings": 2,
-      "share": 0.0769,
+      "postings": 3,
+      "share": 0.1154,
       "ci95": [
-       0.0214,
-       0.2414
+       0.04,
+       0.2898
+      ]
+     },
+     {
+      "skill": "rest",
+      "category": "web_backend",
+      "postings": 3,
+      "share": 0.1154,
+      "ci95": [
+       0.04,
+       0.2898
       ]
      },
      {
       "skill": "go",
       "category": "languages",
-      "postings": 2,
-      "share": 0.0769,
-      "ci95": [
-       0.0214,
-       0.2414
-      ]
-     },
-     {
-      "skill": "terraform",
-      "category": "cloud_ops",
-      "postings": 2,
-      "share": 0.0769,
-      "ci95": [
-       0.0214,
-       0.2414
-      ]
-     },
-     {
-      "skill": "azure",
-      "category": "cloud_ops",
       "postings": 2,
       "share": 0.0769,
       "ci95": [
@@ -772,6 +1472,16 @@
       ]
      },
      {
+      "skill": "azure",
+      "category": "cloud_ops",
+      "postings": 2,
+      "share": 0.0769,
+      "ci95": [
+       0.0214,
+       0.2414
+      ]
+     },
+     {
       "skill": "hugging face",
       "category": "ml_dl_nlp",
       "postings": 2,
@@ -782,7 +1492,167 @@
       ]
      },
      {
-      "skill": "mlflow",
+      "skill": "iac",
+      "category": "cloud_ops",
+      "postings": 2,
+      "share": 0.0769,
+      "ci95": [
+       0.0214,
+       0.2414
+      ]
+     },
+     {
+      "skill": "terraform",
+      "category": "cloud_ops",
+      "postings": 2,
+      "share": 0.0769,
+      "ci95": [
+       0.0214,
+       0.2414
+      ]
+     },
+     {
+      "skill": "computer vision",
+      "category": "ml_dl_nlp",
+      "postings": 2,
+      "share": 0.0769,
+      "ci95": [
+       0.0214,
+       0.2414
+      ]
+     },
+     {
+      "skill": "mulesoft",
+      "category": "enterprise_apps",
+      "postings": 2,
+      "share": 0.0769,
+      "ci95": [
+       0.0214,
+       0.2414
+      ]
+     },
+     {
+      "skill": "git",
+      "category": "cloud_ops",
+      "postings": 2,
+      "share": 0.0769,
+      "ci95": [
+       0.0214,
+       0.2414
+      ]
+     },
+     {
+      "skill": "rust",
+      "category": "languages",
+      "postings": 1,
+      "share": 0.0385,
+      "ci95": [
+       0.0068,
+       0.1889
+      ]
+     },
+     {
+      "skill": "c++",
+      "category": "languages",
+      "postings": 1,
+      "share": 0.0385,
+      "ci95": [
+       0.0068,
+       0.1889
+      ]
+     },
+     {
+      "skill": "github actions",
+      "category": "cloud_ops",
+      "postings": 1,
+      "share": 0.0385,
+      "ci95": [
+       0.0068,
+       0.1889
+      ]
+     },
+     {
+      "skill": "argocd",
+      "category": "cloud_ops",
+      "postings": 1,
+      "share": 0.0385,
+      "ci95": [
+       0.0068,
+       0.1889
+      ]
+     },
+     {
+      "skill": "docker",
+      "category": "cloud_ops",
+      "postings": 1,
+      "share": 0.0385,
+      "ci95": [
+       0.0068,
+       0.1889
+      ]
+     },
+     {
+      "skill": "hubspot",
+      "category": "enterprise_apps",
+      "postings": 1,
+      "share": 0.0385,
+      "ci95": [
+       0.0068,
+       0.1889
+      ]
+     },
+     {
+      "skill": "airflow",
+      "category": "data_eng",
+      "postings": 1,
+      "share": 0.0385,
+      "ci95": [
+       0.0068,
+       0.1889
+      ]
+     },
+     {
+      "skill": "snowflake",
+      "category": "data_eng",
+      "postings": 1,
+      "share": 0.0385,
+      "ci95": [
+       0.0068,
+       0.1889
+      ]
+     },
+     {
+      "skill": "jira",
+      "category": "viz_bi",
+      "postings": 1,
+      "share": 0.0385,
+      "ci95": [
+       0.0068,
+       0.1889
+      ]
+     },
+     {
+      "skill": "crossplane",
+      "category": "cloud_ops",
+      "postings": 1,
+      "share": 0.0385,
+      "ci95": [
+       0.0068,
+       0.1889
+      ]
+     },
+     {
+      "skill": "load balancer",
+      "category": "security_net",
+      "postings": 1,
+      "share": 0.0385,
+      "ci95": [
+       0.0068,
+       0.1889
+      ]
+     },
+     {
+      "skill": "sre",
       "category": "cloud_ops",
       "postings": 1,
       "share": 0.0385,
@@ -802,7 +1672,67 @@
       ]
      },
      {
-      "skill": "docker",
+      "skill": "next.js",
+      "category": "web_backend",
+      "postings": 1,
+      "share": 0.0385,
+      "ci95": [
+       0.0068,
+       0.1889
+      ]
+     },
+     {
+      "skill": "postgresql",
+      "category": "data_eng",
+      "postings": 1,
+      "share": 0.0385,
+      "ci95": [
+       0.0068,
+       0.1889
+      ]
+     },
+     {
+      "skill": "claude code",
+      "category": "ml_dl_nlp",
+      "postings": 1,
+      "share": 0.0385,
+      "ci95": [
+       0.0068,
+       0.1889
+      ]
+     },
+     {
+      "skill": "copilot",
+      "category": "ml_dl_nlp",
+      "postings": 1,
+      "share": 0.0385,
+      "ci95": [
+       0.0068,
+       0.1889
+      ]
+     },
+     {
+      "skill": "apex",
+      "category": "enterprise_apps",
+      "postings": 1,
+      "share": 0.0385,
+      "ci95": [
+       0.0068,
+       0.1889
+      ]
+     },
+     {
+      "skill": "lightning web components",
+      "category": "enterprise_apps",
+      "postings": 1,
+      "share": 0.0385,
+      "ci95": [
+       0.0068,
+       0.1889
+      ]
+     },
+     {
+      "skill": "devops",
       "category": "cloud_ops",
       "postings": 1,
       "share": 0.0385,
@@ -812,8 +1742,8 @@
       ]
      },
      {
-      "skill": "snowflake",
-      "category": "data_eng",
+      "skill": "react",
+      "category": "web_backend",
       "postings": 1,
       "share": 0.0385,
       "ci95": [
@@ -822,8 +1752,48 @@
       ]
      },
      {
-      "skill": "airflow",
-      "category": "data_eng",
+      "skill": "node.js",
+      "category": "web_backend",
+      "postings": 1,
+      "share": 0.0385,
+      "ci95": [
+       0.0068,
+       0.1889
+      ]
+     },
+     {
+      "skill": "api gateway",
+      "category": "web_backend",
+      "postings": 1,
+      "share": 0.0385,
+      "ci95": [
+       0.0068,
+       0.1889
+      ]
+     },
+     {
+      "skill": "cpq",
+      "category": "enterprise_apps",
+      "postings": 1,
+      "share": 0.0385,
+      "ci95": [
+       0.0068,
+       0.1889
+      ]
+     },
+     {
+      "skill": "kotlin",
+      "category": "languages",
+      "postings": 1,
+      "share": 0.0385,
+      "ci95": [
+       0.0068,
+       0.1889
+      ]
+     },
+     {
+      "skill": "mlflow",
+      "category": "cloud_ops",
       "postings": 1,
       "share": 0.0385,
       "ci95": [
@@ -898,6 +1868,16 @@
       ]
      },
      {
+      "skill": "generative ai",
+      "category": "ml_dl_nlp",
+      "postings": 11,
+      "share": 0.4074,
+      "ci95": [
+       0.2451,
+       0.5927
+      ]
+     },
+     {
       "skill": "r",
       "category": "languages",
       "postings": 6,
@@ -905,6 +1885,26 @@
       "ci95": [
        0.1061,
        0.4076
+      ]
+     },
+     {
+      "skill": "excel",
+      "category": "viz_bi",
+      "postings": 6,
+      "share": 0.2222,
+      "ci95": [
+       0.1061,
+       0.4076
+      ]
+     },
+     {
+      "skill": "dbt",
+      "category": "data_eng",
+      "postings": 5,
+      "share": 0.1852,
+      "ci95": [
+       0.0818,
+       0.367
       ]
      },
      {
@@ -928,17 +1928,17 @@
       ]
      },
      {
-      "skill": "dbt",
-      "category": "data_eng",
-      "postings": 5,
-      "share": 0.1852,
+      "skill": "claude code",
+      "category": "ml_dl_nlp",
+      "postings": 4,
+      "share": 0.1481,
       "ci95": [
-       0.0818,
-       0.367
+       0.0592,
+       0.3248
       ]
      },
      {
-      "skill": "nlp",
+      "skill": "ai agents",
       "category": "ml_dl_nlp",
       "postings": 3,
       "share": 0.1111,
@@ -958,8 +1958,58 @@
       ]
      },
      {
+      "skill": "nlp",
+      "category": "ml_dl_nlp",
+      "postings": 3,
+      "share": 0.1111,
+      "ci95": [
+       0.0385,
+       0.2806
+      ]
+     },
+     {
+      "skill": "copilot",
+      "category": "ml_dl_nlp",
+      "postings": 3,
+      "share": 0.1111,
+      "ci95": [
+       0.0385,
+       0.2806
+      ]
+     },
+     {
+      "skill": "ms office",
+      "category": "viz_bi",
+      "postings": 2,
+      "share": 0.0741,
+      "ci95": [
+       0.0206,
+       0.2337
+      ]
+     },
+     {
+      "skill": "jira",
+      "category": "viz_bi",
+      "postings": 2,
+      "share": 0.0741,
+      "ci95": [
+       0.0206,
+       0.2337
+      ]
+     },
+     {
       "skill": "spark",
       "category": "data_eng",
+      "postings": 2,
+      "share": 0.0741,
+      "ci95": [
+       0.0206,
+       0.2337
+      ]
+     },
+     {
+      "skill": "netsuite",
+      "category": "enterprise_apps",
       "postings": 2,
       "share": 0.0741,
       "ci95": [
@@ -988,7 +2038,17 @@
       ]
      },
      {
-      "skill": "kafka",
+      "skill": "hubspot",
+      "category": "enterprise_apps",
+      "postings": 1,
+      "share": 0.037,
+      "ci95": [
+       0.0066,
+       0.1828
+      ]
+     },
+     {
+      "skill": "nosql",
       "category": "data_eng",
       "postings": 1,
       "share": 0.037,
@@ -1010,6 +2070,56 @@
      {
       "skill": "databricks",
       "category": "data_eng",
+      "postings": 1,
+      "share": 0.037,
+      "ci95": [
+       0.0066,
+       0.1828
+      ]
+     },
+     {
+      "skill": "git",
+      "category": "cloud_ops",
+      "postings": 1,
+      "share": 0.037,
+      "ci95": [
+       0.0066,
+       0.1828
+      ]
+     },
+     {
+      "skill": "kafka",
+      "category": "data_eng",
+      "postings": 1,
+      "share": 0.037,
+      "ci95": [
+       0.0066,
+       0.1828
+      ]
+     },
+     {
+      "skill": "cpq",
+      "category": "enterprise_apps",
+      "postings": 1,
+      "share": 0.037,
+      "ci95": [
+       0.0066,
+       0.1828
+      ]
+     },
+     {
+      "skill": "gsuite",
+      "category": "viz_bi",
+      "postings": 1,
+      "share": 0.037,
+      "ci95": [
+       0.0066,
+       0.1828
+      ]
+     },
+     {
+      "skill": "google sheets",
+      "category": "viz_bi",
       "postings": 1,
       "share": 0.037,
       "ci95": [
@@ -1044,7 +2154,17 @@
     "ci_note": "Wilson 95% interval over this panel's postings, not the whole market",
     "skills": [
      {
-      "skill": "kafka",
+      "skill": "iac",
+      "category": "cloud_ops",
+      "postings": 8,
+      "share": 0.6667,
+      "ci95": [
+       0.3906,
+       0.8619
+      ]
+     },
+     {
+      "skill": "airflow",
       "category": "data_eng",
       "postings": 7,
       "share": 0.5833,
@@ -1054,7 +2174,7 @@
       ]
      },
      {
-      "skill": "airflow",
+      "skill": "kafka",
       "category": "data_eng",
       "postings": 7,
       "share": 0.5833,
@@ -1104,6 +2224,16 @@
       ]
      },
      {
+      "skill": "dbt",
+      "category": "data_eng",
+      "postings": 4,
+      "share": 0.3333,
+      "ci95": [
+       0.1381,
+       0.6094
+      ]
+     },
+     {
       "skill": "gcp",
       "category": "cloud_ops",
       "postings": 4,
@@ -1124,16 +2254,6 @@
       ]
      },
      {
-      "skill": "dbt",
-      "category": "data_eng",
-      "postings": 4,
-      "share": 0.3333,
-      "ci95": [
-       0.1381,
-       0.6094
-      ]
-     },
-     {
       "skill": "aws",
       "category": "cloud_ops",
       "postings": 4,
@@ -1144,8 +2264,18 @@
       ]
      },
      {
-      "skill": "databricks",
-      "category": "data_eng",
+      "skill": "llm",
+      "category": "ml_dl_nlp",
+      "postings": 3,
+      "share": 0.25,
+      "ci95": [
+       0.0889,
+       0.5323
+      ]
+     },
+     {
+      "skill": "docker",
+      "category": "cloud_ops",
       "postings": 3,
       "share": 0.25,
       "ci95": [
@@ -1164,7 +2294,7 @@
       ]
      },
      {
-      "skill": "llm",
+      "skill": "generative ai",
       "category": "ml_dl_nlp",
       "postings": 3,
       "share": 0.25,
@@ -1184,8 +2314,8 @@
       ]
      },
      {
-      "skill": "docker",
-      "category": "cloud_ops",
+      "skill": "databricks",
+      "category": "data_eng",
       "postings": 3,
       "share": 0.25,
       "ci95": [
@@ -1194,8 +2324,28 @@
       ]
      },
      {
-      "skill": "snowflake",
+      "skill": "mysql",
       "category": "data_eng",
+      "postings": 2,
+      "share": 0.1667,
+      "ci95": [
+       0.047,
+       0.448
+      ]
+     },
+     {
+      "skill": "postgresql",
+      "category": "data_eng",
+      "postings": 2,
+      "share": 0.1667,
+      "ci95": [
+       0.047,
+       0.448
+      ]
+     },
+     {
+      "skill": "rest",
+      "category": "web_backend",
       "postings": 2,
       "share": 0.1667,
       "ci95": [
@@ -1214,7 +2364,77 @@
       ]
      },
      {
+      "skill": "snowflake",
+      "category": "data_eng",
+      "postings": 2,
+      "share": 0.1667,
+      "ci95": [
+       0.047,
+       0.448
+      ]
+     },
+     {
+      "skill": "ai agents",
+      "category": "ml_dl_nlp",
+      "postings": 1,
+      "share": 0.0833,
+      "ci95": [
+       0.0149,
+       0.3539
+      ]
+     },
+     {
       "skill": "azure",
+      "category": "cloud_ops",
+      "postings": 1,
+      "share": 0.0833,
+      "ci95": [
+       0.0149,
+       0.3539
+      ]
+     },
+     {
+      "skill": "c++",
+      "category": "languages",
+      "postings": 1,
+      "share": 0.0833,
+      "ci95": [
+       0.0149,
+       0.3539
+      ]
+     },
+     {
+      "skill": "gitlab",
+      "category": "cloud_ops",
+      "postings": 1,
+      "share": 0.0833,
+      "ci95": [
+       0.0149,
+       0.3539
+      ]
+     },
+     {
+      "skill": "github actions",
+      "category": "cloud_ops",
+      "postings": 1,
+      "share": 0.0833,
+      "ci95": [
+       0.0149,
+       0.3539
+      ]
+     },
+     {
+      "skill": "devops",
+      "category": "cloud_ops",
+      "postings": 1,
+      "share": 0.0833,
+      "ci95": [
+       0.0149,
+       0.3539
+      ]
+     },
+     {
+      "skill": "unix",
       "category": "cloud_ops",
       "postings": 1,
       "share": 0.0833,
@@ -1260,8 +2480,8 @@
       ]
      },
      {
-      "skill": "aws",
-      "category": "cloud_ops",
+      "skill": "go",
+      "category": "languages",
       "postings": 16,
       "share": 0.381,
       "ci95": [
@@ -1270,8 +2490,8 @@
       ]
      },
      {
-      "skill": "go",
-      "category": "languages",
+      "skill": "aws",
+      "category": "cloud_ops",
       "postings": 16,
       "share": 0.381,
       "ci95": [
@@ -1290,6 +2510,16 @@
       ]
      },
      {
+      "skill": "postgresql",
+      "category": "data_eng",
+      "postings": 12,
+      "share": 0.2857,
+      "ci95": [
+       0.1717,
+       0.4357
+      ]
+     },
+     {
       "skill": "kubernetes",
       "category": "cloud_ops",
       "postings": 11,
@@ -1297,6 +2527,16 @@
       "ci95": [
        0.153,
        0.4107
+      ]
+     },
+     {
+      "skill": "rest",
+      "category": "web_backend",
+      "postings": 9,
+      "share": 0.2143,
+      "ci95": [
+       0.1171,
+       0.3594
       ]
      },
      {
@@ -1320,6 +2560,26 @@
       ]
      },
      {
+      "skill": "c++",
+      "category": "languages",
+      "postings": 7,
+      "share": 0.1667,
+      "ci95": [
+       0.0832,
+       0.306
+      ]
+     },
+     {
+      "skill": "oauth",
+      "category": "security_net",
+      "postings": 6,
+      "share": 0.1429,
+      "ci95": [
+       0.0672,
+       0.2784
+      ]
+     },
+     {
       "skill": "kafka",
       "category": "data_eng",
       "postings": 6,
@@ -1327,6 +2587,56 @@
       "ci95": [
        0.0672,
        0.2784
+      ]
+     },
+     {
+      "skill": "rust",
+      "category": "languages",
+      "postings": 6,
+      "share": 0.1429,
+      "ci95": [
+       0.0672,
+       0.2784
+      ]
+     },
+     {
+      "skill": "react",
+      "category": "web_backend",
+      "postings": 5,
+      "share": 0.119,
+      "ci95": [
+       0.0519,
+       0.25
+      ]
+     },
+     {
+      "skill": "mysql",
+      "category": "data_eng",
+      "postings": 5,
+      "share": 0.119,
+      "ci95": [
+       0.0519,
+       0.25
+      ]
+     },
+     {
+      "skill": "kotlin",
+      "category": "languages",
+      "postings": 5,
+      "share": 0.119,
+      "ci95": [
+       0.0519,
+       0.25
+      ]
+     },
+     {
+      "skill": "spring boot",
+      "category": "web_backend",
+      "postings": 5,
+      "share": 0.119,
+      "ci95": [
+       0.0519,
+       0.25
       ]
      },
      {
@@ -1350,8 +2660,78 @@
       ]
      },
      {
+      "skill": "nosql",
+      "category": "data_eng",
+      "postings": 4,
+      "share": 0.0952,
+      "ci95": [
+       0.0377,
+       0.2207
+      ]
+     },
+     {
+      "skill": "ruby",
+      "category": "languages",
+      "postings": 4,
+      "share": 0.0952,
+      "ci95": [
+       0.0377,
+       0.2207
+      ]
+     },
+     {
+      "skill": "copilot",
+      "category": "ml_dl_nlp",
+      "postings": 3,
+      "share": 0.0714,
+      "ci95": [
+       0.0246,
+       0.1901
+      ]
+     },
+     {
       "skill": "llm",
       "category": "ml_dl_nlp",
+      "postings": 3,
+      "share": 0.0714,
+      "ci95": [
+       0.0246,
+       0.1901
+      ]
+     },
+     {
+      "skill": "scrum",
+      "category": "practices",
+      "postings": 3,
+      "share": 0.0714,
+      "ci95": [
+       0.0246,
+       0.1901
+      ]
+     },
+     {
+      "skill": "ai agents",
+      "category": "ml_dl_nlp",
+      "postings": 3,
+      "share": 0.0714,
+      "ci95": [
+       0.0246,
+       0.1901
+      ]
+     },
+     {
+      "skill": "devops",
+      "category": "cloud_ops",
+      "postings": 3,
+      "share": 0.0714,
+      "ci95": [
+       0.0246,
+       0.1901
+      ]
+     },
+     {
+      "skill": "git",
+      "category": "cloud_ops",
       "postings": 3,
       "share": 0.0714,
       "ci95": [
@@ -1370,8 +2750,8 @@
       ]
      },
      {
-      "skill": "javascript",
-      "category": "languages",
+      "skill": "macos",
+      "category": "cloud_ops",
       "postings": 2,
       "share": 0.0476,
       "ci95": [
@@ -1381,6 +2761,26 @@
      },
      {
       "skill": "sql",
+      "category": "languages",
+      "postings": 2,
+      "share": 0.0476,
+      "ci95": [
+       0.0132,
+       0.1579
+      ]
+     },
+     {
+      "skill": "generative ai",
+      "category": "ml_dl_nlp",
+      "postings": 2,
+      "share": 0.0476,
+      "ci95": [
+       0.0132,
+       0.1579
+      ]
+     },
+     {
+      "skill": "javascript",
       "category": "languages",
       "postings": 2,
       "share": 0.0476,
@@ -1400,8 +2800,38 @@
       ]
      },
      {
-      "skill": "typescript",
-      "category": "languages",
+      "skill": "sre",
+      "category": "cloud_ops",
+      "postings": 1,
+      "share": 0.0238,
+      "ci95": [
+       0.0042,
+       0.1232
+      ]
+     },
+     {
+      "skill": "vmware",
+      "category": "cloud_ops",
+      "postings": 1,
+      "share": 0.0238,
+      "ci95": [
+       0.0042,
+       0.1232
+      ]
+     },
+     {
+      "skill": "openshift",
+      "category": "cloud_ops",
+      "postings": 1,
+      "share": 0.0238,
+      "ci95": [
+       0.0042,
+       0.1232
+      ]
+     },
+     {
+      "skill": "gitlab",
+      "category": "cloud_ops",
       "postings": 1,
       "share": 0.0238,
       "ci95": [
@@ -1412,6 +2842,76 @@
      {
       "skill": "langchain",
       "category": "ml_dl_nlp",
+      "postings": 1,
+      "share": 0.0238,
+      "ci95": [
+       0.0042,
+       0.1232
+      ]
+     },
+     {
+      "skill": "iso 27001",
+      "category": "security_net",
+      "postings": 1,
+      "share": 0.0238,
+      "ci95": [
+       0.0042,
+       0.1232
+      ]
+     },
+     {
+      "skill": "soc 2",
+      "category": "security_net",
+      "postings": 1,
+      "share": 0.0238,
+      "ci95": [
+       0.0042,
+       0.1232
+      ]
+     },
+     {
+      "skill": "claude code",
+      "category": "ml_dl_nlp",
+      "postings": 1,
+      "share": 0.0238,
+      "ci95": [
+       0.0042,
+       0.1232
+      ]
+     },
+     {
+      "skill": "https",
+      "category": "security_net",
+      "postings": 1,
+      "share": 0.0238,
+      "ci95": [
+       0.0042,
+       0.1232
+      ]
+     },
+     {
+      "skill": "node.js",
+      "category": "web_backend",
+      "postings": 1,
+      "share": 0.0238,
+      "ci95": [
+       0.0042,
+       0.1232
+      ]
+     },
+     {
+      "skill": "typescript",
+      "category": "languages",
+      "postings": 1,
+      "share": 0.0238,
+      "ci95": [
+       0.0042,
+       0.1232
+      ]
+     },
+     {
+      "skill": "orm",
+      "category": "web_backend",
       "postings": 1,
       "share": 0.0238,
       "ci95": [
@@ -1432,6 +2932,26 @@
      {
       "skill": "pytorch",
       "category": "ml_dl_nlp",
+      "postings": 1,
+      "share": 0.0238,
+      "ci95": [
+       0.0042,
+       0.1232
+      ]
+     },
+     {
+      "skill": "opensearch",
+      "category": "data_eng",
+      "postings": 1,
+      "share": 0.0238,
+      "ci95": [
+       0.0042,
+       0.1232
+      ]
+     },
+     {
+      "skill": "dynamodb",
+      "category": "data_eng",
       "postings": 1,
       "share": 0.0238,
       "ci95": [
@@ -1526,6 +3046,16 @@
       ]
      },
      {
+      "skill": "c++",
+      "category": "languages",
+      "postings": 56,
+      "share": 0.2286,
+      "ci95": [
+       0.1804,
+       0.2851
+      ]
+     },
+     {
       "skill": "gcp",
       "category": "cloud_ops",
       "postings": 54,
@@ -1566,8 +3096,38 @@
       ]
      },
      {
+      "skill": "rest",
+      "category": "web_backend",
+      "postings": 44,
+      "share": 0.1796,
+      "ci95": [
+       0.1366,
+       0.2325
+      ]
+     },
+     {
       "skill": "scala",
       "category": "languages",
+      "postings": 40,
+      "share": 0.1633,
+      "ci95": [
+       0.1222,
+       0.2147
+      ]
+     },
+     {
+      "skill": "react",
+      "category": "web_backend",
+      "postings": 40,
+      "share": 0.1633,
+      "ci95": [
+       0.1222,
+       0.2147
+      ]
+     },
+     {
+      "skill": "oauth",
+      "category": "security_net",
       "postings": 40,
       "share": 0.1633,
       "ci95": [
@@ -1586,6 +3146,16 @@
       ]
      },
      {
+      "skill": "postgresql",
+      "category": "data_eng",
+      "postings": 38,
+      "share": 0.1551,
+      "ci95": [
+       0.1151,
+       0.2057
+      ]
+     },
+     {
       "skill": "typescript",
       "category": "languages",
       "postings": 35,
@@ -1593,6 +3163,16 @@
       "ci95": [
        0.1045,
        0.1922
+      ]
+     },
+     {
+      "skill": "ai agents",
+      "category": "ml_dl_nlp",
+      "postings": 34,
+      "share": 0.1388,
+      "ci95": [
+       0.101,
+       0.1877
       ]
      },
      {
@@ -1616,6 +3196,106 @@
       ]
      },
      {
+      "skill": "devops",
+      "category": "cloud_ops",
+      "postings": 27,
+      "share": 0.1102,
+      "ci95": [
+       0.0769,
+       0.1556
+      ]
+     },
+     {
+      "skill": "generative ai",
+      "category": "ml_dl_nlp",
+      "postings": 26,
+      "share": 0.1061,
+      "ci95": [
+       0.0735,
+       0.151
+      ]
+     },
+     {
+      "skill": "iac",
+      "category": "cloud_ops",
+      "postings": 25,
+      "share": 0.102,
+      "ci95": [
+       0.0701,
+       0.1463
+      ]
+     },
+     {
+      "skill": "rust",
+      "category": "languages",
+      "postings": 24,
+      "share": 0.098,
+      "ci95": [
+       0.0667,
+       0.1416
+      ]
+     },
+     {
+      "skill": "nosql",
+      "category": "data_eng",
+      "postings": 20,
+      "share": 0.0816,
+      "ci95": [
+       0.0535,
+       0.1227
+      ]
+     },
+     {
+      "skill": "sre",
+      "category": "cloud_ops",
+      "postings": 18,
+      "share": 0.0735,
+      "ci95": [
+       0.047,
+       0.1131
+      ]
+     },
+     {
+      "skill": "mysql",
+      "category": "data_eng",
+      "postings": 18,
+      "share": 0.0735,
+      "ci95": [
+       0.047,
+       0.1131
+      ]
+     },
+     {
+      "skill": "copilot",
+      "category": "ml_dl_nlp",
+      "postings": 16,
+      "share": 0.0653,
+      "ci95": [
+       0.0406,
+       0.1034
+      ]
+     },
+     {
+      "skill": "kotlin",
+      "category": "languages",
+      "postings": 16,
+      "share": 0.0653,
+      "ci95": [
+       0.0406,
+       0.1034
+      ]
+     },
+     {
+      "skill": "node.js",
+      "category": "web_backend",
+      "postings": 15,
+      "share": 0.0612,
+      "ci95": [
+       0.0375,
+       0.0985
+      ]
+     },
+     {
       "skill": "spark",
       "category": "data_eng",
       "postings": 15,
@@ -1623,6 +3303,106 @@
       "ci95": [
        0.0375,
        0.0985
+      ]
+     },
+     {
+      "skill": "github actions",
+      "category": "cloud_ops",
+      "postings": 13,
+      "share": 0.0531,
+      "ci95": [
+       0.0313,
+       0.0887
+      ]
+     },
+     {
+      "skill": "scrum",
+      "category": "practices",
+      "postings": 13,
+      "share": 0.0531,
+      "ci95": [
+       0.0313,
+       0.0887
+      ]
+     },
+     {
+      "skill": "api gateway",
+      "category": "web_backend",
+      "postings": 12,
+      "share": 0.049,
+      "ci95": [
+       0.0282,
+       0.0836
+      ]
+     },
+     {
+      "skill": "next.js",
+      "category": "web_backend",
+      "postings": 11,
+      "share": 0.0449,
+      "ci95": [
+       0.0253,
+       0.0786
+      ]
+     },
+     {
+      "skill": "spring boot",
+      "category": "web_backend",
+      "postings": 11,
+      "share": 0.0449,
+      "ci95": [
+       0.0253,
+       0.0786
+      ]
+     },
+     {
+      "skill": "unix",
+      "category": "cloud_ops",
+      "postings": 11,
+      "share": 0.0449,
+      "ci95": [
+       0.0253,
+       0.0786
+      ]
+     },
+     {
+      "skill": "elasticsearch",
+      "category": "data_eng",
+      "postings": 11,
+      "share": 0.0449,
+      "ci95": [
+       0.0253,
+       0.0786
+      ]
+     },
+     {
+      "skill": "c#",
+      "category": "languages",
+      "postings": 10,
+      "share": 0.0408,
+      "ci95": [
+       0.0223,
+       0.0735
+      ]
+     },
+     {
+      "skill": "vmware",
+      "category": "cloud_ops",
+      "postings": 10,
+      "share": 0.0408,
+      "ci95": [
+       0.0223,
+       0.0735
+      ]
+     },
+     {
+      "skill": "datadog",
+      "category": "cloud_ops",
+      "postings": 9,
+      "share": 0.0367,
+      "ci95": [
+       0.0194,
+       0.0683
       ]
      },
      {
@@ -1636,13 +3416,13 @@
       ]
      },
      {
-      "skill": "langchain",
-      "category": "ml_dl_nlp",
-      "postings": 7,
-      "share": 0.0286,
+      "skill": "git",
+      "category": "cloud_ops",
+      "postings": 8,
+      "share": 0.0327,
       "ci95": [
-       0.0139,
-       0.0578
+       0.0166,
+       0.0631
       ]
      },
      {
@@ -1656,8 +3436,88 @@
       ]
      },
      {
+      "skill": "langchain",
+      "category": "ml_dl_nlp",
+      "postings": 7,
+      "share": 0.0286,
+      "ci95": [
+       0.0139,
+       0.0578
+      ]
+     },
+     {
+      "skill": "active directory",
+      "category": "security_net",
+      "postings": 7,
+      "share": 0.0286,
+      "ci95": [
+       0.0139,
+       0.0578
+      ]
+     },
+     {
+      "skill": "dynamodb",
+      "category": "data_eng",
+      "postings": 7,
+      "share": 0.0286,
+      "ci95": [
+       0.0139,
+       0.0578
+      ]
+     },
+     {
+      "skill": "bash",
+      "category": "languages",
+      "postings": 6,
+      "share": 0.0245,
+      "ci95": [
+       0.0113,
+       0.0524
+      ]
+     },
+     {
+      "skill": "macos",
+      "category": "cloud_ops",
+      "postings": 5,
+      "share": 0.0204,
+      "ci95": [
+       0.0087,
+       0.0469
+      ]
+     },
+     {
       "skill": "nlp",
       "category": "ml_dl_nlp",
+      "postings": 5,
+      "share": 0.0204,
+      "ci95": [
+       0.0087,
+       0.0469
+      ]
+     },
+     {
+      "skill": "tdd",
+      "category": "practices",
+      "postings": 5,
+      "share": 0.0204,
+      "ci95": [
+       0.0087,
+       0.0469
+      ]
+     },
+     {
+      "skill": "ruby",
+      "category": "languages",
+      "postings": 5,
+      "share": 0.0204,
+      "ci95": [
+       0.0087,
+       0.0469
+      ]
+     },
+     {
+      "skill": "gitlab",
+      "category": "cloud_ops",
       "postings": 5,
       "share": 0.0204,
       "ci95": [
@@ -1676,8 +3536,98 @@
       ]
      },
      {
+      "skill": "swift",
+      "category": "languages",
+      "postings": 4,
+      "share": 0.0163,
+      "ci95": [
+       0.0064,
+       0.0412
+      ]
+     },
+     {
+      "skill": "jira",
+      "category": "viz_bi",
+      "postings": 4,
+      "share": 0.0163,
+      "ci95": [
+       0.0064,
+       0.0412
+      ]
+     },
+     {
+      "skill": "opensearch",
+      "category": "data_eng",
+      "postings": 4,
+      "share": 0.0163,
+      "ci95": [
+       0.0064,
+       0.0412
+      ]
+     },
+     {
+      "skill": "claude code",
+      "category": "ml_dl_nlp",
+      "postings": 4,
+      "share": 0.0163,
+      "ci95": [
+       0.0064,
+       0.0412
+      ]
+     },
+     {
+      "skill": "load balancer",
+      "category": "security_net",
+      "postings": 4,
+      "share": 0.0163,
+      "ci95": [
+       0.0064,
+       0.0412
+      ]
+     },
+     {
       "skill": "snowflake",
       "category": "data_eng",
+      "postings": 3,
+      "share": 0.0122,
+      "ci95": [
+       0.0042,
+       0.0354
+      ]
+     },
+     {
+      "skill": "openshift",
+      "category": "cloud_ops",
+      "postings": 3,
+      "share": 0.0122,
+      "ci95": [
+       0.0042,
+       0.0354
+      ]
+     },
+     {
+      "skill": "vpn",
+      "category": "security_net",
+      "postings": 3,
+      "share": 0.0122,
+      "ci95": [
+       0.0042,
+       0.0354
+      ]
+     },
+     {
+      "skill": ".net",
+      "category": "languages",
+      "postings": 3,
+      "share": 0.0122,
+      "ci95": [
+       0.0042,
+       0.0354
+      ]
+     },
+     {
+      "skill": "argocd",
+      "category": "cloud_ops",
       "postings": 3,
       "share": 0.0122,
       "ci95": [
@@ -1693,6 +3643,76 @@
       "ci95": [
        0.0042,
        0.0354
+      ]
+     },
+     {
+      "skill": "https",
+      "category": "security_net",
+      "postings": 3,
+      "share": 0.0122,
+      "ci95": [
+       0.0042,
+       0.0354
+      ]
+     },
+     {
+      "skill": "ipsec",
+      "category": "security_net",
+      "postings": 3,
+      "share": 0.0122,
+      "ci95": [
+       0.0042,
+       0.0354
+      ]
+     },
+     {
+      "skill": "apex",
+      "category": "enterprise_apps",
+      "postings": 2,
+      "share": 0.0082,
+      "ci95": [
+       0.0022,
+       0.0293
+      ]
+     },
+     {
+      "skill": "lightning web components",
+      "category": "enterprise_apps",
+      "postings": 2,
+      "share": 0.0082,
+      "ci95": [
+       0.0022,
+       0.0293
+      ]
+     },
+     {
+      "skill": "agentforce",
+      "category": "enterprise_apps",
+      "postings": 2,
+      "share": 0.0082,
+      "ci95": [
+       0.0022,
+       0.0293
+      ]
+     },
+     {
+      "skill": "gitops",
+      "category": "cloud_ops",
+      "postings": 2,
+      "share": 0.0082,
+      "ci95": [
+       0.0022,
+       0.0293
+      ]
+     },
+     {
+      "skill": "orm",
+      "category": "web_backend",
+      "postings": 2,
+      "share": 0.0082,
+      "ci95": [
+       0.0022,
+       0.0293
       ]
      },
      {
@@ -1716,8 +3736,8 @@
       ]
      },
      {
-      "skill": "tensorflow",
-      "category": "ml_dl_nlp",
+      "skill": "gsuite",
+      "category": "viz_bi",
       "postings": 1,
       "share": 0.0041,
       "ci95": [
@@ -1726,8 +3746,18 @@
       ]
      },
      {
-      "skill": "power bi",
-      "category": "viz_bi",
+      "skill": "netsuite",
+      "category": "enterprise_apps",
+      "postings": 1,
+      "share": 0.0041,
+      "ci95": [
+       0.0007,
+       0.0228
+      ]
+     },
+     {
+      "skill": "elk stack",
+      "category": "cloud_ops",
       "postings": 1,
       "share": 0.0041,
       "ci95": [
@@ -1746,8 +3776,38 @@
       ]
      },
      {
+      "skill": "power bi",
+      "category": "viz_bi",
+      "postings": 1,
+      "share": 0.0041,
+      "ci95": [
+       0.0007,
+       0.0228
+      ]
+     },
+     {
       "skill": "tableau",
       "category": "viz_bi",
+      "postings": 1,
+      "share": 0.0041,
+      "ci95": [
+       0.0007,
+       0.0228
+      ]
+     },
+     {
+      "skill": "tensorflow",
+      "category": "ml_dl_nlp",
+      "postings": 1,
+      "share": 0.0041,
+      "ci95": [
+       0.0007,
+       0.0228
+      ]
+     },
+     {
+      "skill": "crossplane",
+      "category": "cloud_ops",
       "postings": 1,
       "share": 0.0041,
       "ci95": [
@@ -1862,6 +3922,16 @@
       ]
      },
      {
+      "skill": "generative ai",
+      "category": "ml_dl_nlp",
+      "postings": 116,
+      "share": 0.1376,
+      "ci95": [
+       0.116,
+       0.1625
+      ]
+     },
+     {
       "skill": "llm",
       "category": "ml_dl_nlp",
       "postings": 102,
@@ -1869,6 +3939,46 @@
       "ci95": [
        0.1007,
        0.1447
+      ]
+     },
+     {
+      "skill": "ai agents",
+      "category": "ml_dl_nlp",
+      "postings": 85,
+      "share": 0.1008,
+      "ci95": [
+       0.0823,
+       0.123
+      ]
+     },
+     {
+      "skill": "rest",
+      "category": "web_backend",
+      "postings": 80,
+      "share": 0.0949,
+      "ci95": [
+       0.0769,
+       0.1166
+      ]
+     },
+     {
+      "skill": "devops",
+      "category": "cloud_ops",
+      "postings": 77,
+      "share": 0.0913,
+      "ci95": [
+       0.0737,
+       0.1127
+      ]
+     },
+     {
+      "skill": "c++",
+      "category": "languages",
+      "postings": 72,
+      "share": 0.0854,
+      "ci95": [
+       0.0684,
+       0.1062
       ]
      },
      {
@@ -1892,6 +4002,16 @@
       ]
      },
      {
+      "skill": "postgresql",
+      "category": "data_eng",
+      "postings": 60,
+      "share": 0.0712,
+      "ci95": [
+       0.0557,
+       0.0905
+      ]
+     },
+     {
       "skill": "docker",
       "category": "cloud_ops",
       "postings": 59,
@@ -1899,6 +4019,56 @@
       "ci95": [
        0.0546,
        0.0892
+      ]
+     },
+     {
+      "skill": "excel",
+      "category": "viz_bi",
+      "postings": 58,
+      "share": 0.0688,
+      "ci95": [
+       0.0536,
+       0.0879
+      ]
+     },
+     {
+      "skill": "iac",
+      "category": "cloud_ops",
+      "postings": 55,
+      "share": 0.0652,
+      "ci95": [
+       0.0505,
+       0.084
+      ]
+     },
+     {
+      "skill": "sre",
+      "category": "cloud_ops",
+      "postings": 54,
+      "share": 0.0641,
+      "ci95": [
+       0.0494,
+       0.0826
+      ]
+     },
+     {
+      "skill": "react",
+      "category": "web_backend",
+      "postings": 53,
+      "share": 0.0629,
+      "ci95": [
+       0.0484,
+       0.0813
+      ]
+     },
+     {
+      "skill": "oauth",
+      "category": "security_net",
+      "postings": 52,
+      "share": 0.0617,
+      "ci95": [
+       0.0473,
+       0.08
       ]
      },
      {
@@ -1932,6 +4102,26 @@
       ]
      },
      {
+      "skill": "jira",
+      "category": "viz_bi",
+      "postings": 35,
+      "share": 0.0415,
+      "ci95": [
+       0.03,
+       0.0572
+      ]
+     },
+     {
+      "skill": "git",
+      "category": "cloud_ops",
+      "postings": 35,
+      "share": 0.0415,
+      "ci95": [
+       0.03,
+       0.0572
+      ]
+     },
+     {
       "skill": "tableau",
       "category": "viz_bi",
       "postings": 35,
@@ -1952,8 +4142,98 @@
       ]
      },
      {
+      "skill": "mysql",
+      "category": "data_eng",
+      "postings": 34,
+      "share": 0.0403,
+      "ci95": [
+       0.029,
+       0.0558
+      ]
+     },
+     {
+      "skill": "copilot",
+      "category": "ml_dl_nlp",
+      "postings": 27,
+      "share": 0.032,
+      "ci95": [
+       0.0221,
+       0.0462
+      ]
+     },
+     {
+      "skill": "nosql",
+      "category": "data_eng",
+      "postings": 25,
+      "share": 0.0297,
+      "ci95": [
+       0.0202,
+       0.0434
+      ]
+     },
+     {
+      "skill": "node.js",
+      "category": "web_backend",
+      "postings": 24,
+      "share": 0.0285,
+      "ci95": [
+       0.0192,
+       0.042
+      ]
+     },
+     {
+      "skill": "github actions",
+      "category": "cloud_ops",
+      "postings": 23,
+      "share": 0.0273,
+      "ci95": [
+       0.0182,
+       0.0406
+      ]
+     },
+     {
+      "skill": "gsuite",
+      "category": "viz_bi",
+      "postings": 21,
+      "share": 0.0249,
+      "ci95": [
+       0.0164,
+       0.0378
+      ]
+     },
+     {
+      "skill": "rust",
+      "category": "languages",
+      "postings": 21,
+      "share": 0.0249,
+      "ci95": [
+       0.0164,
+       0.0378
+      ]
+     },
+     {
+      "skill": "scrum",
+      "category": "practices",
+      "postings": 20,
+      "share": 0.0237,
+      "ci95": [
+       0.0154,
+       0.0364
+      ]
+     },
+     {
       "skill": "snowflake",
       "category": "data_eng",
+      "postings": 20,
+      "share": 0.0237,
+      "ci95": [
+       0.0154,
+       0.0364
+      ]
+     },
+     {
+      "skill": "netsuite",
+      "category": "enterprise_apps",
       "postings": 20,
       "share": 0.0237,
       "ci95": [
@@ -1972,6 +4252,36 @@
       ]
      },
      {
+      "skill": "ruby",
+      "category": "languages",
+      "postings": 19,
+      "share": 0.0225,
+      "ci95": [
+       0.0145,
+       0.0349
+      ]
+     },
+     {
+      "skill": "unix",
+      "category": "cloud_ops",
+      "postings": 18,
+      "share": 0.0214,
+      "ci95": [
+       0.0135,
+       0.0335
+      ]
+     },
+     {
+      "skill": "vmware",
+      "category": "cloud_ops",
+      "postings": 18,
+      "share": 0.0214,
+      "ci95": [
+       0.0135,
+       0.0335
+      ]
+     },
+     {
       "skill": "langchain",
       "category": "ml_dl_nlp",
       "postings": 18,
@@ -1982,8 +4292,28 @@
       ]
      },
      {
-      "skill": "r",
-      "category": "languages",
+      "skill": "claude code",
+      "category": "ml_dl_nlp",
+      "postings": 18,
+      "share": 0.0214,
+      "ci95": [
+       0.0135,
+       0.0335
+      ]
+     },
+     {
+      "skill": "nlp",
+      "category": "ml_dl_nlp",
+      "postings": 17,
+      "share": 0.0202,
+      "ci95": [
+       0.0126,
+       0.0321
+      ]
+     },
+     {
+      "skill": "macos",
+      "category": "cloud_ops",
       "postings": 17,
       "share": 0.0202,
       "ci95": [
@@ -2002,13 +4332,33 @@
       ]
      },
      {
-      "skill": "nlp",
-      "category": "ml_dl_nlp",
+      "skill": "r",
+      "category": "languages",
       "postings": 17,
       "share": 0.0202,
       "ci95": [
        0.0126,
        0.0321
+      ]
+     },
+     {
+      "skill": "vpn",
+      "category": "security_net",
+      "postings": 16,
+      "share": 0.019,
+      "ci95": [
+       0.0117,
+       0.0306
+      ]
+     },
+     {
+      "skill": "spring boot",
+      "category": "web_backend",
+      "postings": 16,
+      "share": 0.019,
+      "ci95": [
+       0.0117,
+       0.0306
       ]
      },
      {
@@ -2022,6 +4372,46 @@
       ]
      },
      {
+      "skill": "api gateway",
+      "category": "web_backend",
+      "postings": 16,
+      "share": 0.019,
+      "ci95": [
+       0.0117,
+       0.0306
+      ]
+     },
+     {
+      "skill": "datadog",
+      "category": "cloud_ops",
+      "postings": 15,
+      "share": 0.0178,
+      "ci95": [
+       0.0108,
+       0.0291
+      ]
+     },
+     {
+      "skill": "cpq",
+      "category": "enterprise_apps",
+      "postings": 15,
+      "share": 0.0178,
+      "ci95": [
+       0.0108,
+       0.0291
+      ]
+     },
+     {
+      "skill": "google sheets",
+      "category": "viz_bi",
+      "postings": 15,
+      "share": 0.0178,
+      "ci95": [
+       0.0108,
+       0.0291
+      ]
+     },
+     {
       "skill": "dbt",
       "category": "data_eng",
       "postings": 14,
@@ -2029,16 +4419,6 @@
       "ci95": [
        0.0099,
        0.0277
-      ]
-     },
-     {
-      "skill": "databricks",
-      "category": "data_eng",
-      "postings": 13,
-      "share": 0.0154,
-      "ci95": [
-       0.009,
-       0.0262
       ]
      },
      {
@@ -2052,6 +4432,116 @@
       ]
      },
      {
+      "skill": "load balancer",
+      "category": "security_net",
+      "postings": 13,
+      "share": 0.0154,
+      "ci95": [
+       0.009,
+       0.0262
+      ]
+     },
+     {
+      "skill": "siem",
+      "category": "security_net",
+      "postings": 13,
+      "share": 0.0154,
+      "ci95": [
+       0.009,
+       0.0262
+      ]
+     },
+     {
+      "skill": "gitlab",
+      "category": "cloud_ops",
+      "postings": 12,
+      "share": 0.0142,
+      "ci95": [
+       0.0082,
+       0.0247
+      ]
+     },
+     {
+      "skill": "kotlin",
+      "category": "languages",
+      "postings": 12,
+      "share": 0.0142,
+      "ci95": [
+       0.0082,
+       0.0247
+      ]
+     },
+     {
+      "skill": "soc 2",
+      "category": "security_net",
+      "postings": 12,
+      "share": 0.0142,
+      "ci95": [
+       0.0082,
+       0.0247
+      ]
+     },
+     {
+      "skill": "databricks",
+      "category": "data_eng",
+      "postings": 12,
+      "share": 0.0142,
+      "ci95": [
+       0.0082,
+       0.0247
+      ]
+     },
+     {
+      "skill": "c#",
+      "category": "languages",
+      "postings": 12,
+      "share": 0.0142,
+      "ci95": [
+       0.0082,
+       0.0247
+      ]
+     },
+     {
+      "skill": "elasticsearch",
+      "category": "data_eng",
+      "postings": 11,
+      "share": 0.013,
+      "ci95": [
+       0.0073,
+       0.0232
+      ]
+     },
+     {
+      "skill": "argocd",
+      "category": "cloud_ops",
+      "postings": 11,
+      "share": 0.013,
+      "ci95": [
+       0.0073,
+       0.0232
+      ]
+     },
+     {
+      "skill": "next.js",
+      "category": "web_backend",
+      "postings": 11,
+      "share": 0.013,
+      "ci95": [
+       0.0073,
+       0.0232
+      ]
+     },
+     {
+      "skill": "ms office",
+      "category": "viz_bi",
+      "postings": 11,
+      "share": 0.013,
+      "ci95": [
+       0.0073,
+       0.0232
+      ]
+     },
+     {
       "skill": "airflow",
       "category": "data_eng",
       "postings": 11,
@@ -2062,6 +4552,26 @@
       ]
      },
      {
+      "skill": "active directory",
+      "category": "security_net",
+      "postings": 11,
+      "share": 0.013,
+      "ci95": [
+       0.0073,
+       0.0232
+      ]
+     },
+     {
+      "skill": "gitops",
+      "category": "cloud_ops",
+      "postings": 10,
+      "share": 0.0119,
+      "ci95": [
+       0.0065,
+       0.0217
+      ]
+     },
+     {
       "skill": "scikit-learn",
       "category": "ml_dl_nlp",
       "postings": 10,
@@ -2069,6 +4579,56 @@
       "ci95": [
        0.0065,
        0.0217
+      ]
+     },
+     {
+      "skill": "bash",
+      "category": "languages",
+      "postings": 10,
+      "share": 0.0119,
+      "ci95": [
+       0.0065,
+       0.0217
+      ]
+     },
+     {
+      "skill": "ipsec",
+      "category": "security_net",
+      "postings": 10,
+      "share": 0.0119,
+      "ci95": [
+       0.0065,
+       0.0217
+      ]
+     },
+     {
+      "skill": "iso 27001",
+      "category": "security_net",
+      "postings": 10,
+      "share": 0.0119,
+      "ci95": [
+       0.0065,
+       0.0217
+      ]
+     },
+     {
+      "skill": "opensearch",
+      "category": "data_eng",
+      "postings": 9,
+      "share": 0.0107,
+      "ci95": [
+       0.0056,
+       0.0202
+      ]
+     },
+     {
+      "skill": "apex",
+      "category": "enterprise_apps",
+      "postings": 9,
+      "share": 0.0107,
+      "ci95": [
+       0.0056,
+       0.0202
       ]
      },
      {
@@ -2092,6 +4652,86 @@
       ]
      },
      {
+      "skill": "elk stack",
+      "category": "cloud_ops",
+      "postings": 7,
+      "share": 0.0083,
+      "ci95": [
+       0.004,
+       0.017
+      ]
+     },
+     {
+      "skill": "tdd",
+      "category": "practices",
+      "postings": 7,
+      "share": 0.0083,
+      "ci95": [
+       0.004,
+       0.017
+      ]
+     },
+     {
+      "skill": "https",
+      "category": "security_net",
+      "postings": 7,
+      "share": 0.0083,
+      "ci95": [
+       0.004,
+       0.017
+      ]
+     },
+     {
+      "skill": "lightning web components",
+      "category": "enterprise_apps",
+      "postings": 7,
+      "share": 0.0083,
+      "ci95": [
+       0.004,
+       0.017
+      ]
+     },
+     {
+      "skill": "hubspot",
+      "category": "enterprise_apps",
+      "postings": 7,
+      "share": 0.0083,
+      "ci95": [
+       0.004,
+       0.017
+      ]
+     },
+     {
+      "skill": "dynamodb",
+      "category": "data_eng",
+      "postings": 6,
+      "share": 0.0071,
+      "ci95": [
+       0.0033,
+       0.0154
+      ]
+     },
+     {
+      "skill": "swift",
+      "category": "languages",
+      "postings": 6,
+      "share": 0.0071,
+      "ci95": [
+       0.0033,
+       0.0154
+      ]
+     },
+     {
+      "skill": "waf",
+      "category": "security_net",
+      "postings": 5,
+      "share": 0.0059,
+      "ci95": [
+       0.0025,
+       0.0138
+      ]
+     },
+     {
       "skill": "hugging face",
       "category": "ml_dl_nlp",
       "postings": 5,
@@ -2099,6 +4739,96 @@
       "ci95": [
        0.0025,
        0.0138
+      ]
+     },
+     {
+      "skill": "openshift",
+      "category": "cloud_ops",
+      "postings": 5,
+      "share": 0.0059,
+      "ci95": [
+       0.0025,
+       0.0138
+      ]
+     },
+     {
+      "skill": "agentforce",
+      "category": "enterprise_apps",
+      "postings": 4,
+      "share": 0.0047,
+      "ci95": [
+       0.0018,
+       0.0121
+      ]
+     },
+     {
+      "skill": "crossplane",
+      "category": "cloud_ops",
+      "postings": 3,
+      "share": 0.0036,
+      "ci95": [
+       0.0012,
+       0.0104
+      ]
+     },
+     {
+      "skill": "mulesoft",
+      "category": "enterprise_apps",
+      "postings": 3,
+      "share": 0.0036,
+      "ci95": [
+       0.0012,
+       0.0104
+      ]
+     },
+     {
+      "skill": ".net",
+      "category": "languages",
+      "postings": 3,
+      "share": 0.0036,
+      "ci95": [
+       0.0012,
+       0.0104
+      ]
+     },
+     {
+      "skill": "php",
+      "category": "languages",
+      "postings": 3,
+      "share": 0.0036,
+      "ci95": [
+       0.0012,
+       0.0104
+      ]
+     },
+     {
+      "skill": "orm",
+      "category": "web_backend",
+      "postings": 3,
+      "share": 0.0036,
+      "ci95": [
+       0.0012,
+       0.0104
+      ]
+     },
+     {
+      "skill": "wifi",
+      "category": "security_net",
+      "postings": 2,
+      "share": 0.0024,
+      "ci95": [
+       0.0007,
+       0.0086
+      ]
+     },
+     {
+      "skill": "perl",
+      "category": "languages",
+      "postings": 2,
+      "share": 0.0024,
+      "ci95": [
+       0.0007,
+       0.0086
       ]
      },
      {
@@ -2112,8 +4842,8 @@
       ]
      },
      {
-      "skill": "computer vision",
-      "category": "ml_dl_nlp",
+      "skill": "streamlit",
+      "category": "viz_bi",
       "postings": 1,
       "share": 0.0012,
       "ci95": [
@@ -2122,8 +4852,8 @@
       ]
      },
      {
-      "skill": "streamlit",
-      "category": "viz_bi",
+      "skill": "computer vision",
+      "category": "ml_dl_nlp",
       "postings": 1,
       "share": 0.0012,
       "ci95": [
@@ -2175,6 +4905,16 @@
       "ci95": [
        0.1206,
        0.2199
+      ]
+     },
+     {
+      "skill": "excel",
+      "category": "viz_bi",
+      "postings": 30,
+      "share": 0.1408,
+      "ci95": [
+       0.1005,
+       0.1939
       ]
      },
      {
@@ -2248,6 +4988,16 @@
       ]
      },
      {
+      "skill": "ai agents",
+      "category": "ml_dl_nlp",
+      "postings": 16,
+      "share": 0.0751,
+      "ci95": [
+       0.0468,
+       0.1185
+      ]
+     },
+     {
       "skill": "llm",
       "category": "ml_dl_nlp",
       "postings": 12,
@@ -2268,6 +5018,26 @@
       ]
      },
      {
+      "skill": "copilot",
+      "category": "ml_dl_nlp",
+      "postings": 12,
+      "share": 0.0563,
+      "ci95": [
+       0.0325,
+       0.0959
+      ]
+     },
+     {
+      "skill": "google sheets",
+      "category": "viz_bi",
+      "postings": 12,
+      "share": 0.0563,
+      "ci95": [
+       0.0325,
+       0.0959
+      ]
+     },
+     {
       "skill": "kafka",
       "category": "data_eng",
       "postings": 11,
@@ -2278,13 +5048,53 @@
       ]
      },
      {
-      "skill": "typescript",
-      "category": "languages",
-      "postings": 9,
-      "share": 0.0423,
+      "skill": "generative ai",
+      "category": "ml_dl_nlp",
+      "postings": 11,
+      "share": 0.0516,
       "ci95": [
-       0.0224,
-       0.0783
+       0.0291,
+       0.0901
+      ]
+     },
+     {
+      "skill": "devops",
+      "category": "cloud_ops",
+      "postings": 11,
+      "share": 0.0516,
+      "ci95": [
+       0.0291,
+       0.0901
+      ]
+     },
+     {
+      "skill": "claude code",
+      "category": "ml_dl_nlp",
+      "postings": 10,
+      "share": 0.0469,
+      "ci95": [
+       0.0257,
+       0.0843
+      ]
+     },
+     {
+      "skill": "agentforce",
+      "category": "enterprise_apps",
+      "postings": 10,
+      "share": 0.0469,
+      "ci95": [
+       0.0257,
+       0.0843
+      ]
+     },
+     {
+      "skill": "scrum",
+      "category": "practices",
+      "postings": 10,
+      "share": 0.0469,
+      "ci95": [
+       0.0257,
+       0.0843
       ]
      },
      {
@@ -2298,8 +5108,18 @@
       ]
      },
      {
-      "skill": "spark",
-      "category": "data_eng",
+      "skill": "typescript",
+      "category": "languages",
+      "postings": 9,
+      "share": 0.0423,
+      "ci95": [
+       0.0224,
+       0.0783
+      ]
+     },
+     {
+      "skill": "netsuite",
+      "category": "enterprise_apps",
       "postings": 8,
       "share": 0.0376,
       "ci95": [
@@ -2318,8 +5138,48 @@
       ]
      },
      {
-      "skill": "r",
-      "category": "languages",
+      "skill": "spark",
+      "category": "data_eng",
+      "postings": 8,
+      "share": 0.0376,
+      "ci95": [
+       0.0192,
+       0.0724
+      ]
+     },
+     {
+      "skill": "node.js",
+      "category": "web_backend",
+      "postings": 8,
+      "share": 0.0376,
+      "ci95": [
+       0.0192,
+       0.0724
+      ]
+     },
+     {
+      "skill": "lightning web components",
+      "category": "enterprise_apps",
+      "postings": 8,
+      "share": 0.0376,
+      "ci95": [
+       0.0192,
+       0.0724
+      ]
+     },
+     {
+      "skill": "apex",
+      "category": "enterprise_apps",
+      "postings": 8,
+      "share": 0.0376,
+      "ci95": [
+       0.0192,
+       0.0724
+      ]
+     },
+     {
+      "skill": "git",
+      "category": "cloud_ops",
       "postings": 7,
       "share": 0.0329,
       "ci95": [
@@ -2328,8 +5188,18 @@
       ]
      },
      {
-      "skill": "looker",
-      "category": "viz_bi",
+      "skill": "rest",
+      "category": "web_backend",
+      "postings": 7,
+      "share": 0.0329,
+      "ci95": [
+       0.016,
+       0.0663
+      ]
+     },
+     {
+      "skill": "c#",
+      "category": "languages",
       "postings": 7,
       "share": 0.0329,
       "ci95": [
@@ -2348,6 +5218,86 @@
       ]
      },
      {
+      "skill": "jira",
+      "category": "viz_bi",
+      "postings": 7,
+      "share": 0.0329,
+      "ci95": [
+       0.016,
+       0.0663
+      ]
+     },
+     {
+      "skill": "looker",
+      "category": "viz_bi",
+      "postings": 7,
+      "share": 0.0329,
+      "ci95": [
+       0.016,
+       0.0663
+      ]
+     },
+     {
+      "skill": "r",
+      "category": "languages",
+      "postings": 7,
+      "share": 0.0329,
+      "ci95": [
+       0.016,
+       0.0663
+      ]
+     },
+     {
+      "skill": "nosql",
+      "category": "data_eng",
+      "postings": 6,
+      "share": 0.0282,
+      "ci95": [
+       0.013,
+       0.0601
+      ]
+     },
+     {
+      "skill": "ruby",
+      "category": "languages",
+      "postings": 6,
+      "share": 0.0282,
+      "ci95": [
+       0.013,
+       0.0601
+      ]
+     },
+     {
+      "skill": "c++",
+      "category": "languages",
+      "postings": 6,
+      "share": 0.0282,
+      "ci95": [
+       0.013,
+       0.0601
+      ]
+     },
+     {
+      "skill": "react",
+      "category": "web_backend",
+      "postings": 6,
+      "share": 0.0282,
+      "ci95": [
+       0.013,
+       0.0601
+      ]
+     },
+     {
+      "skill": "sre",
+      "category": "cloud_ops",
+      "postings": 5,
+      "share": 0.0235,
+      "ci95": [
+       0.0101,
+       0.0538
+      ]
+     },
+     {
       "skill": "terraform",
       "category": "cloud_ops",
       "postings": 5,
@@ -2355,6 +5305,66 @@
       "ci95": [
        0.0101,
        0.0538
+      ]
+     },
+     {
+      "skill": "rust",
+      "category": "languages",
+      "postings": 5,
+      "share": 0.0235,
+      "ci95": [
+       0.0101,
+       0.0538
+      ]
+     },
+     {
+      "skill": "kotlin",
+      "category": "languages",
+      "postings": 5,
+      "share": 0.0235,
+      "ci95": [
+       0.0101,
+       0.0538
+      ]
+     },
+     {
+      "skill": "load balancer",
+      "category": "security_net",
+      "postings": 4,
+      "share": 0.0188,
+      "ci95": [
+       0.0073,
+       0.0473
+      ]
+     },
+     {
+      "skill": "gsuite",
+      "category": "viz_bi",
+      "postings": 4,
+      "share": 0.0188,
+      "ci95": [
+       0.0073,
+       0.0473
+      ]
+     },
+     {
+      "skill": "oauth",
+      "category": "security_net",
+      "postings": 4,
+      "share": 0.0188,
+      "ci95": [
+       0.0073,
+       0.0473
+      ]
+     },
+     {
+      "skill": "postgresql",
+      "category": "data_eng",
+      "postings": 4,
+      "share": 0.0188,
+      "ci95": [
+       0.0073,
+       0.0473
       ]
      },
      {
@@ -2368,8 +5378,48 @@
       ]
      },
      {
+      "skill": "ms office",
+      "category": "viz_bi",
+      "postings": 4,
+      "share": 0.0188,
+      "ci95": [
+       0.0073,
+       0.0473
+      ]
+     },
+     {
+      "skill": "php",
+      "category": "languages",
+      "postings": 3,
+      "share": 0.0141,
+      "ci95": [
+       0.0048,
+       0.0406
+      ]
+     },
+     {
+      "skill": "perl",
+      "category": "languages",
+      "postings": 3,
+      "share": 0.0141,
+      "ci95": [
+       0.0048,
+       0.0406
+      ]
+     },
+     {
       "skill": "hadoop",
       "category": "data_eng",
+      "postings": 3,
+      "share": 0.0141,
+      "ci95": [
+       0.0048,
+       0.0406
+      ]
+     },
+     {
+      "skill": "next.js",
+      "category": "web_backend",
       "postings": 3,
       "share": 0.0141,
       "ci95": [
@@ -2388,6 +5438,16 @@
       ]
      },
      {
+      "skill": "iac",
+      "category": "cloud_ops",
+      "postings": 2,
+      "share": 0.0094,
+      "ci95": [
+       0.0026,
+       0.0336
+      ]
+     },
+     {
       "skill": "snowflake",
       "category": "data_eng",
       "postings": 2,
@@ -2398,8 +5458,158 @@
       ]
      },
      {
+      "skill": "spring boot",
+      "category": "web_backend",
+      "postings": 2,
+      "share": 0.0094,
+      "ci95": [
+       0.0026,
+       0.0336
+      ]
+     },
+     {
+      "skill": "crossplane",
+      "category": "cloud_ops",
+      "postings": 2,
+      "share": 0.0094,
+      "ci95": [
+       0.0026,
+       0.0336
+      ]
+     },
+     {
+      "skill": "macos",
+      "category": "cloud_ops",
+      "postings": 2,
+      "share": 0.0094,
+      "ci95": [
+       0.0026,
+       0.0336
+      ]
+     },
+     {
+      "skill": "active directory",
+      "category": "security_net",
+      "postings": 2,
+      "share": 0.0094,
+      "ci95": [
+       0.0026,
+       0.0336
+      ]
+     },
+     {
+      "skill": "unix",
+      "category": "cloud_ops",
+      "postings": 2,
+      "share": 0.0094,
+      "ci95": [
+       0.0026,
+       0.0336
+      ]
+     },
+     {
+      "skill": "cpq",
+      "category": "enterprise_apps",
+      "postings": 2,
+      "share": 0.0094,
+      "ci95": [
+       0.0026,
+       0.0336
+      ]
+     },
+     {
+      "skill": "mysql",
+      "category": "data_eng",
+      "postings": 2,
+      "share": 0.0094,
+      "ci95": [
+       0.0026,
+       0.0336
+      ]
+     },
+     {
+      "skill": "iso 27001",
+      "category": "security_net",
+      "postings": 1,
+      "share": 0.0047,
+      "ci95": [
+       0.0008,
+       0.0261
+      ]
+     },
+     {
+      "skill": "ipsec",
+      "category": "security_net",
+      "postings": 1,
+      "share": 0.0047,
+      "ci95": [
+       0.0008,
+       0.0261
+      ]
+     },
+     {
       "skill": "airflow",
       "category": "data_eng",
+      "postings": 1,
+      "share": 0.0047,
+      "ci95": [
+       0.0008,
+       0.0261
+      ]
+     },
+     {
+      "skill": "elasticsearch",
+      "category": "data_eng",
+      "postings": 1,
+      "share": 0.0047,
+      "ci95": [
+       0.0008,
+       0.0261
+      ]
+     },
+     {
+      "skill": "nlp",
+      "category": "ml_dl_nlp",
+      "postings": 1,
+      "share": 0.0047,
+      "ci95": [
+       0.0008,
+       0.0261
+      ]
+     },
+     {
+      "skill": "openshift",
+      "category": "cloud_ops",
+      "postings": 1,
+      "share": 0.0047,
+      "ci95": [
+       0.0008,
+       0.0261
+      ]
+     },
+     {
+      "skill": ".net",
+      "category": "languages",
+      "postings": 1,
+      "share": 0.0047,
+      "ci95": [
+       0.0008,
+       0.0261
+      ]
+     },
+     {
+      "skill": "mulesoft",
+      "category": "enterprise_apps",
+      "postings": 1,
+      "share": 0.0047,
+      "ci95": [
+       0.0008,
+       0.0261
+      ]
+     },
+     {
+      "skill": "orm",
+      "category": "web_backend",
       "postings": 1,
       "share": 0.0047,
       "ci95": [
@@ -2418,7 +5628,27 @@
       ]
      },
      {
-      "skill": "nlp",
+      "skill": "github actions",
+      "category": "cloud_ops",
+      "postings": 1,
+      "share": 0.0047,
+      "ci95": [
+       0.0008,
+       0.0261
+      ]
+     },
+     {
+      "skill": "argocd",
+      "category": "cloud_ops",
+      "postings": 1,
+      "share": 0.0047,
+      "ci95": [
+       0.0008,
+       0.0261
+      ]
+     },
+     {
+      "skill": "scikit-learn",
       "category": "ml_dl_nlp",
       "postings": 1,
       "share": 0.0047,
@@ -2438,7 +5668,7 @@
       ]
      },
      {
-      "skill": "scikit-learn",
+      "skill": "hugging face",
       "category": "ml_dl_nlp",
       "postings": 1,
       "share": 0.0047,
@@ -2448,8 +5678,8 @@
       ]
      },
      {
-      "skill": "hugging face",
-      "category": "ml_dl_nlp",
+      "skill": "bash",
+      "category": "languages",
       "postings": 1,
       "share": 0.0047,
       "ci95": [
@@ -2484,7 +5714,7 @@
     "ci_note": "Wilson 95% interval over this panel's postings, not the whole market",
     "skills": [
      {
-      "skill": "python",
+      "skill": "sql",
       "category": "languages",
       "postings": 28,
       "share": 0.2887,
@@ -2494,7 +5724,7 @@
       ]
      },
      {
-      "skill": "sql",
+      "skill": "python",
       "category": "languages",
       "postings": 28,
       "share": 0.2887,
@@ -2534,6 +5764,16 @@
       ]
      },
      {
+      "skill": "ai agents",
+      "category": "ml_dl_nlp",
+      "postings": 16,
+      "share": 0.1649,
+      "ci95": [
+       0.1042,
+       0.2513
+      ]
+     },
+     {
       "skill": "llm",
       "category": "ml_dl_nlp",
       "postings": 16,
@@ -2545,6 +5785,16 @@
      },
      {
       "skill": "gcp",
+      "category": "cloud_ops",
+      "postings": 16,
+      "share": 0.1649,
+      "ci95": [
+       0.1042,
+       0.2513
+      ]
+     },
+     {
+      "skill": "devops",
       "category": "cloud_ops",
       "postings": 16,
       "share": 0.1649,
@@ -2584,6 +5834,16 @@
       ]
      },
      {
+      "skill": "postgresql",
+      "category": "data_eng",
+      "postings": 11,
+      "share": 0.1134,
+      "ci95": [
+       0.0645,
+       0.1917
+      ]
+     },
+     {
       "skill": "go",
       "category": "languages",
       "postings": 11,
@@ -2591,6 +5851,106 @@
       "ci95": [
        0.0645,
        0.1917
+      ]
+     },
+     {
+      "skill": "iac",
+      "category": "cloud_ops",
+      "postings": 9,
+      "share": 0.0928,
+      "ci95": [
+       0.0496,
+       0.167
+      ]
+     },
+     {
+      "skill": "mysql",
+      "category": "data_eng",
+      "postings": 9,
+      "share": 0.0928,
+      "ci95": [
+       0.0496,
+       0.167
+      ]
+     },
+     {
+      "skill": "git",
+      "category": "cloud_ops",
+      "postings": 9,
+      "share": 0.0928,
+      "ci95": [
+       0.0496,
+       0.167
+      ]
+     },
+     {
+      "skill": "oauth",
+      "category": "security_net",
+      "postings": 8,
+      "share": 0.0825,
+      "ci95": [
+       0.0424,
+       0.1544
+      ]
+     },
+     {
+      "skill": "sre",
+      "category": "cloud_ops",
+      "postings": 8,
+      "share": 0.0825,
+      "ci95": [
+       0.0424,
+       0.1544
+      ]
+     },
+     {
+      "skill": "rest",
+      "category": "web_backend",
+      "postings": 8,
+      "share": 0.0825,
+      "ci95": [
+       0.0424,
+       0.1544
+      ]
+     },
+     {
+      "skill": "excel",
+      "category": "viz_bi",
+      "postings": 7,
+      "share": 0.0722,
+      "ci95": [
+       0.0354,
+       0.1415
+      ]
+     },
+     {
+      "skill": "elk stack",
+      "category": "cloud_ops",
+      "postings": 7,
+      "share": 0.0722,
+      "ci95": [
+       0.0354,
+       0.1415
+      ]
+     },
+     {
+      "skill": "elasticsearch",
+      "category": "data_eng",
+      "postings": 7,
+      "share": 0.0722,
+      "ci95": [
+       0.0354,
+       0.1415
+      ]
+     },
+     {
+      "skill": "nosql",
+      "category": "data_eng",
+      "postings": 6,
+      "share": 0.0619,
+      "ci95": [
+       0.0287,
+       0.1284
       ]
      },
      {
@@ -2614,8 +5974,108 @@
       ]
      },
      {
-      "skill": "airflow",
-      "category": "data_eng",
+      "skill": "github actions",
+      "category": "cloud_ops",
+      "postings": 5,
+      "share": 0.0515,
+      "ci95": [
+       0.0222,
+       0.115
+      ]
+     },
+     {
+      "skill": "crossplane",
+      "category": "cloud_ops",
+      "postings": 4,
+      "share": 0.0412,
+      "ci95": [
+       0.0162,
+       0.1013
+      ]
+     },
+     {
+      "skill": "argocd",
+      "category": "cloud_ops",
+      "postings": 4,
+      "share": 0.0412,
+      "ci95": [
+       0.0162,
+       0.1013
+      ]
+     },
+     {
+      "skill": "generative ai",
+      "category": "ml_dl_nlp",
+      "postings": 4,
+      "share": 0.0412,
+      "ci95": [
+       0.0162,
+       0.1013
+      ]
+     },
+     {
+      "skill": "unix",
+      "category": "cloud_ops",
+      "postings": 4,
+      "share": 0.0412,
+      "ci95": [
+       0.0162,
+       0.1013
+      ]
+     },
+     {
+      "skill": "load balancer",
+      "category": "security_net",
+      "postings": 4,
+      "share": 0.0412,
+      "ci95": [
+       0.0162,
+       0.1013
+      ]
+     },
+     {
+      "skill": "copilot",
+      "category": "ml_dl_nlp",
+      "postings": 4,
+      "share": 0.0412,
+      "ci95": [
+       0.0162,
+       0.1013
+      ]
+     },
+     {
+      "skill": "bash",
+      "category": "languages",
+      "postings": 4,
+      "share": 0.0412,
+      "ci95": [
+       0.0162,
+       0.1013
+      ]
+     },
+     {
+      "skill": "gitlab",
+      "category": "cloud_ops",
+      "postings": 4,
+      "share": 0.0412,
+      "ci95": [
+       0.0162,
+       0.1013
+      ]
+     },
+     {
+      "skill": "c++",
+      "category": "languages",
+      "postings": 3,
+      "share": 0.0309,
+      "ci95": [
+       0.0106,
+       0.087
+      ]
+     },
+     {
+      "skill": "iso 27001",
+      "category": "security_net",
       "postings": 3,
       "share": 0.0309,
       "ci95": [
@@ -2634,7 +6094,137 @@
       ]
      },
      {
+      "skill": "google sheets",
+      "category": "viz_bi",
+      "postings": 3,
+      "share": 0.0309,
+      "ci95": [
+       0.0106,
+       0.087
+      ]
+     },
+     {
+      "skill": "hubspot",
+      "category": "enterprise_apps",
+      "postings": 3,
+      "share": 0.0309,
+      "ci95": [
+       0.0106,
+       0.087
+      ]
+     },
+     {
+      "skill": "spring boot",
+      "category": "web_backend",
+      "postings": 3,
+      "share": 0.0309,
+      "ci95": [
+       0.0106,
+       0.087
+      ]
+     },
+     {
+      "skill": "waf",
+      "category": "security_net",
+      "postings": 3,
+      "share": 0.0309,
+      "ci95": [
+       0.0106,
+       0.087
+      ]
+     },
+     {
+      "skill": "soc 2",
+      "category": "security_net",
+      "postings": 3,
+      "share": 0.0309,
+      "ci95": [
+       0.0106,
+       0.087
+      ]
+     },
+     {
+      "skill": "rust",
+      "category": "languages",
+      "postings": 3,
+      "share": 0.0309,
+      "ci95": [
+       0.0106,
+       0.087
+      ]
+     },
+     {
+      "skill": "scrum",
+      "category": "practices",
+      "postings": 3,
+      "share": 0.0309,
+      "ci95": [
+       0.0106,
+       0.087
+      ]
+     },
+     {
+      "skill": "airflow",
+      "category": "data_eng",
+      "postings": 3,
+      "share": 0.0309,
+      "ci95": [
+       0.0106,
+       0.087
+      ]
+     },
+     {
+      "skill": "claude code",
+      "category": "ml_dl_nlp",
+      "postings": 3,
+      "share": 0.0309,
+      "ci95": [
+       0.0106,
+       0.087
+      ]
+     },
+     {
+      "skill": "vpn",
+      "category": "security_net",
+      "postings": 2,
+      "share": 0.0206,
+      "ci95": [
+       0.0057,
+       0.0721
+      ]
+     },
+     {
       "skill": "typescript",
+      "category": "languages",
+      "postings": 2,
+      "share": 0.0206,
+      "ci95": [
+       0.0057,
+       0.0721
+      ]
+     },
+     {
+      "skill": "vmware",
+      "category": "cloud_ops",
+      "postings": 2,
+      "share": 0.0206,
+      "ci95": [
+       0.0057,
+       0.0721
+      ]
+     },
+     {
+      "skill": "langchain",
+      "category": "ml_dl_nlp",
+      "postings": 2,
+      "share": 0.0206,
+      "ci95": [
+       0.0057,
+       0.0721
+      ]
+     },
+     {
+      "skill": "ruby",
       "category": "languages",
       "postings": 2,
       "share": 0.0206,
@@ -2654,8 +6244,8 @@
       ]
      },
      {
-      "skill": "langchain",
-      "category": "ml_dl_nlp",
+      "skill": "datadog",
+      "category": "cloud_ops",
       "postings": 2,
       "share": 0.0206,
       "ci95": [
@@ -2664,8 +6254,38 @@
       ]
      },
      {
-      "skill": "spark",
+      "skill": "opensearch",
       "category": "data_eng",
+      "postings": 2,
+      "share": 0.0206,
+      "ci95": [
+       0.0057,
+       0.0721
+      ]
+     },
+     {
+      "skill": "siem",
+      "category": "security_net",
+      "postings": 2,
+      "share": 0.0206,
+      "ci95": [
+       0.0057,
+       0.0721
+      ]
+     },
+     {
+      "skill": "active directory",
+      "category": "security_net",
+      "postings": 2,
+      "share": 0.0206,
+      "ci95": [
+       0.0057,
+       0.0721
+      ]
+     },
+     {
+      "skill": "ipsec",
+      "category": "security_net",
       "postings": 1,
       "share": 0.0103,
       "ci95": [
@@ -2674,8 +6294,8 @@
       ]
      },
      {
-      "skill": "scala",
-      "category": "languages",
+      "skill": "openshift",
+      "category": "cloud_ops",
       "postings": 1,
       "share": 0.0103,
       "ci95": [
@@ -2684,8 +6304,8 @@
       ]
      },
      {
-      "skill": "scikit-learn",
-      "category": "ml_dl_nlp",
+      "skill": "netsuite",
+      "category": "enterprise_apps",
       "postings": 1,
       "share": 0.0103,
       "ci95": [
@@ -2714,8 +6334,148 @@
       ]
      },
      {
+      "skill": "https",
+      "category": "security_net",
+      "postings": 1,
+      "share": 0.0103,
+      "ci95": [
+       0.0018,
+       0.0561
+      ]
+     },
+     {
+      "skill": "jira",
+      "category": "viz_bi",
+      "postings": 1,
+      "share": 0.0103,
+      "ci95": [
+       0.0018,
+       0.0561
+      ]
+     },
+     {
+      "skill": "node.js",
+      "category": "web_backend",
+      "postings": 1,
+      "share": 0.0103,
+      "ci95": [
+       0.0018,
+       0.0561
+      ]
+     },
+     {
+      "skill": "dynamodb",
+      "category": "data_eng",
+      "postings": 1,
+      "share": 0.0103,
+      "ci95": [
+       0.0018,
+       0.0561
+      ]
+     },
+     {
+      "skill": "scala",
+      "category": "languages",
+      "postings": 1,
+      "share": 0.0103,
+      "ci95": [
+       0.0018,
+       0.0561
+      ]
+     },
+     {
+      "skill": "apex",
+      "category": "enterprise_apps",
+      "postings": 1,
+      "share": 0.0103,
+      "ci95": [
+       0.0018,
+       0.0561
+      ]
+     },
+     {
       "skill": "snowflake",
       "category": "data_eng",
+      "postings": 1,
+      "share": 0.0103,
+      "ci95": [
+       0.0018,
+       0.0561
+      ]
+     },
+     {
+      "skill": "gitops",
+      "category": "cloud_ops",
+      "postings": 1,
+      "share": 0.0103,
+      "ci95": [
+       0.0018,
+       0.0561
+      ]
+     },
+     {
+      "skill": "orm",
+      "category": "web_backend",
+      "postings": 1,
+      "share": 0.0103,
+      "ci95": [
+       0.0018,
+       0.0561
+      ]
+     },
+     {
+      "skill": "macos",
+      "category": "cloud_ops",
+      "postings": 1,
+      "share": 0.0103,
+      "ci95": [
+       0.0018,
+       0.0561
+      ]
+     },
+     {
+      "skill": "spark",
+      "category": "data_eng",
+      "postings": 1,
+      "share": 0.0103,
+      "ci95": [
+       0.0018,
+       0.0561
+      ]
+     },
+     {
+      "skill": "next.js",
+      "category": "web_backend",
+      "postings": 1,
+      "share": 0.0103,
+      "ci95": [
+       0.0018,
+       0.0561
+      ]
+     },
+     {
+      "skill": "php",
+      "category": "languages",
+      "postings": 1,
+      "share": 0.0103,
+      "ci95": [
+       0.0018,
+       0.0561
+      ]
+     },
+     {
+      "skill": "react",
+      "category": "web_backend",
+      "postings": 1,
+      "share": 0.0103,
+      "ci95": [
+       0.0018,
+       0.0561
+      ]
+     },
+     {
+      "skill": "scikit-learn",
+      "category": "ml_dl_nlp",
       "postings": 1,
       "share": 0.0103,
       "ci95": [
@@ -2749,6 +6509,16 @@
     "view": "point-in-time snapshot (one day); not a trend",
     "ci_note": "Wilson 95% interval over this panel's postings, not the whole market",
     "skills": [
+     {
+      "skill": "generative ai",
+      "category": "ml_dl_nlp",
+      "postings": 18,
+      "share": 0.2069,
+      "ci95": [
+       0.1351,
+       0.3035
+      ]
+     },
      {
       "skill": "python",
       "category": "languages",
@@ -2810,8 +6580,28 @@
       ]
      },
      {
+      "skill": "excel",
+      "category": "viz_bi",
+      "postings": 7,
+      "share": 0.0805,
+      "ci95": [
+       0.0395,
+       0.1569
+      ]
+     },
+     {
       "skill": "java",
       "category": "languages",
+      "postings": 6,
+      "share": 0.069,
+      "ci95": [
+       0.032,
+       0.1424
+      ]
+     },
+     {
+      "skill": "ai agents",
+      "category": "ml_dl_nlp",
       "postings": 6,
       "share": 0.069,
       "ci95": [
@@ -2840,6 +6630,16 @@
       ]
      },
      {
+      "skill": "kubernetes",
+      "category": "cloud_ops",
+      "postings": 4,
+      "share": 0.046,
+      "ci95": [
+       0.018,
+       0.1123
+      ]
+     },
+     {
       "skill": "kafka",
       "category": "data_eng",
       "postings": 4,
@@ -2850,13 +6650,13 @@
       ]
      },
      {
-      "skill": "kubernetes",
-      "category": "cloud_ops",
-      "postings": 4,
-      "share": 0.046,
+      "skill": "google sheets",
+      "category": "viz_bi",
+      "postings": 3,
+      "share": 0.0345,
       "ci95": [
-       0.018,
-       0.1123
+       0.0118,
+       0.0965
       ]
      },
      {
@@ -2870,28 +6670,18 @@
       ]
      },
      {
-      "skill": "tableau",
+      "skill": "gsuite",
       "category": "viz_bi",
-      "postings": 2,
-      "share": 0.023,
+      "postings": 3,
+      "share": 0.0345,
       "ci95": [
-       0.0063,
-       0.08
+       0.0118,
+       0.0965
       ]
      },
      {
-      "skill": "javascript",
-      "category": "languages",
-      "postings": 2,
-      "share": 0.023,
-      "ci95": [
-       0.0063,
-       0.08
-      ]
-     },
-     {
-      "skill": "r",
-      "category": "languages",
+      "skill": "iso 27001",
+      "category": "security_net",
       "postings": 2,
       "share": 0.023,
       "ci95": [
@@ -2920,8 +6710,48 @@
       ]
      },
      {
-      "skill": "terraform",
+      "skill": "r",
+      "category": "languages",
+      "postings": 2,
+      "share": 0.023,
+      "ci95": [
+       0.0063,
+       0.08
+      ]
+     },
+     {
+      "skill": "ms office",
+      "category": "viz_bi",
+      "postings": 2,
+      "share": 0.023,
+      "ci95": [
+       0.0063,
+       0.08
+      ]
+     },
+     {
+      "skill": "macos",
       "category": "cloud_ops",
+      "postings": 2,
+      "share": 0.023,
+      "ci95": [
+       0.0063,
+       0.08
+      ]
+     },
+     {
+      "skill": "active directory",
+      "category": "security_net",
+      "postings": 2,
+      "share": 0.023,
+      "ci95": [
+       0.0063,
+       0.08
+      ]
+     },
+     {
+      "skill": "jira",
+      "category": "viz_bi",
       "postings": 2,
       "share": 0.023,
       "ci95": [
@@ -2950,6 +6780,86 @@
       ]
      },
      {
+      "skill": "nosql",
+      "category": "data_eng",
+      "postings": 2,
+      "share": 0.023,
+      "ci95": [
+       0.0063,
+       0.08
+      ]
+     },
+     {
+      "skill": "terraform",
+      "category": "cloud_ops",
+      "postings": 2,
+      "share": 0.023,
+      "ci95": [
+       0.0063,
+       0.08
+      ]
+     },
+     {
+      "skill": "tableau",
+      "category": "viz_bi",
+      "postings": 2,
+      "share": 0.023,
+      "ci95": [
+       0.0063,
+       0.08
+      ]
+     },
+     {
+      "skill": "javascript",
+      "category": "languages",
+      "postings": 2,
+      "share": 0.023,
+      "ci95": [
+       0.0063,
+       0.08
+      ]
+     },
+     {
+      "skill": "devops",
+      "category": "cloud_ops",
+      "postings": 2,
+      "share": 0.023,
+      "ci95": [
+       0.0063,
+       0.08
+      ]
+     },
+     {
+      "skill": "c#",
+      "category": "languages",
+      "postings": 2,
+      "share": 0.023,
+      "ci95": [
+       0.0063,
+       0.08
+      ]
+     },
+     {
+      "skill": "node.js",
+      "category": "web_backend",
+      "postings": 2,
+      "share": 0.023,
+      "ci95": [
+       0.0063,
+       0.08
+      ]
+     },
+     {
+      "skill": "c++",
+      "category": "languages",
+      "postings": 2,
+      "share": 0.023,
+      "ci95": [
+       0.0063,
+       0.08
+      ]
+     },
+     {
       "skill": "langchain",
       "category": "ml_dl_nlp",
       "postings": 2,
@@ -2970,7 +6880,47 @@
       ]
      },
      {
-      "skill": "airflow",
+      "skill": "load balancer",
+      "category": "security_net",
+      "postings": 1,
+      "share": 0.0115,
+      "ci95": [
+       0.002,
+       0.0623
+      ]
+     },
+     {
+      "skill": "ipsec",
+      "category": "security_net",
+      "postings": 1,
+      "share": 0.0115,
+      "ci95": [
+       0.002,
+       0.0623
+      ]
+     },
+     {
+      "skill": "unix",
+      "category": "cloud_ops",
+      "postings": 1,
+      "share": 0.0115,
+      "ci95": [
+       0.002,
+       0.0623
+      ]
+     },
+     {
+      "skill": "mysql",
+      "category": "data_eng",
+      "postings": 1,
+      "share": 0.0115,
+      "ci95": [
+       0.002,
+       0.0623
+      ]
+     },
+     {
+      "skill": "postgresql",
       "category": "data_eng",
       "postings": 1,
       "share": 0.0115,
@@ -2990,8 +6940,48 @@
       ]
      },
      {
+      "skill": "sre",
+      "category": "cloud_ops",
+      "postings": 1,
+      "share": 0.0115,
+      "ci95": [
+       0.002,
+       0.0623
+      ]
+     },
+     {
+      "skill": "wifi",
+      "category": "security_net",
+      "postings": 1,
+      "share": 0.0115,
+      "ci95": [
+       0.002,
+       0.0623
+      ]
+     },
+     {
       "skill": "looker",
       "category": "viz_bi",
+      "postings": 1,
+      "share": 0.0115,
+      "ci95": [
+       0.002,
+       0.0623
+      ]
+     },
+     {
+      "skill": "ruby",
+      "category": "languages",
+      "postings": 1,
+      "share": 0.0115,
+      "ci95": [
+       0.002,
+       0.0623
+      ]
+     },
+     {
+      "skill": "scikit-learn",
+      "category": "ml_dl_nlp",
       "postings": 1,
       "share": 0.0115,
       "ci95": [
@@ -3010,8 +7000,48 @@
       ]
      },
      {
-      "skill": "scikit-learn",
-      "category": "ml_dl_nlp",
+      "skill": "soc 2",
+      "category": "security_net",
+      "postings": 1,
+      "share": 0.0115,
+      "ci95": [
+       0.002,
+       0.0623
+      ]
+     },
+     {
+      "skill": "bash",
+      "category": "languages",
+      "postings": 1,
+      "share": 0.0115,
+      "ci95": [
+       0.002,
+       0.0623
+      ]
+     },
+     {
+      "skill": "siem",
+      "category": "security_net",
+      "postings": 1,
+      "share": 0.0115,
+      "ci95": [
+       0.002,
+       0.0623
+      ]
+     },
+     {
+      "skill": "airflow",
+      "category": "data_eng",
+      "postings": 1,
+      "share": 0.0115,
+      "ci95": [
+       0.002,
+       0.0623
+      ]
+     },
+     {
+      "skill": "git",
+      "category": "cloud_ops",
       "postings": 1,
       "share": 0.0115,
       "ci95": [

@@ -1,42 +1,35 @@
 candidate,labels,postings,boards,example
-ai,ORG|GPE,831,51,AI
-ci,GPE|ORG,196,35,CI
-api,ORG,141,35,API
+ai,ORG|GPE,768,50,AI
+ci,ORG|GPE,195,35,CI
+api,ORG,138,34,API
 ai/ml,ORG,129,21,AI/ML
 us,GPE,124,27,US
 sase,ORG,88,4,SASE
-devops,ORG|GPE,85,21,DevOps
 ui,ORG,76,20,UI
 computer science,ORG,76,17,Computer Science
 ml,ORG|GPE,74,16,ML
 google,ORG,72,12,Google
-linux,GPE|ORG|PRODUCT,71,16,Linux
+linux,ORG|PRODUCT|GPE,71,16,Linux
 finance,ORG|PRODUCT|GPE,70,25,Finance
 dns,ORG,67,15,DNS
 gtm,ORG,66,23,GTM
 crm,PRODUCT,66,20,CRM
 qa,ORG|GPE,57,17,QA
-excel,PRODUCT,52,16,Excel
 iam,ORG,52,12,IAM
 u.s,GPE,50,7,U.S
 erp,ORG,47,17,ERP
-salesforce,GPE|ORG|PRODUCT,46,18,Salesforce
-react,ORG|GPE,44,16,React
+salesforce,ORG|PRODUCT|GPE,46,18,Salesforce
 linkedin,GPE|ORG,43,9,LinkedIn
 mcp,ORG|GPE,42,22,MCP
-sre,ORG,42,18,SRE
 san francisco,GPE,41,6,San Francisco
 engineering,GPE|ORG,40,14,Engineering
-postgresql,GPE,38,13,PostgreSQL
 customer success,ORG,36,15,Customer Success
-netsuite,ORG,36,14,NetSuite
 whatsapp,ORG,36,3,WhatsApp
 sms,ORG,35,3,SMS
 software,ORG,33,15,Software
 sox,ORG,33,11,SOX
 bi,GPE|ORG,32,14,BI
 "computer science, engineering",ORG,32,14,"Computer Science, Engineering"
-oauth,ORG|GPE,32,6,OAuth
 identity and access management,ORG,31,6,Identity and Access Management
 success,ORG,30,12,SUCCESS
 validate,ORG,29,10,Validate
@@ -44,7 +37,6 @@ ip,ORG,29,7,IP
 bachelor,ORG,28,13,Bachelor
 emea,ORG,28,12,EMEA
 software engineering,ORG,28,8,Software Engineering
-nosql,GPE,27,14,NoSQL
 operations,ORG,27,13,Operations
 software engineer,ORG,27,9,Software Engineer
 account executive,ORG,25,14,Account Executive
@@ -52,21 +44,16 @@ windows,ORG|PRODUCT|GPE,25,12,Windows
 apac,ORG,24,13,APAC
 android,ORG|GPE,24,9,Android
 cursor,GPE,23,13,Cursor
-github actions,ORG,23,11,GitHub Actions
-node.js,GPE|ORG,23,9,Node.js
 "computer science, information systems",ORG,23,8,"Computer Science, Information Systems"
 data,GPE|ORG,22,10,Data
 sso,ORG,22,10,SSO
 fintech,ORG|GPE,22,7,FinTech
-github copilot,ORG,22,6,GitHub Copilot
 cisco,GPE,22,4,Cisco
 tcp/ip,ORG,21,6,TCP/IP
 big data,ORG,21,4,Big Data
 fp&a,ORG,20,12,FP&A
-iac,ORG,20,12,IaC
 sdk,ORG,20,9,SDK
 mis,ORG,20,5,MIS
-vmware,ORG,20,4,VMware
 uat,ORG,19,10,UAT
 sap,ORG|GPE,18,7,SAP
 data engineering,ORG,18,6,Data Engineering
@@ -80,22 +67,35 @@ karnataka,GPE,17,5,Karnataka
 product management,ORG,16,9,Product Management
 professional services,ORG,16,9,Professional Services
 sales,GPE,16,9,Sales
-apex,ORG|GPE,16,7,Apex
 cloudformation,PRODUCT|ORG,16,7,CloudFormation
 zero trust,ORG,16,5,Zero Trust
 software development engineer,ORG,16,4,Software Development Engineer
 claude,ORG,15,11,Claude
 ap,ORG,15,10,AP
 consulting,ORG|GPE,15,9,Consulting
-cpq,ORG,15,9,CPQ
 opentelemetry,ORG,15,9,OpenTelemetry
 rbac,ORG,15,9,RBAC
-postgres,ORG,15,8,Postgres
 sse,ORG,15,6,SSE
 apj,ORG,14,9,APJ
 treasury,ORG,14,9,Treasury
 hris,ORG,14,8,HRIS
 develop,ORG,14,7,Develop
 s3,ORG,14,7,S3
-google sheets,ORG,14,6,Google Sheets
-ipsec,ORG,14,5,IPsec
+powerpoint,ORG,13,8,PowerPoint
+redis,ORG|GPE,13,7,Redis
+smb,ORG|PRODUCT,13,6,SMB
+uk,GPE,13,6,UK
+talent acquisition,ORG,13,4,Talent Acquisition
+cs,ORG,12,11,CS
+sme,ORG,12,10,SME
+success looks like,ORG,12,9,Success Looks Like
+cxo,ORG,12,8,CXO
+gke,ORG,12,8,GKE
+kyc,ORG,12,8,KYC
+poc,ORG|GPE,12,8,PoC
+slack,ORG|GPE,12,8,Slack
+cli,ORG,12,7,CLI
+model context protocol,PRODUCT|ORG,12,7,Model Context Protocol
+mlops,ORG,12,6,MLOps
+tls,ORG,12,6,TLS
+kpi,ORG,12,5,KPI

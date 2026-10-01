@@ -1,12 +1,30 @@
 # Seed skill vocabulary for spaCy PhraseMatcher. DOMAIN KNOWLEDGE, not data.
 # Add aliases freely; M3 embeddings will also catch variants you miss.
 # Keep it honest: don't stuff rare terms just to inflate match coverage.
-languages:   ["python", "java", "sql", "scala", "r", "go", "typescript", "javascript"]
+#
+# The original seed is the first entries of the first five lists. Terms after it in each list,
+# and the four lists below them, were added on 2026-10-02 from the M3 review
+# (config/skill_map.yaml: groups marked `skill`) and the M2 vocabulary-gap report. Each was observed
+# in >= 3 postings at >= 3 employers in the 2026-10-01 snapshot. Ambiguous words get the
+# exact-spelling and context rules further down.
+languages:   ["python", "java", "sql", "scala", "r", "go", "typescript", "javascript",
+              "c++", "c#", "rust", "ruby", "kotlin", "swift", "php", "perl", "bash", ".net"]
 ml_dl_nlp:   ["pytorch", "tensorflow", "scikit-learn", "spacy", "hugging face", "transformers",
-              "llm", "nlp", "computer vision", "xgboost", "langchain"]
-data_eng:    ["spark", "airflow", "kafka", "dbt", "snowflake", "databricks", "hadoop"]
-cloud_ops:   ["aws", "gcp", "azure", "docker", "kubernetes", "terraform", "mlflow"]
-viz_bi:      ["tableau", "power bi", "streamlit", "looker"]
+              "llm", "nlp", "computer vision", "xgboost", "langchain",
+              "generative ai", "ai agents", "claude code", "copilot"]
+data_eng:    ["spark", "airflow", "kafka", "dbt", "snowflake", "databricks", "hadoop",
+              "postgresql", "mysql", "dynamodb", "nosql", "elasticsearch", "opensearch"]
+cloud_ops:   ["aws", "gcp", "azure", "docker", "kubernetes", "terraform", "mlflow",
+              "devops", "iac", "gitops", "argocd", "crossplane", "openshift", "vmware",
+              "github actions", "gitlab", "git", "datadog", "elk stack", "sre", "unix", "macos"]
+viz_bi:      ["tableau", "power bi", "streamlit", "looker",
+              "excel", "google sheets", "ms office", "gsuite", "jira"]
+web_backend:     ["react", "next.js", "node.js", "spring boot", "rest", "api gateway", "orm"]
+security_net:    ["oauth", "active directory", "siem", "waf", "ipsec", "vpn", "https", "soc 2",
+                  "iso 27001", "load balancer", "wifi"]
+enterprise_apps: ["netsuite", "apex", "lightning web components", "agentforce", "cpq", "hubspot",
+                  "mulesoft"]
+practices:       ["scrum", "tdd"]
 
 # ---- Matching rules (added at M2). Domain knowledge, not data. -----------------------------------
 # Aliases are other spellings of the SAME skill; they map to the canonical name above. They do not
@@ -21,12 +39,44 @@ aliases:
   aws:          ["amazon web services"]
   kubernetes:   ["k8s"]
   spark:        ["apache spark"]
-# Skills whose lowercase form is ordinary English ("a spark of inspiration", "go above and beyond"):
-# match ONLY these exact spellings.
+  .net:         [".net core", "dotnet"]
+  generative ai: ["genai", "gen ai", "gen-ai"]
+  ai agents:    ["ai agent", "agentic ai"]
+  copilot:      ["github copilot", "co-pilot"]
+  postgresql:   ["postgres"]
+  nosql:        ["nosql databases"]
+  elasticsearch: ["elastic search"]
+  opensearch:   ["open search"]
+  iac:          ["infrastructure as code", "infrastructure-as-code"]
+  argocd:       ["argo cd"]
+  gitlab:       ["gitlab ci"]
+  elk stack:    ["elk"]
+  sre:          ["site reliability engineering"]
+  macos:        ["mac os"]
+  ms office:    ["microsoft office"]
+  gsuite:       ["g suite", "g-suite", "google workspace"]
+  next.js:      ["nextjs"]
+  node.js:      ["nodejs", "node js"]
+  spring boot:  ["springboot"]
+  oauth:        ["oauth2", "oauth 2.0"]
+  soc 2:        ["soc2"]
+  iso 27001:    ["iso27001"]
+  load balancer: ["load balancers", "load balancing"]
+  wifi:         ["wi-fi"]
+  lightning web components: ["lwc"]
+  cpq:          ["salesforce cpq"]
+  tdd:          ["test-driven development", "test driven development"]
+# Skills whose lowercase form is ordinary English ("a spark of inspiration", "go above and beyond",
+# "swift resolution", "excel in", "react to", "rest of"): match ONLY these exact spellings.
 case_sensitive:
   spark: ["Spark", "PySpark", "Pyspark", "pyspark"]
   go:    ["Go", "GO", "Golang", "golang", "GoLang"]   # "GO" added at M3 review (2 real uses, both the language)
   r:     ["R", "RStudio"]
+  swift: ["Swift", "SwiftUI"]
+  excel: ["Excel", "MS Excel", "MS-Excel", "Ms-Excel", "Microsoft Excel", "Advanced Excel"]
+  react: ["React", "React.js", "ReactJS", "Reactjs"]
+  rest:  ["REST", "RESTful", "REST APIs", "RESTful APIs"]
+  apex:  ["Apex", "APEX"]
 # Still ambiguous after casing. Checked against every real "Go"/"R" match on 2026-10-01: rejected if a
 # symbol or a known non-language word follows ("Go-live", "Go To Market", "Go beyond"); otherwise
 # counted if a cue word sits right before/after it, or another language/tool is within `window`
@@ -41,7 +91,14 @@ needs_context:
                     "concurrency", "expertise", "code", "codebase"]
   # Disambiguation cues only. These are NOT counted as skills; multi-letter ones are recorded as
   # "not in vocab" observations so vocabulary gaps show up in the report.
-  context_only_words: ["c", "c++", "c#", "rust", "ruby", "php", "perl", "kotlin", "swift", "sas",
-                       "matlab", "stata", "julia", "node.js", ".net", "bash", "excel", "spss"]
+  context_only_words: ["c", "sas", "matlab", "stata", "julia", "spss"]
+# A capitalised form used as a verb at the start of a bullet ("Excel at tracking workstreams"):
+# rejected when one of these words follows. Kept and flagged like every other rejection.
+reject_if_next_word:
+  Excel: ["at", "in"]
 # "Databricks" inside a Databricks posting names the employer, not a required skill.
 exclude_employer_self_mentions: true
+# Likewise an employer's own product in its own postings (board -> product skills).
+employer_products:
+  elastic:   ["elasticsearch", "elk stack"]
+  anthropic: ["claude code"]

@@ -23,7 +23,7 @@ from spacy.util import filter_spans
 from xray.skills.sections import tag_sections
 from xray.skills.vocab import SkillVocab
 
-EXTRACTOR_VERSION = "m2.3"
+EXTRACTOR_VERSION = "m2.4"
 NOT_IN_VOCAB = "(not in vocab)"
 MODEL = "en_core_web_sm"
 NER_LABELS = frozenset({"ORG", "PRODUCT", "GPE"})
@@ -160,6 +160,7 @@ class SkillExtractor:
             | {t for sp in ctx_only for t in range(sp.start, sp.end)}
         )
         employer = {norm_key(p.board)} | ({norm_key(p.company_name)} if p.company_name else set())
+        own_products = set(self.vocab.employer_products.get(p.board.lower(), ()))
 
         mentions: list[Mention] = []
         for sp in kept:
@@ -169,10 +170,17 @@ class SkillExtractor:
             if sp.text in self._needs_ctx:
                 rule = "cased+context"
                 excluded = self._ambiguity(doc, sp, anchors)
+            nxt = doc[sp.end] if sp.end < len(doc) else None
+            if (
+                excluded is None
+                and nxt is not None
+                and nxt.lower_ in self.vocab.reject_if_next_word.get(sp.text, ())
+            ):
+                excluded = "negative_next_word"  # "Excel at tracking" is a verb
             if (
                 excluded is None
                 and self.vocab.exclude_employer_self_mentions
-                and norm_key(skill) in employer
+                and (norm_key(skill) in employer or skill in own_products)
             ):
                 excluded = "employer_self_mention"
             mentions.append(

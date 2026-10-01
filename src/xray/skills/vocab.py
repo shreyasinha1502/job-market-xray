@@ -12,7 +12,10 @@ from pydantic import BaseModel, ConfigDict, Field
 
 from xray.config import CONFIG_DIR, ConfigError, load_yaml
 
-RULE_KEYS = {"aliases", "case_sensitive", "needs_context", "exclude_employer_self_mentions"}
+RULE_KEYS = {
+    "aliases", "case_sensitive", "needs_context", "exclude_employer_self_mentions",
+    "reject_if_next_word", "employer_products",
+}  # fmt: skip
 
 
 class NeedsContext(BaseModel):
@@ -33,6 +36,8 @@ class SkillVocab:
     cased_forms: dict[str, list[str]]  # matched on exact spelling only
     needs_context: NeedsContext
     exclude_employer_self_mentions: bool
+    reject_if_next_word: dict[str, list[str]]  # exact surface form -> following words that reject
+    employer_products: dict[str, list[str]]  # board -> its own product skills (self-mentions)
     sha256: str  # of the effective matching rules, to detect stale extractions
 
     @property
@@ -110,10 +115,27 @@ def load_vocab(config_dir: Path = CONFIG_DIR, *, apply_skill_map: bool = True) -
     if not set(nc.forms) <= all_cased:
         raise ConfigError(f"needs_context forms must be case_sensitive forms: {nc.forms}")
     self_mentions = bool(raw.get("exclude_employer_self_mentions", False))
+    reject_next = {
+        str(form): [w.lower() for w in words]
+        for form, words in (raw.get("reject_if_next_word") or {}).items()
+    }
+    unknown_forms = sorted(
+        set(reject_next) - all_cased - {f for fs in lower_forms.values() for f in fs}
+    )
+    if unknown_forms:
+        raise ConfigError(f"reject_if_next_word refers to unknown surface forms: {unknown_forms}")
+    products = {
+        str(b).lower(): [p.lower() for p in ps]
+        for b, ps in (raw.get("employer_products") or {}).items()
+    }
+    unknown = sorted({p for ps in products.values() for p in ps} - set(category))
+    if unknown:
+        raise ConfigError(f"employer_products refers to unknown skills: {unknown}")
     # Hash what matching actually uses, so regenerated metadata never forces a re-extraction.
     effective = {
         "category": category, "lower": lower_forms, "cased": cased_forms,
         "needs_context": nc.model_dump(), "self_mentions": self_mentions,
+        "reject_next": reject_next, "products": products,
     }  # fmt: skip
     return SkillVocab(
         category=category,
@@ -121,5 +143,7 @@ def load_vocab(config_dir: Path = CONFIG_DIR, *, apply_skill_map: bool = True) -
         cased_forms=cased_forms,
         needs_context=nc,
         exclude_employer_self_mentions=self_mentions,
+        reject_if_next_word=reject_next,
+        employer_products=products,
         sha256=hashlib.sha256(json.dumps(effective, sort_keys=True).encode()).hexdigest(),
     )

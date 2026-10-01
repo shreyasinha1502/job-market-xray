@@ -1,7 +1,7 @@
 {
   "extractor": {
-    "version": "m2.3",
-    "vocab_sha256": "56670b5335967d330d733dfceb42fd29505198f4646f4063d90ce01b598a749f",
+    "version": "m2.4",
+    "vocab_sha256": "1a7b1f373444d2f2b24fb4208ac89f163456192a4501c44296905974b40563bc",
     "spacy": "3.8.16",
     "model": "en_core_web_sm-3.8.0"
   },
@@ -9,8 +9,8 @@
     "2026-10-01": {
       "postings_sha256": "5391769db3bcd5fcab04bb1ccb1c2c0d5ebf758b59562faad4a66a8d70e4d3d7",
       "n_postings": 1315,
-      "n_mentions": 6418,
-      "extracted_at": "2026-10-01T16:58:00.149119+00:00"
+      "n_mentions": 9915,
+      "extracted_at": "2026-10-01T21:16:41.478731+00:00"
     }
   }
 }

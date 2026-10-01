@@ -5,12 +5,37 @@
 # conflicts: clusters holding 2+ different vocabulary skills. Never merged.
 generated:
   snapshot: '2026-10-01'
-  at: '2026-10-01T16:55:12+00:00'
+  at: '2026-10-01T21:13:47+00:00'
   model: sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41
   eps: 0.12
   min_cluster_size: 2
-  candidate_terms: 784
+  candidate_terms: 796
 aliases:
+- variant: NET
+  skill: .net
+  status: rejected
+  why: same lexical key as a vocabulary form
+  cos: null
+  postings: 6
+  boards: 3
+  sources:
+  - list
+  - vocab
+  reviewed: true
+  note: 'reviewed 2026-10-02 (Claude): bare ''NET'' has 0 real uses outside ''.NET''; would catch ''NET
+    30'' terms'
+- variant: API gateways
+  skill: api gateway
+  status: accepted
+  why: semantic cluster
+  cos: 0.964
+  postings: 5
+  boards: 3
+  sources:
+  - list
+  - ner
+  reviewed: true
+  note: 'reviewed 2026-10-02 (Claude): plural/spelling variant, confirmed'
 - variant: Microsoft Azure
   skill: azure
   status: already_matched
@@ -20,6 +45,224 @@ aliases:
   boards: 4
   sources:
   - list
+- variant: Claudecode
+  skill: claude code
+  status: accepted
+  why: same lexical key as a vocabulary form
+  cos: null
+  postings: 33
+  boards: 15
+  sources:
+  - list
+  - ner
+  - vocab
+  reviewed: true
+  note: 'reviewed 2026-10-02 (Claude): plural/spelling variant, confirmed'
+- variant: Cross plane
+  skill: crossplane
+  status: accepted
+  why: same lexical key as a vocabulary form
+  cos: null
+  postings: 9
+  boards: 6
+  sources:
+  - list
+  - vocab
+  reviewed: true
+  note: 'reviewed 2026-10-02 (Claude): plural/spelling variant, confirmed'
+- variant: Google-Sheets
+  skill: google sheets
+  status: accepted
+  why: same lexical key as a vocabulary form
+  cos: null
+  postings: 31
+  boards: 13
+  sources:
+  - list
+  - ner
+  - vocab
+  reviewed: true
+  note: 'reviewed 2026-10-02 (Claude): plural/spelling variant, confirmed'
+- variant: Google Sheets.
+  skill: google sheets
+  status: already_matched
+  why: same lexical key as a vocabulary form
+  cos: null
+  postings: 31
+  boards: 13
+  sources:
+  - list
+  - ner
+  - vocab
+- variant: HTTP/S
+  skill: https
+  status: accepted
+  why: same lexical key as a vocabulary form
+  cos: null
+  postings: 8
+  boards: 3
+  sources:
+  - list
+  - ner
+  - shape
+  - vocab
+  reviewed: true
+  note: 'reviewed 2026-10-02 (Claude): plural/spelling variant, confirmed'
+- variant: IaC.
+  skill: iac
+  status: already_matched
+  why: same lexical key as a vocabulary form
+  cos: null
+  postings: 36
+  boards: 16
+  sources:
+  - list
+  - shape
+  - vocab
+- variant: LLM-
+  skill: llm
+  status: already_matched
+  why: same lexical key as a vocabulary form
+  cos: null
+  postings: 154
+  boards: 41
+  sources:
+  - list
+  - ner
+  - shape
+  - vocab
+- variant: LoadBalancers
+  skill: load balancer
+  status: accepted
+  why: same lexical key as a vocabulary form
+  cos: null
+  postings: 7
+  boards: 5
+  sources:
+  - list
+  - ner
+  - shape
+  - vocab
+  reviewed: true
+  note: 'reviewed 2026-10-02 (Claude): plural/spelling variant, confirmed'
+- variant: NoSQL  databases
+  skill: nosql
+  status: already_matched
+  why: same lexical key as a vocabulary form
+  cos: null
+  postings: 16
+  boards: 10
+  sources:
+  - list
+  - vocab
+- variant: ORMs
+  skill: orm
+  status: accepted
+  why: same lexical key as a vocabulary form
+  cos: null
+  postings: 3
+  boards: 3
+  sources:
+  - list
+  - shape
+  - vocab
+  reviewed: true
+  note: 'reviewed 2026-10-02 (Claude): plural/spelling variant, confirmed'
+- variant: ReAct
+  skill: react
+  status: rejected
+  why: 'same lexical key as a vocabulary form (exact-spelling skill: casing variant needs review)'
+  cos: null
+  postings: 63
+  boards: 18
+  sources:
+  - list
+  - ner
+  - shape
+  - vocab
+  reviewed: true
+  note: 'reviewed 2026-10-02 (Claude): LLM agent pattern (''ReAct loops for reasoning''), not the React
+    library'
+- variant: ReST
+  skill: rest
+  status: accepted
+  why: 'same lexical key as a vocabulary form (exact-spelling skill: casing variant needs review)'
+  cos: null
+  postings: 79
+  boards: 24
+  sources:
+  - list
+  - ner
+  - shape
+  - vocab
+  reviewed: true
+  note: 'reviewed 2026-10-02 (Claude): both real uses (okta) are REST: ''working with ReST'''
+- variant: SIEMs
+  skill: siem
+  status: accepted
+  why: same lexical key as a vocabulary form
+  cos: null
+  postings: 16
+  boards: 10
+  sources:
+  - list
+  - shape
+  - vocab
+  reviewed: true
+  note: 'reviewed 2026-10-02 (Claude): plural/spelling variant, confirmed'
+- variant: SREs
+  skill: sre
+  status: accepted
+  why: same lexical key as a vocabulary form
+  cos: null
+  postings: 53
+  boards: 19
+  sources:
+  - list
+  - shape
+  - vocab
+  reviewed: true
+  note: 'reviewed 2026-10-02 (Claude): plural/spelling variant, confirmed'
+- variant: TDDs
+  skill: tdd
+  status: rejected
+  why: same lexical key as a vocabulary form
+  cos: null
+  postings: 8
+  boards: 3
+  sources:
+  - ner
+  - shape
+  - vocab
+  reviewed: true
+  note: 'reviewed 2026-10-02 (Claude): both real uses mean Technical Design Documents, not test-driven
+    dev'
+- variant: VPNs
+  skill: vpn
+  status: accepted
+  why: same lexical key as a vocabulary form
+  cos: null
+  postings: 21
+  boards: 10
+  sources:
+  - list
+  - shape
+  - vocab
+  reviewed: true
+  note: 'reviewed 2026-10-02 (Claude): plural/spelling variant, confirmed'
+- variant: WAFs
+  skill: waf
+  status: accepted
+  why: same lexical key as a vocabulary form
+  cos: null
+  postings: 10
+  boards: 6
+  sources:
+  - list
+  - shape
+  - vocab
+  reviewed: true
+  note: 'reviewed 2026-10-02 (Claude): plural/spelling variant, confirmed'
 - variant: Data bricks
   skill: databricks
   status: accepted
@@ -32,6 +275,7 @@ aliases:
   - vocab
   reviewed: true
   note: 'reviewed 2026-10-01 (Claude): spacing variant (''Data bricks, Python, SQL'')'
+  stale: true
 - variant: GO
   skill: go
   status: accepted
@@ -47,18 +291,7 @@ aliases:
   reviewed: true
   note: 'reviewed 2026-10-01 (Claude): both real uses are the language (''Java, GO, etc'', ''Java or GO'');
     promoted into skills.yaml case_sensitive + needs_context so the Go context rules still apply'
-- variant: LLM-
-  skill: llm
-  status: already_matched
-  why: same lexical key as a vocabulary form
-  cos: null
-  postings: 154
-  boards: 41
-  sources:
-  - list
-  - ner
-  - shape
-  - vocab
+  stale: true
 conflicts: []
 new_skill_groups:
 - canonical: AI
@@ -85,14 +318,6 @@ new_skill_groups:
   - API
   postings_max_member: 211
   boards_max_member: 39
-- canonical: DevOps
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude).
-  members:
-  - DevOps
-  postings_max_member: 108
-  boards_max_member: 26
 - canonical: LinkedIn
   status: not_a_skill
   reviewed: true
@@ -109,15 +334,6 @@ new_skill_groups:
   - CRM
   postings_max_member: 85
   boards_max_member: 24
-- canonical: PostgreSQL
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude). Postgres merged (cos 0.90, lexical)
-  members:
-  - PostgreSQL
-  - Postgres
-  postings_max_member: 66
-  boards_max_member: 18
 - canonical: UI
   status: not_a_skill
   reviewed: true
@@ -134,24 +350,6 @@ new_skill_groups:
   - BS
   postings_max_member: 81
   boards_max_member: 18
-- canonical: REST
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude).
-  members:
-  - REST
-  postings_max_member: 79
-  boards_max_member: 24
-- canonical: Excel
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude). MS/Microsoft Excel merged
-  members:
-  - Excel
-  - MS Excel
-  - Microsoft Excel
-  postings_max_member: 58
-  boards_max_member: 16
 - canonical: MS
   status: not_a_skill
   reviewed: true
@@ -170,25 +368,6 @@ new_skill_groups:
   - Bachelor's
   postings_max_member: 29
   boards_max_member: 14
-- canonical: generative AI
-  status: skill
-  reviewed: true
-  note: 'reviewed 2026-10-01 (Claude). same concept as GenAI (cos 0.36, too low to merge automatically):
-    merge by hand if promoted'
-  members:
-  - generative AI
-  postings_max_member: 69
-  boards_max_member: 7
-- canonical: React
-  status: skill
-  reviewed: true
-  note: 'reviewed 2026-10-01 (Claude). spellings include ''ReAct'' (an LLM agent pattern, different concept):
-    promote with case-sensitive forms only'
-  members:
-  - React
-  - React.js
-  postings_max_member: 50
-  boards_max_member: 17
 - canonical: B2B
   status: not_a_skill
   reviewed: true
@@ -213,24 +392,6 @@ new_skill_groups:
   - TV
   postings_max_member: 59
   boards_max_member: 3
-- canonical: OAuth
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude). OAuth 2.0 / OAuth2 merged
-  members:
-  - OAuth
-  - OAuth 2.0
-  - OAuth2
-  postings_max_member: 41
-  boards_max_member: 8
-- canonical: SRE
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude). practice
-  members:
-  - SRE
-  postings_max_member: 53
-  boards_max_member: 19
 - canonical: SLA
   status: not_a_skill
   reviewed: true
@@ -239,14 +400,6 @@ new_skill_groups:
   - SLA
   postings_max_member: 50
   boards_max_member: 20
-- canonical: MySQL
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude).
-  members:
-  - MySQL
-  postings_max_member: 46
-  boards_max_member: 16
 - canonical: Excellent communication
   status: not_a_skill
   reviewed: true
@@ -265,14 +418,6 @@ new_skill_groups:
   - Software Development Engineer
   postings_max_member: 27
   boards_max_member: 9
-- canonical: GenAI
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude). see 'generative AI'
-  members:
-  - GenAI
-  postings_max_member: 43
-  boards_max_member: 18
 - canonical: Data Science
   status: not_a_skill
   reviewed: true
@@ -289,30 +434,6 @@ new_skill_groups:
   - PM
   postings_max_member: 39
   boards_max_member: 18
-- canonical: Node.js
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude).
-  members:
-  - Node.js
-  postings_max_member: 37
-  boards_max_member: 12
-- canonical: IaC
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude). practice
-  members:
-  - IaC
-  postings_max_member: 36
-  boards_max_member: 16
-- canonical: NetSuite
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude).
-  members:
-  - NetSuite
-  postings_max_member: 36
-  boards_max_member: 14
 - canonical: Architect
   status: not_a_skill
   reviewed: true
@@ -322,16 +443,6 @@ new_skill_groups:
   - Architects
   postings_max_member: 27
   boards_max_member: 15
-- canonical: AI agents
-  status: skill
-  reviewed: true
-  note: 'reviewed 2026-10-01 (Claude). ''Agentic AI'' joined by embedding only (cos 0.90, no lexical support):
-    same concept, accepted'
-  members:
-  - AI agents
-  - Agentic AI
-  postings_max_member: 23
-  boards_max_member: 12
 - canonical: B.Tech
   status: not_a_skill
   reviewed: true
@@ -356,14 +467,6 @@ new_skill_groups:
   - CS
   postings_max_member: 30
   boards_max_member: 17
-- canonical: GitHub Actions
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude).
-  members:
-  - GitHub Actions
-  postings_max_member: 30
-  boards_max_member: 11
 - canonical: KPI
   status: not_a_skill
   reviewed: true
@@ -404,39 +507,6 @@ new_skill_groups:
   - SIP
   postings_max_member: 27
   boards_max_member: 3
-- canonical: GitLab
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude). GitLab CI joined (lexical)
-  members:
-  - GitLab
-  - GitLab CI
-  postings_max_member: 18
-  boards_max_member: 8
-- canonical: Git
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude).
-  members:
-  - Git
-  postings_max_member: 26
-  boards_max_member: 13
-- canonical: Jira
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude).
-  members:
-  - Jira
-  postings_max_member: 26
-  boards_max_member: 17
-- canonical: macOS
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude).
-  members:
-  - macOS
-  postings_max_member: 26
-  boards_max_member: 9
 - canonical: PhD
   status: not_a_skill
   reviewed: true
@@ -453,39 +523,6 @@ new_skill_groups:
   - BFSI
   postings_max_member: 25
   boards_max_member: 8
-- canonical: Claude Code
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude).
-  members:
-  - Claude Code
-  postings_max_member: 23
-  boards_max_member: 11
-- canonical: Google Sheets
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude).
-  members:
-  - Google Sheets
-  postings_max_member: 23
-  boards_max_member: 12
-- canonical: CPQ
-  status: skill
-  reviewed: true
-  note: 'reviewed 2026-10-01 (Claude). ''Salesforce CPQ'' joined by embedding only: same product, accepted'
-  members:
-  - CPQ
-  - Salesforce CPQ
-  postings_max_member: 17
-  boards_max_member: 10
-- canonical: VPN
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude).
-  members:
-  - VPN
-  postings_max_member: 21
-  boards_max_member: 10
 - canonical: AM
   status: not_a_skill
   reviewed: true
@@ -494,14 +531,6 @@ new_skill_groups:
   - AM
   postings_max_member: 20
   boards_max_member: 9
-- canonical: VMware
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude).
-  members:
-  - VMware
-  postings_max_member: 20
-  boards_max_member: 4
 - canonical: CXO
   status: not_a_skill
   reviewed: true
@@ -526,14 +555,6 @@ new_skill_groups:
   - CLI
   postings_max_member: 18
   boards_max_member: 8
-- canonical: ISO 27001
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude). compliance framework
-  members:
-  - ISO 27001
-  postings_max_member: 18
-  boards_max_member: 13
 - canonical: MDM
   status: not_a_skill
   reviewed: true
@@ -550,39 +571,6 @@ new_skill_groups:
   - RFP
   postings_max_member: 18
   boards_max_member: 11
-- canonical: UNIX
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude).
-  members:
-  - UNIX
-  postings_max_member: 18
-  boards_max_member: 6
-- canonical: MS Office
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude). Microsoft Office merged
-  members:
-  - MS Office
-  - Microsoft Office
-  postings_max_member: 9
-  boards_max_member: 6
-- canonical: Apex
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude). Salesforce language
-  members:
-  - Apex
-  postings_max_member: 17
-  boards_max_member: 8
-- canonical: Datadog
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude).
-  members:
-  - Datadog
-  postings_max_member: 17
-  boards_max_member: 10
 - canonical: ID
   status: not_a_skill
   reviewed: true
@@ -599,31 +587,6 @@ new_skill_groups:
   - SOPs
   postings_max_member: 17
   boards_max_member: 8
-- canonical: REST APIs
-  status: skill
-  reviewed: true
-  note: 'reviewed 2026-10-01 (Claude). duplicate of REST: merge into REST if promoted'
-  members:
-  - REST APIs
-  - RESTful APIs
-  postings_max_member: 10
-  boards_max_member: 8
-- canonical: ArgoCD
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude).
-  members:
-  - ArgoCD
-  postings_max_member: 16
-  boards_max_member: 7
-- canonical: Elasticsearch
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude).
-  members:
-  - Elasticsearch
-  postings_max_member: 16
-  boards_max_member: 9
 - canonical: M.Tech
   status: not_a_skill
   reviewed: true
@@ -632,22 +595,6 @@ new_skill_groups:
   - M.Tech
   postings_max_member: 16
   boards_max_member: 7
-- canonical: Next.js
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude).
-  members:
-  - Next.js
-  postings_max_member: 16
-  boards_max_member: 6
-- canonical: SIEM
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude).
-  members:
-  - SIEM
-  postings_max_member: 16
-  boards_max_member: 10
 - canonical: SLIs
   status: not_a_skill
   reviewed: true
@@ -681,14 +628,6 @@ new_skill_groups:
   - CE
   postings_max_member: 15
   boards_max_member: 4
-- canonical: SOC 2
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude). compliance framework
-  members:
-  - SOC 2
-  postings_max_member: 15
-  boards_max_member: 11
 - canonical: Collaborate with Product
   status: not_a_skill
   reviewed: true
@@ -705,22 +644,6 @@ new_skill_groups:
   - CSM
   postings_max_member: 14
   boards_max_member: 9
-- canonical: IPSec
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude).
-  members:
-  - IPSec
-  postings_max_member: 14
-  boards_max_member: 5
-- canonical: Lightning Web Components
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude).
-  members:
-  - Lightning Web Components
-  postings_max_member: 14
-  boards_max_member: 5
 - canonical: NBFC
   status: not_a_skill
   reviewed: true
@@ -729,14 +652,6 @@ new_skill_groups:
   - NBFC
   postings_max_member: 14
   boards_max_member: 5
-- canonical: Spring Boot
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude).
-  members:
-  - Spring Boot
-  postings_max_member: 14
-  boards_max_member: 7
 - canonical: Treasury
   status: not_a_skill
   reviewed: true
@@ -753,22 +668,6 @@ new_skill_groups:
   - CFO
   postings_max_member: 13
   boards_max_member: 5
-- canonical: Copilot
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude). ambiguous between GitHub Copilot and Microsoft Copilot
-  members:
-  - Copilot
-  postings_max_member: 13
-  boards_max_member: 8
-- canonical: GitOps
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude). practice
-  members:
-  - GitOps
-  postings_max_member: 13
-  boards_max_member: 7
 - canonical: RevOps
   status: not_a_skill
   reviewed: true
@@ -777,23 +676,6 @@ new_skill_groups:
   - RevOps
   postings_max_member: 13
   boards_max_member: 7
-- canonical: API Gateway
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude).
-  members:
-  - API Gateway
-  - API gateways
-  postings_max_member: 7
-  boards_max_member: 3
-- canonical: Active Directory
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude).
-  members:
-  - Active Directory
-  postings_max_member: 12
-  boards_max_member: 5
 - canonical: CTO
   status: not_a_skill
   reviewed: true
@@ -819,14 +701,6 @@ new_skill_groups:
   - AE
   postings_max_member: 11
   boards_max_member: 8
-- canonical: Agentforce
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude). Salesforce product
-  members:
-  - Agentforce
-  postings_max_member: 11
-  boards_max_member: 4
 - canonical: GSI
   status: not_a_skill
   reviewed: true
@@ -835,28 +709,12 @@ new_skill_groups:
   - GSI
   postings_max_member: 11
   boards_max_member: 9
-- canonical: HubSpot
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude).
-  members:
-  - HubSpot
-  postings_max_member: 11
-  boards_max_member: 5
 - canonical: ISV
   status: not_a_skill
   reviewed: true
   note: 'reviewed 2026-10-01 (Claude): business / commercial term'
   members:
   - ISV
-  postings_max_member: 11
-  boards_max_member: 6
-- canonical: OpenSearch
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude).
-  members:
-  - OpenSearch
   postings_max_member: 11
   boards_max_member: 6
 - canonical: AI Security
@@ -899,14 +757,6 @@ new_skill_groups:
   - PO
   postings_max_member: 10
   boards_max_member: 7
-- canonical: Scrum
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude). method
-  members:
-  - Scrum
-  postings_max_member: 10
-  boards_max_member: 8
 - canonical: SE
   status: not_a_skill
   reviewed: true
@@ -915,14 +765,6 @@ new_skill_groups:
   - SE
   postings_max_member: 10
   boards_max_member: 5
-- canonical: WAF
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude).
-  members:
-  - WAF
-  postings_max_member: 10
-  boards_max_member: 6
 - canonical: CD tools
   status: not_a_skill
   reviewed: true
@@ -940,14 +782,6 @@ new_skill_groups:
   - CIO
   postings_max_member: 9
   boards_max_member: 8
-- canonical: DynamoDB
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude).
-  members:
-  - DynamoDB
-  postings_max_member: 9
-  boards_max_member: 4
 - canonical: IIT
   status: not_a_skill
   reviewed: true
@@ -972,14 +806,6 @@ new_skill_groups:
   - Bachelor’s degree
   postings_max_member: 8
   boards_max_member: 4
-- canonical: Crossplane
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude).
-  members:
-  - Crossplane
-  postings_max_member: 8
-  boards_max_member: 5
 - canonical: HRMS
   status: not_a_skill
   reviewed: true
@@ -988,14 +814,6 @@ new_skill_groups:
   - HRMS
   postings_max_member: 8
   boards_max_member: 6
-- canonical: HTTPS
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude).
-  members:
-  - HTTPS
-  postings_max_member: 8
-  boards_max_member: 3
 - canonical: modern CI
   status: not_a_skill
   reviewed: true
@@ -1012,14 +830,6 @@ new_skill_groups:
   - TAM
   postings_max_member: 8
   boards_max_member: 5
-- canonical: TDD
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude). practice
-  members:
-  - TDD
-  postings_max_member: 8
-  boards_max_member: 3
 - canonical: maintaining CI
   status: not_a_skill
   reviewed: true
@@ -1061,14 +871,6 @@ new_skill_groups:
   - IDP
   postings_max_member: 7
   boards_max_member: 4
-- canonical: NoSQL databases
-  status: skill
-  reviewed: true
-  note: 'reviewed 2026-10-01 (Claude). duplicate of NoSQL: merge if promoted'
-  members:
-  - NoSQL databases
-  postings_max_member: 7
-  boards_max_member: 5
 - canonical: OEM
   status: not_a_skill
   reviewed: true
@@ -1077,14 +879,6 @@ new_skill_groups:
   - OEM
   postings_max_member: 7
   boards_max_member: 6
-- canonical: OpenShift
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude).
-  members:
-  - OpenShift
-  postings_max_member: 7
-  boards_max_member: 3
 - canonical: PRD
   status: not_a_skill
   reviewed: true
@@ -1139,14 +933,6 @@ new_skill_groups:
   note: 'reviewed 2026-10-01 (Claude): soft skill / phrase'
   members:
   - Collaborate with engineering
-  postings_max_member: 6
-  boards_max_member: 5
-- canonical: GSuite
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude).
-  members:
-  - GSuite
   postings_max_member: 6
   boards_max_member: 5
 - canonical: Mac
@@ -1349,14 +1135,6 @@ new_skill_groups:
   - LLB
   postings_max_member: 4
   boards_max_member: 3
-- canonical: Load Balancers
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude).
-  members:
-  - Load Balancers
-  postings_max_member: 4
-  boards_max_member: 3
 - canonical: ML Engineering
   status: not_a_skill
   reviewed: true
@@ -1365,14 +1143,6 @@ new_skill_groups:
   - ML Engineering
   postings_max_member: 4
   boards_max_member: 3
-- canonical: MuleSoft
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude).
-  members:
-  - MuleSoft
-  postings_max_member: 4
-  boards_max_member: 4
 - canonical: SA
   status: not_a_skill
   reviewed: true
@@ -1429,14 +1199,6 @@ new_skill_groups:
   - CDP
   postings_max_member: 3
   boards_max_member: 3
-- canonical: ELK Stack
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude).
-  members:
-  - ELK Stack
-  postings_max_member: 3
-  boards_max_member: 3
 - canonical: FAQ
   status: not_a_skill
   reviewed: true
@@ -1451,14 +1213,6 @@ new_skill_groups:
   note: 'reviewed 2026-10-01 (Claude): generic term'
   members:
   - OpenSource
-  postings_max_member: 3
-  boards_max_member: 3
-- canonical: ORM
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude).
-  members:
-  - ORM
   postings_max_member: 3
   boards_max_member: 3
 - canonical: Software Engineer - Backend
@@ -1499,13 +1253,5 @@ new_skill_groups:
   note: 'reviewed 2026-10-01 (Claude): ambiguous acronym (several meanings in this data)'
   members:
   - WAL
-  postings_max_member: 3
-  boards_max_member: 3
-- canonical: WiFi
-  status: skill
-  reviewed: true
-  note: reviewed 2026-10-01 (Claude).
-  members:
-  - WiFi
   postings_max_member: 3
   boards_max_member: 3

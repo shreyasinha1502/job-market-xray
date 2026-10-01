@@ -1,7 +1,7 @@
 # Model card: seniority classifier (Job Market X-Ray, M5)
 
 Generated 2026-10-01T17:22:01+00:00 from `data/processed/model/seniority_metrics.json`, code commit
-`11afdc4`.
+`02279aa`.
 
 ## What it does
 
@@ -64,6 +64,7 @@ Macro-F1 has a bootstrap 95% CI (1,000 resamples of the real test predictions).
 | majority class (always "senior") | 0.822 | **0.451** (0.43–0.47) | 0.00 / 0.00 / 0.00 | 0.82 / 1.00 / 0.90 |
 | TF-IDF + logistic regression | 0.843 | **0.686** (0.58–0.79) | 0.59 / 0.38 / 0.47 | 0.88 / 0.94 / 0.91 |
 | DistilBERT fine-tuned | 0.849 | **0.694** (0.58–0.80) | 0.62 / 0.38 / 0.48 | 0.88 / 0.95 / 0.91 |
+| DistilBERT int8 ONNX (served) | 0.856 | **0.689** (0.57–0.80) | 0.69 / 0.35 / 0.46 | 0.87 / 0.97 / 0.92 |
 
 **Paired comparison on the same test postings** (exact McNemar on discordant predictions): both correct 116, only TF-IDF+LR correct 7, only DistilBERT correct 8, both wrong 15. p = 1.0, so **no significant difference at 0.05**. On this data, fine-tuning does not beat the linear baseline.
 

@@ -59,6 +59,8 @@ def model_card(res: dict[str, Any]) -> str:
               ("TF-IDF + logistic regression", res["baseline"]["test"])]  # fmt: skip
     if tr:
         models.append(("DistilBERT fine-tuned", tr["test"]))
+    if res.get("serving_int8"):
+        models.append(("DistilBERT int8 ONNX (served)", res["serving_int8"]["int8_test_metrics"]))
     per_head = " | ".join(f"{c} P / R / F1" for c in labels)
     table = "\n".join(_row(n, m, labels) for n, m in models)
     hist = ""

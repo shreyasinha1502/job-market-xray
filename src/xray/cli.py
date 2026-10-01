@@ -264,6 +264,11 @@ def cmd_report(args: argparse.Namespace) -> int:
     q = build_quality(store)
     print(f"wrote {write_json(store, 'trends', t['as_of'], t)}")
     print(f"wrote {write_json(store, 'quality', t['as_of'], q)}")
+    from xray.classify.examples import write_examples
+
+    ex = write_examples(store)
+    if ex:
+        print(f"wrote {ex}")
     print(f"history: {t['history']}")
     for g in q["gaps"]:
         print(f"GAP: {g}")

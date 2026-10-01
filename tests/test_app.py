@@ -1,4 +1,4 @@
-"""M6 dashboard pieces on the committed real data (data/processed) + model download checks."""
+"""M6 site: payload built from the committed real data, API endpoints, model download checks."""
 
 import hashlib
 import io
@@ -8,58 +8,63 @@ import zipfile
 import httpx
 import pytest
 
-from xray.app import charts
-from xray.app.data import load
+from xray.app import payload
 from xray.app.model import ModelUnavailable, ensure_bundle
 
 
 @pytest.fixture(scope="module")
-def data():
-    return load()
+def doc():
+    return payload.build()
 
 
-def test_committed_dashboard_inputs_load(data):
-    assert data.as_of == data.history["last"]
-    assert "all in-region postings" in data.scope_labels()
-    assert data.quality["gaps"] is not None
+def test_payload_is_built_from_committed_snapshot(doc):
+    assert doc["as_of"] == doc["history"]["last"]
+    ids = {s["id"] for s in doc["scopes"]}
+    assert "all" in ids and any(i.startswith("role:") for i in ids)
+    assert set(doc["trends"]) == ids
+    all_scope = next(s for s in doc["scopes"] if s["id"] == "all")
+    assert all_scope["n"] == doc["kpis"]["postings"]
+    assert all(0 <= r["ci95"][0] <= r["share"] <= r["ci95"][1] <= 1 for r in all_scope["skills"])
 
 
-def test_share_chart_draws_one_bar_and_one_whisker_per_skill(data):
-    snap = data.scope("all in-region postings")["snapshot"]
-    out = charts.share_chart(snap["skills"], snap["postings"], "t", top=10)
-    assert out.count("<path ") == 10
-    assert out.count("<title>") == 10  # hover text for every bar
-    assert out.count('stroke-opacity=".55"') == 20  # whisker + cap per bar
-    assert f"of {snap['postings']} postings" in out
+def test_payload_categories_cover_every_skill(doc):
+    assert set(doc["skill_category"].values()) <= set(doc["categories"])
 
 
-def test_delta_chart_uses_both_poles_and_marks_significance():
-    rows = [
-        {"skill": "go", "delta_pp": 1.5, "first_share": 0.1, "last_share": 0.115,
-         "flow_significant": True},
-        {"skill": "java", "delta_pp": -0.5, "first_share": 0.2, "last_share": 0.195,
-         "flow_significant": False},
-    ]  # fmt: skip
-    out = charts.delta_chart(rows, "t", "n")
-    assert "var(--pos)" in out and "var(--neg)" in out
-    assert "+1.5 *" in out and "-0.5<" in out
+def test_examples_are_held_out_real_postings(doc):
+    assert doc["examples"]
+    for e in doc["examples"]:
+        assert e["description"] and e["target"] in {"senior", "below_senior"}
 
 
-def test_status_is_never_color_alone():
-    out = charts.status_list("g", [("warning", "only 1 snapshot day")])
-    assert "<b>Gap</b>" in out
+def test_model_results_include_floor_and_baseline(doc):
+    keys = [r["key"] for r in doc["model"]["results"]]
+    assert keys[:2] == ["majority", "baseline"]
+    floor = doc["model"]["results"][0]["macro_f1"]
+    assert all(r["macro_f1"] >= floor for r in doc["model"]["results"])
 
 
-def test_dashboard_views_render(data):
-    pytest.importorskip("gradio")
-    from xray.app.dashboard import classify, quality_view, snapshot_view, trend_view
+@pytest.fixture(scope="module")
+def client():
+    pytest.importorskip("fastapi")
+    from fastapi.testclient import TestClient
 
-    html_, table = snapshot_view(data, "all in-region postings")
-    assert table and len(table[0]) == 5
-    head, _, _ = trend_view(data, "all in-region postings")
-    assert "real snapshot day" in head
-    assert "Known gaps" in quality_view(data)
-    assert classify("too short")[0] is None
+    from xray.app.server import app
+
+    with TestClient(app) as c:
+        yield c
+
+
+def test_site_and_api_respond(client):
+    assert client.get("/").status_code == 200
+    assert client.get("/static/app.js").status_code == 200
+    body = client.get("/api/dashboard").json()
+    assert body["as_of"] and "serving" in body
+    assert client.get("/healthz").json()["status"] == "ok"
+
+
+def test_classify_rejects_short_text(client):
+    assert client.post("/api/classify", json={"text": "too short"}).status_code == 422
 
 
 def _zip_of(fixtures_dir) -> bytes:

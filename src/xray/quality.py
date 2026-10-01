@@ -13,6 +13,30 @@ from xray.skills.vocab import load_vocab
 from xray.store import Store
 from xray.trends import history, load_frame
 
+AGE_BUCKETS = [
+    ("0-7 days", 0, 7), ("8-30 days", 8, 30), ("31-90 days", 31, 90),
+    ("91-180 days", 91, 180), ("181-365 days", 181, 365), ("over a year", 366, 10**6),
+]  # fmt: skip
+
+
+def label_readiness(store: Store, config_dir: Path = CONFIG_DIR) -> dict[str, Any]:
+    """Rule-derived seniority labels available today vs the per-class minimum (retrain gate)."""
+    from xray.classify.train import build_dataset
+
+    _, rep = build_dataset(store, config_dir)
+    fine = rep["fine_class_counts"]
+    need = rep["min_confident_examples_per_class"]
+    classes = ["intern", "junior", "mid", "senior"]
+    return {
+        "fine_class_counts": {c: fine.get(c, 0) for c in classes},
+        "target_counts": rep["target_counts"],
+        "min_per_class": need,
+        "four_class_ready": all(fine.get(c, 0) >= need for c in classes),
+        "current_task_trainable": rep["trainable"],
+        "note": "labels come from rules on real titles/descriptions; nothing is invented to fill a "
+        "class. Retrain when more classes clear the minimum.",
+    }
+
 
 def build_quality(store: Store | None = None, config_dir: Path = CONFIG_DIR) -> dict[str, Any]:
     store = store or Store()
@@ -69,12 +93,17 @@ def build_quality(store: Store | None = None, config_dir: Path = CONFIG_DIR) -> 
                 "postings_with_publish_date": len(ages),
                 "median_days_open": statistics.median(ages),
                 "share_open_over_90_days": round(sum(a > 90 for a in ages) / len(ages), 4),
+                "histogram": [
+                    {"bucket": label, "postings": sum(lo <= a <= hi for a in ages)}
+                    for label, lo, hi in AGE_BUCKETS
+                ],
                 "note": "long-open postings dominate stock counts; flow (new postings) is the "
                 "cleaner demand signal once enough days accumulate",
             }
     return {
         "generated_at": datetime.now(UTC).isoformat(timespec="seconds"),
         "history": hist,
+        "classifier_labels": label_readiness(store, config_dir),
         "panel": {
             "boards": len(panel),
             "added_dates": sorted({b.added.isoformat() for b in panel}),

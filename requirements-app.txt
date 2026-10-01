@@ -1,6 +1,7 @@
-# Render web service: dashboard + int8 ONNX classifier. No torch / spaCy / duckdb at runtime
-# (measured: torch + fp32 DistilBERT ~660 MB RSS; this stack ~270 MB, inside the 512 MB tier).
-gradio==6.29.0       # M6: dashboard UI
+# Render web service: FastAPI site + int8 ONNX classifier. No torch / spaCy / duckdb at runtime
+# (measured: torch + fp32 DistilBERT ~660 MB RSS; this stack fits easily in the 512 MB tier).
+fastapi==0.142.2     # M6: JSON API + static site
+uvicorn==0.54.0      # M6: ASGI server
 onnxruntime==1.30.0  # M6: CPU inference of the int8 model
 tokenizers==0.23.2   # M6: DistilBERT WordPiece tokenizer without transformers
 numpy==2.5.3

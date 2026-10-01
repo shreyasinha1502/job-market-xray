@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Job Market X-Ray · Tech-skill demand in real India job postings</title>
+  <meta name="description" content="What India's tech employers actually ask for, measured from real job postings fetched daily. Skill demand, role fingerprints, city heatmap, honest trends and a seniority classifier. No synthetic data.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232a78d6'/%3E%3Cpath d='M18 18l28 28M46 18L18 46' stroke='white' stroke-width='7' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css">
+  <script>
+    (function () {
+      var t = new URLSearchParams(location.search).get("theme");
+      if (t !== "dark" && t !== "light") { t = null; try { t = localStorage.getItem("xray-theme"); } catch (e) {} }
+      if (!t) t = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="wrap topbar-in">
+      <a class="brand" href="#overview" aria-label="Job Market X-Ray home">
+        <span class="logo" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M18 18l28 28M46 18L18 46"/></svg></span>
+        <span>Job Market <b>X-Ray</b></span>
+      </a>
+      <nav class="nav" aria-label="Sections">
+        <a href="#skills">Skills</a>
+        <a href="#roles">Roles</a>
+        <a href="#cities">Cities</a>
+        <a href="#trends">Trends</a>
+        <a href="#classifier">Classifier</a>
+        <a href="#quality">Data quality</a>
+        <a href="#method">Method</a>
+      </nav>
+      <div class="top-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle light or dark theme">
+          <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+          <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>
+        </button>
+        <a class="gh" id="repoLink" href="https://github.com/shreyasinha1502/job-market-xray" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"/></svg>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="overview" class="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="wrap">
+        <div class="hero-top">
+          <span class="live-pill"><span class="pulse" aria-hidden="true"></span>Live · refreshed daily</span>
+          <span class="asof" id="asOf">Loading data…</span>
+        </div>
+        <h1>What India's tech employers<br><span class="grad">actually ask for.</span></h1>
+        <p class="lede">An X-ray of real job postings: skills extracted with transparent NLP rules, variants merged with
+          embeddings, demand tracked day by day across a fixed panel of 55 employers. Every number comes from real
+          postings, and every gap is shown instead of filled.</p>
+        <div class="hero-cta">
+          <a class="btn primary" href="#skills">Explore skill demand</a>
+          <a class="btn ghost" href="#classifier">Try the seniority classifier</a>
+        </div>
+        <div class="kpis" id="kpis" aria-live="polite"></div>
+        <div class="history-banner" id="historyBanner"></div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow">01 · Skill demand now</span>
+          <h2>Which skills show up in postings?</h2>
+          <p>Share of open postings that mention each skill in the role sections (title, intro, responsibilities,
+            requirements). Company "About us" boilerplate is not counted. Whiskers show the 95% interval, which matters
+            for small roles.</p>
+        </div>
+        <div class="controls">
+          <label class="field"><span>Scope</span><select id="scopeSelect"></select></label>
+          <div class="chips" id="catChips" role="group" aria-label="Filter by category"></div>
+          <div class="seg" role="group" aria-label="How many skills">
+            <button type="button" data-top="15" class="on">Top 15</button>
+            <button type="button" data-top="30">Top 30</button>
+            <button type="button" data-top="999">All</button>
+          </div>
+        </div>
+        <div class="card chart-card">
+          <div class="card-head"><h3 id="skillsTitle">Skills</h3><span class="muted" id="skillsSub"></span></div>
+          <div id="skillsChart" class="chart"></div>
+          <details class="tableview"><summary>Show as table</summary><div id="skillsTable"></div></details>
+        </div>
+      </div>
+    </section>
+
+    <section id="roles" class="section alt">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow">02 · Role fingerprints</span>
+          <h2>Each role has its own skill signature</h2>
+          <p>Roles are assigned by transparent title rules. Small roles are flagged: with fewer than 30 postings, a share
+            can move a lot when one posting changes.</p>
+        </div>
+        <div class="role-grid" id="roleGrid"></div>
+      </div>
+    </section>
+
+    <section id="cities" class="section">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow">03 · Cities</span>
+          <h2>Where the demand sits</h2>
+          <p>Share of postings in each city that mention the overall top skills. Darker means a higher share. Only cities
+            with at least 50 postings get their own row.</p>
+        </div>
+        <div class="card chart-card">
+          <div id="cityHeat" class="chart"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="trends" class="section alt">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow">04 · Trends</span>
+          <h2>Rising and falling, measured honestly</h2>
+          <p>Trends need real accumulated days and are never backfilled. Changes are measured on a balanced panel (only
+            employers fetched OK every day). Significance comes from new postings only, using Fisher's exact test with
+            Benjamini-Hochberg correction.</p>
+        </div>
+        <div class="controls"><label class="field"><span>Scope</span><select id="trendScope"></select></label></div>
+        <div id="trendBody"></div>
+      </div>
+    </section>
+
+    <section id="classifier" class="section">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow">05 · Seniority classifier</span>
+          <h2>Guess the level from the duties alone</h2>
+          <p>Paste a job description. The title and every seniority keyword are removed before the model sees it, so it has
+            to infer senior vs below-senior from the responsibilities and requirements. It is a fine-tuned DistilBERT,
+            int8 ONNX on CPU.</p>
+        </div>
+        <div class="play">
+          <div class="card play-in">
+            <div class="examples" id="examples"></div>
+            <label class="sr" for="jdText">Job description</label>
+            <textarea id="jdText" rows="12" placeholder="Paste a full job description here, or pick one of the real held-out postings above…"></textarea>
+            <div class="play-actions">
+              <span class="muted" id="charCount">0 characters</span>
+              <button class="btn primary" id="classifyBtn" type="button">Classify seniority</button>
+            </div>
+          </div>
+          <div class="card play-out" id="result" aria-live="polite">
+            <div class="empty">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M10 34l10-10 7 7 11-15"/><circle cx="38" cy="16" r="3"/></svg>
+              <p>Results appear here.<br><span class="muted">Try a real held-out posting first.</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="model-grid">
+          <div class="card chart-card">
+            <div class="card-head"><h3>How good is it?</h3><span class="muted">macro-F1 on 146 held-out postings · 95% CI</span></div>
+            <div id="modelChart" class="chart"></div>
+            <p class="note" id="modelNote"></p>
+          </div>
+          <div class="card chart-card">
+            <div class="card-head"><h3>Where it errs</h3><span class="muted">served model · test set</span></div>
+            <div id="confusion" class="chart"></div>
+            <p class="note" id="confusionNote"></p>
+          </div>
+          <div class="card chart-card">
+            <div class="card-head"><h3>Retrain gate</h3><span class="muted">real rule-derived labels vs minimum</span></div>
+            <div id="labelGate" class="chart"></div>
+            <p class="note">Intern and junior are below the minimum of real examples, so the model only separates senior from
+              below-senior. Classes are never filled with invented labels.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="quality" class="section alt">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow">06 · Data quality</span>
+          <h2>What the numbers rest on</h2>
+          <p>Coverage, gaps and caveats sit on the page instead of a footnote.</p>
+        </div>
+        <div class="q-tiles" id="qTiles"></div>
+        <div class="q-grid">
+          <div class="card"><div class="card-head"><h3>Known gaps</h3></div><ul class="status" id="gaps"></ul>
+            <div class="card-head sub"><h3>Snapshot log</h3><span class="muted">one row per real day</span></div><div id="snapLog"></div></div>
+          <div class="card chart-card"><div class="card-head"><h3>Skill coverage by role</h3><span class="muted">postings with at least one skill</span></div><div id="covRole" class="chart"></div></div>
+          <div class="card chart-card"><div class="card-head"><h3>How long postings stay open</h3><span class="muted">latest snapshot</span></div><div id="ageHist" class="chart"></div></div>
+          <div class="card"><div class="card-head"><h3>Rules that rejected matches</h3></div><div id="exclusions"></div>
+            <div class="card-head sub"><h3>Seen but not in the vocabulary</h3></div><div class="chips static" id="vocabGaps"></div></div>
+        </div>
+        <div class="callout">
+          <b>Sampling frame.</b> This is a fixed panel of 55 employers with public Greenhouse, Lever or Ashby job boards
+          (India locations only), not the whole Indian job market. It skews towards product and SaaS companies in
+          Bengaluru. A fixed panel keeps day-to-day comparisons fair.
+        </div>
+      </div>
+    </section>
+
+    <section id="method" class="section">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow">07 · Method</span>
+          <h2>From raw postings to this page</h2>
+        </div>
+        <ol class="pipeline" id="pipeline"></ol>
+        <div class="principles">
+          <div class="pr"><b>No synthetic data</b><span>Nothing is mocked or backfilled. Every posting keeps provenance to the raw API bytes (sha256).</span></div>
+          <div class="pr"><b>Rules you can read</b><span>Skills, regions, roles and labels come from YAML rules in the repo. Rejected matches are kept and flagged.</span></div>
+          <div class="pr"><b>Gaps stay visible</b><span>Failed boards, missing days and low coverage are reported, never imputed.</span></div>
+          <div class="pr"><b>Honest models</b><span>A fine-tuned transformer is compared with a linear baseline and a majority floor, with CIs and McNemar.</span></div>
+        </div>
+        <div class="links" id="links"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap foot-in">
+      <span>Job Market X-Ray · built from real postings only</span>
+      <span class="muted" id="builtAt"></span>
+    </div>
+  </footer>
+
+  <div id="tip" class="tip" role="tooltip" hidden></div>
+  <script src="/static/app.js" defer></script>
+</body>
+</html>

@@ -347,5 +347,51 @@
   "both_wrong": 15,
   "mcnemar_exact_p": 1.0,
   "reading": "no significant difference at 0.05"
+ },
+ "serving_int8": {
+  "test_postings": 146,
+  "agreement_with_fp32": 0.9795,
+  "disagreements": 3,
+  "int8_test_metrics": {
+   "n": 146,
+   "accuracy": 0.8562,
+   "macro_f1": 0.6893,
+   "macro_f1_ci95_bootstrap": [
+    0.5709,
+    0.8006
+   ],
+   "weighted_f1": 0.8359,
+   "per_class": {
+    "below_senior": {
+     "precision": 0.6923,
+     "recall": 0.3462,
+     "f1-score": 0.4615,
+     "support": 26
+    },
+    "senior": {
+     "precision": 0.8722,
+     "recall": 0.9667,
+     "f1-score": 0.917,
+     "support": 120
+    }
+   },
+   "confusion_matrix": {
+    "labels": [
+     "below_senior",
+     "senior"
+    ],
+    "rows_true_cols_pred": [
+     [
+      9,
+      17
+     ],
+     [
+      4,
+      116
+     ]
+    ]
+   }
+  },
+  "onnx_sha256": "7ba1b4ae22cf3ef1280766c36f4b566b5bb5d8b14e64cad2a008c33dbbe58ff6"
  }
 }

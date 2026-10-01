@@ -318,6 +318,7 @@ def trend(frame: Frame, scope: Scope, roles: RoleMatcher, cfg: TrendConfig,
             "delta_pp": round(100 * (c1[s] / n1 - c0[s] / n0), 2) if n0 and n1 else None,
             "first_postings": c0[s], "last_postings": c1[s],
             "slope_pp_per_day": None if slope is None else round(slope, 3),
+            "series": [None if np.isnan(v) else round(float(v), 4) for v in sh],
         })  # fmt: skip
     flow = flow_test(frame, days, boards, scope, roles, cfg)
     sig = {r["skill"]: r for r in flow.get("skills", [])}
@@ -332,6 +333,8 @@ def trend(frame: Frame, scope: Scope, roles: RoleMatcher, cfg: TrendConfig,
         "status": "ok",
         "panel": {"boards_compared": len(boards), "boards_excluded": excluded},
         "stock": {"first_day_postings": n0, "last_day_postings": n1,
+                  "days": [d.isoformat() for d in days],
+                  "postings_per_day": [series[d][0] for d in days],
                   "note": "descriptive: same postings stay open across days, so no p-values"},
         "risers": risers[: cfg.top_k],
         "fallers": fallers[: cfg.top_k],

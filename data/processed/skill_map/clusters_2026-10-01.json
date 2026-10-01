@@ -1,79 +1,105 @@
 {
  "generated": {
   "snapshot": "2026-10-01",
-  "at": "2026-10-01T16:55:12+00:00",
+  "at": "2026-10-01T21:13:47+00:00",
   "model": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
   "eps": 0.12,
   "min_cluster_size": 2,
-  "candidate_terms": 784
+  "candidate_terms": 796
  },
  "sensitivity": [
   {
    "eps": 0.06,
    "min_similarity": 0.94,
-   "clusters": 6,
-   "terms_in_clusters": 13,
+   "clusters": 7,
+   "terms_in_clusters": 15,
    "multi_skill_conflicts": 0,
    "merges_without_lexical_support": 0
   },
   {
    "eps": 0.08,
    "min_similarity": 0.92,
-   "clusters": 10,
-   "terms_in_clusters": 22,
-   "multi_skill_conflicts": 0,
-   "merges_without_lexical_support": 2
-  },
-  {
-   "eps": 0.1,
-   "min_similarity": 0.9,
    "clusters": 12,
    "terms_in_clusters": 26,
    "multi_skill_conflicts": 0,
    "merges_without_lexical_support": 2
   },
   {
+   "eps": 0.1,
+   "min_similarity": 0.9,
+   "clusters": 14,
+   "terms_in_clusters": 30,
+   "multi_skill_conflicts": 0,
+   "merges_without_lexical_support": 2
+  },
+  {
    "eps": 0.12,
    "min_similarity": 0.88,
-   "clusters": 21,
-   "terms_in_clusters": 45,
+   "clusters": 22,
+   "terms_in_clusters": 48,
    "multi_skill_conflicts": 0,
    "merges_without_lexical_support": 7
   },
   {
    "eps": 0.15,
    "min_similarity": 0.85,
-   "clusters": 33,
-   "terms_in_clusters": 73,
-   "multi_skill_conflicts": 0,
+   "clusters": 35,
+   "terms_in_clusters": 78,
+   "multi_skill_conflicts": 1,
    "merges_without_lexical_support": 20
   },
   {
    "eps": 0.2,
    "min_similarity": 0.8,
-   "clusters": 55,
-   "terms_in_clusters": 124,
-   "multi_skill_conflicts": 0,
-   "merges_without_lexical_support": 43
+   "clusters": 59,
+   "terms_in_clusters": 133,
+   "multi_skill_conflicts": 1,
+   "merges_without_lexical_support": 45
   },
   {
    "eps": 0.25,
    "min_similarity": 0.75,
-   "clusters": 80,
-   "terms_in_clusters": 200,
-   "multi_skill_conflicts": 0,
-   "merges_without_lexical_support": 86
+   "clusters": 84,
+   "terms_in_clusters": 210,
+   "multi_skill_conflicts": 1,
+   "merges_without_lexical_support": 89
   },
   {
    "eps": 0.3,
    "min_similarity": 0.7,
-   "clusters": 101,
-   "terms_in_clusters": 310,
-   "multi_skill_conflicts": 0,
-   "merges_without_lexical_support": 169
+   "clusters": 103,
+   "terms_in_clusters": 318,
+   "multi_skill_conflicts": 5,
+   "merges_without_lexical_support": 173
   }
  ],
  "aliases": [
+  {
+   "variant": "NET",
+   "skill": ".net",
+   "status": "accepted",
+   "why": "same lexical key as a vocabulary form",
+   "cos": null,
+   "postings": 6,
+   "boards": 3,
+   "sources": [
+    "list",
+    "vocab"
+   ]
+  },
+  {
+   "variant": "API gateways",
+   "skill": "api gateway",
+   "status": "accepted",
+   "why": "semantic cluster",
+   "cos": 0.964,
+   "postings": 5,
+   "boards": 3,
+   "sources": [
+    "list",
+    "ner"
+   ]
+  },
   {
    "variant": "Microsoft Azure",
    "skill": "azure",
@@ -84,6 +110,247 @@
    "boards": 4,
    "sources": [
     "list"
+   ]
+  },
+  {
+   "variant": "Claudecode",
+   "skill": "claude code",
+   "status": "accepted",
+   "why": "same lexical key as a vocabulary form",
+   "cos": null,
+   "postings": 33,
+   "boards": 15,
+   "sources": [
+    "list",
+    "ner",
+    "vocab"
+   ]
+  },
+  {
+   "variant": "Cross plane",
+   "skill": "crossplane",
+   "status": "accepted",
+   "why": "same lexical key as a vocabulary form",
+   "cos": null,
+   "postings": 9,
+   "boards": 6,
+   "sources": [
+    "list",
+    "vocab"
+   ]
+  },
+  {
+   "variant": "Google-Sheets",
+   "skill": "google sheets",
+   "status": "accepted",
+   "why": "same lexical key as a vocabulary form",
+   "cos": null,
+   "postings": 31,
+   "boards": 13,
+   "sources": [
+    "list",
+    "ner",
+    "vocab"
+   ]
+  },
+  {
+   "variant": "Google Sheets.",
+   "skill": "google sheets",
+   "status": "already_matched",
+   "why": "same lexical key as a vocabulary form",
+   "cos": null,
+   "postings": 31,
+   "boards": 13,
+   "sources": [
+    "list",
+    "ner",
+    "vocab"
+   ]
+  },
+  {
+   "variant": "HTTP/S",
+   "skill": "https",
+   "status": "accepted",
+   "why": "same lexical key as a vocabulary form",
+   "cos": null,
+   "postings": 8,
+   "boards": 3,
+   "sources": [
+    "list",
+    "ner",
+    "shape",
+    "vocab"
+   ]
+  },
+  {
+   "variant": "IaC.",
+   "skill": "iac",
+   "status": "already_matched",
+   "why": "same lexical key as a vocabulary form",
+   "cos": null,
+   "postings": 36,
+   "boards": 16,
+   "sources": [
+    "list",
+    "shape",
+    "vocab"
+   ]
+  },
+  {
+   "variant": "LLM-",
+   "skill": "llm",
+   "status": "already_matched",
+   "why": "same lexical key as a vocabulary form",
+   "cos": null,
+   "postings": 154,
+   "boards": 41,
+   "sources": [
+    "list",
+    "ner",
+    "shape",
+    "vocab"
+   ]
+  },
+  {
+   "variant": "LoadBalancers",
+   "skill": "load balancer",
+   "status": "accepted",
+   "why": "same lexical key as a vocabulary form",
+   "cos": null,
+   "postings": 7,
+   "boards": 5,
+   "sources": [
+    "list",
+    "ner",
+    "shape",
+    "vocab"
+   ]
+  },
+  {
+   "variant": "NoSQL  databases",
+   "skill": "nosql",
+   "status": "already_matched",
+   "why": "same lexical key as a vocabulary form",
+   "cos": null,
+   "postings": 16,
+   "boards": 10,
+   "sources": [
+    "list",
+    "vocab"
+   ]
+  },
+  {
+   "variant": "ORMs",
+   "skill": "orm",
+   "status": "accepted",
+   "why": "same lexical key as a vocabulary form",
+   "cos": null,
+   "postings": 3,
+   "boards": 3,
+   "sources": [
+    "list",
+    "shape",
+    "vocab"
+   ]
+  },
+  {
+   "variant": "ReAct",
+   "skill": "react",
+   "status": "needs_review",
+   "why": "same lexical key as a vocabulary form (exact-spelling skill: casing variant needs review)",
+   "cos": null,
+   "postings": 63,
+   "boards": 18,
+   "sources": [
+    "list",
+    "ner",
+    "shape",
+    "vocab"
+   ]
+  },
+  {
+   "variant": "ReST",
+   "skill": "rest",
+   "status": "needs_review",
+   "why": "same lexical key as a vocabulary form (exact-spelling skill: casing variant needs review)",
+   "cos": null,
+   "postings": 79,
+   "boards": 24,
+   "sources": [
+    "list",
+    "ner",
+    "shape",
+    "vocab"
+   ]
+  },
+  {
+   "variant": "SIEMs",
+   "skill": "siem",
+   "status": "accepted",
+   "why": "same lexical key as a vocabulary form",
+   "cos": null,
+   "postings": 16,
+   "boards": 10,
+   "sources": [
+    "list",
+    "shape",
+    "vocab"
+   ]
+  },
+  {
+   "variant": "SREs",
+   "skill": "sre",
+   "status": "accepted",
+   "why": "same lexical key as a vocabulary form",
+   "cos": null,
+   "postings": 53,
+   "boards": 19,
+   "sources": [
+    "list",
+    "shape",
+    "vocab"
+   ]
+  },
+  {
+   "variant": "TDDs",
+   "skill": "tdd",
+   "status": "accepted",
+   "why": "same lexical key as a vocabulary form",
+   "cos": null,
+   "postings": 8,
+   "boards": 3,
+   "sources": [
+    "ner",
+    "shape",
+    "vocab"
+   ]
+  },
+  {
+   "variant": "VPNs",
+   "skill": "vpn",
+   "status": "accepted",
+   "why": "same lexical key as a vocabulary form",
+   "cos": null,
+   "postings": 21,
+   "boards": 10,
+   "sources": [
+    "list",
+    "shape",
+    "vocab"
+   ]
+  },
+  {
+   "variant": "WAFs",
+   "skill": "waf",
+   "status": "accepted",
+   "why": "same lexical key as a vocabulary form",
+   "cos": null,
+   "postings": 10,
+   "boards": 6,
+   "sources": [
+    "list",
+    "shape",
+    "vocab"
    ]
   },
   {
@@ -99,7 +366,8 @@
     "vocab"
    ],
    "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude): spacing variant ('Data bricks, Python, SQL')"
+   "note": "reviewed 2026-10-01 (Claude): spacing variant ('Data bricks, Python, SQL')",
+   "stale": true
   },
   {
    "variant": "GO",
@@ -116,22 +384,8 @@
     "vocab"
    ],
    "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude): both real uses are the language ('Java, GO, etc', 'Java or GO'); promoted into skills.yaml case_sensitive + needs_context so the Go context rules still apply"
-  },
-  {
-   "variant": "LLM-",
-   "skill": "llm",
-   "status": "already_matched",
-   "why": "same lexical key as a vocabulary form",
-   "cos": null,
-   "postings": 154,
-   "boards": 41,
-   "sources": [
-    "list",
-    "ner",
-    "shape",
-    "vocab"
-   ]
+   "note": "reviewed 2026-10-01 (Claude): both real uses are the language ('Java, GO, etc', 'Java or GO'); promoted into skills.yaml case_sensitive + needs_context so the Go context rules still apply",
+   "stale": true
   }
  ],
  "conflicts": [],
@@ -144,7 +398,7 @@
      "cos_to_canonical": 1.0,
      "lexical_support": true,
      "spellings": {
-      "AI": 5755,
+      "AI": 5647,
       "A.I": 2,
       "A.I.": 2
      },
@@ -195,7 +449,7 @@
      "cos_to_canonical": 1.0,
      "lexical_support": true,
      "spellings": {
-      "API": 464,
+      "API": 463,
       "APIs": 76
      },
      "postings": 211,
@@ -210,30 +464,6 @@
    "status": "not_a_skill",
    "reviewed": true,
    "note": "reviewed 2026-10-01 (Claude): generic term"
-  },
-  {
-   "canonical": "DevOps",
-   "members": [
-    {
-     "term": "DevOps",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "DevOps": 280,
-      "Devops": 1
-     },
-     "postings": 108,
-     "boards": 26,
-     "sources": [
-      "list",
-      "ner",
-      "shape"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude)."
   },
   {
    "canonical": "LinkedIn",
@@ -284,45 +514,6 @@
    "note": "reviewed 2026-10-01 (Claude): generic term"
   },
   {
-   "canonical": "PostgreSQL",
-   "members": [
-    {
-     "term": "PostgreSQL",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "PostgreSQL": 147,
-      "PostGreSQL": 2,
-      "postgresQL": 2
-     },
-     "postings": 66,
-     "boards": 18,
-     "sources": [
-      "list",
-      "ner",
-      "shape"
-     ]
-    },
-    {
-     "term": "Postgres",
-     "cos_to_canonical": 0.899,
-     "lexical_support": true,
-     "spellings": {
-      "Postgres": 24
-     },
-     "postings": 18,
-     "boards": 9,
-     "sources": [
-      "list",
-      "ner"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude). Postgres merged (cos 0.90, lexical)"
-  },
-  {
    "canonical": "UI",
    "members": [
     {
@@ -370,81 +561,6 @@
    "status": "not_a_skill",
    "reviewed": true,
    "note": "reviewed 2026-10-01 (Claude): degree or institution"
-  },
-  {
-   "canonical": "REST",
-   "members": [
-    {
-     "term": "REST",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "REST": 109,
-      "ReST": 4
-     },
-     "postings": 79,
-     "boards": 24,
-     "sources": [
-      "list",
-      "ner",
-      "shape"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude)."
-  },
-  {
-   "canonical": "Excel",
-   "members": [
-    {
-     "term": "Excel",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "Excel": 81
-     },
-     "postings": 58,
-     "boards": 16,
-     "sources": [
-      "list",
-      "ner"
-     ]
-    },
-    {
-     "term": "MS Excel",
-     "cos_to_canonical": 0.957,
-     "lexical_support": true,
-     "spellings": {
-      "MS Excel": 16,
-      "Ms-Excel": 2
-     },
-     "postings": 13,
-     "boards": 6,
-     "sources": [
-      "list",
-      "ner"
-     ]
-    },
-    {
-     "term": "Microsoft Excel",
-     "cos_to_canonical": 0.966,
-     "lexical_support": true,
-     "spellings": {
-      "Microsoft Excel": 8
-     },
-     "postings": 6,
-     "boards": 6,
-     "sources": [
-      "list",
-      "ner"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude). MS/Microsoft Excel merged"
   },
   {
    "canonical": "MS",
@@ -520,71 +636,6 @@
    "note": "reviewed 2026-10-01 (Claude): degree or institution"
   },
   {
-   "canonical": "generative AI",
-   "members": [
-    {
-     "term": "generative AI",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "generative AI": 64,
-      "Generative AI": 7
-     },
-     "postings": 69,
-     "boards": 7,
-     "sources": [
-      "list",
-      "ner"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude). same concept as GenAI (cos 0.36, too low to merge automatically): merge by hand if promoted"
-  },
-  {
-   "canonical": "React",
-   "members": [
-    {
-     "term": "React",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "React": 69,
-      "ReAct": 5,
-      "REACT": 2,
-      "ReACT": 1
-     },
-     "postings": 50,
-     "boards": 17,
-     "sources": [
-      "list",
-      "ner",
-      "shape"
-     ]
-    },
-    {
-     "term": "React.js",
-     "cos_to_canonical": 0.883,
-     "lexical_support": true,
-     "spellings": {
-      "React.js": 13,
-      "ReactJS": 10
-     },
-     "postings": 13,
-     "boards": 5,
-     "sources": [
-      "list",
-      "ner",
-      "shape"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude). spellings include 'ReAct' (an LLM agent pattern, different concept): promote with case-sensitive forms only"
-  },
-  {
    "canonical": "B2B",
    "members": [
     {
@@ -654,81 +705,6 @@
    "note": "reviewed 2026-10-01 (Claude): business / commercial term"
   },
   {
-   "canonical": "OAuth",
-   "members": [
-    {
-     "term": "OAuth",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "OAuth": 68,
-      "oAuth": 2
-     },
-     "postings": 41,
-     "boards": 8,
-     "sources": [
-      "list",
-      "ner",
-      "shape"
-     ]
-    },
-    {
-     "term": "OAuth 2.0",
-     "cos_to_canonical": 0.816,
-     "lexical_support": true,
-     "spellings": {
-      "OAuth 2.0": 16
-     },
-     "postings": 10,
-     "boards": 5,
-     "sources": [
-      "list"
-     ]
-    },
-    {
-     "term": "OAuth2",
-     "cos_to_canonical": 0.93,
-     "lexical_support": true,
-     "spellings": {
-      "OAuth2": 15
-     },
-     "postings": 7,
-     "boards": 6,
-     "sources": [
-      "list",
-      "shape"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude). OAuth 2.0 / OAuth2 merged"
-  },
-  {
-   "canonical": "SRE",
-   "members": [
-    {
-     "term": "SRE",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "SRE": 151,
-      "SREs": 4
-     },
-     "postings": 53,
-     "boards": 19,
-     "sources": [
-      "list",
-      "ner",
-      "shape"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude). practice"
-  },
-  {
    "canonical": "SLA",
    "members": [
     {
@@ -751,30 +727,6 @@
    "status": "not_a_skill",
    "reviewed": true,
    "note": "reviewed 2026-10-01 (Claude): business / commercial term"
-  },
-  {
-   "canonical": "MySQL",
-   "members": [
-    {
-     "term": "MySQL",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "MySQL": 73,
-      "MySql": 1
-     },
-     "postings": 46,
-     "boards": 16,
-     "sources": [
-      "list",
-      "ner",
-      "shape"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude)."
   },
   {
    "canonical": "Excellent communication",
@@ -845,30 +797,6 @@
    "note": "reviewed 2026-10-01 (Claude): job title or role"
   },
   {
-   "canonical": "GenAI",
-   "members": [
-    {
-     "term": "GenAI",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "GenAI": 99,
-      "Gen-AI": 1
-     },
-     "postings": 43,
-     "boards": 18,
-     "sources": [
-      "list",
-      "ner",
-      "shape"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude). see 'generative AI'"
-  },
-  {
    "canonical": "Data Science",
    "members": [
     {
@@ -915,80 +843,6 @@
    "note": "reviewed 2026-10-01 (Claude): job title or role"
   },
   {
-   "canonical": "Node.js",
-   "members": [
-    {
-     "term": "Node.js",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "Node.js": 76,
-      "NodeJS": 7,
-      "node.js": 6
-     },
-     "postings": 37,
-     "boards": 12,
-     "sources": [
-      "list",
-      "ner",
-      "shape"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude)."
-  },
-  {
-   "canonical": "IaC",
-   "members": [
-    {
-     "term": "IaC",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "IaC": 75,
-      "IAC": 3,
-      "IaC.": 1
-     },
-     "postings": 36,
-     "boards": 16,
-     "sources": [
-      "list",
-      "ner",
-      "shape"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude). practice"
-  },
-  {
-   "canonical": "NetSuite",
-   "members": [
-    {
-     "term": "NetSuite",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "NetSuite": 142,
-      "Netsuite": 2
-     },
-     "postings": 36,
-     "boards": 14,
-     "sources": [
-      "list",
-      "ner",
-      "shape"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude)."
-  },
-  {
    "canonical": "Architect",
    "members": [
     {
@@ -1021,44 +875,6 @@
    "status": "not_a_skill",
    "reviewed": true,
    "note": "reviewed 2026-10-01 (Claude): job title or role"
-  },
-  {
-   "canonical": "AI agents",
-   "members": [
-    {
-     "term": "AI agents",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "AI agents": 16,
-      "AI Agents": 12
-     },
-     "postings": 23,
-     "boards": 12,
-     "sources": [
-      "list",
-      "ner"
-     ]
-    },
-    {
-     "term": "Agentic AI",
-     "cos_to_canonical": 0.897,
-     "lexical_support": false,
-     "spellings": {
-      "Agentic AI": 19,
-      "agentic AI": 1
-     },
-     "postings": 10,
-     "boards": 6,
-     "sources": [
-      "list",
-      "ner"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude). 'Agentic AI' joined by embedding only (cos 0.90, no lexical support): same concept, accepted"
   },
   {
    "canonical": "B.Tech",
@@ -1132,29 +948,6 @@
    "status": "not_a_skill",
    "reviewed": true,
    "note": "reviewed 2026-10-01 (Claude): degree or institution"
-  },
-  {
-   "canonical": "GitHub Actions",
-   "members": [
-    {
-     "term": "GitHub Actions",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "GitHub Actions": 44,
-      "Github Actions": 1
-     },
-     "postings": 30,
-     "boards": 11,
-     "sources": [
-      "list",
-      "ner"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude)."
   },
   {
    "canonical": "KPI",
@@ -1276,115 +1069,6 @@
    "note": "reviewed 2026-10-01 (Claude): ambiguous acronym (several meanings in this data)"
   },
   {
-   "canonical": "GitLab",
-   "members": [
-    {
-     "term": "GitLab",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "GitLab": 29,
-      "Gitlab": 2
-     },
-     "postings": 18,
-     "boards": 8,
-     "sources": [
-      "list",
-      "ner",
-      "shape"
-     ]
-    },
-    {
-     "term": "GitLab CI",
-     "cos_to_canonical": 0.903,
-     "lexical_support": true,
-     "spellings": {
-      "GitLab CI": 8
-     },
-     "postings": 8,
-     "boards": 5,
-     "sources": [
-      "list"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude). GitLab CI joined (lexical)"
-  },
-  {
-   "canonical": "Git",
-   "members": [
-    {
-     "term": "Git",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "Git": 26,
-      "GIT": 3
-     },
-     "postings": 26,
-     "boards": 13,
-     "sources": [
-      "list",
-      "ner",
-      "shape"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude)."
-  },
-  {
-   "canonical": "Jira",
-   "members": [
-    {
-     "term": "Jira",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "Jira": 22,
-      "JIRA": 10
-     },
-     "postings": 26,
-     "boards": 17,
-     "sources": [
-      "list",
-      "ner",
-      "shape"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude)."
-  },
-  {
-   "canonical": "macOS",
-   "members": [
-    {
-     "term": "macOS",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "macOS": 57,
-      "MacOS": 6,
-      "MAC OS": 1
-     },
-     "postings": 26,
-     "boards": 9,
-     "sources": [
-      "list",
-      "shape"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude)."
-  },
-  {
    "canonical": "PhD",
    "members": [
     {
@@ -1432,114 +1116,6 @@
    "note": "reviewed 2026-10-01 (Claude): business / commercial term"
   },
   {
-   "canonical": "Claude Code",
-   "members": [
-    {
-     "term": "Claude Code",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "Claude Code": 33,
-      "Claudecode": 2
-     },
-     "postings": 23,
-     "boards": 11,
-     "sources": [
-      "list",
-      "ner"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude)."
-  },
-  {
-   "canonical": "Google Sheets",
-   "members": [
-    {
-     "term": "Google Sheets",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "Google Sheets": 35,
-      "Google-Sheets": 2,
-      "Google Sheets.": 1
-     },
-     "postings": 23,
-     "boards": 12,
-     "sources": [
-      "list",
-      "ner"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude)."
-  },
-  {
-   "canonical": "CPQ",
-   "members": [
-    {
-     "term": "CPQ",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "CPQ": 119
-     },
-     "postings": 17,
-     "boards": 10,
-     "sources": [
-      "list",
-      "ner",
-      "shape"
-     ]
-    },
-    {
-     "term": "Salesforce CPQ",
-     "cos_to_canonical": 0.885,
-     "lexical_support": false,
-     "spellings": {
-      "Salesforce CPQ": 3,
-      "Salesforce/CPQ": 1
-     },
-     "postings": 4,
-     "boards": 3,
-     "sources": [
-      "list",
-      "ner"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude). 'Salesforce CPQ' joined by embedding only: same product, accepted"
-  },
-  {
-   "canonical": "VPN",
-   "members": [
-    {
-     "term": "VPN",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "VPN": 37,
-      "VPNs": 3
-     },
-     "postings": 21,
-     "boards": 10,
-     "sources": [
-      "list",
-      "shape"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude)."
-  },
-  {
    "canonical": "AM",
    "members": [
     {
@@ -1561,29 +1137,6 @@
    "status": "not_a_skill",
    "reviewed": true,
    "note": "reviewed 2026-10-01 (Claude): business / commercial term"
-  },
-  {
-   "canonical": "VMware",
-   "members": [
-    {
-     "term": "VMware",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "VMware": 16,
-      "VMWare": 7
-     },
-     "postings": 20,
-     "boards": 4,
-     "sources": [
-      "list",
-      "ner"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude)."
   },
   {
    "canonical": "CXO",
@@ -1663,30 +1216,6 @@
    "note": "reviewed 2026-10-01 (Claude): generic term"
   },
   {
-   "canonical": "ISO 27001",
-   "members": [
-    {
-     "term": "ISO 27001",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "ISO 27001": 19,
-      "ISO27001": 6
-     },
-     "postings": 18,
-     "boards": 13,
-     "sources": [
-      "list",
-      "ner",
-      "shape"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude). compliance framework"
-  },
-  {
    "canonical": "MDM",
    "members": [
     {
@@ -1732,114 +1261,6 @@
    "status": "not_a_skill",
    "reviewed": true,
    "note": "reviewed 2026-10-01 (Claude): business / commercial term"
-  },
-  {
-   "canonical": "UNIX",
-   "members": [
-    {
-     "term": "UNIX",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "UNIX": 18,
-      "Unix": 11
-     },
-     "postings": 18,
-     "boards": 6,
-     "sources": [
-      "list",
-      "ner",
-      "shape"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude)."
-  },
-  {
-   "canonical": "MS Office",
-   "members": [
-    {
-     "term": "MS Office",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "MS Office": 14
-     },
-     "postings": 9,
-     "boards": 6,
-     "sources": [
-      "list",
-      "ner"
-     ]
-    },
-    {
-     "term": "Microsoft Office",
-     "cos_to_canonical": 0.937,
-     "lexical_support": true,
-     "spellings": {
-      "Microsoft Office": 11
-     },
-     "postings": 8,
-     "boards": 6,
-     "sources": [
-      "list",
-      "ner"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude). Microsoft Office merged"
-  },
-  {
-   "canonical": "Apex",
-   "members": [
-    {
-     "term": "Apex",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "Apex": 34,
-      "APEX": 1
-     },
-     "postings": 17,
-     "boards": 8,
-     "sources": [
-      "list",
-      "ner",
-      "shape"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude). Salesforce language"
-  },
-  {
-   "canonical": "Datadog",
-   "members": [
-    {
-     "term": "Datadog",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "Datadog": 21,
-      "DataDog": 8
-     },
-     "postings": 17,
-     "boards": 10,
-     "sources": [
-      "list",
-      "ner",
-      "shape"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude)."
   },
   {
    "canonical": "ID",
@@ -1889,88 +1310,6 @@
    "note": "reviewed 2026-10-01 (Claude): business / commercial term"
   },
   {
-   "canonical": "REST APIs",
-   "members": [
-    {
-     "term": "REST APIs",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "REST APIs": 12
-     },
-     "postings": 10,
-     "boards": 8,
-     "sources": [
-      "list"
-     ]
-    },
-    {
-     "term": "RESTful APIs",
-     "cos_to_canonical": 0.929,
-     "lexical_support": false,
-     "spellings": {
-      "RESTful APIs": 6
-     },
-     "postings": 6,
-     "boards": 4,
-     "sources": [
-      "list"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude). duplicate of REST: merge into REST if promoted"
-  },
-  {
-   "canonical": "ArgoCD",
-   "members": [
-    {
-     "term": "ArgoCD",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "ArgoCD": 30,
-      "Argo CD": 1
-     },
-     "postings": 16,
-     "boards": 7,
-     "sources": [
-      "list",
-      "shape"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude)."
-  },
-  {
-   "canonical": "Elasticsearch",
-   "members": [
-    {
-     "term": "Elasticsearch",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "Elasticsearch": 17,
-      "ElasticSearch": 9,
-      "Elastic Search": 3
-     },
-     "postings": 16,
-     "boards": 9,
-     "sources": [
-      "list",
-      "ner",
-      "shape"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude)."
-  },
-  {
    "canonical": "M.Tech",
    "members": [
     {
@@ -1994,53 +1333,6 @@
    "status": "not_a_skill",
    "reviewed": true,
    "note": "reviewed 2026-10-01 (Claude): degree or institution"
-  },
-  {
-   "canonical": "Next.js",
-   "members": [
-    {
-     "term": "Next.js",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "Next.js": 36,
-      "NextJS": 2
-     },
-     "postings": 16,
-     "boards": 6,
-     "sources": [
-      "list",
-      "ner",
-      "shape"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude)."
-  },
-  {
-   "canonical": "SIEM",
-   "members": [
-    {
-     "term": "SIEM",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "SIEM": 37,
-      "SIEMs": 1
-     },
-     "postings": 16,
-     "boards": 10,
-     "sources": [
-      "list",
-      "shape"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude)."
   },
   {
    "canonical": "SLIs",
@@ -2150,30 +1442,6 @@
    "note": "reviewed 2026-10-01 (Claude): business / commercial term"
   },
   {
-   "canonical": "SOC 2",
-   "members": [
-    {
-     "term": "SOC 2",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "SOC 2": 14,
-      "SOC2": 6
-     },
-     "postings": 15,
-     "boards": 11,
-     "sources": [
-      "list",
-      "ner",
-      "shape"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude). compliance framework"
-  },
-  {
    "canonical": "Collaborate with Product",
    "members": [
     {
@@ -2220,51 +1488,6 @@
    "note": "reviewed 2026-10-01 (Claude): job title or role"
   },
   {
-   "canonical": "IPSec",
-   "members": [
-    {
-     "term": "IPSec",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "IPSec": 12,
-      "IPsec": 9
-     },
-     "postings": 14,
-     "boards": 5,
-     "sources": [
-      "list",
-      "ner"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude)."
-  },
-  {
-   "canonical": "Lightning Web Components",
-   "members": [
-    {
-     "term": "Lightning Web Components",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "Lightning Web Components": 17,
-      "Lightning Web components": 1
-     },
-     "postings": 14,
-     "boards": 5,
-     "sources": [
-      "list"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude)."
-  },
-  {
    "canonical": "NBFC",
    "members": [
     {
@@ -2287,29 +1510,6 @@
    "status": "not_a_skill",
    "reviewed": true,
    "note": "reviewed 2026-10-01 (Claude): business / commercial term"
-  },
-  {
-   "canonical": "Spring Boot",
-   "members": [
-    {
-     "term": "Spring Boot",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "Spring Boot": 11,
-      "Springboot": 4
-     },
-     "postings": 14,
-     "boards": 7,
-     "sources": [
-      "list",
-      "ner"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude)."
   },
   {
    "canonical": "Treasury",
@@ -2359,53 +1559,6 @@
    "note": "reviewed 2026-10-01 (Claude): job title or role"
   },
   {
-   "canonical": "Copilot",
-   "members": [
-    {
-     "term": "Copilot",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "Copilot": 21,
-      "Co-pilot": 1
-     },
-     "postings": 13,
-     "boards": 8,
-     "sources": [
-      "list",
-      "ner"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude). ambiguous between GitHub Copilot and Microsoft Copilot"
-  },
-  {
-   "canonical": "GitOps",
-   "members": [
-    {
-     "term": "GitOps",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "GitOps": 35,
-      "Gitops": 1
-     },
-     "postings": 13,
-     "boards": 7,
-     "sources": [
-      "list",
-      "ner",
-      "shape"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude). practice"
-  },
-  {
    "canonical": "RevOps",
    "members": [
     {
@@ -2428,66 +1581,6 @@
    "status": "not_a_skill",
    "reviewed": true,
    "note": "reviewed 2026-10-01 (Claude): business / commercial term"
-  },
-  {
-   "canonical": "API Gateway",
-   "members": [
-    {
-     "term": "API Gateway",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "API Gateway": 7
-     },
-     "postings": 7,
-     "boards": 3,
-     "sources": [
-      "list",
-      "ner"
-     ]
-    },
-    {
-     "term": "API gateways",
-     "cos_to_canonical": 0.964,
-     "lexical_support": true,
-     "spellings": {
-      "API gateways": 4,
-      "API Gateways": 1
-     },
-     "postings": 5,
-     "boards": 3,
-     "sources": [
-      "list",
-      "ner"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude)."
-  },
-  {
-   "canonical": "Active Directory",
-   "members": [
-    {
-     "term": "Active Directory",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "Active Directory": 11,
-      "Active Directory/": 1
-     },
-     "postings": 12,
-     "boards": 5,
-     "sources": [
-      "list",
-      "ner"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude)."
   },
   {
    "canonical": "CTO",
@@ -2574,30 +1667,6 @@
    "note": "reviewed 2026-10-01 (Claude): job title or role"
   },
   {
-   "canonical": "Agentforce",
-   "members": [
-    {
-     "term": "Agentforce",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "Agentforce": 14,
-      "AgentForce": 1
-     },
-     "postings": 11,
-     "boards": 4,
-     "sources": [
-      "list",
-      "ner",
-      "shape"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude). Salesforce product"
-  },
-  {
    "canonical": "GSI",
    "members": [
     {
@@ -2622,30 +1691,6 @@
    "note": "reviewed 2026-10-01 (Claude): business / commercial term"
   },
   {
-   "canonical": "HubSpot",
-   "members": [
-    {
-     "term": "HubSpot",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "HubSpot": 31,
-      "Hubspot": 1
-     },
-     "postings": 11,
-     "boards": 5,
-     "sources": [
-      "list",
-      "ner",
-      "shape"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude)."
-  },
-  {
    "canonical": "ISV",
    "members": [
     {
@@ -2668,30 +1713,6 @@
    "status": "not_a_skill",
    "reviewed": true,
    "note": "reviewed 2026-10-01 (Claude): business / commercial term"
-  },
-  {
-   "canonical": "OpenSearch",
-   "members": [
-    {
-     "term": "OpenSearch",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "OpenSearch": 33,
-      "Open Search": 1
-     },
-     "postings": 11,
-     "boards": 6,
-     "sources": [
-      "list",
-      "ner",
-      "shape"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude)."
   },
   {
    "canonical": "AI Security",
@@ -2812,30 +1833,6 @@
    "note": "reviewed 2026-10-01 (Claude): job title or role"
   },
   {
-   "canonical": "Scrum",
-   "members": [
-    {
-     "term": "Scrum",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "Scrum": 9,
-      "SCRUM": 2
-     },
-     "postings": 10,
-     "boards": 8,
-     "sources": [
-      "list",
-      "ner",
-      "shape"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude). method"
-  },
-  {
    "canonical": "SE",
    "members": [
     {
@@ -2857,30 +1854,6 @@
    "status": "not_a_skill",
    "reviewed": true,
    "note": "reviewed 2026-10-01 (Claude): job title or role"
-  },
-  {
-   "canonical": "WAF",
-   "members": [
-    {
-     "term": "WAF",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "WAF": 23,
-      "WAFs": 2
-     },
-     "postings": 10,
-     "boards": 6,
-     "sources": [
-      "list",
-      "ner",
-      "shape"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude)."
   },
   {
    "canonical": "CD tools",
@@ -2939,31 +1912,6 @@
    "status": "not_a_skill",
    "reviewed": true,
    "note": "reviewed 2026-10-01 (Claude): job title or role"
-  },
-  {
-   "canonical": "DynamoDB",
-   "members": [
-    {
-     "term": "DynamoDB",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "DynamoDB": 16,
-      "Dynamodb": 2,
-      "DynamoDb": 1
-     },
-     "postings": 9,
-     "boards": 4,
-     "sources": [
-      "list",
-      "ner",
-      "shape"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude)."
   },
   {
    "canonical": "IIT",
@@ -3036,29 +1984,6 @@
    "note": "reviewed 2026-10-01 (Claude): degree or institution"
   },
   {
-   "canonical": "Crossplane",
-   "members": [
-    {
-     "term": "Crossplane",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "Crossplane": 9,
-      "Cross plane": 1
-     },
-     "postings": 8,
-     "boards": 5,
-     "sources": [
-      "list",
-      "ner"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude)."
-  },
-  {
    "canonical": "HRMS",
    "members": [
     {
@@ -3081,30 +2006,6 @@
    "status": "not_a_skill",
    "reviewed": true,
    "note": "reviewed 2026-10-01 (Claude): generic term"
-  },
-  {
-   "canonical": "HTTPS",
-   "members": [
-    {
-     "term": "HTTPS",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "HTTPS": 14,
-      "HTTP/S": 1
-     },
-     "postings": 8,
-     "boards": 3,
-     "sources": [
-      "list",
-      "ner",
-      "shape"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude)."
   },
   {
    "canonical": "modern CI",
@@ -3151,29 +2052,6 @@
    "status": "not_a_skill",
    "reviewed": true,
    "note": "reviewed 2026-10-01 (Claude): job title or role"
-  },
-  {
-   "canonical": "TDD",
-   "members": [
-    {
-     "term": "TDD",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "TDD": 10,
-      "TDDs": 1
-     },
-     "postings": 8,
-     "boards": 3,
-     "sources": [
-      "ner",
-      "shape"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude). practice"
   },
   {
    "canonical": "maintaining CI",
@@ -3308,28 +2186,6 @@
    "note": "reviewed 2026-10-01 (Claude): ambiguous acronym (several meanings in this data)"
   },
   {
-   "canonical": "NoSQL databases",
-   "members": [
-    {
-     "term": "NoSQL databases",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "NoSQL databases": 6,
-      "NoSQL  databases": 1
-     },
-     "postings": 7,
-     "boards": 5,
-     "sources": [
-      "list"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude). duplicate of NoSQL: merge if promoted"
-  },
-  {
    "canonical": "OEM",
    "members": [
     {
@@ -3352,30 +2208,6 @@
    "status": "not_a_skill",
    "reviewed": true,
    "note": "reviewed 2026-10-01 (Claude): business / commercial term"
-  },
-  {
-   "canonical": "OpenShift",
-   "members": [
-    {
-     "term": "OpenShift",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "OpenShift": 18,
-      "Openshift": 3
-     },
-     "postings": 7,
-     "boards": 3,
-     "sources": [
-      "list",
-      "ner",
-      "shape"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude)."
   },
   {
    "canonical": "PRD",
@@ -3410,7 +2242,7 @@
      "lexical_support": true,
      "spellings": {
       "RestAssured": 6,
-      "REST Assured": 6,
+      "REST Assured": 4,
       "Rest Assured": 1
      },
      "postings": 7,
@@ -3542,33 +2374,6 @@
    "note": "reviewed 2026-10-01 (Claude): soft skill / phrase"
   },
   {
-   "canonical": "GSuite",
-   "members": [
-    {
-     "term": "GSuite",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "GSuite": 2,
-      "G suite": 2,
-      "gSuite": 1,
-      "G-suite": 1,
-      "G Suite": 1
-     },
-     "postings": 6,
-     "boards": 5,
-     "sources": [
-      "list",
-      "ner",
-      "shape"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude)."
-  },
-  {
    "canonical": "Mac",
    "members": [
     {
@@ -3577,7 +2382,7 @@
      "lexical_support": true,
      "spellings": {
       "Mac": 7,
-      "MAC": 3
+      "MAC": 2
      },
      "postings": 6,
      "boards": 5,
@@ -3863,8 +2668,8 @@
      "lexical_support": true,
      "spellings": {
       "Partner with Finance": 3,
-      "Partner with finance": 1,
-      "partner with Finance": 1
+      "partner with Finance": 1,
+      "Partner with finance": 1
      },
      "postings": 5,
      "boards": 5,
@@ -4144,8 +2949,8 @@
      "lexical_support": true,
      "spellings": {
       "LLB": 3,
-      "LL.B": 1,
-      "LL.B.": 1
+      "LL.B.": 1,
+      "LL.B": 1
      },
      "postings": 4,
      "boards": 3,
@@ -4158,30 +2963,6 @@
    "status": "not_a_skill",
    "reviewed": true,
    "note": "reviewed 2026-10-01 (Claude): degree or institution"
-  },
-  {
-   "canonical": "Load Balancers",
-   "members": [
-    {
-     "term": "Load Balancers",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "Load Balancers": 3,
-      "LoadBalancers": 2
-     },
-     "postings": 4,
-     "boards": 3,
-     "sources": [
-      "list",
-      "ner",
-      "shape"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude)."
   },
   {
    "canonical": "ML Engineering",
@@ -4204,30 +2985,6 @@
    "status": "not_a_skill",
    "reviewed": true,
    "note": "reviewed 2026-10-01 (Claude): generic term"
-  },
-  {
-   "canonical": "MuleSoft",
-   "members": [
-    {
-     "term": "MuleSoft",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "MuleSoft": 7,
-      "Mulesoft": 1
-     },
-     "postings": 4,
-     "boards": 4,
-     "sources": [
-      "list",
-      "ner",
-      "shape"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude)."
   },
   {
    "canonical": "SA",
@@ -4393,29 +3150,6 @@
    "note": "reviewed 2026-10-01 (Claude): ambiguous acronym (several meanings in this data)"
   },
   {
-   "canonical": "ELK Stack",
-   "members": [
-    {
-     "term": "ELK Stack",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "ELK Stack": 2,
-      "ELK stack": 2
-     },
-     "postings": 3,
-     "boards": 3,
-     "sources": [
-      "list",
-      "ner"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude)."
-  },
-  {
    "canonical": "FAQ",
    "members": [
     {
@@ -4463,30 +3197,6 @@
    "status": "not_a_skill",
    "reviewed": true,
    "note": "reviewed 2026-10-01 (Claude): generic term"
-  },
-  {
-   "canonical": "ORM",
-   "members": [
-    {
-     "term": "ORM",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "ORM": 3,
-      "ORMs": 2
-     },
-     "postings": 3,
-     "boards": 3,
-     "sources": [
-      "list",
-      "ner",
-      "shape"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude)."
   },
   {
    "canonical": "Software Engineer - Backend",
@@ -4605,29 +3315,6 @@
    "status": "not_a_skill",
    "reviewed": true,
    "note": "reviewed 2026-10-01 (Claude): ambiguous acronym (several meanings in this data)"
-  },
-  {
-   "canonical": "WiFi",
-   "members": [
-    {
-     "term": "WiFi",
-     "cos_to_canonical": 1.0,
-     "lexical_support": true,
-     "spellings": {
-      "WiFi": 2,
-      "Wifi": 1
-     },
-     "postings": 3,
-     "boards": 3,
-     "sources": [
-      "list",
-      "shape"
-     ]
-    }
-   ],
-   "status": "skill",
-   "reviewed": true,
-   "note": "reviewed 2026-10-01 (Claude)."
   }
  ],
  "covered_phrases": [
@@ -4664,6 +3351,16 @@
    "cos": 0.879,
    "lexical_support": false,
    "anchors": []
+  },
+  {
+   "a": "Swift",
+   "b": "SwiftUI",
+   "cos": 0.879,
+   "lexical_support": true,
+   "anchors": [
+    "swift",
+    "swift"
+   ]
   },
   {
    "a": "Computer Science",
@@ -4705,14 +3402,19 @@
    "b": "Google Sheets",
    "cos": 0.864,
    "lexical_support": false,
-   "anchors": []
+   "anchors": [
+    "excel",
+    "google sheets"
+   ]
   },
   {
    "a": "SOC",
    "b": "SOC 2",
    "cos": 0.864,
    "lexical_support": true,
-   "anchors": []
+   "anchors": [
+    "soc 2"
+   ]
   },
   {
    "a": "CXO",
@@ -4740,7 +3442,10 @@
    "b": "NoSQL databases",
    "cos": 0.856,
    "lexical_support": false,
-   "anchors": []
+   "anchors": [
+    "nosql",
+    "nosql"
+   ]
   },
   {
    "a": "MBA",
@@ -4813,11 +3518,23 @@
    "anchors": []
   },
   {
-   "a": "ELK",
-   "b": "ELK Stack",
+   "a": "AI",
+   "b": "AI agent",
    "cos": 0.84,
    "lexical_support": false,
-   "anchors": []
+   "anchors": [
+    "ai agents"
+   ]
+  },
+  {
+   "a": "ELK",
+   "b": "ELK stack",
+   "cos": 0.84,
+   "lexical_support": false,
+   "anchors": [
+    "elk stack",
+    "elk stack"
+   ]
   },
   {
    "a": "OWASP ZAP",
@@ -4845,7 +3562,9 @@
    "b": "AI agents",
    "cos": 0.828,
    "lexical_support": false,
-   "anchors": []
+   "anchors": [
+    "ai agents"
+   ]
   },
   {
    "a": "OS",
@@ -4866,7 +3585,10 @@
    "b": "MS Excel",
    "cos": 0.826,
    "lexical_support": false,
-   "anchors": []
+   "anchors": [
+    "google sheets",
+    "excel"
+   ]
   },
   {
    "a": "Finance",
@@ -4874,6 +3596,16 @@
    "cos": 0.824,
    "lexical_support": false,
    "anchors": []
+  },
+  {
+   "a": "REST",
+   "b": "RESTful",
+   "cos": 0.824,
+   "lexical_support": true,
+   "anchors": [
+    "rest",
+    "rest"
+   ]
   },
   {
    "a": "Salesforce",
@@ -4887,7 +3619,10 @@
    "b": "Microsoft Excel",
    "cos": 0.823,
    "lexical_support": false,
-   "anchors": []
+   "anchors": [
+    "google sheets",
+    "excel"
+   ]
   },
   {
    "a": "PO",
@@ -4908,7 +3643,10 @@
    "b": "OAuth 2.0",
    "cos": 0.816,
    "lexical_support": true,
-   "anchors": []
+   "anchors": [
+    "oauth",
+    "oauth"
+   ]
   },
   {
    "a": "SaaS",
@@ -4929,7 +3667,19 @@
    "b": "HTTPS",
    "cos": 0.814,
    "lexical_support": false,
-   "anchors": []
+   "anchors": [
+    "https"
+   ]
+  },
+  {
+   "a": "load balancing",
+   "b": "Load Balancers",
+   "cos": 0.814,
+   "lexical_support": false,
+   "anchors": [
+    "load balancer",
+    "load balancer"
+   ]
   },
   {
    "a": "NPCI",
@@ -5009,18 +3759,23 @@
    "anchors": []
   },
   {
-   "a": "Microsoft Excel",
-   "b": "Advanced Excel",
+   "a": "Advanced Excel",
+   "b": "Microsoft Excel",
    "cos": 0.804,
    "lexical_support": true,
-   "anchors": []
+   "anchors": [
+    "excel",
+    "excel"
+   ]
   },
   {
    "a": "SRE",
    "b": "Sr",
    "cos": 0.803,
    "lexical_support": false,
-   "anchors": []
+   "anchors": [
+    "sre"
+   ]
   },
   {
    "a": "CIS",
@@ -5041,7 +3796,10 @@
    "b": "Advanced Excel",
    "cos": 0.8,
    "lexical_support": true,
-   "anchors": []
+   "anchors": [
+    "excel",
+    "excel"
+   ]
   },
   {
    "a": "CSS",
@@ -5085,7 +3843,10 @@
    "b": "Advanced Excel",
    "cos": 0.793,
    "lexical_support": true,
-   "anchors": []
+   "anchors": [
+    "excel",
+    "excel"
+   ]
   },
   {
    "a": "CI",
@@ -5148,7 +3909,9 @@
    "b": "Microsoft Office",
    "cos": 0.787,
    "lexical_support": false,
-   "anchors": []
+   "anchors": [
+    "ms office"
+   ]
   },
   {
    "a": "San Francisco",
@@ -5162,7 +3925,9 @@
    "b": "Agentic AI",
    "cos": 0.783,
    "lexical_support": false,
-   "anchors": []
+   "anchors": [
+    "ai agents"
+   ]
   },
   {
    "a": "CI",
@@ -5213,14 +3978,18 @@
    "b": "IaaS",
    "cos": 0.776,
    "lexical_support": false,
-   "anchors": []
+   "anchors": [
+    "iac"
+   ]
   },
   {
    "a": "macOS",
    "b": "Mac",
    "cos": 0.776,
    "lexical_support": true,
-   "anchors": []
+   "anchors": [
+    "macos"
+   ]
   },
   {
    "a": "TAT",
@@ -5374,7 +4143,9 @@
    "b": "Git",
    "cos": 0.759,
    "lexical_support": true,
-   "anchors": []
+   "anchors": [
+    "git"
+   ]
   },
   {
    "a": "API",
@@ -5426,11 +4197,22 @@
    "anchors": []
   },
   {
-   "a": "Claude",
-   "b": "Claude Code",
+   "a": "Claude Code",
+   "b": "Claude",
    "cos": 0.752,
    "lexical_support": true,
-   "anchors": []
+   "anchors": [
+    "claude code"
+   ]
+  },
+  {
+   "a": "RESTful",
+   "b": "RestAssured",
+   "cos": 0.751,
+   "lexical_support": false,
+   "anchors": [
+    "rest"
+   ]
   },
   {
    "a": "Strong SQL skills",
@@ -5455,9 +4237,9 @@
   }
  ],
  "candidate_sources": {
-  "list": 690,
-  "shape": 472,
-  "ner": 506,
-  "vocab": 44
+  "shape": 474,
+  "list": 698,
+  "ner": 442,
+  "vocab": 138
  }
 }

@@ -1,11 +1,27 @@
 {
- "generated_at": "2026-10-01T17:06:53+00:00",
+ "generated_at": "2026-10-01T21:16:47+00:00",
  "history": {
   "n_snapshots": 1,
   "first": "2026-10-01",
   "last": "2026-10-01",
   "span_days": 0,
   "missing_dates": []
+ },
+ "classifier_labels": {
+  "fine_class_counts": {
+   "intern": 18,
+   "junior": 0,
+   "mid": 112,
+   "senior": 604
+  },
+  "target_counts": {
+   "below_senior": 130,
+   "senior": 601
+  },
+  "min_per_class": 100,
+  "four_class_ready": false,
+  "current_task_trainable": true,
+  "note": "labels come from rules on real titles/descriptions; nothing is invented to fill a class. Retrain when more classes clear the minimum."
  },
  "panel": {
   "boards": 55,
@@ -14,8 +30,8 @@
   ]
  },
  "extractor": {
-  "version": "m2.3",
-  "vocab_sha256": "56670b5335967d330d733dfceb42fd29505198f4646f4063d90ce01b598a749f",
+  "version": "m2.4",
+  "vocab_sha256": "1a7b1f373444d2f2b24fb4208ac89f163456192a4501c44296905974b40563bc",
   "spacy": "3.8.16",
   "model": "en_core_web_sm-3.8.0"
  },
@@ -30,7 +46,7 @@
     "changed": 0,
     "unchanged": 0
    },
-   "skill_coverage": 0.5726,
+   "skill_coverage": 0.7384,
    "description_completeness": 1.0
   }
  ],
@@ -38,6 +54,32 @@
   "postings_with_publish_date": 1315,
   "median_days_open": 56,
   "share_open_over_90_days": 0.3567,
+  "histogram": [
+   {
+    "bucket": "0-7 days",
+    "postings": 110
+   },
+   {
+    "bucket": "8-30 days",
+    "postings": 306
+   },
+   {
+    "bucket": "31-90 days",
+    "postings": 411
+   },
+   {
+    "bucket": "91-180 days",
+    "postings": 256
+   },
+   {
+    "bucket": "181-365 days",
+    "postings": 123
+   },
+   {
+    "bucket": "over a year",
+    "postings": 90
+   }
+  ],
   "note": "long-open postings dominate stock counts; flow (new postings) is the cleaner demand signal once enough days accumulate"
  },
  "gaps": [
