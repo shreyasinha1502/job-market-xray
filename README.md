@@ -284,6 +284,12 @@ gitignored.
 
 ### Deploy on Render
 
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/shreyasinha1502/job-market-xray)
+
+Model release: [`model-v1`](https://github.com/shreyasinha1502/job-market-xray/releases/tag/model-v1).
+Set `MODEL_URL=https://github.com/shreyasinha1502/job-market-xray/releases/download/model-v1/seniority-onnx.zip`
+and `MODEL_SHA256=b56cbb04194db5417cabbd81296afbabf19f95663c1cebb47d9a101524ff2110`.
+
 1. Sign in at render.com with GitHub. Choose **New → Blueprint** and pick this repo. Render reads
    `render.yaml` (one free Docker web service).
 2. Set the two environment variables from the model release: `MODEL_URL` (the
