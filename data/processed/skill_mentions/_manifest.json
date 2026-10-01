@@ -1,0 +1,16 @@
+{
+  "extractor": {
+    "version": "m2.3",
+    "vocab_sha256": "d9cb2478139935e1275cb29483f07868e36496154eb478fb46a5f9822d3362d3",
+    "spacy": "3.8.16",
+    "model": "en_core_web_sm-3.8.0"
+  },
+  "partitions": {
+    "2026-10-01": {
+      "postings_sha256": "5391769db3bcd5fcab04bb1ccb1c2c0d5ebf758b59562faad4a66a8d70e4d3d7",
+      "n_postings": 1315,
+      "n_mentions": 6415,
+      "extracted_at": "2026-10-01T16:04:46.390947+00:00"
+    }
+  }
+}

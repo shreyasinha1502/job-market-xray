@@ -117,6 +117,79 @@ def cmd_coverage(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_extract(args: argparse.Namespace) -> int:
+    from xray.skills.pipeline import run_extraction
+    from xray.skills.report import build_report, ner_candidates, write_report
+
+    store = Store()
+    manifest, parts = run_extraction(store=store, rebuild=args.rebuild)
+    print(f"extractor {manifest['extractor']}")
+    for p in parts:
+        print(
+            f"  postings/{p.partition}: {p.status:<10} "
+            f"postings={p.n_postings} mentions={p.n_mentions}"
+        )
+    day = _resolve_day(store, None)
+    report = build_report(store, day)
+    rp, cp = write_report(store, day, report, ner_candidates(store, day))
+    c = report["coverage"]
+    print(f"\nsnapshot {day}: coverage (>=1 skill) {c['all_in_region']}")
+    for role, v in c["by_role"].items():
+        print(f"  {role:<28} {v['with_skill']:>4}/{v['postings']:<4} = {v['coverage']}")
+    print(f"exclusions: {report['exclusions']['by_reason']}")
+    print(f"wrote {rp}\nwrote {cp}")
+    return 0
+
+
+def cmd_skills(args: argparse.Namespace) -> int:
+    from xray.skills.report import load_snapshot, skill_table
+
+    store = Store()
+    day = _resolve_day(store, args.date)
+    posts, mentions, _ = load_snapshot(store, day)
+    if args.role:
+        roles = RoleMatcher.from_config(load_sources())
+        posts = [p for p in posts if args.role in roles.match(p.title)]
+    if args.city:
+        posts = [p for p in posts if args.city in p.cities]
+    table = skill_table(posts, mentions, scope=args.scope)
+    scope = {
+        "role": "in title/intro/responsibilities/requirements",
+        "requirements": "in title/requirements",
+        "anywhere": "anywhere incl. company boilerplate",
+    }[args.scope]
+    print(f"snapshot {day} ({day} only; not a trend): {len(posts)} postings, skill {scope}\n")
+    print(
+        f"{'skill':<16} {'category':<10} {'postings':>8} {'share':>6} {'boards':>6}  "
+        "top board (share)"
+    )
+    for r in table[: args.top]:
+        print(
+            f"{r['skill']:<16} {r['category']:<10} {r['postings']:>8} {r['share']:>6.1%} "
+            f"{r['boards']:>6}  {r['top_board']} ({r['top_board_share']:.0%})"
+        )
+    return 0
+
+
+def cmd_mentions(args: argparse.Namespace) -> int:
+    from xray.skills.report import _contexts, load_snapshot
+
+    store = Store()
+    day = _resolve_day(store, args.date)
+    _, mentions, _ = load_snapshot(store, day)
+    picked = [
+        m
+        for m in mentions
+        if m.skill == args.skill.lower() and (m.excluded_reason is not None) == args.excluded
+    ]
+    print(
+        f"{len(picked)} {'excluded' if args.excluded else 'counted'} mentions of {args.skill!r}\n"
+    )
+    for m, ctx in zip(picked[: args.limit], _contexts(store, picked[: args.limit]), strict=True):
+        print(f"[{m.section}{'/' + m.excluded_reason if m.excluded_reason else ''}] …{ctx}…\n")
+    return 0
+
+
 def cmd_probe(args: argparse.Namespace) -> int:
     """Adzuna (dormant): one live call. Needs ADZUNA_APP_ID / ADZUNA_APP_KEY in .env."""
     app_id, app_key = adzuna_credentials()
@@ -163,6 +236,25 @@ def build_parser() -> argparse.ArgumentParser:
     cov.add_argument("--date", type=date.fromisoformat, default=None)
     cov.add_argument("--full", action="store_true", help="include every skipped record")
     cov.set_defaults(func=cmd_coverage)
+
+    ext = sub.add_parser("extract", help="extract skills (incremental) + write skill report")
+    ext.add_argument("--rebuild", action="store_true", help="re-extract every partition")
+    ext.set_defaults(func=cmd_extract)
+
+    sk = sub.add_parser("skills", help="top skills in one snapshot")
+    sk.add_argument("--date", type=date.fromisoformat, default=None)
+    sk.add_argument("--role", default=None)
+    sk.add_argument("--city", default=None)
+    sk.add_argument("--scope", choices=("role", "requirements", "anywhere"), default="role")
+    sk.add_argument("--top", type=int, default=40)
+    sk.set_defaults(func=cmd_skills)
+
+    mn = sub.add_parser("mentions", help="show the text around each match of one skill (audit)")
+    mn.add_argument("--skill", required=True)
+    mn.add_argument("--excluded", action="store_true", help="show flagged/rejected matches")
+    mn.add_argument("--date", type=date.fromisoformat, default=None)
+    mn.add_argument("--limit", type=int, default=15)
+    mn.set_defaults(func=cmd_mentions)
 
     probe = sub.add_parser("probe", help="Adzuna (dormant, needs keys): one live call")
     probe.add_argument("--role", default="data scientist")

@@ -7,3 +7,41 @@ ml_dl_nlp:   ["pytorch", "tensorflow", "scikit-learn", "spacy", "hugging face", 
 data_eng:    ["spark", "airflow", "kafka", "dbt", "snowflake", "databricks", "hadoop"]
 cloud_ops:   ["aws", "gcp", "azure", "docker", "kubernetes", "terraform", "mlflow"]
 viz_bi:      ["tableau", "power bi", "streamlit", "looker"]
+
+# ---- Matching rules (added at M2). Domain knowledge, not data. -----------------------------------
+# Aliases are other spellings of the SAME skill; they map to the canonical name above. They do not
+# add skills. Gaps in the vocabulary are reported (NER candidates), never silently filled.
+aliases:
+  scikit-learn: ["sklearn", "scikit learn"]
+  hugging face: ["huggingface"]
+  llm:          ["llms", "large language model", "large language models"]
+  nlp:          ["natural language processing"]
+  power bi:     ["powerbi"]
+  gcp:          ["google cloud", "google cloud platform"]
+  aws:          ["amazon web services"]
+  kubernetes:   ["k8s"]
+  spark:        ["apache spark"]
+# Skills whose lowercase form is ordinary English ("a spark of inspiration", "go above and beyond"):
+# match ONLY these exact spellings.
+case_sensitive:
+  spark: ["Spark", "PySpark", "Pyspark", "pyspark"]
+  go:    ["Go", "Golang", "golang", "GoLang"]
+  r:     ["R", "RStudio"]
+# Still ambiguous after casing. Checked against every real "Go"/"R" match on 2026-10-01: rejected if a
+# symbol or a known non-language word follows ("Go-live", "Go To Market", "Go beyond"); otherwise
+# counted if a cue word sits right before/after it, or another language/tool is within `window`
+# tokens. Rejections are kept, flagged.
+needs_context:
+  forms: ["Go", "R"]
+  window: 6
+  reject_if_next: ["to", "beyond", "above", "far", "live", "ahead"]
+  cue_words_before: ["in", "with", "using", "strong", "production", "fluency", "proficiency"]
+  cue_words_after: ["programming", "language", "languages", "developer", "developers", "engineer",
+                    "studio", "shiny", "packages", "microservices", "services", "modules",
+                    "concurrency", "expertise", "code", "codebase"]
+  # Disambiguation cues only. These are NOT counted as skills; multi-letter ones are recorded as
+  # "not in vocab" observations so vocabulary gaps show up in the report.
+  context_only_words: ["c", "c++", "c#", "rust", "ruby", "php", "perl", "kotlin", "swift", "sas",
+                       "matlab", "stata", "julia", "node.js", ".net", "bash", "excel", "spss"]
+# "Databricks" inside a Databricks posting names the employer, not a required skill.
+exclude_employer_self_mentions: true

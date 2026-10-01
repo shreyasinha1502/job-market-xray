@@ -77,6 +77,32 @@ SCHEMAS: dict[str, list[tuple[str, str]]] = {
         ("n_changed", "INTEGER"),
         ("n_unchanged", "INTEGER"),
     ],
+    # Derived (M2), partitioned like `postings` (by the postings file they were extracted from).
+    "skill_mentions": [
+        ("posting_key", "VARCHAR"),
+        ("content_hash", "VARCHAR"),
+        ("skill", "VARCHAR"),
+        ("category", "VARCHAR"),
+        ("surface", "VARCHAR"),
+        ("start_char", "INTEGER"),
+        ("end_char", "INTEGER"),
+        ("section", "VARCHAR"),
+        ("rule", "VARCHAR"),
+        ("excluded_reason", "VARCHAR"),
+    ],
+    "entity_mentions": [
+        ("posting_key", "VARCHAR"),
+        ("content_hash", "VARCHAR"),
+        ("text_norm", "VARCHAR"),
+        ("label", "VARCHAR"),
+        ("n", "INTEGER"),
+        ("surface", "VARCHAR"),
+    ],
+    "extraction_meta": [
+        ("posting_key", "VARCHAR"),
+        ("content_hash", "VARCHAR"),
+        ("n_headings", "INTEGER"),
+    ],
 }
 
 
@@ -132,17 +158,26 @@ class Store:
         path = self.path(table, day)
         path.parent.mkdir(parents=True, exist_ok=True)
         tmp = path.with_name(path.name + ".tmp")
+        # Stage as NDJSON and bulk-load: DuckDB's executemany inserts row by row and is far too
+        # slow for tens of thousands of rows.
+        staging = path.with_name(path.name + ".ndjson")
+        with staging.open("w", encoding="utf-8") as f:
+            for r in rows:
+                f.write(json.dumps({c: r[c] for c, _ in cols}, default=str, ensure_ascii=False))
+                f.write("\n")
         con = duckdb.connect()
         try:
             con.execute(f"CREATE TABLE t ({', '.join(f'{c} {t}' for c, t in cols)})")
             if rows:
-                con.executemany(
-                    f"INSERT INTO t VALUES ({', '.join('?' * len(cols))})",
-                    [tuple(r[c] for c, _ in cols) for r in rows],
+                spec = "{" + ", ".join(f"'{c}': '{t}'" for c, t in cols) + "}"
+                con.execute(
+                    f"INSERT INTO t SELECT {', '.join(c for c, _ in cols)} FROM read_json("
+                    f"{_sql_str(staging)}, format = 'newline_delimited', columns = {spec})"
                 )
             con.execute(f"COPY t TO {_sql_str(tmp)} (FORMAT parquet, COMPRESSION zstd)")
         finally:
             con.close()
+            staging.unlink(missing_ok=True)
         os.replace(tmp, path)
         return path
 

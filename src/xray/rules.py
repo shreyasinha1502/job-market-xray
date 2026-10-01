@@ -67,6 +67,10 @@ class RoleMatcher:
         exclude = [e for e in exclude if e.strip()]
         self._exclude = _phrase_regex(exclude) if exclude else None
 
+    @property
+    def names(self) -> list[str]:
+        return [role for role, _ in self._roles]
+
     @classmethod
     def from_config(cls, sources: SourcesConfig) -> RoleMatcher:
         return cls(sources.roles_to_track, sources.role_title_exclude)

@@ -58,6 +58,55 @@ use it as a second source later.
   non-engineering title phrases excluded (`role_title_exclude`). A title can match several roles. Roles
   are computed at read time from the stored title, so improving the rules never requires re-ingesting.
 
+## Skill extraction (M2)
+
+`xray extract` runs spaCy (`en_core_web_sm` 3.8.0) over `title + description` of every stored
+posting version:
+
+- **PhraseMatcher** over the seed vocabulary in `config/skills.yaml` (35 skills). Aliases map other
+  spellings to the same skill (`k8s` → kubernetes, `LLMs` → llm). They never add new skills.
+- **Exact-spelling forms** for skills whose lowercase is ordinary English. "Spark" counts; Meesho's
+  "a spark of inspiration" does not.
+- **Context rules for "Go" and "R"**: rejected when followed by a symbol or a known non-language word
+  (`Go-live`, `Go To Market`, `Go beyond`). Counted when a cue word is adjacent (`in Go`,
+  `Go services`) or another language/tool is within 6 tokens (`Python, R, SQL`, `(C and Go)`).
+- **Employer self-mentions** are flagged, not counted: "Databricks" inside a Databricks posting names
+  the employer (1,183 such mentions).
+- **Section tags**: rule-based headings split each posting into title / intro / responsibilities /
+  requirements / about / benefits / legal (99.5% of postings have recognized headings). Skill
+  counts use role sections only, so an employer's About-section blurb ("runs on AWS, GCP and Azure")
+  is not counted as demand.
+- **NER** (ORG/PRODUCT/GPE) entities that are not vocabulary matches are written to
+  `skill_reports/ner_candidates_<date>.csv` as vocabulary-gap suggestions. The small model often
+  mislabels tech terms (e.g. "Databricks" as GPE), so NER output is never counted as a skill.
+
+Every match is stored with its character offsets, section and the rule that produced it. Rejected
+matches are kept and flagged (`excluded_reason`), never dropped. `xray mentions --skill go
+--excluded` prints the text around each one.
+
+### Coverage, 2026-10-01 snapshot (1,315 India postings)
+
+| scope | postings with ≥1 skill |
+|---|---|
+| role sections (headline) | 753 / 1,315 = **57.3%** |
+| title + requirements only | 691 = 52.6% |
+| anywhere incl. company boilerplate | 794 = 60.4% |
+
+By tracked role (role sections): data scientist 16/16, ML engineer 22/26, data analyst 22/27, data
+engineer 11/12, backend 33/42, software engineer 226/245. Postings with no tracked role: 452/983
+(46%), mostly sales, finance, operations and support roles that name no tech skill.
+
+These numbers are not inflated. Known gaps, as reported in `skill_reports/<date>.json`:
+
+- **Seed vocabulary misses common terms.** Seen in role sections but not in the vocab: Excel (112
+  postings), C++ (90), Node.js (34), Rust (33), Ruby (28), Bash (24), C# (21), Kotlin (20). These are
+  reported, not counted. Add them to `skills.yaml` deliberately if wanted.
+- `spacy` and `xgboost` appear in no posting in this snapshot.
+- **Precision spot check** (40 random counted mentions, seed 20261001): 39 correct. The one miss was
+  "SQL" meaning *Sales Qualified Lead* next to "MQL". It occurs in 2 of 225 SQL postings.
+- **Board concentration** is shown per skill (`top_board_share`). Some skills are dominated by one
+  employer, e.g. scala 57% Databricks and mlflow 73% Databricks.
+
 ## Storage
 
 ```
@@ -66,7 +115,15 @@ data/processed/postings/<date>.parquet          postings first seen, or whose co
 data/processed/sightings/<date>.parquet         every in-region posting observed that day (stock)
 data/processed/board_runs/<date>.parquet        one row per board fetch, failures included
 data/processed/coverage/<date>.json             coverage / gaps report
+data/processed/skill_mentions/<date>.parquet    every vocab match: offsets, section, rule, excluded_reason
+data/processed/entity_mentions/<date>.parquet   NER entities that are not vocab matches (review only)
+data/processed/extraction_meta/<date>.parquet   per posting: recognized section headings
+data/processed/skill_mentions/_manifest.json    extractor id (version, vocab sha256, spaCy/model)
+data/processed/skill_reports/<date>.json        skill coverage report for that snapshot
 ```
+
+Derived skill tables are partitioned like `postings` and re-extracted automatically when the postings
+file, the vocabulary, the spaCy/model version or the extractor version changes.
 
 Unchanged postings cost one sightings row per day, not a re-stored description, so the committed
 history stays small. Read everything through `xray.store.Store().connect()` (DuckDB views over all
@@ -94,6 +151,9 @@ No credentials are needed for the default sources.
 python -m xray ingest                                 # today's snapshot for the whole panel
 python -m xray show --role "data scientist" --city Bengaluru
 python -m xray coverage                               # coverage / gaps report (add --full for skips)
+python -m xray extract                                # skill extraction (incremental) + skill report
+python -m xray skills --role "data scientist"         # top skills in a snapshot (--scope role|requirements|anywhere)
+python -m xray mentions --skill go --excluded         # audit: text around each (rejected) match
 python scripts/discover_panel.py                      # re-scan candidate boards (writes evidence)
 python -m pytest && python -m ruff check .
 ```
@@ -105,7 +165,7 @@ listed in the coverage report.
 
 - [x] M0: scaffold, config + hard gates, structured logging, schemas, polite fetcher + raw cache
 - [x] M1: panel ingestion from public ATS APIs, provenance-stamped postings, coverage report
-- [ ] M2: spaCy skill extraction
+- [x] M2: spaCy skill extraction, section tags, ambiguity rules, honest coverage report
 - [ ] M3: embedding-based skill normalization
 - [ ] M4: trend engine
 - [ ] M5: seniority classifier on rule-derived labels
