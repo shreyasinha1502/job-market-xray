@@ -1,0 +1,11 @@
+# Job API config. Provider auth goes in .env, NOT here.
+provider: adzuna            # free tier: app_id + app_key
+countries: ["in"]           # start with one; add "gb","us" etc. later
+roles_to_track:             # each becomes a tracked query; keep focused at first
+  - "data scientist"
+  - "machine learning engineer"
+  - "data analyst"
+  - "backend engineer"
+results_per_query: 50       # per snapshot per role; respect rate limits
+rate_limit_sleep_sec: 1.5   # polite delay between calls
+max_pages: 5                # cap pagination per query

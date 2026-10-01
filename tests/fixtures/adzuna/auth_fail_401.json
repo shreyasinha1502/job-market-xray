@@ -1,0 +1,1 @@
+{"display":"Authorisation failed","__CLASS__":"Adzuna::API::Response::Exception","doc":"https://api.adzuna.com/v1/doc","exception":"AUTH_FAIL"}

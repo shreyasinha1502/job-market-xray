@@ -1,0 +1,11 @@
+# Rules to DERIVE classifier labels from REAL posting fields (M5). No invented labels.
+target: seniority           # classify postings into seniority bands
+# A posting gets a label ONLY if real title/description signals match confidently.
+rules:
+  intern:  ["intern", "internship", "trainee"]
+  junior:  ["junior", "jr.", "entry level", "fresher", "0-2 years", "graduate"]
+  mid:     ["mid level", "2-5 years", "3+ years", "associate"]
+  senior:  ["senior", "sr.", "5+ years", "lead", "principal", "staff"]
+exclude_if_ambiguous: true  # no confident signal -> EXCLUDE the posting, do NOT guess
+allow_synthetic_labels: false   # hard gate. must stay false.
+min_confident_examples_per_class: 100   # below this, scope down — never fabricate to fill

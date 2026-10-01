@@ -1,0 +1,9 @@
+# Seed skill vocabulary for spaCy PhraseMatcher. DOMAIN KNOWLEDGE, not data.
+# Add aliases freely; M3 embeddings will also catch variants you miss.
+# Keep it honest: don't stuff rare terms just to inflate match coverage.
+languages:   ["python", "java", "sql", "scala", "r", "go", "typescript", "javascript"]
+ml_dl_nlp:   ["pytorch", "tensorflow", "scikit-learn", "spacy", "hugging face", "transformers",
+              "llm", "nlp", "computer vision", "xgboost", "langchain"]
+data_eng:    ["spark", "airflow", "kafka", "dbt", "snowflake", "databricks", "hadoop"]
+cloud_ops:   ["aws", "gcp", "azure", "docker", "kubernetes", "terraform", "mlflow"]
+viz_bi:      ["tableau", "power bi", "streamlit", "looker"]

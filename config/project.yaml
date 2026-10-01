@@ -1,0 +1,10 @@
+embeddings_model: "sentence-transformers/all-MiniLM-L6-v2"   # small, fast, good enough
+clustering:
+  algorithm: "dbscan"       # or "kmeans"; dbscan handles variant-merging well
+  min_cluster_size: 2
+classifier:
+  base_model: "distilbert-base-uncased"   # light enough for Colab free GPU
+  baseline: "tfidf_logreg"                 # always compare fine-tuned vs this
+  test_size: 0.2
+  val_size: 0.1
+allow_synthetic: false      # hard gate. must stay false.
