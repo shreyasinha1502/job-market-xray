@@ -1,0 +1,13 @@
+{
+  "source": "greenhouse",
+  "endpoint": "https://boards-api.greenhouse.io/v1/boards/groww/jobs?content=true",
+  "params": {
+    "content": "true"
+  },
+  "status": 200,
+  "attempts": 1,
+  "fetched_at": "2026-10-01T15:10:37.157386+00:00",
+  "content_type": "application/json",
+  "bytes": 46515,
+  "sha256": "b225d09adfad85289af9da1202594e9474aaa7ef74eb43c9973f3f21431b64d3"
+}

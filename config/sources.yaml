@@ -1,11 +1,31 @@
-# Job API config. Provider auth goes in .env, NOT here.
-provider: adzuna            # free tier: app_id + app_key
-countries: ["in"]           # start with one; add "gb","us" etc. later
-roles_to_track:             # each becomes a tracked query; keep focused at first
-  - "data scientist"
-  - "machine learning engineer"
-  - "data analyst"
-  - "backend engineer"
-results_per_query: 50       # per snapshot per role; respect rate limits
-rate_limit_sleep_sec: 1.5   # polite delay between calls
-max_pages: 5                # cap pagination per query
+# Job sources. Adzuna (the original plan) needs an account + API keys, which this project does not
+# have, so the pipeline reads employers' PUBLIC job-board APIs instead: Greenhouse, Lever, Ashby.
+# No auth, full descriptions, real publish timestamps. Trade-off: it covers a fixed employer
+# panel (panel.yaml), not the whole market. See README "Sampling frame".
+providers: [greenhouse, lever, ashby]
+panel_file: panel.yaml
+countries: ["in"]           # stored postings are filtered to these (rules in regions.yaml)
+roles_to_track:             # role -> job-title patterns (case-insensitive, whole-phrase). Domain rules.
+                            # A title can match several roles. Patterns were checked against real titles.
+  data scientist:            ["data scientist", "data science", "applied scientist", "research scientist",
+                              "ml researcher", "ai researcher", "ds/ml"]
+  machine learning engineer: ["machine learning", "ml", "mle", "mlops", "ai/ml", "deep learning",
+                              "ai engineer", "ai engineering", "ai platform", "ai infrastructure",
+                              "ai agent engineer", "ai product engineer"]
+  data analyst:              ["data analyst", "analytics", "bi analyst", "business intelligence",
+                              "product analyst", "insights analyst"]
+  data engineer:             ["data engineer", "data engineering", "analytics engineer", "data platform",
+                              "data infrastructure", "big data", "etl"]
+  backend engineer:          ["backend", "back end", "back-end", "server side", "server-side"]
+  software engineer:         ["software engineer", "software development engineer", "software developer",
+                              "sde", "member of technical staff"]   # broad family; overlaps backend
+role_title_exclude:         # titles with these phrases get no tracked role (non-engineering functions)
+  ["sales", "presales", "pre sales", "account executive", "account director", "recruiter", "talent",
+   "learning & development", "solutions architect", "solution architect", "gtm", "marketing",
+   "partnerships", "customer success", "technical solutions"]
+rate_limit_sleep_sec: 1.5   # polite delay between calls to the same host
+
+adzuna:                     # dormant until ADZUNA_APP_ID / ADZUNA_APP_KEY exist in .env
+  enabled: false
+  results_per_query: 50
+  max_pages: 5

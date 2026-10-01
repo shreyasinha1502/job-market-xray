@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import os
+from datetime import date
 from functools import lru_cache
 from pathlib import Path
 from typing import Any, Literal
@@ -22,15 +23,44 @@ class ConfigError(RuntimeError):
     pass
 
 
+Provider = Literal["greenhouse", "lever", "ashby"]
+
+
+class AdzunaConfig(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    enabled: bool
+    results_per_query: int = Field(gt=0)
+    max_pages: int = Field(gt=0)
+
+
 class SourcesConfig(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
-    provider: Literal["adzuna"]
+    providers: list[Provider] = Field(min_length=1)
+    panel_file: str
     countries: list[str] = Field(min_length=1)
-    roles_to_track: list[str] = Field(min_length=1)
-    results_per_query: int = Field(gt=0)
+    roles_to_track: dict[str, list[str]] = Field(min_length=1)
+    role_title_exclude: list[str]
     rate_limit_sleep_sec: float = Field(ge=0)
-    max_pages: int = Field(gt=0)
+    adzuna: AdzunaConfig
+
+
+class PanelBoard(BaseModel):
+    model_config = ConfigDict(extra="forbid", frozen=True)
+
+    source: Provider
+    board: str = Field(pattern=r"^[A-Za-z0-9_.-]+$")
+    added: date
+
+
+class RegionRule(BaseModel):
+    model_config = ConfigDict(extra="forbid", frozen=True)
+
+    name: str
+    iso2: str = Field(min_length=2, max_length=2)
+    country_aliases: list[str] = Field(min_length=1)
+    cities: dict[str, list[str]]
 
 
 def load_yaml(name: str, config_dir: Path = CONFIG_DIR) -> dict[str, Any]:
@@ -46,6 +76,24 @@ def load_yaml(name: str, config_dir: Path = CONFIG_DIR) -> dict[str, Any]:
 
 def load_sources(config_dir: Path = CONFIG_DIR) -> SourcesConfig:
     return SourcesConfig.model_validate(load_yaml("sources.yaml", config_dir))
+
+
+def load_panel(sources: SourcesConfig, config_dir: Path = CONFIG_DIR) -> list[PanelBoard]:
+    boards = [
+        PanelBoard.model_validate(b) for b in load_yaml(sources.panel_file, config_dir)["boards"]
+    ]
+    keys = [(b.source, b.board) for b in boards]
+    if len(keys) != len(set(keys)):
+        raise ConfigError("duplicate (source, board) entries in panel")
+    return [b for b in boards if b.source in sources.providers]
+
+
+def load_regions(sources: SourcesConfig, config_dir: Path = CONFIG_DIR) -> dict[str, RegionRule]:
+    raw = load_yaml("regions.yaml", config_dir)
+    missing = [c for c in sources.countries if c not in raw]
+    if missing:
+        raise ConfigError(f"countries {missing} have no rules in regions.yaml")
+    return {c: RegionRule.model_validate(raw[c]) for c in sources.countries}
 
 
 # (file, key) pairs that must be present and literally `false`. Absent counts as a violation.

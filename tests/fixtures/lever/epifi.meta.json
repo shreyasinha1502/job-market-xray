@@ -1,0 +1,13 @@
+{
+  "source": "lever",
+  "endpoint": "https://api.lever.co/v0/postings/epifi?mode=json",
+  "params": {
+    "mode": "json"
+  },
+  "status": 200,
+  "attempts": 1,
+  "fetched_at": "2026-10-01T15:11:36.751464+00:00",
+  "content_type": "application/json; charset=utf-8",
+  "bytes": 27241,
+  "sha256": "d2a578e6e3b978641dc5ad78b4f948c3daa101402d1aad18296537c88e7b3563"
+}

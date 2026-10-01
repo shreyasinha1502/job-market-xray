@@ -1,0 +1,60 @@
+# Fixed employer panel. Membership rule: a public Greenhouse/Lever/Ashby board that had >=1
+# India posting when scanned on 2026-10-01 (evidence: data/processed/panel_discovery/2026-10-01.json).
+# Candidates were slugs guessed from domain knowledge; non-responding slugs were dropped.
+# Add boards with a new `added:` date. Trends restrict to boards present across their window.
+boards:
+  - {source: ashby     , board: amplitude     , added: 2026-10-01}
+  - {source: ashby     , board: astronomer    , added: 2026-10-01}
+  - {source: ashby     , board: atlan         , added: 2026-10-01}
+  - {source: ashby     , board: clickhouse    , added: 2026-10-01}
+  - {source: ashby     , board: confluent     , added: 2026-10-01}
+  - {source: ashby     , board: notion        , added: 2026-10-01}
+  - {source: ashby     , board: openai        , added: 2026-10-01}
+  - {source: ashby     , board: sarvam        , added: 2026-10-01}
+  - {source: ashby     , board: spotdraft     , added: 2026-10-01}
+  - {source: greenhouse, board: agoda         , added: 2026-10-01}
+  - {source: greenhouse, board: airbnb        , added: 2026-10-01}
+  - {source: greenhouse, board: anthropic     , added: 2026-10-01}
+  - {source: greenhouse, board: cloudflare    , added: 2026-10-01}
+  - {source: greenhouse, board: cockroachlabs , added: 2026-10-01}
+  - {source: greenhouse, board: coinbase      , added: 2026-10-01}
+  - {source: greenhouse, board: databricks    , added: 2026-10-01}
+  - {source: greenhouse, board: datadog       , added: 2026-10-01}
+  - {source: greenhouse, board: deliveroo     , added: 2026-10-01}
+  - {source: greenhouse, board: druva         , added: 2026-10-01}
+  - {source: greenhouse, board: elastic       , added: 2026-10-01}
+  - {source: greenhouse, board: figma         , added: 2026-10-01}
+  - {source: greenhouse, board: fivetran      , added: 2026-10-01}
+  - {source: greenhouse, board: gitlab        , added: 2026-10-01}
+  - {source: greenhouse, board: glance        , added: 2026-10-01}
+  - {source: greenhouse, board: groww         , added: 2026-10-01}
+  - {source: greenhouse, board: harnessinc    , added: 2026-10-01}
+  - {source: greenhouse, board: highradius    , added: 2026-10-01}
+  - {source: greenhouse, board: inmobi        , added: 2026-10-01}
+  - {source: greenhouse, board: mixpanel      , added: 2026-10-01}
+  - {source: greenhouse, board: mongodb       , added: 2026-10-01}
+  - {source: greenhouse, board: netskope      , added: 2026-10-01}
+  - {source: greenhouse, board: newrelic      , added: 2026-10-01}
+  - {source: greenhouse, board: observeai     , added: 2026-10-01}
+  - {source: greenhouse, board: okta          , added: 2026-10-01}
+  - {source: greenhouse, board: purestorage   , added: 2026-10-01}
+  - {source: greenhouse, board: rubrik        , added: 2026-10-01}
+  - {source: greenhouse, board: samsara       , added: 2026-10-01}
+  - {source: greenhouse, board: scaleai       , added: 2026-10-01}
+  - {source: greenhouse, board: sigmoid       , added: 2026-10-01}
+  - {source: greenhouse, board: singlestore   , added: 2026-10-01}
+  - {source: greenhouse, board: starburst     , added: 2026-10-01}
+  - {source: greenhouse, board: stripe        , added: 2026-10-01}
+  - {source: greenhouse, board: sumologic     , added: 2026-10-01}
+  - {source: greenhouse, board: toast         , added: 2026-10-01}
+  - {source: greenhouse, board: turing        , added: 2026-10-01}
+  - {source: greenhouse, board: twilio        , added: 2026-10-01}
+  - {source: greenhouse, board: yugabyte      , added: 2026-10-01}
+  - {source: greenhouse, board: zscaler       , added: 2026-10-01}
+  - {source: greenhouse, board: zuora         , added: 2026-10-01}
+  - {source: lever     , board: cred          , added: 2026-10-01}
+  - {source: lever     , board: epifi         , added: 2026-10-01}
+  - {source: lever     , board: meesho        , added: 2026-10-01}
+  - {source: lever     , board: mindtickle    , added: 2026-10-01}
+  - {source: lever     , board: paytm         , added: 2026-10-01}
+  - {source: lever     , board: zeta          , added: 2026-10-01}

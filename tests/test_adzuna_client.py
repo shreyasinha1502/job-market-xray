@@ -1,12 +1,14 @@
 """Client control-flow tests. Response bodies are real bytes captured from the live API;
 only HTTP status sequencing (e.g. a 429 before the final response) is simulated."""
 
+import hashlib
 import json
 
 import httpx
 import pytest
 
-from xray.sources.adzuna import AdzunaAuthError, AdzunaClient, cache_raw, raw_page_path
+from xray.fetch import AuthError, cache_raw, read_raw
+from xray.sources.adzuna import AdzunaClient, raw_page_path
 
 APP_ID, APP_KEY = "test-id-not-real", "test-key-not-real"
 
@@ -42,7 +44,7 @@ def test_auth_failure_is_not_retried_and_raises(auth_fail_body):
         raw = c.search("in", 1, {"what": "data scientist", "results_per_page": 50})
     assert len(calls) == 1 and raw.attempts == 1 and raw.status == 401
     assert raw.body == auth_fail_body
-    with pytest.raises(AdzunaAuthError, match="AUTH_FAIL"):
+    with pytest.raises(AuthError, match="AUTH_FAIL"):
         raw.raise_for_status()
 
 
@@ -86,11 +88,12 @@ def test_credentials_sent_but_never_exposed(auth_fail_body, tmp_path):
     with _client(handler, []) as c:
         raw = c.search("in", 1, {"what": "data scientist"})
     assert seen[0].params["app_key"] == APP_KEY  # sent to the API
-    cached = cache_raw(raw, raw_page_path(tmp_path, "in", "run1", "data scientist", 1))
+    cached = cache_raw(raw, raw_page_path(tmp_path, "in", "run1", "data scientist", 1), "adzuna")
     meta = (cached.path.parent / "page-1.meta.json").read_text(encoding="utf-8")
     for text in (raw.endpoint, meta):
         assert APP_KEY not in text and APP_ID not in text
-    assert cached.path.read_bytes() == auth_fail_body
+    assert read_raw(cached.path) == auth_fail_body
+    assert hashlib.sha256(auth_fail_body).hexdigest() == cached.sha256
     assert json.loads(meta)["sha256"] == cached.sha256
 
 

@@ -2,13 +2,22 @@ import shutil
 
 import pytest
 
-from xray.config import CONFIG_DIR, ConfigError, enforce_no_synthetic_gates, load_sources
+from xray.config import (
+    CONFIG_DIR,
+    ConfigError,
+    enforce_no_synthetic_gates,
+    load_panel,
+    load_regions,
+    load_sources,
+)
 
 
 def test_real_sources_config_validates():
     cfg = load_sources()
-    assert cfg.provider == "adzuna"
-    assert cfg.countries and cfg.roles_to_track
+    assert cfg.providers and cfg.countries and cfg.roles_to_track
+    panel = load_panel(cfg)
+    assert panel and all(b.source in cfg.providers for b in panel)
+    assert set(load_regions(cfg)) == set(cfg.countries)
 
 
 def test_real_config_passes_synthetic_gates():

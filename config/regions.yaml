@@ -1,0 +1,23 @@
+# How a posting's REAL location fields map to a country and city. Domain knowledge, not data.
+# A posting counts for a country only if a structured country field says so, or a location string
+# names the country or one of its cities. "Remote" / "APAC" alone is ambiguous -> not counted.
+in:
+  name: India
+  iso2: IN
+  country_aliases: ["india"]
+  cities:
+    Bengaluru:          ["bengaluru", "bangalore"]
+    Hyderabad:          ["hyderabad", "secunderabad"]
+    Mumbai:             ["mumbai", "bombay", "navi mumbai", "thane"]
+    Pune:               ["pune"]
+    Delhi NCR:          ["delhi", "new delhi", "gurgaon", "gurugram", "noida", "greater noida",
+                         "faridabad", "ghaziabad"]
+    Chennai:            ["chennai"]
+    Kolkata:            ["kolkata"]
+    Ahmedabad:          ["ahmedabad", "gandhinagar"]
+    Jaipur:             ["jaipur"]
+    Kochi:              ["kochi", "cochin"]
+    Coimbatore:         ["coimbatore"]
+    Thiruvananthapuram: ["thiruvananthapuram", "trivandrum"]
+    Indore:             ["indore"]
+    Chandigarh:         ["chandigarh", "mohali"]

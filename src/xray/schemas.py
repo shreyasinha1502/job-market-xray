@@ -2,10 +2,12 @@
 
 from __future__ import annotations
 
-from datetime import date, datetime
+from datetime import date
 from typing import Literal
 
 from pydantic import AwareDatetime, BaseModel, ConfigDict, Field
+
+Source = Literal["greenhouse", "lever", "ashby", "adzuna"]
 
 
 class _Strict(BaseModel):
@@ -13,70 +15,78 @@ class _Strict(BaseModel):
 
 
 class Provenance(_Strict):
-    source: Literal["adzuna"]
+    source: Source
     run_id: str
-    country: str
-    role_query: str
+    query: str  # board slug (ATS sources) or search query (Adzuna)
     endpoint: str  # request URL with credentials stripped
-    page: int = Field(ge=1)
+    page: int | None = Field(ge=1)
     fetched_at: AwareDatetime
     raw_path: str  # repo-relative path of the cached raw response
     raw_sha256: str = Field(pattern=r"^[0-9a-f]{64}$")
 
 
 class Posting(_Strict):
-    """One real posting as returned for one role query in one snapshot.
+    """One real in-region posting, normalized from one cached raw response.
 
     Nullable fields have no default on purpose: the normalizer must state each one explicitly.
     """
 
-    snapshot_date: date
-    source_id: str = Field(min_length=1)
-    rank: int = Field(ge=1)  # 1-based position within the query's results
+    posting_key: str  # "{source}:{board}:{source_job_id}"
+    source: Source
+    board: str
+    source_job_id: str = Field(min_length=1)
     title: str = Field(min_length=1)
-    description: str | None
-    company: str | None
-    location_display: str | None
-    location_area: list[str] | None
-    category_label: str | None
-    category_tag: str | None
-    created: AwareDatetime
-    salary_min: float | None
-    salary_max: float | None
-    salary_is_predicted: bool | None
-    contract_type: str | None
-    contract_time: str | None
-    redirect_url: str | None
-    latitude: float | None
-    longitude: float | None
+    description: str | None  # plain text from the source's HTML/plain fields
+    company_name: str | None
+    locations: list[str]  # every location string the source lists, whitespace-normalized
+    countries: list[str] = Field(min_length=1)  # region keys matched (regions.yaml)
+    country_evidence: list[str] = Field(min_length=1)  # which real field matched, per country
+    cities: list[str]  # canonical cities matched; empty when only the country is named
+    department: str | None
+    team: str | None
+    employment_type: str | None
+    workplace_type: str | None
+    published_at: AwareDatetime | None  # the source's own publish timestamp
+    updated_at: AwareDatetime | None
+    url: str | None
+    content_hash: str = Field(pattern=r"^[0-9a-f]{64}$")
     provenance: Provenance
+
+
+class Sighting(_Strict):
+    snapshot_date: date
+    posting_key: str
+    content_hash: str
+    run_id: str
 
 
 class SkippedRecord(_Strict):
     run_id: str
-    country: str
-    role_query: str
-    page: int
-    source_id: str | None
+    source: Source
+    board: str
+    source_job_id: str | None
     reason: str
 
 
-class QueryRun(_Strict):
-    """One role query in one snapshot run: what was asked, what came back, what was kept."""
+class BoardRun(_Strict):
+    """One board fetched in one snapshot run: what was asked, what came back, what was kept."""
 
     run_id: str
     snapshot_date: date
-    source: Literal["adzuna"]
-    country: str
-    role_query: str
-    params: str  # JSON of non-secret request params
-    started_at: datetime
-    finished_at: datetime
-    pages_fetched: int
-    n_results_raw: int
-    n_postings_kept: int
-    n_skipped: int
-    total_count: int | None  # source-reported total matches for the query; None if unknown
-    mean_salary: float | None
-    status: Literal["ok", "partial", "failed"]
+    source: Source
+    board: str
+    endpoint: str
+    fetched_at: AwareDatetime | None
+    http_status: int | None
+    attempts: int | None
+    raw_path: str | None
+    raw_sha256: str | None
+    status: Literal["ok", "failed"]
     error: str | None
+    n_jobs_total: int  # every job in the response, all regions
+    n_skipped: int
+    n_in_region: int
+    n_out_of_region: int
+    n_new: int
+    n_changed: int
+    n_unchanged: int

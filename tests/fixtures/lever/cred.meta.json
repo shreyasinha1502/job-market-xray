@@ -1,0 +1,13 @@
+{
+  "source": "lever",
+  "endpoint": "https://api.lever.co/v0/postings/cred?mode=json",
+  "params": {
+    "mode": "json"
+  },
+  "status": 200,
+  "attempts": 1,
+  "fetched_at": "2026-10-01T15:11:33.441889+00:00",
+  "content_type": "application/json; charset=utf-8",
+  "bytes": 71358,
+  "sha256": "5d19b54223c7fbddb251375bc98c61905cb3b74499c8c8b19872f92fd7a98cef"
+}

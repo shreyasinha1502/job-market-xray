@@ -1,0 +1,18 @@
+# Candidate board slugs guessed from domain knowledge (employers with India tech hiring).
+# Only slugs that respond with real India postings make it into config/panel.yaml.
+razorpay cred meesho swiggy zomato zepto phonepe groww upstox zerodha paytm flipkart
+myntra olacabs dream11 dreamsports sharechat mohalla inmobi glance unacademy vedantu physicswallah urbancompany
+nykaa lenskart freshworks postman browserstack chargebee druva innovaccer mindtickle hasura atlan slice
+jupiter jupitermoney fi epifi jar khatabook okcredit rapido porter delhivery shiprocket spinny
+cars24 cardekho girnarsoft policybazaar acko godigit zeta juspay setu m2p perfios signzy
+hyperverge sigmoid fractal tigeranalytics latentview quantiphi gupshup haptik yellowai uniphore observeai sprinklr
+capillary moengage clevertap webengage netcore leadsquared darwinbox keka whatfix amagi highradius icertis
+turing rocketlane spotdraft sarvam sarvamai krutrim uptime zluri bharatpe pinelabs cashfree payu
+mobikwik navi smallcase stripe databricks mongodb gitlab twilio okta cloudflare rubrik nutanix
+coinbase samsara thoughtspot harness harnessinc confluent elastic datadog atlassian palantir airbnb doordash
+figma notion zscaler purestorage zendesk hubspot intercom braze amplitude mixpanel fivetran dbtlabs
+airbyte astronomer starburst dremio clickhouse singlestore couchbase cockroachlabs yugabyte scaleai anthropic openai
+cohere wandb deepgram assemblyai perplexity mistral spotify grab agoda wise revolut deliveroo
+toast plaid brex ramp rippling gusto chime robinhood affirm instacart lyft pinterest
+reddit discord dropbox box asana airtable miro canva hashicorp pagerduty newrelic sumologic
+sentinelone netskope zuora freshtohome swiggyinstamart
