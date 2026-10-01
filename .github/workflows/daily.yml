@@ -6,7 +6,12 @@ name: daily-snapshot
 on:
   schedule:
     - cron: "30 3 * * *"   # 03:30 UTC = 09:00 IST
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      commit:
+        description: "Commit the snapshot (untick for a dry run that changes nothing)"
+        type: boolean
+        default: true
 
 permissions:
   contents: write
@@ -52,6 +57,7 @@ jobs:
           if-no-files-found: warn
 
       - name: Commit the new day
+        if: github.event_name == 'schedule' || inputs.commit
         run: |
           git config user.name "xray-daily-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
