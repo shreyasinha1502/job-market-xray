@@ -1,0 +1,1262 @@
+{
+  "snapshot_date": "2026-10-02",
+  "generated_at": "2026-10-02T09:59:27.325123+00:00",
+  "extractor": {
+    "version": "m2.4",
+    "vocab_sha256": "1a7b1f373444d2f2b24fb4208ac89f163456192a4501c44296905974b40563bc",
+    "spacy": "3.8.16",
+    "model": "en_core_web_sm-3.8.0"
+  },
+  "vocab": {
+    "skills": 104,
+    "surface_forms": 189,
+    "never_seen_in_snapshot": [
+      "spacy",
+      "xgboost"
+    ]
+  },
+  "coverage": {
+    "definition": "posting has >=1 valid vocabulary skill in title, intro, responsibilities or requirements (company about/benefits/legal sections excluded)",
+    "all_in_region": {
+      "postings": 1315,
+      "with_skill": 970,
+      "coverage": 0.7376
+    },
+    "by_role": {
+      "data scientist": {
+        "postings": 16,
+        "with_skill": 16,
+        "coverage": 1.0
+      },
+      "machine learning engineer": {
+        "postings": 25,
+        "with_skill": 23,
+        "coverage": 0.92
+      },
+      "data analyst": {
+        "postings": 28,
+        "with_skill": 27,
+        "coverage": 0.9643
+      },
+      "data engineer": {
+        "postings": 13,
+        "with_skill": 13,
+        "coverage": 1.0
+      },
+      "backend engineer": {
+        "postings": 42,
+        "with_skill": 36,
+        "coverage": 0.8571
+      },
+      "software engineer": {
+        "postings": 245,
+        "with_skill": 236,
+        "coverage": 0.9633
+      },
+      "(no tracked role)": {
+        "postings": 983,
+        "with_skill": 652,
+        "coverage": 0.6633
+      }
+    },
+    "requirements_only": {
+      "postings": 1315,
+      "with_skill": 858,
+      "coverage": 0.6525
+    },
+    "anywhere_incl_boilerplate": {
+      "postings": 1315,
+      "with_skill": 1001,
+      "coverage": 0.7612
+    }
+  },
+  "skills": [
+    {
+      "skill": "python",
+      "category": "languages",
+      "postings": 369,
+      "share": 0.2806,
+      "in_requirements_or_title": 337,
+      "boards": 48,
+      "top_board": "purestorage",
+      "top_board_share": 0.108
+    },
+    {
+      "skill": "aws",
+      "category": "cloud_ops",
+      "postings": 294,
+      "share": 0.2236,
+      "in_requirements_or_title": 249,
+      "boards": 41,
+      "top_board": "okta",
+      "top_board_share": 0.204
+    },
+    {
+      "skill": "sql",
+      "category": "languages",
+      "postings": 225,
+      "share": 0.1711,
+      "in_requirements_or_title": 176,
+      "boards": 44,
+      "top_board": "databricks",
+      "top_board_share": 0.142
+    },
+    {
+      "skill": "java",
+      "category": "languages",
+      "postings": 218,
+      "share": 0.1658,
+      "in_requirements_or_title": 195,
+      "boards": 28,
+      "top_board": "okta",
+      "top_board_share": 0.225
+    },
+    {
+      "skill": "kubernetes",
+      "category": "cloud_ops",
+      "postings": 203,
+      "share": 0.1544,
+      "in_requirements_or_title": 184,
+      "boards": 32,
+      "top_board": "okta",
+      "top_board_share": 0.143
+    },
+    {
+      "skill": "gcp",
+      "category": "cloud_ops",
+      "postings": 200,
+      "share": 0.1521,
+      "in_requirements_or_title": 182,
+      "boards": 36,
+      "top_board": "okta",
+      "top_board_share": 0.14
+    },
+    {
+      "skill": "azure",
+      "category": "cloud_ops",
+      "postings": 196,
+      "share": 0.149,
+      "in_requirements_or_title": 165,
+      "boards": 34,
+      "top_board": "databricks",
+      "top_board_share": 0.148
+    },
+    {
+      "skill": "go",
+      "category": "languages",
+      "postings": 188,
+      "share": 0.143,
+      "in_requirements_or_title": 175,
+      "boards": 32,
+      "top_board": "purestorage",
+      "top_board_share": 0.16
+    },
+    {
+      "skill": "llm",
+      "category": "ml_dl_nlp",
+      "postings": 154,
+      "share": 0.1171,
+      "in_requirements_or_title": 131,
+      "boards": 41,
+      "top_board": "sarvam",
+      "top_board_share": 0.143
+    },
+    {
+      "skill": "generative ai",
+      "category": "ml_dl_nlp",
+      "postings": 153,
+      "share": 0.1163,
+      "in_requirements_or_title": 63,
+      "boards": 25,
+      "top_board": "inmobi",
+      "top_board_share": 0.235
+    },
+    {
+      "skill": "ai agents",
+      "category": "ml_dl_nlp",
+      "postings": 135,
+      "share": 0.1027,
+      "in_requirements_or_title": 84,
+      "boards": 37,
+      "top_board": "rubrik",
+      "top_board_share": 0.23
+    },
+    {
+      "skill": "devops",
+      "category": "cloud_ops",
+      "postings": 111,
+      "share": 0.0844,
+      "in_requirements_or_title": 65,
+      "boards": 26,
+      "top_board": "harnessinc",
+      "top_board_share": 0.171
+    },
+    {
+      "skill": "rest",
+      "category": "web_backend",
+      "postings": 105,
+      "share": 0.0798,
+      "in_requirements_or_title": 85,
+      "boards": 27,
+      "top_board": "okta",
+      "top_board_share": 0.324
+    },
+    {
+      "skill": "terraform",
+      "category": "cloud_ops",
+      "postings": 96,
+      "share": 0.073,
+      "in_requirements_or_title": 79,
+      "boards": 25,
+      "top_board": "okta",
+      "top_board_share": 0.323
+    },
+    {
+      "skill": "excel",
+      "category": "viz_bi",
+      "postings": 95,
+      "share": 0.0722,
+      "in_requirements_or_title": 83,
+      "boards": 20,
+      "top_board": "paytm",
+      "top_board_share": 0.284
+    },
+    {
+      "skill": "c++",
+      "category": "languages",
+      "postings": 90,
+      "share": 0.0684,
+      "in_requirements_or_title": 85,
+      "boards": 20,
+      "top_board": "purestorage",
+      "top_board_share": 0.289
+    },
+    {
+      "skill": "javascript",
+      "category": "languages",
+      "postings": 90,
+      "share": 0.0684,
+      "in_requirements_or_title": 73,
+      "boards": 26,
+      "top_board": "okta",
+      "top_board_share": 0.378
+    },
+    {
+      "skill": "docker",
+      "category": "cloud_ops",
+      "postings": 89,
+      "share": 0.0677,
+      "in_requirements_or_title": 81,
+      "boards": 23,
+      "top_board": "okta",
+      "top_board_share": 0.225
+    },
+    {
+      "skill": "postgresql",
+      "category": "data_eng",
+      "postings": 87,
+      "share": 0.0662,
+      "in_requirements_or_title": 67,
+      "boards": 19,
+      "top_board": "okta",
+      "top_board_share": 0.322
+    },
+    {
+      "skill": "iac",
+      "category": "cloud_ops",
+      "postings": 78,
+      "share": 0.0593,
+      "in_requirements_or_title": 63,
+      "boards": 25,
+      "top_board": "okta",
+      "top_board_share": 0.321
+    },
+    {
+      "skill": "oauth",
+      "category": "security_net",
+      "postings": 72,
+      "share": 0.0548,
+      "in_requirements_or_title": 68,
+      "boards": 15,
+      "top_board": "okta",
+      "top_board_share": 0.514
+    },
+    {
+      "skill": "sre",
+      "category": "cloud_ops",
+      "postings": 71,
+      "share": 0.054,
+      "in_requirements_or_title": 39,
+      "boards": 23,
+      "top_board": "okta",
+      "top_board_share": 0.366
+    },
+    {
+      "skill": "react",
+      "category": "web_backend",
+      "postings": 69,
+      "share": 0.0525,
+      "in_requirements_or_title": 65,
+      "boards": 20,
+      "top_board": "okta",
+      "top_board_share": 0.449
+    },
+    {
+      "skill": "spark",
+      "category": "data_eng",
+      "postings": 65,
+      "share": 0.0494,
+      "in_requirements_or_title": 52,
+      "boards": 14,
+      "top_board": "databricks",
+      "top_board_share": 0.385
+    },
+    {
+      "skill": "typescript",
+      "category": "languages",
+      "postings": 62,
+      "share": 0.0471,
+      "in_requirements_or_title": 51,
+      "boards": 19,
+      "top_board": "okta",
+      "top_board_share": 0.419
+    },
+    {
+      "skill": "git",
+      "category": "cloud_ops",
+      "postings": 59,
+      "share": 0.0449,
+      "in_requirements_or_title": 47,
+      "boards": 21,
+      "top_board": "okta",
+      "top_board_share": 0.169
+    },
+    {
+      "skill": "scala",
+      "category": "languages",
+      "postings": 58,
+      "share": 0.0441,
+      "in_requirements_or_title": 54,
+      "boards": 13,
+      "top_board": "databricks",
+      "top_board_share": 0.569
+    },
+    {
+      "skill": "kafka",
+      "category": "data_eng",
+      "postings": 56,
+      "share": 0.0426,
+      "in_requirements_or_title": 48,
+      "boards": 21,
+      "top_board": "okta",
+      "top_board_share": 0.143
+    },
+    {
+      "skill": "tableau",
+      "category": "viz_bi",
+      "postings": 51,
+      "share": 0.0388,
+      "in_requirements_or_title": 48,
+      "boards": 23,
+      "top_board": "paytm",
+      "top_board_share": 0.137
+    },
+    {
+      "skill": "jira",
+      "category": "viz_bi",
+      "postings": 47,
+      "share": 0.0357,
+      "in_requirements_or_title": 34,
+      "boards": 24,
+      "top_board": "mongodb",
+      "top_board_share": 0.106
+    },
+    {
+      "skill": "mysql",
+      "category": "data_eng",
+      "postings": 46,
+      "share": 0.035,
+      "in_requirements_or_title": 40,
+      "boards": 16,
+      "top_board": "okta",
+      "top_board_share": 0.457
+    },
+    {
+      "skill": "copilot",
+      "category": "ml_dl_nlp",
+      "postings": 43,
+      "share": 0.0327,
+      "in_requirements_or_title": 24,
+      "boards": 16,
+      "top_board": "okta",
+      "top_board_share": 0.302
+    },
+    {
+      "skill": "nosql",
+      "category": "data_eng",
+      "postings": 40,
+      "share": 0.0304,
+      "in_requirements_or_title": 30,
+      "boards": 19,
+      "top_board": "okta",
+      "top_board_share": 0.2
+    },
+    {
+      "skill": "node.js",
+      "category": "web_backend",
+      "postings": 39,
+      "share": 0.0297,
+      "in_requirements_or_title": 32,
+      "boards": 13,
+      "top_board": "okta",
+      "top_board_share": 0.385
+    },
+    {
+      "skill": "scrum",
+      "category": "practices",
+      "postings": 37,
+      "share": 0.0281,
+      "in_requirements_or_title": 28,
+      "boards": 14,
+      "top_board": "okta",
+      "top_board_share": 0.189
+    },
+    {
+      "skill": "netsuite",
+      "category": "enterprise_apps",
+      "postings": 36,
+      "share": 0.0274,
+      "in_requirements_or_title": 29,
+      "boards": 14,
+      "top_board": "mongodb",
+      "top_board_share": 0.222
+    },
+    {
+      "skill": "rust",
+      "category": "languages",
+      "postings": 33,
+      "share": 0.0251,
+      "in_requirements_or_title": 30,
+      "boards": 13,
+      "top_board": "databricks",
+      "top_board_share": 0.212
+    },
+    {
+      "skill": "unix",
+      "category": "cloud_ops",
+      "postings": 33,
+      "share": 0.0251,
+      "in_requirements_or_title": 32,
+      "boards": 9,
+      "top_board": "zscaler",
+      "top_board_share": 0.394
+    },
+    {
+      "skill": "claude code",
+      "category": "ml_dl_nlp",
+      "postings": 32,
+      "share": 0.0243,
+      "in_requirements_or_title": 22,
+      "boards": 14,
+      "top_board": "mongodb",
+      "top_board_share": 0.312
+    },
+    {
+      "skill": "github actions",
+      "category": "cloud_ops",
+      "postings": 31,
+      "share": 0.0236,
+      "in_requirements_or_title": 21,
+      "boards": 11,
+      "top_board": "okta",
+      "top_board_share": 0.355
+    },
+    {
+      "skill": "gsuite",
+      "category": "viz_bi",
+      "postings": 31,
+      "share": 0.0236,
+      "in_requirements_or_title": 25,
+      "boards": 15,
+      "top_board": "mongodb",
+      "top_board_share": 0.161
+    },
+    {
+      "skill": "google sheets",
+      "category": "viz_bi",
+      "postings": 30,
+      "share": 0.0228,
+      "in_requirements_or_title": 26,
+      "boards": 13,
+      "top_board": "paytm",
+      "top_board_share": 0.467
+    },
+    {
+      "skill": "looker",
+      "category": "viz_bi",
+      "postings": 28,
+      "share": 0.0213,
+      "in_requirements_or_title": 26,
+      "boards": 19,
+      "top_board": "paytm",
+      "top_board_share": 0.214
+    },
+    {
+      "skill": "ruby",
+      "category": "languages",
+      "postings": 28,
+      "share": 0.0213,
+      "in_requirements_or_title": 25,
+      "boards": 8,
+      "top_board": "gitlab",
+      "top_board_share": 0.321
+    },
+    {
+      "skill": "snowflake",
+      "category": "data_eng",
+      "postings": 28,
+      "share": 0.0213,
+      "in_requirements_or_title": 22,
+      "boards": 12,
+      "top_board": "okta",
+      "top_board_share": 0.25
+    },
+    {
+      "skill": "power bi",
+      "category": "viz_bi",
+      "postings": 27,
+      "share": 0.0205,
+      "in_requirements_or_title": 25,
+      "boards": 14,
+      "top_board": "inmobi",
+      "top_board_share": 0.185
+    },
+    {
+      "skill": "macos",
+      "category": "cloud_ops",
+      "postings": 26,
+      "share": 0.0198,
+      "in_requirements_or_title": 24,
+      "boards": 9,
+      "top_board": "okta",
+      "top_board_share": 0.308
+    },
+    {
+      "skill": "r",
+      "category": "languages",
+      "postings": 25,
+      "share": 0.019,
+      "in_requirements_or_title": 22,
+      "boards": 9,
+      "top_board": "databricks",
+      "top_board_share": 0.24
+    },
+    {
+      "skill": "bash",
+      "category": "languages",
+      "postings": 24,
+      "share": 0.0183,
+      "in_requirements_or_title": 23,
+      "boards": 15,
+      "top_board": "cloudflare",
+      "top_board_share": 0.167
+    },
+    {
+      "skill": "langchain",
+      "category": "ml_dl_nlp",
+      "postings": 23,
+      "share": 0.0175,
+      "in_requirements_or_title": 16,
+      "boards": 11,
+      "top_board": "databricks",
+      "top_board_share": 0.261
+    },
+    {
+      "skill": "spring boot",
+      "category": "web_backend",
+      "postings": 23,
+      "share": 0.0175,
+      "in_requirements_or_title": 22,
+      "boards": 8,
+      "top_board": "okta",
+      "top_board_share": 0.565
+    },
+    {
+      "skill": "datadog",
+      "category": "cloud_ops",
+      "postings": 22,
+      "share": 0.0167,
+      "in_requirements_or_title": 16,
+      "boards": 11,
+      "top_board": "okta",
+      "top_board_share": 0.318
+    },
+    {
+      "skill": "hadoop",
+      "category": "data_eng",
+      "postings": 22,
+      "share": 0.0167,
+      "in_requirements_or_title": 22,
+      "boards": 7,
+      "top_board": "databricks",
+      "top_board_share": 0.409
+    },
+    {
+      "skill": "vmware",
+      "category": "cloud_ops",
+      "postings": 22,
+      "share": 0.0167,
+      "in_requirements_or_title": 21,
+      "boards": 4,
+      "top_board": "purestorage",
+      "top_board_share": 0.727
+    },
+    {
+      "skill": "c#",
+      "category": "languages",
+      "postings": 21,
+      "share": 0.016,
+      "in_requirements_or_title": 19,
+      "boards": 3,
+      "top_board": "mongodb",
+      "top_board_share": 0.476
+    },
+    {
+      "skill": "load balancer",
+      "category": "security_net",
+      "postings": 21,
+      "share": 0.016,
+      "in_requirements_or_title": 15,
+      "boards": 9,
+      "top_board": "okta",
+      "top_board_share": 0.381
+    },
+    {
+      "skill": "vpn",
+      "category": "security_net",
+      "postings": 21,
+      "share": 0.016,
+      "in_requirements_or_title": 15,
+      "boards": 10,
+      "top_board": "zscaler",
+      "top_board_share": 0.381
+    },
+    {
+      "skill": "kotlin",
+      "category": "languages",
+      "postings": 20,
+      "share": 0.0152,
+      "in_requirements_or_title": 17,
+      "boards": 5,
+      "top_board": "toast",
+      "top_board_share": 0.45
+    },
+    {
+      "skill": "ms office",
+      "category": "viz_bi",
+      "postings": 20,
+      "share": 0.0152,
+      "in_requirements_or_title": 18,
+      "boards": 10,
+      "top_board": "paytm",
+      "top_board_share": 0.25
+    },
+    {
+      "skill": "nlp",
+      "category": "ml_dl_nlp",
+      "postings": 20,
+      "share": 0.0152,
+      "in_requirements_or_title": 19,
+      "boards": 10,
+      "top_board": "databricks",
+      "top_board_share": 0.25
+    },
+    {
+      "skill": "active directory",
+      "category": "security_net",
+      "postings": 19,
+      "share": 0.0144,
+      "in_requirements_or_title": 14,
+      "boards": 7,
+      "top_board": "okta",
+      "top_board_share": 0.263
+    },
+    {
+      "skill": "iso 27001",
+      "category": "security_net",
+      "postings": 19,
+      "share": 0.0144,
+      "in_requirements_or_title": 14,
+      "boards": 13,
+      "top_board": "zeta",
+      "top_board_share": 0.211
+    },
+    {
+      "skill": "soc 2",
+      "category": "security_net",
+      "postings": 19,
+      "share": 0.0144,
+      "in_requirements_or_title": 15,
+      "boards": 13,
+      "top_board": "zeta",
+      "top_board_share": 0.158
+    },
+    {
+      "skill": "apex",
+      "category": "enterprise_apps",
+      "postings": 18,
+      "share": 0.0137,
+      "in_requirements_or_title": 14,
+      "boards": 9,
+      "top_board": "mongodb",
+      "top_board_share": 0.444
+    },
+    {
+      "skill": "api gateway",
+      "category": "web_backend",
+      "postings": 18,
+      "share": 0.0137,
+      "in_requirements_or_title": 8,
+      "boards": 8,
+      "top_board": "okta",
+      "top_board_share": 0.611
+    },
+    {
+      "skill": "dbt",
+      "category": "data_eng",
+      "postings": 18,
+      "share": 0.0137,
+      "in_requirements_or_title": 13,
+      "boards": 8,
+      "top_board": "fivetran",
+      "top_board_share": 0.333
+    },
+    {
+      "skill": "elasticsearch",
+      "category": "data_eng",
+      "postings": 18,
+      "share": 0.0137,
+      "in_requirements_or_title": 17,
+      "boards": 10,
+      "top_board": "zscaler",
+      "top_board_share": 0.222
+    },
+    {
+      "skill": "gitlab",
+      "category": "cloud_ops",
+      "postings": 18,
+      "share": 0.0137,
+      "in_requirements_or_title": 11,
+      "boards": 8,
+      "top_board": "zscaler",
+      "top_board_share": 0.278
+    },
+    {
+      "skill": "airflow",
+      "category": "data_eng",
+      "postings": 17,
+      "share": 0.0129,
+      "in_requirements_or_title": 14,
+      "boards": 12,
+      "top_board": "sarvam",
+      "top_board_share": 0.118
+    },
+    {
+      "skill": "argocd",
+      "category": "cloud_ops",
+      "postings": 16,
+      "share": 0.0122,
+      "in_requirements_or_title": 10,
+      "boards": 7,
+      "top_board": "okta",
+      "top_board_share": 0.375
+    },
+    {
+      "skill": "cpq",
+      "category": "enterprise_apps",
+      "postings": 16,
+      "share": 0.0122,
+      "in_requirements_or_title": 15,
+      "boards": 10,
+      "top_board": "rubrik",
+      "top_board_share": 0.188
+    },
+    {
+      "skill": "ipsec",
+      "category": "security_net",
+      "postings": 16,
+      "share": 0.0122,
+      "in_requirements_or_title": 13,
+      "boards": 6,
+      "top_board": "zscaler",
+      "top_board_share": 0.562
+    },
+    {
+      "skill": "next.js",
+      "category": "web_backend",
+      "postings": 16,
+      "share": 0.0122,
+      "in_requirements_or_title": 12,
+      "boards": 6,
+      "top_board": "okta",
+      "top_board_share": 0.438
+    },
+    {
+      "skill": "pytorch",
+      "category": "ml_dl_nlp",
+      "postings": 16,
+      "share": 0.0122,
+      "in_requirements_or_title": 13,
+      "boards": 6,
+      "top_board": "sarvam",
+      "top_board_share": 0.25
+    },
+    {
+      "skill": "siem",
+      "category": "security_net",
+      "postings": 16,
+      "share": 0.0122,
+      "in_requirements_or_title": 14,
+      "boards": 10,
+      "top_board": "purestorage",
+      "top_board_share": 0.188
+    },
+    {
+      "skill": "lightning web components",
+      "category": "enterprise_apps",
+      "postings": 15,
+      "share": 0.0114,
+      "in_requirements_or_title": 9,
+      "boards": 6,
+      "top_board": "mongodb",
+      "top_board_share": 0.533
+    },
+    {
+      "skill": "agentforce",
+      "category": "enterprise_apps",
+      "postings": 14,
+      "share": 0.0106,
+      "in_requirements_or_title": 7,
+      "boards": 4,
+      "top_board": "mongodb",
+      "top_board_share": 0.714
+    },
+    {
+      "skill": "elk stack",
+      "category": "cloud_ops",
+      "postings": 14,
+      "share": 0.0106,
+      "in_requirements_or_title": 10,
+      "boards": 8,
+      "top_board": "highradius",
+      "top_board_share": 0.286
+    },
+    {
+      "skill": "gitops",
+      "category": "cloud_ops",
+      "postings": 13,
+      "share": 0.0099,
+      "in_requirements_or_title": 7,
+      "boards": 7,
+      "top_board": "okta",
+      "top_board_share": 0.462
+    },
+    {
+      "skill": "databricks",
+      "category": "data_eng",
+      "postings": 12,
+      "share": 0.0091,
+      "in_requirements_or_title": 8,
+      "boards": 6,
+      "top_board": "sigmoid",
+      "top_board_share": 0.25
+    },
+    {
+      "skill": "opensearch",
+      "category": "data_eng",
+      "postings": 12,
+      "share": 0.0091,
+      "in_requirements_or_title": 12,
+      "boards": 6,
+      "top_board": "okta",
+      "top_board_share": 0.5
+    },
+    {
+      "skill": "hubspot",
+      "category": "enterprise_apps",
+      "postings": 11,
+      "share": 0.0084,
+      "in_requirements_or_title": 9,
+      "boards": 5,
+      "top_board": "sarvam",
+      "top_board_share": 0.364
+    },
+    {
+      "skill": "mlflow",
+      "category": "cloud_ops",
+      "postings": 11,
+      "share": 0.0084,
+      "in_requirements_or_title": 2,
+      "boards": 4,
+      "top_board": "databricks",
+      "top_board_share": 0.727
+    },
+    {
+      "skill": "scikit-learn",
+      "category": "ml_dl_nlp",
+      "postings": 10,
+      "share": 0.0076,
+      "in_requirements_or_title": 8,
+      "boards": 6,
+      "top_board": "sigmoid",
+      "top_board_share": 0.4
+    },
+    {
+      "skill": "waf",
+      "category": "security_net",
+      "postings": 10,
+      "share": 0.0076,
+      "in_requirements_or_title": 6,
+      "boards": 6,
+      "top_board": "harnessinc",
+      "top_board_share": 0.3
+    },
+    {
+      "skill": "crossplane",
+      "category": "cloud_ops",
+      "postings": 9,
+      "share": 0.0068,
+      "in_requirements_or_title": 6,
+      "boards": 6,
+      "top_board": "highradius",
+      "top_board_share": 0.333
+    },
+    {
+      "skill": "dynamodb",
+      "category": "data_eng",
+      "postings": 9,
+      "share": 0.0068,
+      "in_requirements_or_title": 8,
+      "boards": 4,
+      "top_board": "toast",
+      "top_board_share": 0.556
+    },
+    {
+      "skill": "https",
+      "category": "security_net",
+      "postings": 9,
+      "share": 0.0068,
+      "in_requirements_or_title": 7,
+      "boards": 3,
+      "top_board": "zscaler",
+      "top_board_share": 0.556
+    },
+    {
+      "skill": "php",
+      "category": "languages",
+      "postings": 8,
+      "share": 0.0061,
+      "in_requirements_or_title": 7,
+      "boards": 4,
+      "top_board": "mongodb",
+      "top_board_share": 0.625
+    },
+    {
+      "skill": "tdd",
+      "category": "practices",
+      "postings": 8,
+      "share": 0.0061,
+      "in_requirements_or_title": 7,
+      "boards": 3,
+      "top_board": "okta",
+      "top_board_share": 0.625
+    },
+    {
+      "skill": "tensorflow",
+      "category": "ml_dl_nlp",
+      "postings": 8,
+      "share": 0.0061,
+      "in_requirements_or_title": 6,
+      "boards": 4,
+      "top_board": "glance",
+      "top_board_share": 0.375
+    },
+    {
+      "skill": "openshift",
+      "category": "cloud_ops",
+      "postings": 7,
+      "share": 0.0053,
+      "in_requirements_or_title": 5,
+      "boards": 3,
+      "top_board": "purestorage",
+      "top_board_share": 0.714
+    },
+    {
+      "skill": "swift",
+      "category": "languages",
+      "postings": 6,
+      "share": 0.0046,
+      "in_requirements_or_title": 5,
+      "boards": 2,
+      "top_board": "okta",
+      "top_board_share": 0.833
+    },
+    {
+      "skill": "hugging face",
+      "category": "ml_dl_nlp",
+      "postings": 5,
+      "share": 0.0038,
+      "in_requirements_or_title": 5,
+      "boards": 2,
+      "top_board": "databricks",
+      "top_board_share": 0.8
+    },
+    {
+      "skill": "orm",
+      "category": "web_backend",
+      "postings": 5,
+      "share": 0.0038,
+      "in_requirements_or_title": 5,
+      "boards": 4,
+      "top_board": "mongodb",
+      "top_board_share": 0.4
+    },
+    {
+      "skill": "perl",
+      "category": "languages",
+      "postings": 5,
+      "share": 0.0038,
+      "in_requirements_or_title": 5,
+      "boards": 1,
+      "top_board": "mongodb",
+      "top_board_share": 1.0
+    },
+    {
+      "skill": ".net",
+      "category": "languages",
+      "postings": 4,
+      "share": 0.003,
+      "in_requirements_or_title": 4,
+      "boards": 2,
+      "top_board": "okta",
+      "top_board_share": 0.75
+    },
+    {
+      "skill": "mulesoft",
+      "category": "enterprise_apps",
+      "postings": 4,
+      "share": 0.003,
+      "in_requirements_or_title": 4,
+      "boards": 4,
+      "top_board": "samsara",
+      "top_board_share": 0.25
+    },
+    {
+      "skill": "wifi",
+      "category": "security_net",
+      "postings": 4,
+      "share": 0.003,
+      "in_requirements_or_title": 1,
+      "boards": 3,
+      "top_board": "zeta",
+      "top_board_share": 0.5
+    },
+    {
+      "skill": "computer vision",
+      "category": "ml_dl_nlp",
+      "postings": 3,
+      "share": 0.0023,
+      "in_requirements_or_title": 3,
+      "boards": 2,
+      "top_board": "coinbase",
+      "top_board_share": 0.667
+    },
+    {
+      "skill": "streamlit",
+      "category": "viz_bi",
+      "postings": 2,
+      "share": 0.0015,
+      "in_requirements_or_title": 1,
+      "boards": 2,
+      "top_board": "okta",
+      "top_board_share": 0.5
+    },
+    {
+      "skill": "transformers",
+      "category": "ml_dl_nlp",
+      "postings": 2,
+      "share": 0.0015,
+      "in_requirements_or_title": 1,
+      "boards": 2,
+      "top_board": "glance",
+      "top_board_share": 0.5
+    }
+  ],
+  "vocab_gaps_observed": {
+    "note": "known tech terms seen in role sections that the seed vocab does not contain; observed only, never counted",
+    "terms": [
+      {
+        "term": "sas",
+        "postings": 5,
+        "boards": 5
+      }
+    ]
+  },
+  "sections": {
+    "postings_with_recognized_headings": 0.9947,
+    "valid_mentions_by_section": {
+      "requirements": 4757,
+      "responsibilities": 2045,
+      "about": 584,
+      "intro": 548,
+      "title": 75,
+      "benefits": 35,
+      "legal": 13
+    }
+  },
+  "exclusions": {
+    "by_reason": {
+      "employer_self_mention": 1812,
+      "ambiguous_followed_by_symbol": 36,
+      "ambiguous_negative_pattern": 9,
+      "negative_next_word": 2,
+      "ambiguous_no_context": 1
+    },
+    "by_surface": {
+      "Databricks:employer_self_mention": 1187,
+      "GitLab:employer_self_mention": 459,
+      "Datadog:employer_self_mention": 123,
+      "Go:ambiguous_followed_by_symbol": 36,
+      "Elasticsearch:employer_self_mention": 17,
+      "Elastic Search:employer_self_mention": 14,
+      "Go:ambiguous_negative_pattern": 9,
+      "databricks:employer_self_mention": 5,
+      "GitLab CI:employer_self_mention": 5,
+      "Excel:negative_next_word": 2,
+      "Claude Code:employer_self_mention": 2,
+      "Go:ambiguous_no_context": 1
+    },
+    "samples": [
+      {
+        "reason": "ambiguous_followed_by_symbol",
+        "surface": "Go",
+        "context": "ole, you will serve as the dedicated People Partner for our [[Go]]-to-Market (GTM) teams across APJ, while collaborating close"
+      },
+      {
+        "reason": "ambiguous_followed_by_symbol",
+        "surface": "Go",
+        "context": "ders — Own the end-to-end people partner experience for our [[Go]]-to-Market teams across APJ, collaborating across time zones"
+      },
+      {
+        "reason": "ambiguous_followed_by_symbol",
+        "surface": "Go",
+        "context": "role. You will partner deeply with Engineering, Design, and [[Go]]-To-Market (GTM) leadership to transform a rapidly evolving "
+      },
+      {
+        "reason": "ambiguous_followed_by_symbol",
+        "surface": "Go",
+        "context": "k's India Talent Acquisition team hires across Engineering, [[Go]]-to-Market, and G&A from our Bengaluru site, one of the comp"
+      },
+      {
+        "reason": "ambiguous_negative_pattern",
+        "surface": "Go",
+        "context": "gether to accomplish this. |  | In pursuit of this mission, our [[Go]] To Market (GTM) team is responsible for helping customers l"
+      },
+      {
+        "reason": "ambiguous_negative_pattern",
+        "surface": "Go",
+        "context": "gether to accomplish this. |  | In pursuit of this mission, our [[Go]] To Market (GTM) team is responsible for helping customers l"
+      },
+      {
+        "reason": "ambiguous_negative_pattern",
+        "surface": "Go",
+        "context": "gether to accomplish this. |  | In pursuit of this mission, our [[Go]] To Market (GTM) team is responsible for helping customers l"
+      },
+      {
+        "reason": "ambiguous_negative_pattern",
+        "surface": "Go",
+        "context": " warning signals—and turn them into meaningful insights. |  | - [[Go]] beyond the rulebook | Build expertise across RBI, SEBI, stock"
+      },
+      {
+        "reason": "ambiguous_no_context",
+        "surface": "Go",
+        "context": "tations) |  | - Develop production-grade automation in Ansible, [[Go]] for bare-metal provisioning, IPMI/Redfish-based hardware li"
+      },
+      {
+        "reason": "employer_self_mention",
+        "surface": "Databricks",
+        "context": "re Engineer, Infrastructure |  | GAQ327R265 |  | About the Role |  | At [[Databricks]] Information Technology, we are a product-led organisation t"
+      },
+      {
+        "reason": "employer_self_mention",
+        "surface": "Databricks",
+        "context": "technical goals into actionable technical solutions. |  | About [[Databricks]] |  | Databricks is the Data and AI company. More than 20,000 or"
+      },
+      {
+        "reason": "employer_self_mention",
+        "surface": "Databricks",
+        "context": "als into actionable technical solutions. |  | About Databricks |  | [[Databricks]] is the Data and AI company. More than 20,000 organizations "
+      },
+      {
+        "reason": "employer_self_mention",
+        "surface": "Databricks",
+        "context": " Rivian, Unilever, and 70% of the Fortune 500 — rely on the [[Databricks]] Data + AI Platform to build and scale data and AI apps, ana"
+      },
+      {
+        "reason": "negative_next_word",
+        "surface": "Excel",
+        "context": "litating seamless coordination on high-stakes projects. |  |  - [[Excel]] in sharing information clearly and efficiently, adapting co"
+      },
+      {
+        "reason": "negative_next_word",
+        "surface": "Excel",
+        "context": "r needs, enabling effective decision-making at all level |  | - [[Excel]] at tracking workstreams, managing dependencies, and driving"
+      }
+    ],
+    "accepted_ambiguous_samples": [
+      {
+        "surface": "Go",
+        "context": "r evolving multi-cluster platforms |  | - Proficiency in Python,[[ G]]o, or a similar programming language |  | - Understand workload "
+      },
+      {
+        "surface": "Go",
+        "context": " expertise in a general-purpose programming language (e.g., [[Go]], Java, C/C++, Scala, Python) and mastery in applying first "
+      },
+      {
+        "surface": "Go",
+        "context": "cy in a general-purpose programming language (e.g., Python, [[Go]]), with experience in infrastructure-as-code (IaC) and CI/CD"
+      },
+      {
+        "surface": "Go",
+        "context": "ucture focus. |  | - Strong programming skills in Python and/or [[Go]] — you ship production code, not just scripts and configs. |  | "
+      },
+      {
+        "surface": "Go",
+        "context": " programming language or scripting language such as Python, [[Go]], or Java for automating and managing security tools and pro"
+      },
+      {
+        "surface": "Go",
+        "context": "on/Palo Alto, Chrome Enterprise) |  |  - Proficiency in Python, [[Go]], or similar languages for building security tooling and aut"
+      }
+    ]
+  },
+  "tracked_role_postings_without_skill": [
+    "Engineering Manager - Backend",
+    "Forward-Deployed AI Engineer",
+    "Senior Engineering Manager - Backend",
+    "Senior Product Manager - Data & Analytics Platform",
+    "Senior Software Engineer - Multi Cloud Efficiency",
+    "Senior Staff Software Engineer (Backend)",
+    "Senior Staff Software Engineer - Backend",
+    "Senior Staff Software Engineer, Payments",
+    "Software Engineer, Infrastructure",
+    "Software Engineer, Stripe Data Pipeline",
+    "Sr Staff Software Engineer (Backend)",
+    "Staff Software Engineer"
+  ],
+  "notes": [
+    "Point-in-time snapshot over the fixed employer panel; not a trend.",
+    "Skill counts use role sections only, so an employer's product blurb in its About section (e.g. 'runs on AWS, GCP and Azure') is not counted as demand.",
+    "NER candidates are vocabulary-gap suggestions for review, not counted skills."
+  ]
+}
