@@ -1,0 +1,88 @@
+{
+  "snapshot_date": "2026-10-03",
+  "run_id": "20261003T091942Z",
+  "generated_at": "2026-10-03T09:21:00.973838+00:00",
+  "panel": {
+    "boards": 55,
+    "ok": 55,
+    "failed": []
+  },
+  "jobs": {
+    "returned_all_regions": 9784,
+    "in_region": 1313,
+    "out_of_region": 8471,
+    "skipped": 0,
+    "skip_reasons": {}
+  },
+  "stored_today": {
+    "new": 4,
+    "changed": 85,
+    "unchanged": 1224
+  },
+  "field_completeness_in_region": {
+    "description": 1.0,
+    "company_name": 0.7174,
+    "cities": 0.9177,
+    "department": 0.9985,
+    "team": 0.2826,
+    "employment_type": 0.2734,
+    "workplace_type": 0.2742,
+    "published_at": 1.0,
+    "updated_at": 0.7174,
+    "url": 1.0
+  },
+  "description_chars": {
+    "min": 1072,
+    "median": 5486,
+    "p10": 3006,
+    "max": 12633
+  },
+  "roles": {
+    "counts": {
+      "software engineer": 244,
+      "machine learning engineer": 25,
+      "backend engineer": 42,
+      "data scientist": 16,
+      "data engineer": 14,
+      "data analyst": 28
+    },
+    "untagged": 981,
+    "multi_tagged": 37,
+    "tagged_share": 0.2529
+  },
+  "cities": {
+    "counts": {
+      "Bengaluru": 839,
+      "Delhi NCR": 212,
+      "Hyderabad": 98,
+      "Mumbai": 88,
+      "Pune": 37,
+      "Chandigarh": 19,
+      "Chennai": 16,
+      "Ahmedabad": 4,
+      "Jaipur": 2,
+      "Coimbatore": 2,
+      "Kochi": 2,
+      "Indore": 1
+    },
+    "country_level_only": 108
+  },
+  "config_sha256": {
+    "sources.yaml": "3b5004d7c975ad7ca3196cbc3be99e3bbc55beef3106ca7917822b9c72a8ce9c",
+    "regions.yaml": "822d44014e1ebb719d7d4e46256414bd192883758cb8d17a3780e2022b26f70c",
+    "panel.yaml": "077cfb3b0ca6607f940dba0e713f6c827fb1813a8d1f961beafa0b0e3a3180af"
+  },
+  "history": {
+    "snapshot_dates": [
+      "2026-10-01",
+      "2026-10-02",
+      "2026-10-03"
+    ],
+    "n_days": 3
+  },
+  "skipped_records": [],
+  "notes": [
+    "Sampling frame is the fixed employer panel in config/panel.yaml, not the whole market.",
+    "first_seen_date on the first snapshot marks the panel start, not when a job was posted; use published_at for posting dates."
+  ]
+}
