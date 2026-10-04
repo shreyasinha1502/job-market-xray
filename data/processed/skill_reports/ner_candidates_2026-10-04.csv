@@ -1,0 +1,101 @@
+candidate,labels,postings,boards,example
+ai,GPE|ORG,771,50,AI
+ci,ORG|GPE,195,35,CI
+api,ORG,134,33,API
+ai/ml,ORG,127,21,AI/ML
+us,GPE,123,27,Us
+sase,ORG,86,4,SASE
+ui,ORG,76,20,UI
+computer science,ORG,76,17,Computer Science
+ml,ORG|GPE,74,16,ML
+google,ORG,72,12,Google
+finance,ORG|GPE|PRODUCT,70,25,Finance
+linux,GPE|PRODUCT|ORG,69,16,Linux
+gtm,ORG,66,23,GTM
+crm,PRODUCT,66,18,CRM
+dns,ORG,65,15,DNS
+qa,ORG|GPE,57,17,QA
+iam,ORG,52,12,IAM
+u.s,GPE,51,7,U.S
+salesforce,ORG|GPE|PRODUCT,46,17,Salesforce
+erp,ORG,45,17,ERP
+linkedin,GPE|ORG,43,9,LinkedIn
+mcp,ORG|GPE,42,22,MCP
+san francisco,GPE,42,6,San Francisco
+engineering,ORG|GPE,41,15,Engineering
+customer success,ORG,38,15,Customer Success
+sms,ORG,35,3,SMS
+whatsapp,ORG,35,3,WhatsApp
+bi,GPE|ORG,32,15,BI
+software,ORG,32,15,Software
+sox,ORG,32,10,SOX
+"computer science, engineering",ORG,31,14,"Computer Science, Engineering"
+identity and access management,ORG,31,6,Identity and Access Management
+success,ORG,30,12,Success
+validate,ORG,29,10,Validate
+ip,ORG,29,7,IP
+operations,ORG,28,14,Operations
+bachelor,ORG,28,13,Bachelor
+emea,ORG,28,12,EMEA
+software engineering,ORG,28,8,Software Engineering
+software engineer,ORG,27,9,Software Engineer
+account executive,ORG,25,14,Account Executive
+windows,PRODUCT|ORG|GPE,25,12,Windows
+apac,ORG,24,13,APAC
+android,GPE|ORG,24,9,Android
+cursor,GPE,23,13,Cursor
+"computer science, information systems",ORG,23,8,"Computer Science, Information Systems"
+data,ORG|GPE,22,10,Data
+fintech,ORG|GPE,22,7,FinTech
+cisco,GPE,22,4,Cisco
+sso,ORG,21,10,SSO
+big data,ORG,21,4,Big Data
+fp&a,ORG,20,12,FP&A
+sdk,ORG,20,9,SDK
+tcp/ip,ORG,20,6,TCP/IP
+mis,ORG,20,5,MIS
+uat,ORG,19,10,UAT
+data engineering,ORG,18,6,Data Engineering
+quality,ORG,18,3,Quality
+gemini,GPE|ORG,17,12,Gemini
+p&l,ORG,17,8,P&L
+servicenow,ORG,17,8,ServiceNow
+langgraph,ORG,17,7,LangGraph
+sap,GPE|ORG,17,7,SAP
+ssl,ORG,17,6,SSL
+apj,ORG,16,10,APJ
+product management,ORG,16,9,Product Management
+professional services,ORG,16,9,Professional Services
+cloudformation,ORG|PRODUCT,16,7,CloudFormation
+karnataka,GPE,16,5,Karnataka
+zero trust,ORG,16,5,Zero Trust
+software development engineer,ORG,16,4,Software Development Engineer
+claude,ORG,15,11,Claude
+ap,ORG,15,10,AP
+consulting,ORG|GPE,15,9,Consulting
+opentelemetry,ORG,15,9,OpenTelemetry
+rbac,ORG,15,9,RBAC
+sales,GPE,15,9,Sales
+treasury,ORG,14,9,Treasury
+hris,ORG,14,8,HRIS
+s3,ORG,14,7,S3
+sse,ORG,14,6,SSE
+cs,ORG,13,12,CS
+cli,ORG,13,8,CLI
+powerpoint,ORG,13,8,PowerPoint
+slack,ORG|GPE,13,8,Slack
+develop,ORG,13,7,Develop
+redis,GPE|ORG,13,7,Redis
+smb,PRODUCT|ORG,13,6,SMB
+uk,GPE,13,6,UK
+talent acquisition,ORG,13,4,Talent Acquisition
+bigquery,ORG,12,9,BigQuery
+cxo,ORG,12,8,Cxo
+gke,ORG,12,8,GKE
+poc,ORG|GPE,12,8,POC
+model context protocol,PRODUCT|ORG,12,7,Model Context Protocol
+mlops,ORG,12,6,MLOps
+tls,ORG,12,6,TLS
+gm,ORG,12,4,GM
+london,GPE,12,4,London
+sme,ORG,11,9,SME

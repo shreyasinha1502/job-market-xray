@@ -1,0 +1,125 @@
+{
+ "generated_at": "2026-10-04T10:00:38+00:00",
+ "history": {
+  "n_snapshots": 4,
+  "first": "2026-10-01",
+  "last": "2026-10-04",
+  "span_days": 3,
+  "missing_dates": []
+ },
+ "classifier_labels": {
+  "fine_class_counts": {
+   "intern": 18,
+   "junior": 0,
+   "mid": 114,
+   "senior": 608
+  },
+  "target_counts": {
+   "below_senior": 132,
+   "senior": 605
+  },
+  "min_per_class": 100,
+  "four_class_ready": false,
+  "current_task_trainable": true,
+  "note": "labels come from rules on real titles/descriptions; nothing is invented to fill a class. Retrain when more classes clear the minimum."
+ },
+ "panel": {
+  "boards": 55,
+  "added_dates": [
+   "2026-10-01"
+  ]
+ },
+ "extractor": {
+  "version": "m2.4",
+  "vocab_sha256": "1a7b1f373444d2f2b24fb4208ac89f163456192a4501c44296905974b40563bc",
+  "spacy": "3.8.16",
+  "model": "en_core_web_sm-3.8.0"
+ },
+ "days": [
+  {
+   "day": "2026-10-01",
+   "boards_ok": 55,
+   "boards_failed": [],
+   "in_region_postings": 1315,
+   "stored": {
+    "new": 1315,
+    "changed": 0,
+    "unchanged": 0
+   },
+   "skill_coverage": 0.7384,
+   "description_completeness": 1.0
+  },
+  {
+   "day": "2026-10-02",
+   "boards_ok": 55,
+   "boards_failed": [],
+   "in_region_postings": 1315,
+   "stored": {
+    "new": 8,
+    "changed": 34,
+    "unchanged": 1273
+   },
+   "skill_coverage": 0.7376,
+   "description_completeness": 1.0
+  },
+  {
+   "day": "2026-10-03",
+   "boards_ok": 55,
+   "boards_failed": [],
+   "in_region_postings": 1313,
+   "stored": {
+    "new": 4,
+    "changed": 85,
+    "unchanged": 1224
+   },
+   "skill_coverage": 0.738,
+   "description_completeness": 1.0
+  },
+  {
+   "day": "2026-10-04",
+   "boards_ok": 55,
+   "boards_failed": [],
+   "in_region_postings": 1312,
+   "stored": {
+    "new": 2,
+    "changed": 0,
+    "unchanged": 1310
+   },
+   "skill_coverage": 0.7378,
+   "description_completeness": 1.0
+  }
+ ],
+ "posting_age_latest": {
+  "postings_with_publish_date": 1312,
+  "median_days_open": 59.0,
+  "share_open_over_90_days": 0.3628,
+  "histogram": [
+   {
+    "bucket": "0-7 days",
+    "postings": 83
+   },
+   {
+    "bucket": "8-30 days",
+    "postings": 314
+   },
+   {
+    "bucket": "31-90 days",
+    "postings": 439
+   },
+   {
+    "bucket": "91-180 days",
+    "postings": 263
+   },
+   {
+    "bucket": "181-365 days",
+    "postings": 124
+   },
+   {
+    "bucket": "over a year",
+    "postings": 89
+   }
+  ],
+  "note": "long-open postings dominate stock counts; flow (new postings) is the cleaner demand signal once enough days accumulate"
+ },
+ "gaps": []
+}
