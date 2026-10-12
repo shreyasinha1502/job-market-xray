@@ -1,0 +1,97 @@
+{
+  "snapshot_date": "2026-10-12",
+  "run_id": "20261012T111104Z",
+  "generated_at": "2026-10-12T11:12:27.540869+00:00",
+  "panel": {
+    "boards": 55,
+    "ok": 55,
+    "failed": []
+  },
+  "jobs": {
+    "returned_all_regions": 9841,
+    "in_region": 1311,
+    "out_of_region": 8530,
+    "skipped": 0,
+    "skip_reasons": {}
+  },
+  "stored_today": {
+    "new": 24,
+    "changed": 4,
+    "unchanged": 1283
+  },
+  "field_completeness_in_region": {
+    "description": 1.0,
+    "company_name": 0.7292,
+    "cities": 0.9085,
+    "department": 0.9992,
+    "team": 0.2708,
+    "employment_type": 0.2593,
+    "workplace_type": 0.2632,
+    "published_at": 1.0,
+    "updated_at": 0.7292,
+    "url": 1.0
+  },
+  "description_chars": {
+    "min": 1072,
+    "median": 5520,
+    "p10": 3080,
+    "max": 12989
+  },
+  "roles": {
+    "counts": {
+      "software engineer": 243,
+      "machine learning engineer": 24,
+      "data scientist": 14,
+      "backend engineer": 36,
+      "data analyst": 30,
+      "data engineer": 10
+    },
+    "untagged": 985,
+    "multi_tagged": 31,
+    "tagged_share": 0.2487
+  },
+  "cities": {
+    "counts": {
+      "Bengaluru": 821,
+      "Delhi NCR": 221,
+      "Hyderabad": 100,
+      "Mumbai": 87,
+      "Pune": 41,
+      "Chandigarh": 19,
+      "Chennai": 17,
+      "Ahmedabad": 4,
+      "Jaipur": 3,
+      "Coimbatore": 2,
+      "Kochi": 2,
+      "Kolkata": 1
+    },
+    "country_level_only": 120
+  },
+  "config_sha256": {
+    "sources.yaml": "3b5004d7c975ad7ca3196cbc3be99e3bbc55beef3106ca7917822b9c72a8ce9c",
+    "regions.yaml": "822d44014e1ebb719d7d4e46256414bd192883758cb8d17a3780e2022b26f70c",
+    "panel.yaml": "077cfb3b0ca6607f940dba0e713f6c827fb1813a8d1f961beafa0b0e3a3180af"
+  },
+  "history": {
+    "snapshot_dates": [
+      "2026-10-01",
+      "2026-10-02",
+      "2026-10-03",
+      "2026-10-04",
+      "2026-10-05",
+      "2026-10-06",
+      "2026-10-07",
+      "2026-10-08",
+      "2026-10-09",
+      "2026-10-10",
+      "2026-10-11",
+      "2026-10-12"
+    ],
+    "n_days": 12
+  },
+  "skipped_records": [],
+  "notes": [
+    "Sampling frame is the fixed employer panel in config/panel.yaml, not the whole market.",
+    "first_seen_date on the first snapshot marks the panel start, not when a job was posted; use published_at for posting dates."
+  ]
+}
