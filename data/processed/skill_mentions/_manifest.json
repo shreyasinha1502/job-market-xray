@@ -149,6 +149,12 @@
       "n_postings": 13,
       "n_mentions": 148,
       "extracted_at": "2026-10-24T08:20:09.985661+00:00"
+    },
+    "2026-10-26": {
+      "postings_sha256": "77449bca3c873e1b2447d9661c9a8ea8fbdfaf325817fdb1c7a0e6c41100c65a",
+      "n_postings": 13,
+      "n_mentions": 148,
+      "extracted_at": "2026-10-26T09:14:46.816797+00:00"
     }
   }
 }
