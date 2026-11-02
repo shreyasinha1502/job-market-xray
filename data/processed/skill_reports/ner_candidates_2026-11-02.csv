@@ -1,0 +1,101 @@
+candidate,labels,postings,boards,example
+ai,GPE|ORG,764,50,AI
+ci,ORG|GPE,203,36,CI
+ai/ml,ORG,130,20,AI/ML
+us,GPE,126,22,US
+api,ORG,122,32,API
+google,ORG|PRODUCT,92,14,Google
+ml,ORG|GPE,72,17,ML
+finance,ORG|GPE|PRODUCT,71,25,Finance
+computer science,ORG,68,17,Computer Science
+crm,PRODUCT,67,19,CRM
+gtm,ORG,66,26,GTM
+dns,ORG,65,13,DNS
+linux,GPE|PRODUCT|ORG,62,13,Linux
+ui,ORG,60,20,UI
+mcp,ORG|GPE,53,25,MCP
+iam,ORG,51,16,IAM
+qa,ORG|GPE,46,15,QA
+san francisco,GPE,46,6,San Francisco
+whatsapp,ORG,46,4,WhatsApp
+sms,ORG,46,3,SMS
+salesforce,ORG|GPE|PRODUCT,44,16,Salesforce
+u.s,GPE,44,10,U.S
+erp,ORG,42,19,ERP
+engineering,ORG|GPE,39,13,Engineering
+linkedin,GPE|ORG,37,7,LinkedIn
+customer success,ORG,36,14,Customer Success
+"computer science, engineering",ORG,35,16,"Computer Science, Engineering"
+identity,ORG,35,3,Identity
+security,ORG|GPE,34,3,Security
+fintech,ORG|GPE,33,7,Fintech
+sox,ORG,31,13,SOX
+success,ORG,31,10,Success
+software engineer,ORG,30,12,Software Engineer
+mis,ORG,30,8,MIS
+bi,ORG|GPE,29,17,BI
+software,ORG,29,15,Software
+operations,ORG,29,13,Operations
+apac,ORG,25,13,APAC
+bachelor,ORG,25,11,Bachelor
+data,ORG|GPE,25,10,Data
+ip,ORG,25,7,IP
+account executive,ORG,23,12,Account Executive
+android,ORG|GPE,23,12,Android
+gemini,GPE|ORG,23,11,Gemini
+langgraph,ORG,23,10,LangGraph
+software engineering,ORG,23,7,Software Engineering
+emea,ORG,22,12,EMEA
+github,ORG|GPE|PRODUCT,22,9,GitHub
+cursor,GPE,21,13,Cursor
+product management,ORG,21,12,Product Management
+tcp/ip,ORG,21,5,TCP/IP
+fp&a,ORG,20,12,FP&A
+identity and access management,ORG,20,7,Identity and Access Management
+bigquery,ORG,19,11,BigQuery
+s3,ORG,18,11,S3
+apj,ORG,18,9,APJ
+hris,ORG,18,9,HRIS
+cloudformation,ORG|PRODUCT,18,8,CloudFormation
+eks,ORG,18,8,EKS
+kyc,ORG|GPE,18,8,KYC
+big data,ORG,18,4,Big Data
+cisco,GPE,18,4,Cisco
+software development engineer,ORG,18,4,Software Development Engineer
+rbac,ORG,17,10,RBAC
+sales,GPE,17,8,Sales
+servicenow,ORG,17,8,ServiceNow
+mlops,ORG,17,7,MLOps
+"computer science, information systems",ORG,17,6,"Computer Science, Information Systems"
+data engineering,ORG,17,6,Data Engineering
+nbfc,ORG,17,4,NBFC
+sdk,ORG,16,10,SDK
+soc,ORG,16,10,SOC
+shell,ORG,16,6,Shell
+karnataka,GPE,16,4,Karnataka
+slack,ORG|GPE,15,10,Slack
+cli,ORG,15,9,CLI
+ssl,ORG,15,7,SSL
+develop,ORG,15,6,Develop
+rbi,ORG,15,6,RBI
+claude,ORG,14,12,Claude
+figma,ORG,14,10,Figma
+uat,ORG,14,9,UAT
+opentelemetry,ORG,14,8,OpenTelemetry
+sso,ORG,14,8,SSO
+gke,ORG,14,7,GKE
+validate,ORG,14,7,Validate
+powerpoint,ORG,14,5,PowerPoint
+sme,ORG,13,11,SME
+model context protocol,PRODUCT|ORG,13,7,Model Context Protocol
+p&l,ORG,13,6,P&L
+uk,GPE,13,6,UK
+sse,ORG,13,5,SSE
+zero trust,ORG,13,5,Zero Trust
+ecs,ORG,13,4,ECS
+new york,GPE,13,3,New York
+sla,ORG,12,9,SLA
+ca,PRODUCT|ORG,12,8,CA
+tls,ORG,12,8,TLS
+treasury,ORG,12,8,Treasury
+information security,ORG,12,7,Information Security
