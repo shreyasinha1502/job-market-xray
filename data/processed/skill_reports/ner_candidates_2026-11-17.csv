@@ -1,0 +1,101 @@
+candidate,labels,postings,boards,example
+ai,GPE|ORG,764,48,AI
+ci,ORG|GPE,189,34,CI
+ai/ml,ORG,133,21,AI/ML
+us,GPE,126,24,US
+api,ORG,120,30,API
+sase,ORG,98,3,SASE
+ml,ORG|GPE,74,18,ML
+finance,ORG|GPE|PRODUCT,72,26,Finance
+google,ORG,71,10,Google
+crm,PRODUCT,67,19,CRM
+ui,ORG,63,21,UI
+computer science,ORG,63,17,Computer Science
+linux,PRODUCT|GPE|ORG,61,13,Linux
+gtm,ORG,57,22,GTM
+dns,ORG,57,12,DNS
+mcp,ORG|GPE,50,25,MCP
+san francisco,GPE,49,6,San Francisco
+qa,ORG|GPE,45,15,QA
+iam,ORG,44,17,IAM
+salesforce,ORG|GPE|PRODUCT,43,17,Salesforce
+whatsapp,ORG,42,4,Whatsapp
+sms,ORG,42,3,SMS
+erp,ORG,39,17,ERP
+engineering,GPE|ORG,39,14,Engineering
+u.s,GPE,39,6,U.S
+linkedin,GPE|ORG,38,10,LinkedIn
+fintech,ORG|GPE,36,7,Fintech
+security,GPE|ORG,36,3,Security
+customer success,ORG,35,15,Customer Success
+instagram,ORG|GPE,35,3,Instagram
+operations,ORG,33,15,Operations
+"computer science, engineering",ORG,31,16,"Computer Science, Engineering"
+bachelor,ORG,31,13,Bachelor
+success,ORG,31,10,Success
+mis,ORG,30,7,MIS
+bi,GPE|ORG,28,17,BI
+software,ORG,26,13,Software
+ip,ORG,26,8,IP
+software engineering,ORG,26,8,Software Engineering
+apac,ORG,25,15,APAC
+cursor,GPE,25,15,Cursor
+langgraph,ORG,25,10,LangGraph
+sox,ORG,24,12,SOX
+github,PRODUCT|ORG|GPE,24,11,GitHub
+account executive,ORG,23,12,Account Executive
+software engineer,ORG,23,8,Software Engineer
+data,ORG,22,9,Data
+soc,ORG,21,11,SOC
+android,ORG|GPE,20,13,Android
+big data,ORG,20,5,Big Data
+apj,ORG,19,9,APJ
+servicenow,ORG,19,8,ServiceNow
+gemini,GPE|ORG,18,10,Gemini
+"computer science, information systems",ORG,18,7,"Computer Science, Information Systems"
+karnataka,GPE,18,5,Karnataka
+nbfc,ORG,18,4,NBFC
+claude,ORG,17,14,Claude
+fp&a,ORG,17,12,FP&A
+figma,ORG,17,11,Figma
+emea,ORG,17,10,EMEA
+product management,ORG,17,10,Product Management
+sales,GPE,17,9,Sales
+rbi,ORG,17,7,RBI
+tcp/ip,ORG,17,4,TCP/IP
+cs,ORG,16,11,CS
+s3,ORG,16,11,S3
+bigquery,ORG,16,10,BigQuery
+hris,ORG,16,9,HRIS
+powerpoint,ORG,16,7,PowerPoint
+mlops,ORG,16,6,MLOps
+data engineering,ORG,16,5,Data Engineering
+identity and access management,ORG,16,5,Identity and Access Management
+sdk,ORG,15,10,SDK
+cloudformation,ORG|PRODUCT,15,9,CloudFormation
+singapore,GPE,15,9,Singapore
+p&l,ORG,15,7,P&L
+develop,ORG,15,6,Develop
+rbac,ORG,14,11,RBAC
+slack,ORG|GPE,14,11,Slack
+sso,ORG,14,10,SSO
+model context protocol,PRODUCT,14,9,Model Context Protocol
+information security,ORG,14,7,Information Security
+sap,ORG|GPE,14,7,SAP
+ssl,ORG,14,7,SSL
+validate,ORG,14,7,Validate
+kyc,ORG,14,4,KYC
+software development engineer,ORG,14,4,Software Development Engineer
+sme,ORG,13,11,SME
+ca,ORG|PRODUCT,13,9,CA
+shell,ORG,13,9,Shell
+smb,ORG|PRODUCT,13,8,SMB
+tls,ORG,13,8,TLS
+lms,ORG,13,7,LMS
+professional services,ORG,13,7,Professional Services
+sse,ORG,13,6,SSE
+uk,GPE,13,6,UK
+tech,ORG,13,5,Tech
+legal,ORG|GPE,12,9,Legal
+cli,ORG,12,8,CLI
+owasp,ORG,12,8,OWASP
