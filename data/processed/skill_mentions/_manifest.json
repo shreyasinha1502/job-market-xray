@@ -293,6 +293,12 @@
       "n_postings": 71,
       "n_mentions": 436,
       "extracted_at": "2026-11-19T11:58:59.821679+00:00"
+    },
+    "2026-11-20": {
+      "postings_sha256": "a8c30c61ddee71f4f4eaaf7e9f243da33290dfad4a27a6128a31b0552cc42252",
+      "n_postings": 50,
+      "n_mentions": 505,
+      "extracted_at": "2026-11-20T12:00:05.652954+00:00"
     }
   }
 }
