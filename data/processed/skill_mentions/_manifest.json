@@ -299,6 +299,12 @@
       "n_postings": 50,
       "n_mentions": 505,
       "extracted_at": "2026-11-20T12:00:05.652954+00:00"
+    },
+    "2026-11-21": {
+      "postings_sha256": "e3c5d4d98ed0eea6ec99f3426c59c9a86b2c8fdd494db00b58e36325bdc8580f",
+      "n_postings": 20,
+      "n_mentions": 280,
+      "extracted_at": "2026-11-21T11:33:10.800110+00:00"
     }
   }
 }
