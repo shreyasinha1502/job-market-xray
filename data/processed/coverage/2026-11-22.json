@@ -1,0 +1,146 @@
+{
+  "snapshot_date": "2026-11-22",
+  "run_id": "20261122T114618Z",
+  "generated_at": "2026-11-22T11:47:36.728452+00:00",
+  "panel": {
+    "boards": 55,
+    "ok": 55,
+    "failed": []
+  },
+  "jobs": {
+    "returned_all_regions": 10251,
+    "in_region": 1329,
+    "out_of_region": 8921,
+    "skipped": 1,
+    "skip_reasons": {
+      "missing_title": 1
+    }
+  },
+  "stored_today": {
+    "new": 1,
+    "changed": 4,
+    "unchanged": 1324
+  },
+  "field_completeness_in_region": {
+    "description": 0.9992,
+    "company_name": 0.7171,
+    "cities": 0.9195,
+    "department": 0.9985,
+    "team": 0.2829,
+    "employment_type": 0.2731,
+    "workplace_type": 0.2807,
+    "published_at": 1.0,
+    "updated_at": 0.7171,
+    "url": 1.0
+  },
+  "description_chars": {
+    "min": 1038,
+    "median": 5630.5,
+    "p10": 3009,
+    "max": 13204
+  },
+  "roles": {
+    "counts": {
+      "software engineer": 256,
+      "machine learning engineer": 26,
+      "data scientist": 19,
+      "data engineer": 9,
+      "backend engineer": 37,
+      "data analyst": 31
+    },
+    "untagged": 984,
+    "multi_tagged": 33,
+    "tagged_share": 0.2596
+  },
+  "cities": {
+    "counts": {
+      "Bengaluru": 829,
+      "Delhi NCR": 236,
+      "Mumbai": 93,
+      "Hyderabad": 90,
+      "Pune": 42,
+      "Chennai": 28,
+      "Chandigarh": 24,
+      "Ahmedabad": 7,
+      "Jaipur": 3,
+      "Kochi": 2,
+      "Coimbatore": 1,
+      "Kolkata": 1
+    },
+    "country_level_only": 107
+  },
+  "config_sha256": {
+    "sources.yaml": "3b5004d7c975ad7ca3196cbc3be99e3bbc55beef3106ca7917822b9c72a8ce9c",
+    "regions.yaml": "822d44014e1ebb719d7d4e46256414bd192883758cb8d17a3780e2022b26f70c",
+    "panel.yaml": "077cfb3b0ca6607f940dba0e713f6c827fb1813a8d1f961beafa0b0e3a3180af"
+  },
+  "history": {
+    "snapshot_dates": [
+      "2026-10-01",
+      "2026-10-02",
+      "2026-10-03",
+      "2026-10-04",
+      "2026-10-05",
+      "2026-10-06",
+      "2026-10-07",
+      "2026-10-08",
+      "2026-10-09",
+      "2026-10-10",
+      "2026-10-11",
+      "2026-10-12",
+      "2026-10-13",
+      "2026-10-14",
+      "2026-10-15",
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18",
+      "2026-10-19",
+      "2026-10-20",
+      "2026-10-21",
+      "2026-10-22",
+      "2026-10-23",
+      "2026-10-24",
+      "2026-10-26",
+      "2026-10-27",
+      "2026-10-28",
+      "2026-10-29",
+      "2026-10-30",
+      "2026-10-31",
+      "2026-11-01",
+      "2026-11-02",
+      "2026-11-03",
+      "2026-11-05",
+      "2026-11-06",
+      "2026-11-07",
+      "2026-11-08",
+      "2026-11-09",
+      "2026-11-10",
+      "2026-11-11",
+      "2026-11-12",
+      "2026-11-13",
+      "2026-11-14",
+      "2026-11-15",
+      "2026-11-16",
+      "2026-11-17",
+      "2026-11-18",
+      "2026-11-19",
+      "2026-11-20",
+      "2026-11-21",
+      "2026-11-22"
+    ],
+    "n_days": 51
+  },
+  "skipped_records": [
+    {
+      "run_id": "20261122T114618Z",
+      "source": "ashby",
+      "board": "openai",
+      "source_job_id": "1ae64ddb-505f-4ad2-a731-3a857e94edee",
+      "reason": "missing_title"
+    }
+  ],
+  "notes": [
+    "Sampling frame is the fixed employer panel in config/panel.yaml, not the whole market.",
+    "first_seen_date on the first snapshot marks the panel start, not when a job was posted; use published_at for posting dates."
+  ]
+}
