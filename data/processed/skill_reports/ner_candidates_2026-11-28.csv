@@ -1,0 +1,101 @@
+candidate,labels,postings,boards,example
+ai,ORG|GPE,760,49,AI
+ci,ORG|GPE,190,34,CI
+us,GPE,142,25,US
+ai/ml,ORG,131,21,AI/ML
+api,ORG,116,32,API
+sase,ORG,106,4,SASE
+dns,ORG,72,13,DNS
+google,ORG,70,10,Google
+finance,ORG|GPE,68,24,Finance
+ml,ORG|GPE,66,19,ML
+ui,ORG,65,20,UI
+crm,PRODUCT,64,21,CRM
+qa,ORG|GPE,57,16,QA
+san francisco,GPE,57,5,San Francisco
+linux,GPE|PRODUCT|ORG,55,13,Linux
+gtm,ORG,50,22,GTM
+u.s,GPE,49,8,U.S
+mcp,ORG|GPE,48,26,MCP
+computer science,ORG,48,17,Computer Science
+instagram,ORG|GPE,46,3,Instagram
+erp,ORG,45,18,ERP
+sms,ORG,43,3,SMS
+"computer science, engineering",ORG,42,16,"Computer Science, Engineering"
+whatsapp,ORG,42,3,WhatsApp
+salesforce,ORG|GPE|PRODUCT,40,17,Salesforce
+iam,ORG,39,16,IAM
+linkedin,GPE|ORG,39,8,LinkedIn
+operations,ORG,33,16,Operations
+software engineer,ORG,33,9,Software Engineer
+ip,ORG,33,7,IP
+mis,ORG,33,7,MIS
+fintech,ORG|GPE,33,6,Fintech
+engineering,ORG|GPE,32,14,Engineering
+bachelor,ORG,32,13,Bachelor
+customer success,ORG,32,13,Customer Success
+success,ORG,31,12,Success
+"computer science, information systems",ORG,28,8,"Computer Science, Information Systems"
+bi,GPE|ORG,27,18,BI
+sox,ORG,27,12,SOX
+langgraph,ORG,26,8,LangGraph
+apac,ORG,24,13,APAC
+github,PRODUCT|ORG|GPE,24,13,GitHub
+account executive,ORG,23,11,Account Executive
+gemini,GPE|ORG,22,10,Gemini
+software engineering,ORG,22,6,Software Engineering
+software,ORG,21,13,Software
+data,ORG,21,9,Data
+cursor,GPE,20,11,Cursor
+product management,ORG,20,11,Product Management
+powerpoint,ORG,20,8,PowerPoint
+tcp/ip,ORG,20,5,TCP/IP
+android,GPE|ORG,19,12,Android
+rbi,ORG,19,7,RBI
+karnataka,GPE,19,5,Karnataka
+m.s,GPE,19,3,M.S
+fp&a,ORG,18,13,FP&A
+bigquery,ORG,18,11,BigQuery
+figma,ORG|GPE,18,10,Figma
+graphql,GPE,18,9,GraphQL
+sales,GPE|ORG,18,8,Sales
+opentelemetry,ORG,17,10,OpenTelemetry
+soc,ORG,17,10,SOC
+ssl,ORG,17,7,SSL
+nbfc,ORG,17,5,NBFC
+software development engineer,ORG,17,4,Software Development Engineer
+emea,ORG,16,11,EMEA
+apj,ORG,16,8,APJ
+cloudformation,ORG|PRODUCT,16,8,CloudFormation
+servicenow,ORG,16,7,ServiceNow
+big data,ORG,16,5,Big Data
+claude,ORG,15,11,Claude
+s3,ORG,15,11,S3
+hindi,GPE,15,10,Hindi
+lms,ORG,15,7,LMS
+p&l,ORG,15,7,P&L
+cisco,GPE,15,3,Cisco
+sdk,ORG,14,10,SDK
+model context protocol,PRODUCT,14,9,Model Context Protocol
+uat,ORG,14,9,UAT
+ca,ORG|PRODUCT,14,8,CA
+singapore,GPE,14,8,Singapore
+sap,ORG|GPE,14,7,SAP
+tls,ORG,14,7,TLS
+treasury,ORG,14,7,Treasury
+develop,ORG,14,6,Develop
+professional services,ORG,14,6,Professional Services
+uk,GPE,14,6,UK
+rca,ORG,13,10,RCA
+slack,GPE|ORG,13,10,Slack
+cs,ORG,13,9,CS
+sso,ORG,13,8,SSO
+eks,ORG,13,7,EKS
+hris,ORG,13,7,HRIS
+information security,ORG,13,7,Information Security
+validate,ORG,13,7,Validate
+microsoft,ORG,13,6,Microsoft
+kyc,ORG,13,4,KYC
+mlops,ORG,13,4,MLOps
+legal,ORG|GPE,12,9,Legal
+owasp,ORG,12,9,OWASP
